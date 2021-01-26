@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:LilWidgets.Widgets;assembly=LilWidgets"
+             x:Class="LilSamples.MainPage">
+
+    <StackLayout>
+        <skia:ProgressWidget x:Name="progressWidget" 
+                             PercentValue="0.75"
+                             BackRingColor="#F0EDEE"
+                             ProgressRingColor="#2C666E"
+                             VerticalOptions="FillAndExpand"/>
+        <Button Text="Replay" 
+                Clicked="Replay_BtnClicked"
+                VerticalOptions="EndAndExpand"/>
+    </StackLayout>
+</ContentPage>
