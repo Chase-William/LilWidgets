@@ -19,7 +19,7 @@ namespace LilWidgets.Widgets
         #region Constants
         const float ALLOWED_DEVIATION = 0.009f;
         const float DEFAULT_ANIMATION_DURATION = 1000;
-        const float DEFAULT_FRAME_RATE = 30f;
+        const float DEFAULT_FRAME_RATE = 60f;
         readonly float cycleTime = 1f / DEFAULT_FRAME_RATE;
         #endregion
 
@@ -122,8 +122,7 @@ namespace LilWidgets.Widgets
 
         double nValue = 0;
         double oValue = 0;
-        float millisecondDuration = 2000; // 2 seconds
-        float totalFrames = 0;
+        float millisecondDuration = DEFAULT_ANIMATION_DURATION; // 2 seconds
 
         // Get the signed change needed each frame
         double difference = 0;
@@ -240,7 +239,6 @@ namespace LilWidgets.Widgets
             widget.nValue = (double)newValue;
             widget.oValue = (double)oldValue;
             widget.millisecondDuration = widget.Duration * (float)Math.Abs(widget.nValue - widget.oValue);
-            widget.totalFrames = DEFAULT_FRAME_RATE * (widget.millisecondDuration / 1000f);
 
             // Get the signed change needed each frame
             widget.difference = (widget.nValue - widget.oValue);// / widget.totalFrames;            
@@ -264,14 +262,24 @@ namespace LilWidgets.Widgets
                 Device.BeginInvokeOnMainThread(() =>
                 {
                     widget.stopwatch.Stop();
-                    widget.currentPercentageValue += widget.difference / (widget.Duration / 1000) * widget.stopwatch.Elapsed.TotalSeconds ;
+
+                    //var relativeDuration = (1.0d - widget.difference) / widget.difference * widget.Duration;
+                    var relativeDuration = widget.Duration / 1000 * Math.Abs(widget.difference);
+
+                    //var relativeDuration = widget.Duration * widget.difference / 1000;
+                    //widget.currentPercentageValue += widget.difference * relativeDuration * widget.stopwatch.Elapsed.TotalSeconds;
+                     //widget.currentPercentageValue += widget.difference * relativeDuration * widget.stopwatch.Elapsed.TotalSeconds;
+                    widget.currentPercentageValue += widget.difference / relativeDuration * widget.stopwatch.Elapsed.TotalSeconds;
+                    //widget.currentPercentageValue += widget.difference / (widget.Duration / 1000) * widget.stopwatch.Elapsed.TotalSeconds;
+                    //widget.currentPercentageValue += widget.difference * (widget.Duration / 1000) * widget.stopwatch.Elapsed.TotalSeconds;
                     widget.stopwatch.Restart();
                     // Informing the SKCanvasView that it must redraw itself
                     widget.canvas.InvalidateSurface();
 #if DEBUG
+                    double beforeDelta = widget.difference / (widget.Duration / 1000);
                     Debug.WriteLine($"currentPercentageValue: {widget.currentPercentageValue} | Target: {widget.PercentValue} || " +
                         $"Target Cycle Time: {widget.cycleTime} (milli) | Actual: {widget.stopwatch.ElapsedMilliseconds} (milli) | " +
-                        $"Correction Percentage: {Math.Abs(widget.difference - widget.stopwatch.ElapsedMilliseconds * widget.cycleTime * widget.difference) / widget.difference:P}");
+                        $"Correction Percentage: {Math.Abs(beforeDelta - widget.currentPercentageValue) / beforeDelta:P}");
 #endif             
                     widget.Animating = widget.comparer.Invoke();
 
