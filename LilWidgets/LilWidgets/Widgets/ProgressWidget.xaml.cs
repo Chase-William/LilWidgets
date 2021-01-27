@@ -2,6 +2,7 @@
 using SkiaSharp.Views.Forms;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,10 @@ namespace LilWidgets.Widgets
     public partial class ProgressWidget : ContentView
     {
         #region Constants
-        const float ALLOWED_DEVIATION = 0.0002f;
+        const float ALLOWED_DEVIATION = 0.009f;
+        const float DEFAULT_ANIMATION_DURATION = 1000;
+        const float DEFAULT_FRAME_RATE = 30f;
+        readonly float cycleTime = 1f / DEFAULT_FRAME_RATE;
         #endregion
 
         #region Bindable Properties
@@ -28,6 +32,10 @@ namespace LilWidgets.Widgets
         public static readonly BindableProperty BackRingColorProperty = BindableProperty.Create(nameof(BackRingColor), typeof(Color), typeof(ProgressWidget), Color.Black, BindingMode.OneWay, null, BackgroundRingColorPropertyChanged);
 
         public static readonly BindableProperty ProgressRingColorProperty = BindableProperty.Create(nameof(ProgressRingColor), typeof(Color), typeof(ProgressWidget), Color.White, BindingMode.OneWay, null, ProgressRingColorPropertyChanged);
+
+        public static readonly BindableProperty IsTextEnabledProperty = BindableProperty.Create(nameof(IsTextEnabled), typeof(bool), typeof(ProgressWidget), true, BindingMode.OneWay, null, IsTextEnabledPropertyChanged);
+
+        public static readonly BindableProperty DurationProperty = BindableProperty.Create(nameof(Duration), typeof(float), typeof(ProgressWidget), DEFAULT_ANIMATION_DURATION, BindingMode.OneWay);
         #endregion
 
         #region Properties
@@ -48,6 +56,37 @@ namespace LilWidgets.Widgets
         {
             get => (Color)GetValue(ProgressRingColorProperty);
             set => SetValue(ProgressRingColorProperty, value);
+        }
+        public bool IsTextEnabled
+        {
+            get => (bool)GetValue(IsTextEnabledProperty);
+            set => SetValue(IsTextEnabledProperty, value);
+        }
+        public float Duration
+        {
+            get => (float)GetValue(DurationProperty);
+            set => SetValue(DurationProperty, value);
+        }
+
+        private bool animating;
+        public bool Animating
+        {
+            get => animating;
+            private set
+            {
+                if (animating == value) return;
+                animating = value;
+#if DEBUG
+                if (animating)
+                    debugWatch.Restart();
+                else
+                {
+                    debugWatch.Stop();
+                    Debug.WriteLine($"Animation Finished | Target Duration: {millisecondDuration} (milli) | Actual: {debugWatch.ElapsedMilliseconds} (milli). " +
+                        $"Error Percentage: {Math.Abs(millisecondDuration - debugWatch.ElapsedMilliseconds) / millisecondDuration:P}");
+                }
+#endif
+            }
         }
         #endregion
 
@@ -87,18 +126,23 @@ namespace LilWidgets.Widgets
         float totalFrames = 0;
 
         // Get the signed change needed each frame
-        double changePerFrame = 0;
+        double difference = 0;
 
-        bool animating;
-
+        float textWidth = 1;
         double currentPercentageValue = 0;
         float centerXOffset = 0;
         float centerYOffset = 0;
         float sweepStart = -90;
+        Stopwatch stopwatch = null;
+
+#if DEBUG
+        Stopwatch debugWatch = new Stopwatch();
+#endif
         #endregion
+
         public ProgressWidget()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         private void canvas_PaintSurface(object sender, SKPaintSurfaceEventArgs e)
@@ -132,30 +176,35 @@ namespace LilWidgets.Widgets
             progressPath.AddArc(rect, sweepStart, PercentageToSweepAngle(currentPercentageValue));
             SKPath backgroundPath = new SKPath();
             backgroundPath.AddArc(rect, sweepStart, 360f);
-
-            SKPaint textPaint = new SKPaint
+                 
+            if (IsTextEnabled) // Draw text only if enabled
             {
-                Color = SKColors.Black,
-                Style = SKPaintStyle.Fill,
-                IsAntialias = true
-            };
+                SKPaint textPaint = new SKPaint
+                {
+                    Color = SKColors.Black,
+                    Style = SKPaintStyle.Fill,
+                    IsAntialias = true
+                };
 
-            string str = currentPercentageValue.ToString("P");
+                string str = currentPercentageValue.ToString("P");
 
-            // Adjust TextSize property so text is 75% of screen width
-            float textWidth = textPaint.MeasureText(str);
-            textPaint.TextSize = 0.75f * rect.Width * textPaint.TextSize / textWidth;
+                // Adjust TextSize property so text is 75% of screen width
+                textWidth = textPaint.MeasureText(str);
+                textPaint.TextSize = 0.75f * rect.Width * textPaint.TextSize / textWidth;
+
+                // Find the text bounds
+                SKRect textBounds = new SKRect();
+                textPaint.MeasureText(str, ref textBounds);
+
+                canvas.DrawText(str, centerXOffset - textBounds.MidX, centerYOffset - textBounds.MidY, textPaint); // Progress Text
+            }
+
             var strokeWidth = 0.9f * rect.Size.Width / textWidth;
             progressPaint.StrokeWidth = strokeWidth;
             backgroundPaint.StrokeWidth = strokeWidth;
-            // Find the text bounds
-            SKRect textBounds = new SKRect();
-            textPaint.MeasureText(str, ref textBounds);
-
             // Draw Calls
             canvas.DrawPath(backgroundPath, backgroundPaint); // Background Arc
-            canvas.DrawPath(progressPath, progressPaint); // Progress Arc            
-            canvas.DrawText(str, centerXOffset - textBounds.MidX, centerYOffset - textBounds.MidY, textPaint); // Progress Text
+            canvas.DrawPath(progressPath, progressPaint); // Progress Arc  
         }    
         
         private float PercentageToSweepAngle(double percentage)
@@ -190,42 +239,48 @@ namespace LilWidgets.Widgets
             ProgressWidget widget = (ProgressWidget)bindable;            
             widget.nValue = (double)newValue;
             widget.oValue = (double)oldValue;
-            widget.millisecondDuration = 2000; // 2 seconds
-            widget.totalFrames = 60f * (widget.millisecondDuration / 1000f);
-            
+            widget.millisecondDuration = widget.Duration * (float)Math.Abs(widget.nValue - widget.oValue);
+            widget.totalFrames = DEFAULT_FRAME_RATE * (widget.millisecondDuration / 1000f);
+
             // Get the signed change needed each frame
-            widget.changePerFrame = (widget.nValue - widget.oValue) / widget.totalFrames;            
+            widget.difference = (widget.nValue - widget.oValue);// / widget.totalFrames;            
 
             // No use of locking variables for thread safety should be needed because all modifications from timer are queue in the mainthread dispatcher
 
-            if (widget.changePerFrame < 0) // If decreasing            
+            if (widget.difference < 0) // If decreasing            
                 widget.comparer = () => widget.currentPercentageValue > widget.PercentValue + ALLOWED_DEVIATION; // When decreasing, if the value is larger than the target keep decreasing.         
             else // If inreasing    
                 widget.comparer = () => widget.currentPercentageValue < widget.PercentValue - ALLOWED_DEVIATION; // When increasing, if the value is smaller than the target keep increasing.  
 
-            if (widget.animating) // Prevent another timer being started if the bindable widget is already animating itself
+            if (widget.Animating) // Prevent another timer being started if the bindable widget is already animating itself
                 return;
             else // If the widget animating state is false then assign true because we shall start the animation
-                widget.animating = true;
+                widget.Animating = true;
 
-            Device.StartTimer(TimeSpan.FromSeconds(1f / 60f), () =>
+            widget.stopwatch = new Stopwatch();
+            widget.stopwatch.Start();
+            Device.StartTimer(TimeSpan.FromSeconds(1f / DEFAULT_FRAME_RATE), () =>
             {
                 Device.BeginInvokeOnMainThread(() =>
                 {
-                    widget.currentPercentageValue += widget.changePerFrame;
+                    widget.stopwatch.Stop();
+                    widget.currentPercentageValue += widget.difference / (widget.Duration / 1000) * widget.stopwatch.Elapsed.TotalSeconds ;
+                    widget.stopwatch.Restart();
                     // Informing the SKCanvasView that it must redraw itself
                     widget.canvas.InvalidateSurface();
 #if DEBUG
-                    System.Diagnostics.Debug.WriteLine($"currentPercentageValue: {widget.currentPercentageValue} | Target: {widget.PercentValue}");
+                    Debug.WriteLine($"currentPercentageValue: {widget.currentPercentageValue} | Target: {widget.PercentValue} || " +
+                        $"Target Cycle Time: {widget.cycleTime} (milli) | Actual: {widget.stopwatch.ElapsedMilliseconds} (milli) | " +
+                        $"Correction Percentage: {Math.Abs(widget.difference - widget.stopwatch.ElapsedMilliseconds * widget.cycleTime * widget.difference) / widget.difference:P}");
 #endif             
-                    widget.animating = widget.comparer.Invoke();
+                    widget.Animating = widget.comparer.Invoke();
 
-                    if (!widget.animating) // If not animating anymore assign the currentPercentageValue the exact desired amount
-                        widget.currentPercentageValue = widget.PercentValue;
+                    if (!widget.Animating) // If not animating anymore assign the currentPercentageValue the exact desired amount
+                        widget.currentPercentageValue = widget.PercentValue;                    
                 });                
 
                 // Continue while we haven't reached the target value
-                return widget.animating;
+                return widget.Animating;
             });
         }
 
@@ -234,16 +289,26 @@ namespace LilWidgets.Widgets
         {
             ProgressWidget widget = (ProgressWidget)bindable;
             widget.backgroundPaint.Color = ((Color)newValue).ToSKColor();
-            if (!widget.animating)            
-                widget.canvas.InvalidateSurface();            
+            widget.TryUpdate();
         }
 
         private static void ProgressRingColorPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
             ProgressWidget widget = (ProgressWidget)bindable;
             widget.progressPaint.Color = ((Color)newValue).ToSKColor();
-            if (!widget.animating)            
-                widget.canvas.InvalidateSurface();            
+            widget.TryUpdate();
+        }
+
+        private static void IsTextEnabledPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+        {
+            ProgressWidget widget = (ProgressWidget)bindable;            
+            widget.TryUpdate();
+        }
+
+        private void TryUpdate()
+        {
+            if (!Animating) // Dont update if we are animating because the next frame will be updated anyway
+                canvas.InvalidateSurface();
         }
     }
 }

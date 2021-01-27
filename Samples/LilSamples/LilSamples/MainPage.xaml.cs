@@ -10,14 +10,24 @@ namespace LilSamples
 {
     public partial class MainPage : ContentPage
     {
+        const float DEFAULT_EXAMPLE_PERCENT_VALUE = 0.75f;
+
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = progressWidget;
+            progressWidget.PercentValue = DEFAULT_EXAMPLE_PERCENT_VALUE;
+            percentValueEntry.Text = DEFAULT_EXAMPLE_PERCENT_VALUE.ToString();
         }
 
-        private void Replay_BtnClicked(object sender, EventArgs e)
+        private void Apply_BtnClicked(object sender, EventArgs e)
         {
-            progressWidget.PercentValue = progressWidget.PercentValue == .75d ? 0 : .75d;
+            if (double.TryParse(percentValueEntry.Text, out double result)) // Parse text
+            {
+                if (result > 1 || result < 0) // Only accept value percentages            
+                    return;
+                progressWidget.PercentValue = result;
+            }          
         }
     }
 }

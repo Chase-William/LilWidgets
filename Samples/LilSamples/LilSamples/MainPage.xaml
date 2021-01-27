@@ -5,13 +5,38 @@
              x:Class="LilSamples.MainPage">
 
     <StackLayout>
-        <skia:ProgressWidget x:Name="progressWidget" 
-                             PercentValue="0.75"
+        <skia:ProgressWidget x:Name="progressWidget"
+                             VerticalOptions="FillAndExpand"
                              BackRingColor="#F0EDEE"
-                             ProgressRingColor="#2C666E"
-                             VerticalOptions="FillAndExpand"/>
-        <Button Text="Replay" 
-                Clicked="Replay_BtnClicked"
-                VerticalOptions="EndAndExpand"/>
+                             ProgressRingColor="#2C666E"/>
+        <Grid Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Entry x:Name="percentValueEntry"
+                   Placeholder="Enter value from 0.00 to 1.00"/>
+            <Button Text="Apply"
+                    Grid.Column="1"
+                    Clicked="Apply_BtnClicked"/>
+
+            <Label Text="Toggle Text"
+                   Grid.Row="1"/>
+            <Switch IsToggled="{Binding IsTextEnabled}"
+                    Grid.Row="1"
+                    Grid.Column="1"/>
+
+            <Label Text="Animation Duration"
+                   Grid.Row="2"/>
+            <Entry Text="{Binding Duration}"
+                   Grid.Row="2"
+                   Grid.Column="1"/>
+        </Grid>
     </StackLayout>
 </ContentPage>
