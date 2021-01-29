@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LilWidgets.Widgets;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -24,10 +25,12 @@ namespace LilSamples
         private void ProgressWidget_SizeChanged(object sender, EventArgs e)
         {
             progressWidget.SizeChanged -= ProgressWidget_SizeChanged;
-            heightSlider.Maximum = progressWidget.Height;
-            widthSlider.Maximum = progressWidget.Width;
+            heightSlider.Maximum = ((Grid)progressWidget.Parent).Height;
+            widthSlider.Maximum = ((Grid)progressWidget.Parent).Width;
             heightSlider.Value = progressWidget.Height;
-            widthSlider.Value = progressWidget.Width;            
+            widthSlider.Value = progressWidget.Width;
+            arcToTextSpacingSlider.Value = ProgressWidget.DEFAULT_ARC_TO_TEXT_SPACING;
+            strokeWidthSlider.Value = ProgressWidget.DEFAULT_STROKE_WIDTH;
         }
 
         private void Apply_BtnClicked(object sender, EventArgs e)
@@ -45,5 +48,11 @@ namespace LilSamples
 
         private void widthSlider_ValueChanged(object sender, ValueChangedEventArgs e)
             => progressWidget.WidthRequest = e.NewValue;
+
+        private void arcWidthSlider_ValueChanged(object sender, ValueChangedEventArgs e)
+            => progressWidget.ArcToTextSpacing = (float)e.NewValue;
+
+        private void strokeWidthSlider_ValueChanged(object sender, ValueChangedEventArgs e)
+            => progressWidget.StrokeWidth = (float)e.NewValue;
     }
 }
