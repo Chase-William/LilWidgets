@@ -1,15 +1,10 @@
 ﻿using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using static Xamarin.Forms.BindableProperty;
 
 namespace LilWidgets.Widgets
 {
@@ -17,16 +12,20 @@ namespace LilWidgets.Widgets
     public partial class ProgressWidget : ContentView
     {
         #region Constants
+
         const float ALLOWED_DEVIATION = 0.009f;
         const float DEFAULT_ANIMATION_DURATION = 1000;
         const float DEFAULT_FRAME_RATE = 60f;
+        const float DEFAULT_STROKE_WIDTH = 20;
         readonly float cycleTime = 1f / DEFAULT_FRAME_RATE;
-        #endregion
+
+        #endregion Constants
 
         #region Bindable Properties
+
         /// <summary>
         /// Bindable Property for the <see cref="PercentValue"/> property.
-        /// </summary>        
+        /// </summary>
         public static readonly BindableProperty PercentValueProperty = BindableProperty.Create(nameof(PercentValue), typeof(double), typeof(ProgressWidget), 0d, BindingMode.OneWay, ValidatePercentage, PercentValuePropertyChanged);
 
         public static readonly BindableProperty BackRingColorProperty = BindableProperty.Create(nameof(BackRingColor), typeof(Color), typeof(ProgressWidget), Color.Black, BindingMode.OneWay, null, BackgroundRingColorPropertyChanged);
@@ -35,10 +34,14 @@ namespace LilWidgets.Widgets
 
         public static readonly BindableProperty IsTextEnabledProperty = BindableProperty.Create(nameof(IsTextEnabled), typeof(bool), typeof(ProgressWidget), true, BindingMode.OneWay, null, IsTextEnabledPropertyChanged);
 
-        public static readonly BindableProperty DurationProperty = BindableProperty.Create(nameof(Duration), typeof(float), typeof(ProgressWidget), DEFAULT_ANIMATION_DURATION, BindingMode.OneWay);
-        #endregion
+        public static readonly BindableProperty DurationProperty = BindableProperty.Create(nameof(Duration), typeof(float), typeof(ProgressWidget), DEFAULT_ANIMATION_DURATION);
+
+        public static readonly BindableProperty StrokeWidthProperty = BindableProperty.Create(nameof(StrokeWidth), typeof(float), typeof(ProgressWidget), DEFAULT_STROKE_WIDTH);
+
+        #endregion Bindable Properties
 
         #region Properties
+
         /// <summary>
         /// Contains the value of progress. Expects a value from 0.0 to 1.0 representing the progress.
         /// </summary>
@@ -47,28 +50,39 @@ namespace LilWidgets.Widgets
             get => (double)GetValue(PercentValueProperty);
             set => SetValue(PercentValueProperty, value);
         }
+
         public Color BackRingColor
         {
             get => (Color)GetValue(BackRingColorProperty);
             set => SetValue(BackRingColorProperty, value);
         }
+
         public Color ProgressRingColor
         {
             get => (Color)GetValue(ProgressRingColorProperty);
             set => SetValue(ProgressRingColorProperty, value);
         }
+
         public bool IsTextEnabled
         {
             get => (bool)GetValue(IsTextEnabledProperty);
             set => SetValue(IsTextEnabledProperty, value);
         }
+
         public float Duration
         {
             get => (float)GetValue(DurationProperty);
             set => SetValue(DurationProperty, value);
         }
 
+        public float StrokeWidth
+        {
+            get => (float)GetValue(StrokeWidthProperty);
+            set => SetValue(StrokeWidthProperty, value);
+        }
+
         private bool animating;
+
         public bool Animating
         {
             get => animating;
@@ -88,9 +102,11 @@ namespace LilWidgets.Widgets
 #endif
             }
         }
-        #endregion
+
+        #endregion Properties
 
         #region Fields
+
         private SKPaint progressPaint = new SKPaint
         {
             Color = SKColors.Black,
@@ -120,62 +136,82 @@ namespace LilWidgets.Widgets
         //    IsAntialias = true
         //};
 
-        double nValue = 0;
-        double oValue = 0;
-        float millisecondDuration = DEFAULT_ANIMATION_DURATION; // 2 seconds
+        private double nValue = 0;
+        private double oValue = 0;
+        private float millisecondDuration = DEFAULT_ANIMATION_DURATION; // 2 seconds
 
         // Get the signed change needed each frame
-        double difference = 0;
+        private double difference = 0;
 
-        float textWidth = 1;
-        double currentPercentageValue = 0;
-        float centerXOffset = 0;
-        float centerYOffset = 0;
-        float sweepStart = -90;
-        Stopwatch stopwatch = null;
+        private float textWidth = 1;
+        private double currentPercentageValue = 0;
+        private float centerXOffset = 0;
+        private float centerYOffset = 0;
+        private float sweepStart = -90;
+        private Stopwatch stopwatch = null;
 
 #if DEBUG
-        Stopwatch debugWatch = new Stopwatch();
+        private Stopwatch debugWatch = new Stopwatch();
 #endif
-        #endregion
+
+        #endregion Fields
 
         public ProgressWidget()
         {
             InitializeComponent();
         }
 
+        float halfOfStrokeWidth = 0;
+        float top = 0;
+        float bottom = 0;
+        SKRect arcRect;
+        SKImageInfo info;
+
         private void canvas_PaintSurface(object sender, SKPaintSurfaceEventArgs e)
         {
             var canvas = e.Surface.Canvas;
-            var info = e.Info;          
+            info = e.Info;
 
-            canvas.Clear();
+            canvas.Clear(SKColors.LightBlue);
 
             //canvas.DrawColor(SKColors.LightBlue);
 
             centerXOffset = info.Width / 2;
             centerYOffset = info.Height / 2;
 
+            halfOfStrokeWidth = StrokeWidth / 2;
 
-            SKRect rect = new SKRect();
-            if (centerXOffset > centerYOffset)
+            // Determine top / bottom by finding the MidY then subtracting half the target width (get the radius of our circle) then subtract the half of stroke which acts as an offset
+            if (centerXOffset > centerYOffset) // Cavnas is wider than it is tall, hence computer for height
             {
-                rect.Size = new SKSize(centerYOffset, centerYOffset);
+                arcRect = new SKRect(info.Width / 2f - info.Height / 2f + halfOfStrokeWidth, // left
+                                     halfOfStrokeWidth, // top
+                                     info.Width / 2f + info.Height / 2f - halfOfStrokeWidth, // right
+                                     info.Height - halfOfStrokeWidth); // bottom
             }
-            else
-            {
-                rect.Size = new SKSize(centerXOffset, centerXOffset);
-            }            
-            rect.Location = new SKPoint(centerXOffset / 2, centerYOffset - centerXOffset / 2); // Centering to the center of the parent view x and y
+            else // Canvas is taller than it is wide to compute for width
+            {                
+                arcRect = new SKRect(halfOfStrokeWidth, // left
+                                     info.Height / 2f - info.Width / 2f + halfOfStrokeWidth, // top
+                                     info.Width - halfOfStrokeWidth, // right
+                                     info.Height / 2f + info.Width / 2f - halfOfStrokeWidth); // bottom
+            }
+            //arcRect.Location = new SKPoint(0, centerYOffset - centerXOffset / 2); // Centering to the center of the parent view x and y
 
             //float sweepAngle = 0;// = 75f / 100f * 360f;  // (90 / 100) * 360 -- percentage to drawing angle
             //PercentageToSweepAngle(sweepAngle);
             //canvas.DrawCircle(new SKPoint(centerXOffset, centerYOffset), centerXOffset, paint);
-            SKPath progressPath = new SKPath();            
-            progressPath.AddArc(rect, sweepStart, PercentageToSweepAngle(currentPercentageValue));
+            SKPath progressPath = new SKPath();
+            progressPath.AddArc(arcRect, sweepStart, PercentageToSweepAngle(currentPercentageValue));
             SKPath backgroundPath = new SKPath();
-            backgroundPath.AddArc(rect, sweepStart, 360f);
-                 
+            backgroundPath.AddArc(arcRect, sweepStart, 360f);
+
+            progressPaint.StrokeWidth = StrokeWidth;
+            backgroundPaint.StrokeWidth = StrokeWidth;
+            // Draw Calls
+            canvas.DrawPath(backgroundPath, backgroundPaint); // Background Arc
+            canvas.DrawPath(progressPath, progressPaint); // Progress Arc
+
             if (IsTextEnabled) // Draw text only if enabled
             {
                 SKPaint textPaint = new SKPaint
@@ -189,26 +225,19 @@ namespace LilWidgets.Widgets
 
                 // Adjust TextSize property so text is 75% of screen width
                 textWidth = textPaint.MeasureText(str);
-                textPaint.TextSize = 0.75f * rect.Width * textPaint.TextSize / textWidth;
+                textPaint.TextSize = textWidth;// - (strokeWidth * 2);
 
                 // Find the text bounds
-                SKRect textBounds = new SKRect();
-                textPaint.MeasureText(str, ref textBounds);
+                SKRect textBounds = new SKRect();// (strokeWidth, strokeWidth, rect.Width - strokeWidth, rect.Height - strokeWidth);
+                var test = textPaint.MeasureText(str, ref textBounds);
 
-                canvas.DrawText(str, centerXOffset - textBounds.MidX, centerYOffset - textBounds.MidY, textPaint); // Progress Text
-            }
+                canvas.DrawText(str, arcRect.MidX - textBounds.Width / 2, arcRect.MidY - textBounds.Height / 2, textPaint); // Progress Text
+            }            
+        }
 
-            var strokeWidth = 0.9f * rect.Size.Width / textWidth;
-            progressPaint.StrokeWidth = strokeWidth;
-            backgroundPaint.StrokeWidth = strokeWidth;
-            // Draw Calls
-            canvas.DrawPath(backgroundPath, backgroundPaint); // Background Arc
-            canvas.DrawPath(progressPath, progressPaint); // Progress Arc  
-        }    
-        
         private float PercentageToSweepAngle(double percentage)
             => (float)percentage * 100 / 100f * 360f;
-        
+
         /// <summary>
         /// Validates the given value of the <see cref="PercentValue"/> property.
         /// </summary>
@@ -225,7 +254,7 @@ namespace LilWidgets.Widgets
                 return false;
 
             return true;
-        }      
+        }
 
         /// <summary>
         /// A callback function to the <see cref="PercentValue"/> being changed.
@@ -234,26 +263,28 @@ namespace LilWidgets.Widgets
         /// <param name="oldValue">Old value.</param>
         /// <param name="newValue">Newly assigned value.</param>
         private static void PercentValuePropertyChanged(BindableObject bindable, object oldValue, object newValue)
-        {            
-            ProgressWidget widget = (ProgressWidget)bindable;            
+        {
+            ProgressWidget widget = (ProgressWidget)bindable;
             widget.nValue = (double)newValue;
             widget.oValue = (double)oldValue;
             widget.millisecondDuration = widget.Duration * (float)Math.Abs(widget.nValue - widget.oValue);
 
             // Get the signed change needed each frame
-            widget.difference = (widget.nValue - widget.oValue);// / widget.totalFrames;            
+            widget.difference = (widget.nValue - widget.oValue);// / widget.totalFrames;
 
             // No use of locking variables for thread safety should be needed because all modifications from timer are queue in the mainthread dispatcher
 
-            if (widget.difference < 0) // If decreasing            
-                widget.comparer = () => widget.currentPercentageValue > widget.PercentValue + ALLOWED_DEVIATION; // When decreasing, if the value is larger than the target keep decreasing.         
-            else // If inreasing    
-                widget.comparer = () => widget.currentPercentageValue < widget.PercentValue - ALLOWED_DEVIATION; // When increasing, if the value is smaller than the target keep increasing.  
+            if (widget.difference < 0) // If decreasing
+                widget.comparer = () => widget.currentPercentageValue > widget.PercentValue + ALLOWED_DEVIATION; // When decreasing, if the value is larger than the target keep decreasing.
+            else // If inreasing
+                widget.comparer = () => widget.currentPercentageValue < widget.PercentValue - ALLOWED_DEVIATION; // When increasing, if the value is smaller than the target keep increasing.
 
             if (widget.Animating) // Prevent another timer being started if the bindable widget is already animating itself
                 return;
             else // If the widget animating state is false then assign true because we shall start the animation
                 widget.Animating = true;
+
+            double relativeDuration = 0;
 
             widget.stopwatch = new Stopwatch();
             widget.stopwatch.Start();
@@ -263,15 +294,12 @@ namespace LilWidgets.Widgets
                 {
                     widget.stopwatch.Stop();
 
-                    //var relativeDuration = (1.0d - widget.difference) / widget.difference * widget.Duration;
-                    var relativeDuration = widget.Duration / 1000 * Math.Abs(widget.difference);
+                    // We want to take a percentage of the duration that is relative to the percentage of the total we are moving
+                    // Therefore moving from 0 to 50% will take 50% of the Duration propertys value in time
+                    relativeDuration = widget.Duration / 1000 * Math.Abs(widget.difference);
 
-                    //var relativeDuration = widget.Duration * widget.difference / 1000;
-                    //widget.currentPercentageValue += widget.difference * relativeDuration * widget.stopwatch.Elapsed.TotalSeconds;
-                     //widget.currentPercentageValue += widget.difference * relativeDuration * widget.stopwatch.Elapsed.TotalSeconds;
+                    // Add the correct difference based with respects the desired duration then multiplied by the time passed 
                     widget.currentPercentageValue += widget.difference / relativeDuration * widget.stopwatch.Elapsed.TotalSeconds;
-                    //widget.currentPercentageValue += widget.difference / (widget.Duration / 1000) * widget.stopwatch.Elapsed.TotalSeconds;
-                    //widget.currentPercentageValue += widget.difference * (widget.Duration / 1000) * widget.stopwatch.Elapsed.TotalSeconds;
                     widget.stopwatch.Restart();
                     // Informing the SKCanvasView that it must redraw itself
                     widget.canvas.InvalidateSurface();
@@ -280,18 +308,17 @@ namespace LilWidgets.Widgets
                     Debug.WriteLine($"currentPercentageValue: {widget.currentPercentageValue} | Target: {widget.PercentValue} || " +
                         $"Target Cycle Time: {widget.cycleTime} (milli) | Actual: {widget.stopwatch.ElapsedMilliseconds} (milli) | " +
                         $"Correction Percentage: {Math.Abs(beforeDelta - widget.currentPercentageValue) / beforeDelta:P}");
-#endif             
+#endif
                     widget.Animating = widget.comparer.Invoke();
 
                     if (!widget.Animating) // If not animating anymore assign the currentPercentageValue the exact desired amount
-                        widget.currentPercentageValue = widget.PercentValue;                    
-                });                
+                        widget.currentPercentageValue = widget.PercentValue;
+                });
 
                 // Continue while we haven't reached the target value
                 return widget.Animating;
             });
         }
-
 
         private static void BackgroundRingColorPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
@@ -309,7 +336,7 @@ namespace LilWidgets.Widgets
 
         private static void IsTextEnabledPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
-            ProgressWidget widget = (ProgressWidget)bindable;            
+            ProgressWidget widget = (ProgressWidget)bindable;
             widget.TryUpdate();
         }
 

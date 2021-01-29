@@ -4,12 +4,25 @@
              xmlns:skia="clr-namespace:LilWidgets.Widgets;assembly=LilWidgets"
              x:Class="LilSamples.MainPage">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="controlGrid" TargetType="Grid">
+                <Setter Property="Margin" Value="20,0,20,0"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <StackLayout>
-        <skia:ProgressWidget x:Name="progressWidget"
-                             VerticalOptions="FillAndExpand"
-                             BackRingColor="#F0EDEE"
-                             ProgressRingColor="#2C666E"/>
-        <Grid Padding="20">
+        <Grid VerticalOptions="FillAndExpand">
+            <skia:ProgressWidget x:Name="progressWidget"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Center"
+                                 HeightRequest="400"
+                                 WidthRequest="400"
+                                 BackRingColor="#F0EDEE"
+                                 ProgressRingColor="#2C666E"/>
+        </Grid>
+        <Grid Style="{StaticResource controlGrid}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -37,6 +50,32 @@
             <Entry Text="{Binding Duration}"
                    Grid.Row="2"
                    Grid.Column="1"/>
+           
+            
+        </Grid>
+        <Grid Style="{StaticResource controlGrid}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Width"/>
+            <Slider x:Name="widthSlider"
+                    ValueChanged="widthSlider_ValueChanged"
+                    Minimum="0"
+                    Grid.Row="1"/>
+
+            <Label Text="Height"
+                       Grid.Column="1"/>
+            <Slider x:Name="heightSlider"
+                    ValueChanged="heightSlider_ValueChanged"
+                    Minimum="0"
+                    Grid.Row="1"
+                    Grid.Column="1"/>
         </Grid>
     </StackLayout>
 </ContentPage>

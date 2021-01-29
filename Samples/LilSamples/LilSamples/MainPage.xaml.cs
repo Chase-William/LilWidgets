@@ -18,6 +18,16 @@ namespace LilSamples
             BindingContext = progressWidget;
             progressWidget.PercentValue = DEFAULT_EXAMPLE_PERCENT_VALUE;
             percentValueEntry.Text = DEFAULT_EXAMPLE_PERCENT_VALUE.ToString();
+            progressWidget.SizeChanged += ProgressWidget_SizeChanged;
+        }
+
+        private void ProgressWidget_SizeChanged(object sender, EventArgs e)
+        {
+            progressWidget.SizeChanged -= ProgressWidget_SizeChanged;
+            heightSlider.Maximum = progressWidget.Height;
+            widthSlider.Maximum = progressWidget.Width;
+            heightSlider.Value = progressWidget.Height;
+            widthSlider.Value = progressWidget.Width;            
         }
 
         private void Apply_BtnClicked(object sender, EventArgs e)
@@ -29,5 +39,11 @@ namespace LilSamples
                 progressWidget.PercentValue = result;
             }          
         }
+
+        private void heightSlider_ValueChanged(object sender, ValueChangedEventArgs e)
+            => progressWidget.HeightRequest = e.NewValue;
+
+        private void widthSlider_ValueChanged(object sender, ValueChangedEventArgs e)
+            => progressWidget.WidthRequest = e.NewValue;
     }
 }
