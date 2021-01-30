@@ -10,7 +10,7 @@ namespace LilSamples
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new MasterDetailContainerPage();
         }
 
         protected override void OnStart()

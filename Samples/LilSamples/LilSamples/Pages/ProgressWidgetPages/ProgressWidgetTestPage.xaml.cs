@@ -1,19 +1,22 @@
-﻿using LilWidgets.Widgets;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace LilSamples
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+using LilWidgets.Widgets;
+
+namespace LilSamples.Pages.ProgressWidgetPages
 {
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ProgressWidgetTestPage : ContentPage
     {
         const float DEFAULT_EXAMPLE_PERCENT_VALUE = 0.75f;
 
-        public MainPage()
+        public ProgressWidgetTestPage()
         {
             InitializeComponent();
             BindingContext = progressWidget;
@@ -27,7 +30,7 @@ namespace LilSamples
             progressWidget.SizeChanged -= ProgressWidget_SizeChanged;
             heightSlider.Maximum = ((Grid)progressWidget.Parent).Height;
             widthSlider.Maximum = ((Grid)progressWidget.Parent).Width;
-            heightSlider.Value = progressWidget.Height;
+            heightSlider.Value = progressWidget.Height; 
             widthSlider.Value = progressWidget.Width;
             arcToTextSpacingSlider.Value = ProgressWidget.DEFAULT_ARC_TO_TEXT_SPACING;
             strokeWidthSlider.Value = ProgressWidget.DEFAULT_STROKE_WIDTH;
@@ -40,7 +43,7 @@ namespace LilSamples
                 if (result > 1 || result < 0) // Only accept value percentages            
                     return;
                 progressWidget.PercentProgressValue = result;
-            }          
+            }
         }
 
         private void heightSlider_ValueChanged(object sender, ValueChangedEventArgs e)

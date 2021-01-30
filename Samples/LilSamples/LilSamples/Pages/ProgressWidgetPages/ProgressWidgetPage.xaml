@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:lilWidget="clr-namespace:LilWidgets.Widgets;assembly=LilWidgets"
+             x:Class="LilSamples.Pages.ProgressWidgetPages.ProgressWidgetPage">
+    <StackLayout>
+        <lilWidget:ProgressWidget HorizontalOptions="FillAndExpand"
+                                  VerticalOptions="FillAndExpand"
+                                  StrokeWidth="20"
+                                  ArcToTextSpacing="200"
+                                  PercentProgressValue="0.65"
+                                  Margin="40"
+                                  ProgressArcColor="{StaticResource AccentPrimary}"/>
+        <Button Text="Test Page"
+                Clicked="Test_BtnClicked"/>
+    </StackLayout>
+</ContentPage>

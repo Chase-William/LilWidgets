@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:skia="clr-namespace:LilWidgets.Widgets;assembly=LilWidgets"
+             x:Class="LilSamples.Pages.ProgressWidgetPages.ProgressWidgetTestPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="controlGrid" TargetType="Grid">
+                <Setter Property="Margin" Value="20,0,20,0"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Grid VerticalOptions="FillAndExpand">
+            <skia:ProgressWidget x:Name="progressWidget"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Center"
+                                 ProgressArcColor="{StaticResource AccentPrimary}"/>
+        </Grid>
+        <Grid Style="{StaticResource controlGrid}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Entry x:Name="percentValueEntry"
+                   Placeholder="Enter value from 0.00 to 1.00"/>
+            <Button Text="Apply"
+                    Grid.Column="1"
+                    Clicked="Apply_BtnClicked"/>
+
+            <Label Text="Toggle Text"
+                   Grid.Row="1"/>
+            <Switch IsToggled="{Binding IsTextEnabled}"
+                    Grid.Row="1"
+                    Grid.Column="1"/>
+
+            <Label Text="Animation Duration"
+                   Grid.Row="2"/>
+            <Entry Text="{Binding Duration}"
+                   Grid.Row="2"
+                   Grid.Column="1"/>
+
+            <Label Text="Arc To Text Spacing"
+                   Grid.Row="3"/>
+            <Slider x:Name="arcToTextSpacingSlider"
+                    Minimum="0"
+                    ValueChanged="arcWidthSlider_ValueChanged"
+                    Maximum="200"
+                    Grid.Row="3"
+                    Grid.Column="1"/>
+
+            <Label Text="Stroke Width"
+                   Grid.Row="4"/>
+            <Slider x:Name="strokeWidthSlider"
+                    Minimum="0"
+                    ValueChanged="strokeWidthSlider_ValueChanged"
+                    Maximum="200"
+                    Grid.Column="1"
+                    Grid.Row="4"/>
+        </Grid>
+        <Grid Style="{StaticResource controlGrid}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Width"/>
+            <Slider x:Name="widthSlider"
+                    ValueChanged="widthSlider_ValueChanged"
+                    Minimum="0"
+                    Grid.Row="1"/>
+
+            <Label Text="Height"
+                       Grid.Column="1"/>
+            <Slider x:Name="heightSlider"
+                    ValueChanged="heightSlider_ValueChanged"
+                    Minimum="0"
+                    Grid.Row="1"
+                    Grid.Column="1"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
