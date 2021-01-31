@@ -39,11 +39,19 @@ namespace LilWidgets.Widgets
         /// <summary>
         /// The default spacing between the arc's innner lining and the text rectangle.
         /// </summary>
-        public const float DEFAULT_ARC_TO_TEXT_SPACING = 5;
+        public const float DEFAULT_ARC_TO_TEXT_SPACING = 10;
         /// <summary>
         /// The default cycle time to be aimed for.
         /// </summary>
         readonly float cycleTime = 1f / DEFAULT_FRAME_RATE;
+        /// <summary>
+        /// The default shadow color used with the arcs.
+        /// </summary>
+        public static readonly Color defaultShadowColor = Color.FromHex("#5555");
+        /// <summary>
+        /// The default text color used.
+        /// </summary>
+        public static readonly Color defaultTextColor = Color.Black;
         #endregion Constants
 
         #region Bindable Properties
@@ -62,7 +70,7 @@ namespace LilWidgets.Widgets
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="IsTextVisible"/> property.
         /// </summary>
-        public static readonly BindableProperty IsTextVisibleProperty = BindableProperty.Create(nameof(IsTextVisible), typeof(bool), typeof(ProgressWidget), true, BindingMode.OneWay, null, IsTextEnabledPropertyChanged);
+        public static readonly BindableProperty IsTextVisibleProperty = BindableProperty.Create(nameof(IsTextVisible), typeof(bool), typeof(ProgressWidget), true, BindingMode.OneWay, null, IsTextVisiblePropertyChanged);
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="Duration"/> property.
         /// </summary>
@@ -72,13 +80,20 @@ namespace LilWidgets.Widgets
         /// </summary>
         public static readonly BindableProperty StrokeWidthProperty = BindableProperty.Create(nameof(StrokeWidth), typeof(float), typeof(ProgressWidget), DEFAULT_STROKE_WIDTH, BindingMode.OneWay, null, StokeWidthPropertyChanged);
         /// <summary>
-        /// <see cref="BindableProperty"/> for the <see cref="ArcToTextSpacing"/> property.
+        /// <see cref="BindableProperty"/> for the <see cref="TexMargin"/> property.
         /// </summary>
-        public static readonly BindableProperty ArcToTextSpacingProperty = BindableProperty.Create(nameof(ArcToTextSpacing), typeof(float), typeof(ProgressWidget), DEFAULT_ARC_TO_TEXT_SPACING, BindingMode.OneWay, null, ArcToTextSpacingPropertyChanged);
+        public static readonly BindableProperty TextMarginProperty = BindableProperty.Create(nameof(TexMargin), typeof(float), typeof(ProgressWidget), DEFAULT_ARC_TO_TEXT_SPACING, BindingMode.OneWay, null, ArcToTextSpacingPropertyChanged);
+        /// <summary>
+        /// <see cref="BindableProperty"/> for the <see cref="ShadowColor"/> property.
+        /// </summary>
+        public static readonly BindableProperty ShadowColorProperty = BindableProperty.Create(nameof(ShadowColor), typeof(Color), typeof(ProgressWidget), defaultShadowColor, BindingMode.OneWay, null, ShadowColorPropertyChanged);
+        /// <summary>
+        /// <see cref="BindableProperty"/> for the <see cref="TextColor"/> property.
+        /// </summary>
+        public static readonly BindableProperty TextColorProperty = BindableProperty.Create(nameof(TextColor), typeof(Color), typeof(ProgressWidget), defaultTextColor, BindingMode.OneWay, null, TextColorPropertyChanged);
         #endregion Bindable Properties
 
         #region Properties
-
         /// <summary>
         /// The progress to be displayed. This value should be a percentage value (0.0 to 1.0).
         /// </summary>
@@ -102,6 +117,14 @@ namespace LilWidgets.Widgets
         {
             get => (Color)GetValue(ProgressArcColorProperty);
             set => SetValue(ProgressArcColorProperty, value);
+        }
+        /// <summary>
+        /// The color of the shadow to be used with the arcs.
+        /// </summary>
+        public Color ShadowColor
+        {
+            get => (Color)GetValue(ShadowColorProperty);
+            set => SetValue(ShadowColorProperty, value);
         }
         /// <summary>
         /// Controls whether the percentage text is visible to the user.
@@ -130,14 +153,22 @@ namespace LilWidgets.Widgets
             set => SetValue(StrokeWidthProperty, value);
         }
         /// <summary>
-        /// The target spacing between the inner side of the arc and the edges of the text's rectangle.
+        /// The color the text will use.
         /// </summary>
-        public float ArcToTextSpacing
+        public Color TextColor
         {
-            get => (float)GetValue(ArcToTextSpacingProperty);
-            set => SetValue(ArcToTextSpacingProperty, value);
+            get => (Color)GetValue(TextColorProperty);
+            set => SetValue(TextColorProperty, value);
         }
-               
+        /// <summary>
+        /// The target spacing / margin between the inner side of the arc and the edges of the text's rectangle. The size of the margin can only be a single value at the moment that is used
+        /// for both the left and right hand sides. The text will always be centered both vertically and horizontally.
+        /// </summary>
+        public float TexMargin
+        {
+            get => (float)GetValue(TextMarginProperty);
+            set => SetValue(TextMarginProperty, value);
+        }               
         private bool animating;
         /// <summary>
         /// Indicates whether the progress widget is animating right now.
@@ -161,14 +192,13 @@ namespace LilWidgets.Widgets
 #endif
             }
         }
-
         #endregion Properties
 
         #region Fields
         /// <summary>
         /// Used to draw the progress arc.
         /// </summary>
-        readonly SKPaint progressPaint = new SKPaint
+        SKPaint progressPaint = new SKPaint
         {
             Color = SKColors.Black,
             StrokeWidth = 1,
@@ -184,7 +214,7 @@ namespace LilWidgets.Widgets
             StrokeWidth = 1,
             Style = SKPaintStyle.Stroke,
             IsAntialias = true,
-            ImageFilter = SKImageFilter.CreateDropShadow(0, 0, BASE_SHADOW_SIGMA, BASE_SHADOW_SIGMA, SKColor.Parse("#5555"))
+            ImageFilter = SKImageFilter.CreateDropShadow(0, 0, BASE_SHADOW_SIGMA, BASE_SHADOW_SIGMA, defaultShadowColor.ToSKColor())
         };
         /// <summary>
         /// Used to draw percentage text.
@@ -269,8 +299,8 @@ namespace LilWidgets.Widgets
         /// </summary>
         float strokeRatio = 0.15f;
         /// <summary>
-        /// The ratio of the canvas size and the <see cref="ArcToTextSpacing"/> to be used when resizing.
-        /// This value only updates when the <see cref="ArcToTextSpacing"/> is changed.
+        /// The ratio of the canvas size and the <see cref="TexMargin"/> to be used when resizing.
+        /// This value only updates when the <see cref="TexMargin"/> is changed.
         /// </summary>
         float txtSpaceRatio = 1;
         /// <summary>
@@ -290,7 +320,7 @@ namespace LilWidgets.Widgets
         /// <summary>
         /// Tthe color used for the drop shadow.
         /// </summary>
-        SKColor shadowColor = SKColor.Parse("#5555");
+        SKColor shadowColor = defaultShadowColor.ToSKColor();
         /// <summary>
         /// The width of half the stroke of the shadow arc. This is used as a padding when determining <see cref="arcRect"/> because the shadow is the widest
         /// arc compared to the others.
@@ -326,25 +356,20 @@ namespace LilWidgets.Widgets
            
             canvas.Clear();
 
-            //canvas.DrawColor(SKColors.LightBlue);
             midX = info.Rect.MidX;
             midY = info.Rect.MidY;
 
             isWidthGreaterThanHeight = info.Width > info.Height;
-            limitingSpan = (isWidthGreaterThanHeight ? info.Height : info.Width);
+            limitingSpan = (isWidthGreaterThanHeight ? info.Height : info.Width);            
 
             if (isStrokeRatioDirty) // Calculate the correct strokeRatio if needed
                 UpdateStrokeRatio();
 
-            relativeStrokeWidth = limitingSpan * strokeRatio;
+            relativeStrokeWidth = limitingSpan * strokeRatio;            
             halfOfRelativeStrokeWidth = relativeStrokeWidth / 2;
             relativeShadowSigma = BASE_SHADOW_SIGMA + BASE_SHADOW_SIGMA * strokeRatio;
             // Compensate for the shadow
             halfShadowStrokeWidth = halfOfRelativeStrokeWidth + relativeShadowSigma * 3f;            
-
-#if DEBUG
-            Debug.WriteLine($"Stroke Width: {StrokeWidth} | Stroke Ratio: {strokeRatio} | Relative Stroke: {relativeStrokeWidth}");
-#endif
 
             // Determine top / bottom by finding the MidY then subtracting half the target width (get the radius of our circle) then subtract the half of stroke which acts as an offset
             if (isWidthGreaterThanHeight) // Cavnas is wider than it is tall, hence computer for height
@@ -361,10 +386,15 @@ namespace LilWidgets.Widgets
                                      info.Width - halfShadowStrokeWidth, // right
                                      midY + midX - halfShadowStrokeWidth); // bottom
             }
-
-            if (isArcToTextRatioDirty) // If the arc to text ratio dirty update its value
-                UpdateArcToTextSpacingRatio();
-
+#if DEBUG
+            if (arcRect.Width < 0 || arcRect.Height < 0)
+                return;
+            if (halfOfRelativeStrokeWidth > arcRect.Width)
+                return;
+                //throw new Exception($"Error. Invalid stroke width was given. The stroke width {StrokeWidth} is larger than the view can handle (strokeWidth * 2 > totalWidth == true).");
+            
+            Debug.WriteLine($"Stroke Width: {StrokeWidth} | Stroke Ratio: {strokeRatio} | Relative Stroke: {relativeStrokeWidth}");
+#endif
             // Set the shadow for the background arc
             backgroundPaint.ImageFilter = SKImageFilter.CreateDropShadow(0,
                                                                          0,
@@ -384,12 +414,19 @@ namespace LilWidgets.Widgets
             canvas.DrawPath(backgroundPath, backgroundPaint); // Background Arc
             canvas.DrawPath(progressPath, progressPaint); // Progress Arc
 
+            if (isArcToTextRatioDirty) // If the arc to text ratio dirty update its value
+                UpdateArcToTextSpacingRatio();
+
             if (IsTextVisible) // Draw text only if enabled
-            {                
+            {                            
                 percentageMsg = currentPercentageValue.ToString("P");
                 // Adjust TextSize property so text is 75% of screen width
                 textWidth = textPaint.MeasureText(percentageMsg);
-                textPaint.TextSize = (arcRect.Width - relativeStrokeWidth - ArcToTextSpacing) * textPaint.TextSize / textWidth * txtSpaceRatio;// - (strokeWidth * 2);
+                float width = arcRect.Width - relativeStrokeWidth;
+                if (width - TexMargin > 1) // We don't want *lose* the text, the IsTextVisible property should be used for hiding the text
+                {
+                    textPaint.TextSize = (arcRect.Width - relativeStrokeWidth - TexMargin) * textPaint.TextSize / textWidth * txtSpaceRatio;
+                }
                 // Find the text bounds
                 textPaint.MeasureText(percentageMsg, ref textBounds);
                 // Draw text in the center of the control vertically and horizontally
@@ -499,28 +536,36 @@ namespace LilWidgets.Widgets
             widget.backgroundPaint.Color = ((Color)newValue).ToSKColor();
             TryUpdate(widget);
         }
-
         private static void ProgressRingColorPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
             ProgressWidget widget = (ProgressWidget)bindable;
             widget.progressPaint.Color = ((Color)newValue).ToSKColor();
             TryUpdate(widget);
         }
-
-        private static void IsTextEnabledPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+        private static void IsTextVisiblePropertyChanged(BindableObject bindable, object oldValue, object newValue)
             => TryUpdate((ProgressWidget)bindable);      
-
         private static void StokeWidthPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
             var widget = (ProgressWidget)bindable;
             widget.isStrokeRatioDirty = true;
             TryUpdate(widget);
         }
-
         private static void ArcToTextSpacingPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
             var widget = (ProgressWidget)bindable;
             widget.isArcToTextRatioDirty = true;
+            TryUpdate(widget);
+        }
+        private static void ShadowColorPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+        {
+            var widget = (ProgressWidget)bindable;
+            widget.shadowColor = ((Color)newValue).ToSKColor();
+            TryUpdate(widget);
+        }
+        private static void TextColorPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+        {
+            var widget = (ProgressWidget)bindable;
+            widget.textPaint.Color = ((Color)newValue).ToSKColor();
             TryUpdate(widget);
         }
         #endregion
@@ -535,11 +580,14 @@ namespace LilWidgets.Widgets
         }
 
         /// <summary>
-        /// Calculates a new ratio for the <see cref="txtSpaceRatio"/> based off the target <see cref="ArcToTextSpacing"/> and the current <see cref="arcRect"/>.
+        /// Calculates a new ratio for the <see cref="txtSpaceRatio"/> based off the target <see cref="TexMargin"/> and the current <see cref="arcRect"/>.
         /// </summary>
         private void UpdateArcToTextSpacingRatio()
         {
-            txtSpaceRatio = (arcRect.Width - ArcToTextSpacing) / arcRect.Width;
+            float temp = (arcRect.Width - TexMargin) / arcRect.Width;
+
+            if (temp > 0.01f)            
+                txtSpaceRatio = temp;            
             isArcToTextRatioDirty = false;
         }        
 

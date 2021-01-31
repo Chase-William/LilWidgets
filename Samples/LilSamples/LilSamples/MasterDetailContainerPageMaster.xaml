@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LilSamples.MasterDetailContainerPageMaster"
+             Style="{StaticResource DefaultPageStyle}"
              Title="Master">
   <StackLayout>
     <ListView x:Name="MenuItemsListView"
@@ -9,7 +10,7 @@
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}">
       <ListView.Header>
-        <Grid BackgroundColor="#03A9F4">
+        <Grid>
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="*"/>
@@ -24,8 +25,7 @@
           <Label
               Grid.Column="1"
               Grid.Row="2"
-              Text="AppName"
-              Style="{DynamicResource SubtitleStyle}"/>
+              Text="Lil-Widgets Sample App"/>
         </Grid>
       </ListView.Header>
       <ListView.ItemTemplate>
@@ -33,9 +33,9 @@
           <ViewCell>
             <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
               <Label VerticalOptions="FillAndExpand" 
-                    VerticalTextAlignment="Center" 
-                    Text="{Binding Title}" 
-                    FontSize="24"/>
+                     VerticalTextAlignment="Center" 
+                     Text="{Binding Title}" 
+                     FontSize="24"/>
             </StackLayout>
           </ViewCell>
         </DataTemplate>

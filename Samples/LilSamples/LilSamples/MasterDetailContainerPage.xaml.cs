@@ -15,6 +15,12 @@ namespace LilSamples
         public MasterDetailContainerPage()
         {
             InitializeComponent();
+
+            //Detail = new NavigationPage(new MasterDetailContainerPageDetail())
+            //{
+            //    BarBackgroundColor = (Color)App.Current.Resources["ColorPrimary"]
+            //};
+
             MasterPage.ListView.ItemSelected += ListView_ItemSelected;
         }
 
@@ -27,7 +33,11 @@ namespace LilSamples
             var page = (Page)Activator.CreateInstance(item.TargetType);
             page.Title = item.Title;
 
-            Detail = new NavigationPage(page);
+            Detail = new NavigationPage(page)
+            {
+                BarBackgroundColor = (Color)App.Current.Resources["ColorPrimary"],
+                BarTextColor = (Color)App.Current.Resources["ColorContrast"]
+            };
             IsPresented = false;
 
             MasterPage.ListView.SelectedItem = null;

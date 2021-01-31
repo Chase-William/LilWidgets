@@ -2,6 +2,9 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using Xamarin.Essentials;
+using LilSamples.Interfaces;
+
 namespace LilSamples
 {
     public partial class App : Application
@@ -9,12 +12,13 @@ namespace LilSamples
         public App()
         {
             InitializeComponent();
-
+            DependencyService.Get<INonClientAreaStyler>().SetNonClientArea((Color)Resources["ColorPrimary"], Enumerations.DisplayThemes.Light);
             MainPage = new MasterDetailContainerPage();
         }
 
         protected override void OnStart()
         {
+            
         }
 
         protected override void OnSleep()

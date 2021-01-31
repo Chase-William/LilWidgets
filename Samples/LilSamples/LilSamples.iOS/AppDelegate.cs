@@ -23,6 +23,7 @@ namespace LilSamples.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            Util.NativeNonClientAreaStyler.Init(app);
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

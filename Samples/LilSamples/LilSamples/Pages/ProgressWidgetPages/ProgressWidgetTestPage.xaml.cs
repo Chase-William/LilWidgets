@@ -47,15 +47,28 @@ namespace LilSamples.Pages.ProgressWidgetPages
         }
 
         private void heightSlider_ValueChanged(object sender, ValueChangedEventArgs e)
-            => progressWidget.HeightRequest = e.NewValue;
+        { 
+            progressWidget.HeightRequest = e.NewValue;
+            //UpdateStrokeWidthSlider();
+        }
 
         private void widthSlider_ValueChanged(object sender, ValueChangedEventArgs e)
-            => progressWidget.WidthRequest = e.NewValue;
+        {
+            progressWidget.WidthRequest = e.NewValue;
+            //UpdateStrokeWidthSlider();
+        }
 
         private void arcWidthSlider_ValueChanged(object sender, ValueChangedEventArgs e)
-            => progressWidget.ArcToTextSpacing = (float)e.NewValue;
+            => progressWidget.TexMargin = (float)e.NewValue;
 
         private void strokeWidthSlider_ValueChanged(object sender, ValueChangedEventArgs e)
             => progressWidget.StrokeWidth = (float)e.NewValue;
+
+        //private void UpdateStrokeWidthSlider()
+        //{
+        //    double span = progressWidget.StrokeWidth * 2;
+        //    if (progressWidget.Height <= span || progressWidget.Width <= span) return;
+        //    strokeWidthSlider.Maximum = progressWidget.WidthRequest > progressWidget.HeightRequest ? progressWidget.Height / 2f : progressWidget.WidthRequest / 2f;
+        //}
     }
 }

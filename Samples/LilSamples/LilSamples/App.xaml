@@ -4,7 +4,20 @@
              x:Class="LilSamples.App">
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="AccentPrimary">#D52941</Color>
+            <Color x:Key="ColorPrimary">#F1E4F3</Color>
+            <Color x:Key="ColorSecondary">#084C61</Color>
+            <Color x:Key="AccentPrimary">#DB3A34</Color>
+            <Color x:Key="AccentSecondary">#FFC857</Color>
+            <Color x:Key="ColorContrast">#323031</Color>
+            
+            <!-- Styles -->
+            <Style x:Key="DefaultPageStyle" TargetType="Page">
+                <Setter Property="BackgroundColor" Value="{StaticResource ColorPrimary}"/>
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource ColorContrast}"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

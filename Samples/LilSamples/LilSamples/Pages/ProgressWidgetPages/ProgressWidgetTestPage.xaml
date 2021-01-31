@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:skia="clr-namespace:LilWidgets.Widgets;assembly=LilWidgets"
-             x:Class="LilSamples.Pages.ProgressWidgetPages.ProgressWidgetTestPage">
+             x:Class="LilSamples.Pages.ProgressWidgetPages.ProgressWidgetTestPage"
+             Style="{StaticResource DefaultPageStyle}"
+             Title="Progress Widget Testing">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="controlGrid" TargetType="Grid">
@@ -15,6 +17,10 @@
             <skia:ProgressWidget x:Name="progressWidget"
                                  VerticalOptions="Center"
                                  HorizontalOptions="Center"
+                                 WidthRequest="100"
+                                 HeightRequest="100"
+                                 TextColor="{StaticResource ColorContrast}"
+                                 BackArcColor="{StaticResource AccentSecondary}"
                                  ProgressArcColor="{StaticResource AccentPrimary}"/>
         </Grid>
         <Grid Style="{StaticResource controlGrid}">
@@ -38,7 +44,7 @@
 
             <Label Text="Toggle Text"
                    Grid.Row="1"/>
-            <Switch IsToggled="{Binding IsTextEnabled}"
+            <Switch IsToggled="{Binding IsTextVisible}"
                     Grid.Row="1"
                     Grid.Column="1"/>
 

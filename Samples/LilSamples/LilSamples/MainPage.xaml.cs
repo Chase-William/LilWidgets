@@ -50,7 +50,7 @@ namespace LilSamples
             => progressWidget.WidthRequest = e.NewValue;
 
         private void arcWidthSlider_ValueChanged(object sender, ValueChangedEventArgs e)
-            => progressWidget.ArcToTextSpacing = (float)e.NewValue;
+            => progressWidget.TexMargin = (float)e.NewValue;
 
         private void strokeWidthSlider_ValueChanged(object sender, ValueChangedEventArgs e)
             => progressWidget.StrokeWidth = (float)e.NewValue;
