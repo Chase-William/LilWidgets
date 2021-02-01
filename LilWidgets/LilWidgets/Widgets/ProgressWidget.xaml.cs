@@ -387,9 +387,9 @@ namespace LilWidgets.Widgets
                                      midY + midX - halfShadowStrokeWidth); // bottom
             }
 #if DEBUG
-            if (arcRect.Width < 0 || arcRect.Height < 0)
+            if (arcRect.Width < 0 || arcRect.Height < 0) // return if the control is becoming negatively sized
                 return;
-            if (halfOfRelativeStrokeWidth > arcRect.Width)
+            if (relativeStrokeWidth > arcRect.Width)
                 return;
                 //throw new Exception($"Error. Invalid stroke width was given. The stroke width {StrokeWidth} is larger than the view can handle (strokeWidth * 2 > totalWidth == true).");
             
