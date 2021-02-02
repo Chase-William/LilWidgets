@@ -330,7 +330,14 @@ namespace LilWidgets.Widgets
         /// The bounds or frame of the text being displayed in the center of view.
         /// </summary>
         SKRect textBounds = new SKRect();
-
+        /// <summary>
+        /// The path used to define the progress arc.
+        /// </summary>
+        SKPath progressPath = null;
+        /// <summary>
+        /// The path used to define the background arc.
+        /// </summary>
+        SKPath backgroundPath = null;
 #if DEBUG
         /// <summary>
         /// Used for debugging.
@@ -386,11 +393,12 @@ namespace LilWidgets.Widgets
                                      info.Width - halfShadowStrokeWidth, // right
                                      midY + midX - halfShadowStrokeWidth); // bottom
             }
-#if DEBUG
+
             if (arcRect.Width < 0 || arcRect.Height < 0) // return if the control is becoming negatively sized
                 return;
             if (relativeStrokeWidth > arcRect.Width)
                 return;
+#if DEBUG            
                 //throw new Exception($"Error. Invalid stroke width was given. The stroke width {StrokeWidth} is larger than the view can handle (strokeWidth * 2 > totalWidth == true).");
             
             Debug.WriteLine($"Stroke Width: {StrokeWidth} | Stroke Ratio: {strokeRatio} | Relative Stroke: {relativeStrokeWidth}");
@@ -403,9 +411,9 @@ namespace LilWidgets.Widgets
                                                                          shadowColor);
 
             // Creatings paths
-            SKPath progressPath = new SKPath();
+            progressPath = new SKPath();
             progressPath.AddArc(arcRect, SWEEP_START, PercentageToSweepAngle(currentPercentageValue));
-            SKPath backgroundPath = new SKPath();
+            backgroundPath = new SKPath();
             backgroundPath.AddArc(arcRect, SWEEP_START, 360f);
             // Applying path widths aka strike widths
             progressPaint.StrokeWidth = relativeStrokeWidth;
