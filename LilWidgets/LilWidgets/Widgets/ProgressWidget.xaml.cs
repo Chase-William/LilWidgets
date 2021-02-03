@@ -80,9 +80,9 @@ namespace LilWidgets.Widgets
         /// </summary>
         public static readonly BindableProperty StrokeWidthProperty = BindableProperty.Create(nameof(StrokeWidth), typeof(float), typeof(ProgressWidget), DEFAULT_STROKE_WIDTH, BindingMode.OneWay, null, StokeWidthPropertyChanged);
         /// <summary>
-        /// <see cref="BindableProperty"/> for the <see cref="TexMargin"/> property.
+        /// <see cref="BindableProperty"/> for the <see cref="TextMargin"/> property.
         /// </summary>
-        public static readonly BindableProperty TextMarginProperty = BindableProperty.Create(nameof(TexMargin), typeof(float), typeof(ProgressWidget), DEFAULT_ARC_TO_TEXT_SPACING, BindingMode.OneWay, null, ArcToTextSpacingPropertyChanged);
+        public static readonly BindableProperty TextMarginProperty = BindableProperty.Create(nameof(TextMargin), typeof(float), typeof(ProgressWidget), DEFAULT_ARC_TO_TEXT_SPACING, BindingMode.OneWay, null, ArcToTextSpacingPropertyChanged);
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="ShadowColor"/> property.
         /// </summary>
@@ -164,7 +164,7 @@ namespace LilWidgets.Widgets
         /// The target spacing / margin between the inner side of the arc and the edges of the text's rectangle. The size of the margin can only be a single value at the moment that is used
         /// for both the left and right hand sides. The text will always be centered both vertically and horizontally.
         /// </summary>
-        public float TexMargin
+        public float TextMargin
         {
             get => (float)GetValue(TextMarginProperty);
             set => SetValue(TextMarginProperty, value);
@@ -299,8 +299,8 @@ namespace LilWidgets.Widgets
         /// </summary>
         float strokeRatio = 0.15f;
         /// <summary>
-        /// The ratio of the canvas size and the <see cref="TexMargin"/> to be used when resizing.
-        /// This value only updates when the <see cref="TexMargin"/> is changed.
+        /// The ratio of the canvas size and the <see cref="TextMargin"/> to be used when resizing.
+        /// This value only updates when the <see cref="TextMargin"/> is changed.
         /// </summary>
         float txtSpaceRatio = 1;
         /// <summary>
@@ -431,9 +431,9 @@ namespace LilWidgets.Widgets
                 // Adjust TextSize property so text is 75% of screen width
                 textWidth = textPaint.MeasureText(percentageMsg);
                 float width = arcRect.Width - relativeStrokeWidth;
-                if (width - TexMargin > 1) // We don't want *lose* the text, the IsTextVisible property should be used for hiding the text
+                if (width - TextMargin > 1) // We don't want *lose* the text, the IsTextVisible property should be used for hiding the text
                 {
-                    textPaint.TextSize = (arcRect.Width - relativeStrokeWidth - TexMargin) * textPaint.TextSize / textWidth * txtSpaceRatio;
+                    textPaint.TextSize = (arcRect.Width - relativeStrokeWidth - TextMargin) * textPaint.TextSize / textWidth * txtSpaceRatio;
                 }
                 // Find the text bounds
                 textPaint.MeasureText(percentageMsg, ref textBounds);
@@ -588,11 +588,11 @@ namespace LilWidgets.Widgets
         }
 
         /// <summary>
-        /// Calculates a new ratio for the <see cref="txtSpaceRatio"/> based off the target <see cref="TexMargin"/> and the current <see cref="arcRect"/>.
+        /// Calculates a new ratio for the <see cref="txtSpaceRatio"/> based off the target <see cref="TextMargin"/> and the current <see cref="arcRect"/>.
         /// </summary>
         private void UpdateArcToTextSpacingRatio()
         {
-            float temp = (arcRect.Width - TexMargin) / arcRect.Width;
+            float temp = (arcRect.Width - TextMargin) / arcRect.Width;
 
             if (temp > 0.01f)            
                 txtSpaceRatio = temp;            

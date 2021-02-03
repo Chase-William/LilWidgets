@@ -59,7 +59,7 @@ namespace LilSamples.Pages.ProgressWidgetPages
         }
 
         private void arcWidthSlider_ValueChanged(object sender, ValueChangedEventArgs e)
-            => progressWidget.TexMargin = (float)e.NewValue;
+            => progressWidget.TextMargin = (float)e.NewValue;
 
         private void strokeWidthSlider_ValueChanged(object sender, ValueChangedEventArgs e)
             => progressWidget.StrokeWidth = (float)e.NewValue;

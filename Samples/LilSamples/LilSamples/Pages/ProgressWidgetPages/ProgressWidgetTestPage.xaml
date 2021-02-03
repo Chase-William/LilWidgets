@@ -9,6 +9,9 @@
             <Style x:Key="controlGrid" TargetType="Grid">
                 <Setter Property="Margin" Value="20,0,20,0"/>
             </Style>
+            <Style x:Key="propertyLblStyle" TargetType="Label">
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -43,18 +46,21 @@
                     Clicked="Apply_BtnClicked"/>
 
             <Label Text="Toggle Text"
+                   Style="{StaticResource propertyLblStyle}"
                    Grid.Row="1"/>
             <Switch IsToggled="{Binding IsTextVisible}"
                     Grid.Row="1"
                     Grid.Column="1"/>
 
-            <Label Text="Animation Duration"
+            <Label Text="Animation Duration (milli)"            
+                   Style="{StaticResource propertyLblStyle}"
                    Grid.Row="2"/>
             <Entry Text="{Binding Duration}"
                    Grid.Row="2"
                    Grid.Column="1"/>
 
-            <Label Text="Arc To Text Spacing"
+            <Label Text="Text Margin"
+                   Style="{StaticResource propertyLblStyle}"
                    Grid.Row="3"/>
             <Slider x:Name="arcToTextSpacingSlider"
                     Minimum="0"
@@ -64,6 +70,7 @@
                     Grid.Column="1"/>
 
             <Label Text="Stroke Width"
+                   Style="{StaticResource propertyLblStyle}"
                    Grid.Row="4"/>
             <Slider x:Name="strokeWidthSlider"
                     Minimum="0"
@@ -82,14 +89,16 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Label Text="Width"/>
+            <Label Text="Width"
+                   HorizontalOptions="Center"/>
             <Slider x:Name="widthSlider"
                     ValueChanged="widthSlider_ValueChanged"
                     Minimum="0"
                     Grid.Row="1"/>
 
             <Label Text="Height"
-                       Grid.Column="1"/>
+                   HorizontalOptions="Center"
+                   Grid.Column="1"/>
             <Slider x:Name="heightSlider"
                     ValueChanged="heightSlider_ValueChanged"
                     Minimum="0"

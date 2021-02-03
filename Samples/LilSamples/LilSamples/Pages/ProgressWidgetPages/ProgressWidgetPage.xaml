@@ -9,12 +9,13 @@
                                   VerticalOptions="FillAndExpand"
                                   PercentProgressValue="0.65"
                                   StrokeWidth="20"
-                                  TexMargin="70"             
+                                  TextMargin="70"             
                                   Margin="40"                                                                    
                                   TextColor="{StaticResource ColorContrast}"
                                   BackArcColor="{StaticResource AccentSecondary}"
                                   ProgressArcColor="{StaticResource AccentPrimary}"/>
-        <Button Text="Test Page"
+        <Button Text="Goto Test Page"                             
+                HorizontalOptions="Center"
                 Clicked="Test_BtnClicked"/>
     </StackLayout>
 </ContentPage>
