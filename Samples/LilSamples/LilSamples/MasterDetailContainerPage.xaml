@@ -8,7 +8,8 @@
   </MasterDetailPage.Master>
   <MasterDetailPage.Detail>
     <NavigationPage BarBackgroundColor="{StaticResource ColorPrimary}"
-                    BarTextColor="{StaticResource ColorContrast}">
+                    BarTextColor="{StaticResource ColorContrast}"
+                    BackgroundColor="{StaticResource ColorPrimary}">
       <x:Arguments>
         <pages:MasterDetailContainerPageDetail/>
       </x:Arguments>

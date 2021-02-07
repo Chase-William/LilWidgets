@@ -9,6 +9,7 @@ using LilSamples.Interfaces;
 using UIKit;
 using Xamarin.Forms;
 
+[assembly: Dependency(typeof(LilSamples.iOS.Util.NativeNonClientAreaStyler))]
 namespace LilSamples.iOS.Util
 {
     public class NativeNonClientAreaStyler : INonClientAreaStyler

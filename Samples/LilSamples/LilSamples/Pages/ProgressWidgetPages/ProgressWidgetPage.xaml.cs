@@ -1,4 +1,6 @@
 ﻿using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Xamarin.Forms.Xaml;
 
 namespace LilSamples.Pages.ProgressWidgetPages
@@ -9,6 +11,8 @@ namespace LilSamples.Pages.ProgressWidgetPages
         public ProgressWidgetPage()
         {
             InitializeComponent();
+
+            On<iOS>().SetUseSafeArea(true);
         }
 
         private void Test_BtnClicked(object sender, System.EventArgs e)

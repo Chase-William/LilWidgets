@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LilSamples.MasterDetailContainerPageMaster"
              Style="{StaticResource DefaultPageStyle}"
-             Title="Master">
-  <StackLayout>
+             Title="Navigation">
+  <StackLayout BackgroundColor="{StaticResource ColorPrimary}">
     <ListView x:Name="MenuItemsListView"
               SeparatorVisibility="None"
               HasUnevenRows="true"
+              BackgroundColor="{StaticResource ColorPrimary}"
               ItemsSource="{Binding MenuItems}">
       <ListView.Header>
         <Grid>

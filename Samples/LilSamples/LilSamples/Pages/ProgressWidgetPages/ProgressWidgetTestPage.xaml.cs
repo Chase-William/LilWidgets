@@ -8,6 +8,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using LilWidgets.Widgets;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace LilSamples.Pages.ProgressWidgetPages
 {
@@ -23,6 +25,8 @@ namespace LilSamples.Pages.ProgressWidgetPages
             progressWidget.PercentProgressValue = DEFAULT_EXAMPLE_PERCENT_VALUE;
             percentValueEntry.Text = DEFAULT_EXAMPLE_PERCENT_VALUE.ToString();
             progressWidget.SizeChanged += ProgressWidget_SizeChanged;
+
+            On<iOS>().SetUseSafeArea(true);
         }
 
         private void ProgressWidget_SizeChanged(object sender, EventArgs e)

@@ -10,9 +10,8 @@ namespace LilSamples
     public class MasterDetailContainerPageMasterMenuItem
     {
         public MasterDetailContainerPageMasterMenuItem()
-        {
-            TargetType = typeof(MasterDetailContainerPageMasterMenuItem);
-        }
+            => TargetType = typeof(MasterDetailContainerPageMasterMenuItem);
+        
         public int Id { get; set; }
         public string Title { get; set; }
 
