@@ -4,7 +4,7 @@
 </p>
 <br/><br/><br/>
 
-# LilWidgets [![nuget](https://img.shields.io/nuget/v/LilWidgets.ChaseRoth)](https://www.nuget.org/packages/LilWidgets.ChaseRoth/1.0.0-alpha)
+# LilWidgets [![nuget](https://img.shields.io/nuget/v/LilWidgets.ChaseRoth)](https://www.nuget.org/packages/LilWidgets.Xamarin.Forms/)
 
 LilWidgets is an early staged Xamarin.Forms library that provides customizable controls (widgets) that are not otherwise available by default.
 
