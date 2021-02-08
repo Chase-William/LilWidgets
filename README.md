@@ -4,7 +4,7 @@
 </p>
 <br/><br/><br/>
 
-# LilWidgets
+# LilWidgets [Available On Nuget](https://www.nuget.org/packages/LilWidgets.ChaseRoth/1.0.0-alpha){: .btn .btn-blue }
 LilWidgets is an early staged Xamarin.Forms library that provides customizable controls (widgets) that are not otherwise available by default.
 
 ## The Plan
