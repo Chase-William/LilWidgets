@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package >
   <metadata>
-    <id>LilWidgets.ChaseRoth</id>
+    <id>LilWidgets.Xamarin.Forms</id>
     <title>Lil-Widgets Plugin</title>
-    <version>1.0.0-alpha</version>
+    <version>1.0.0-alpha.1</version>
     <authors>Chase Roth</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
