@@ -14,6 +14,7 @@ The plan for LilWidgets is to empower Xamarin.Forms developers by providing uniq
 ### Available
 
 - <a href="https://github.com/ChaseRoth/LilWidgets/wiki/Progress-Widget">*Progress Widget*</a>
+- <a href="https://github.com/ChaseRoth/LilWidgets/wiki/Progress-Widget">Progress Widget</a>
 
 ### Coming Soon:
 
