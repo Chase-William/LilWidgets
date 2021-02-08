@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>LilWidgets.ChaseRoth</id>
+    <version>1.0.0-alpha</version>
+    <authors>Chase Roth</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/ChaseRoth/LilWidgets</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/ChaseRoth/LilWidgets/main/Resources/Branding/lilwidgets_logo_noborder.png</iconUrl>
+    <description>LilWidgets is an early staged Xamarin.Forms library that provides customizable controls (widgets) that are not otherwise available by default.</description>
+    <releaseNotes>Pre-release with Progress Widget.</releaseNotes>
+    <copyright>Copyright 2021</copyright>
+    <tags>widget widgets control controls components views graphics android ios xamarin.forms xamarin forms portable ui mobile forms</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Xamarin.Forms" version="4.6.0.1141"/>
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- Shared reference assemblies -->
+    <file src="LilWidgets\bin\Release\netstandard2.0\LilWidgets.dll" target="lib\netstandard2.0\LilWidgets.dll"/>
+
+    <!-- Android specific reference assemblies -->
+    <file src="LilWidgets.Android\bin\Release\LilWidgets.dll" target="lib\Xamarin.Android90\LilWidgets.dll"/>
+    <file src="LilWidgets.Android\bin\Release\LilWidgets.Android.dll" target="lib\Xamarin.Android90\LilWidgets.Android.dll"/>
+
+    <!-- iOS specific reference assemblies -->
+    <file src="LilWidgets.iOS\bin\iPhone\Release\LilWidgets.dll" target="lib\Xamarin.iOS13\LilWidgets.dll"/>
+    <file src="LilWidgets.iOS\bin\iPhone\Release\LilWidgets.iOS.dll" target="lib\Xamarin.iOS13\LilWidgets.iOS.dll"/>    
+  </files>
+</package>
