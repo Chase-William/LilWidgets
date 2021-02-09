@@ -20,6 +20,17 @@ The plan for LilWidgets is to empower Xamarin.Forms developers by providing uniq
 - Loading Widget
 - Pie Chart Widget
 
+## Supported Platforms
+
+- Android (>= 8.0 - API 26)
+- iOS (>= 13.0)
+
+## Dependencies
+
+- <a href="https://www.nuget.org/packages/SkiaSharp/2.80.2">SkiaSharp</a> (>= 2.80.2)
+- <a href="https://www.nuget.org/packages/SkiaSharp.Views.Forms/2.80.2">SkiaSharp.Views.Forms</a> (>= 2.80.2)
+- <a href="https://www.nuget.org/packages/Xamarin.Forms/%204.6.0.1141">Xamarin.Forms</a> (>= 4.6.0.1141)
+
 ## Most Recent Addition - Progress Widget
 
 The *Progress Widget* is designed to show a percentage of a goal or objective. This can be anything from a quiz score where the user attained a 90%, or even a loading bar where the loading process’s progress can be given.
