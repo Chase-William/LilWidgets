@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="Animating property">
+    <HelpKINode Title="LoadingWidget.Animating Property " Url="html/5b2c4493-79c6-0e18-0fae-1cf9824d9621.htm" />
+    <HelpKINode Title="ProgressWidget.Animating Property " Url="html/93e0092f-fba9-7813-fa62-fb54c129eec3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BackArcColor property">
+    <HelpKINode Title="LoadingWidget.BackArcColor Property " Url="html/a071f7c9-dbe6-8b35-d056-8d8ac41411dc.htm" />
+    <HelpKINode Title="ProgressWidget.BackArcColor Property " Url="html/d3b3cc0c-48aa-ab1f-801a-01a371b5fc59.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BackArcColorProperty field">
+    <HelpKINode Title="LoadingWidget.BackArcColorProperty Field" Url="html/e2d0f62f-9f0e-4bc2-9a38-b8044a6296ee.htm" />
+    <HelpKINode Title="ProgressWidget.BackArcColorProperty Field" Url="html/d7663237-de6c-fbc0-838f-2093ff1fb4db.htm" />
+  </HelpKINode>
+  <HelpKINode Title="defaultShadowColor field">
+    <HelpKINode Title="LoadingWidget.defaultShadowColor Field" Url="html/d2fbeff5-d3a8-da50-9632-b3146cd99deb.htm" />
+    <HelpKINode Title="ProgressWidget.defaultShadowColor Field" Url="html/14f097c4-6d21-468d-504b-6902fb9a7430.htm" />
+  </HelpKINode>
+  <HelpKINode Title="defaultTextColor field" Url="html/97e430bd-a568-be1e-31f6-f36c06d15ea4.htm" />
+  <HelpKINode Title="DEFAULT_ANIMATION_DURATION field">
+    <HelpKINode Title="LoadingWidget.DEFAULT_ANIMATION_DURATION Field" Url="html/a0d34b60-4d5a-3045-efa2-2300e845e93b.htm" />
+    <HelpKINode Title="ProgressWidget.DEFAULT_ANIMATION_DURATION Field" Url="html/eda89d94-ebef-a355-f27f-6a4120fe35bf.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DEFAULT_ARC_TO_TEXT_SPACING field" Url="html/ba49bb92-12a7-5969-b7d6-e6151fc926d8.htm" />
+  <HelpKINode Title="DEFAULT_FRAME_RATE field">
+    <HelpKINode Title="LoadingWidget.DEFAULT_FRAME_RATE Field" Url="html/25e83ad8-2be1-83e6-588a-998e864ea16d.htm" />
+    <HelpKINode Title="ProgressWidget.DEFAULT_FRAME_RATE Field" Url="html/d24caf8c-af61-48cc-e30e-832eae930c73.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DEFAULT_STROKE_WIDTH field">
+    <HelpKINode Title="LoadingWidget.DEFAULT_STROKE_WIDTH Field" Url="html/1e4cb328-e8a0-a9ae-1e4e-866d266eb53c.htm" />
+    <HelpKINode Title="ProgressWidget.DEFAULT_STROKE_WIDTH Field" Url="html/b062e34d-7c66-a0aa-b343-8884e5892c4a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Duration property">
+    <HelpKINode Title="LoadingWidget.Duration Property " Url="html/fd7d2d02-edb2-0d22-2ce4-3de4b3ac9a6b.htm" />
+    <HelpKINode Title="ProgressWidget.Duration Property " Url="html/14d32322-0c51-dfd7-fe7e-34e267793a31.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DurationProperty field">
+    <HelpKINode Title="LoadingWidget.DurationProperty Field" Url="html/45eceb08-cb88-88e0-b29f-c888793ceadc.htm" />
+    <HelpKINode Title="ProgressWidget.DurationProperty Field" Url="html/d54d8f8d-572e-6378-33fb-5d32f2b12c96.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsTextVisible property" Url="html/622882d5-5f6b-c4e4-941b-f5498e931bb4.htm" />
+  <HelpKINode Title="IsTextVisibleProperty field" Url="html/9a00e6db-11b4-beb2-350f-dea9f7d1e417.htm" />
+  <HelpKINode Title="LilWidgets.Widgets namespace" Url="html/e5a2df85-cbe3-91f7-4044-eca8ce027640.htm" />
+  <HelpKINode Title="LilWidgets.Widgets.LoadingWidget class" Url="html/976dbf40-aab3-c1b0-83df-d1a627865e97.htm" />
+  <HelpKINode Title="LilWidgets.Widgets.ProgressWidget class" Url="html/b3783f13-ae08-9df7-7db1-0c125df745bf.htm" />
+  <HelpKINode Title="LoadingWidget class">
+    <HelpKINode Title="LoadingWidget Class" Url="html/976dbf40-aab3-c1b0-83df-d1a627865e97.htm" />
+    <HelpKINode Title="constructor" Url="html/5b3a9b1e-340b-bbf7-d58a-c64e447e931c.htm" />
+    <HelpKINode Title="events" Url="html/8f6be57f-4f8a-367e-efd3-20ea0b55a8d4.htm" />
+    <HelpKINode Title="fields" Url="html/bc3671e9-647c-a39f-569d-d0abd364c7d3.htm" />
+    <HelpKINode Title="methods" Url="html/30580ecf-149c-6c9e-cfe3-5cfda17c203b.htm" />
+    <HelpKINode Title="properties" Url="html/9ef3a2f9-1174-16aa-be13-76da5ee590aa.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LoadingWidget.Animating property" Url="html/5b2c4493-79c6-0e18-0fae-1cf9824d9621.htm" />
+  <HelpKINode Title="LoadingWidget.BackArcColor property" Url="html/a071f7c9-dbe6-8b35-d056-8d8ac41411dc.htm" />
+  <HelpKINode Title="LoadingWidget.BackArcColorProperty field" Url="html/e2d0f62f-9f0e-4bc2-9a38-b8044a6296ee.htm" />
+  <HelpKINode Title="LoadingWidget.defaultShadowColor field" Url="html/d2fbeff5-d3a8-da50-9632-b3146cd99deb.htm" />
+  <HelpKINode Title="LoadingWidget.DEFAULT_ANIMATION_DURATION field" Url="html/a0d34b60-4d5a-3045-efa2-2300e845e93b.htm" />
+  <HelpKINode Title="LoadingWidget.DEFAULT_FRAME_RATE field" Url="html/25e83ad8-2be1-83e6-588a-998e864ea16d.htm" />
+  <HelpKINode Title="LoadingWidget.DEFAULT_STROKE_WIDTH field" Url="html/1e4cb328-e8a0-a9ae-1e4e-866d266eb53c.htm" />
+  <HelpKINode Title="LoadingWidget.Duration property" Url="html/fd7d2d02-edb2-0d22-2ce4-3de4b3ac9a6b.htm" />
+  <HelpKINode Title="LoadingWidget.DurationProperty field" Url="html/45eceb08-cb88-88e0-b29f-c888793ceadc.htm" />
+  <HelpKINode Title="LoadingWidget.LoadingWidget constructor" Url="html/5b3a9b1e-340b-bbf7-d58a-c64e447e931c.htm" />
+  <HelpKINode Title="LoadingWidget.ShadowColor property" Url="html/73ba96ec-b2d5-294e-ee22-ed3f3f3b9c2a.htm" />
+  <HelpKINode Title="LoadingWidget.ShadowColorProperty field" Url="html/deeb5c0d-02cc-93be-fe0b-62129d0fd7ec.htm" />
+  <HelpKINode Title="LoadingWidget.StartAnimating method" Url="html/10c0b871-5e7b-9a32-4de4-b7f39a88801b.htm" />
+  <HelpKINode Title="LoadingWidget.StopAnimating method" Url="html/7145a50d-95ca-3cd4-24b4-066283bad4a5.htm" />
+  <HelpKINode Title="LoadingWidget.StrokeWidth property" Url="html/da4964a5-e0ac-6aca-38c5-f56a84c3f2ec.htm" />
+  <HelpKINode Title="LoadingWidget.StrokeWidthProperty field" Url="html/a625a150-12e8-006c-5f10-d3adc093f997.htm" />
+  <HelpKINode Title="PercentProgressValue property" Url="html/c3db56ac-4008-4598-1237-1459abecaf38.htm" />
+  <HelpKINode Title="PercentProgressValueProperty field" Url="html/e80239b5-d6c0-a403-4ec8-5d8e4ff0dc93.htm" />
+  <HelpKINode Title="ProgressArcColor property" Url="html/def7239c-f105-753e-ebf0-07935bf36422.htm" />
+  <HelpKINode Title="ProgressArcColorProperty field" Url="html/8370ba90-fd9f-6fc2-548b-d36ceb34b9a4.htm" />
+  <HelpKINode Title="ProgressWidget class">
+    <HelpKINode Title="ProgressWidget Class" Url="html/b3783f13-ae08-9df7-7db1-0c125df745bf.htm" />
+    <HelpKINode Title="constructor" Url="html/b2e3e24c-0ef5-6463-bf63-285904aad1e0.htm" />
+    <HelpKINode Title="events" Url="html/7399e3f5-7259-fc8f-f95d-3c2bc24a11eb.htm" />
+    <HelpKINode Title="fields" Url="html/39316d6e-cb1f-55ac-b73c-0ddde8765e26.htm" />
+    <HelpKINode Title="methods" Url="html/3da99b6a-9184-f1d8-8852-e7533064caeb.htm" />
+    <HelpKINode Title="properties" Url="html/e7fa6a05-c73e-d0f1-65f1-916c594f4f75.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ProgressWidget.Animating property" Url="html/93e0092f-fba9-7813-fa62-fb54c129eec3.htm" />
+  <HelpKINode Title="ProgressWidget.BackArcColor property" Url="html/d3b3cc0c-48aa-ab1f-801a-01a371b5fc59.htm" />
+  <HelpKINode Title="ProgressWidget.BackArcColorProperty field" Url="html/d7663237-de6c-fbc0-838f-2093ff1fb4db.htm" />
+  <HelpKINode Title="ProgressWidget.defaultShadowColor field" Url="html/14f097c4-6d21-468d-504b-6902fb9a7430.htm" />
+  <HelpKINode Title="ProgressWidget.defaultTextColor field" Url="html/97e430bd-a568-be1e-31f6-f36c06d15ea4.htm" />
+  <HelpKINode Title="ProgressWidget.DEFAULT_ANIMATION_DURATION field" Url="html/eda89d94-ebef-a355-f27f-6a4120fe35bf.htm" />
+  <HelpKINode Title="ProgressWidget.DEFAULT_ARC_TO_TEXT_SPACING field" Url="html/ba49bb92-12a7-5969-b7d6-e6151fc926d8.htm" />
+  <HelpKINode Title="ProgressWidget.DEFAULT_FRAME_RATE field" Url="html/d24caf8c-af61-48cc-e30e-832eae930c73.htm" />
+  <HelpKINode Title="ProgressWidget.DEFAULT_STROKE_WIDTH field" Url="html/b062e34d-7c66-a0aa-b343-8884e5892c4a.htm" />
+  <HelpKINode Title="ProgressWidget.Duration property" Url="html/14d32322-0c51-dfd7-fe7e-34e267793a31.htm" />
+  <HelpKINode Title="ProgressWidget.DurationProperty field" Url="html/d54d8f8d-572e-6378-33fb-5d32f2b12c96.htm" />
+  <HelpKINode Title="ProgressWidget.IsTextVisible property" Url="html/622882d5-5f6b-c4e4-941b-f5498e931bb4.htm" />
+  <HelpKINode Title="ProgressWidget.IsTextVisibleProperty field" Url="html/9a00e6db-11b4-beb2-350f-dea9f7d1e417.htm" />
+  <HelpKINode Title="ProgressWidget.PercentProgressValue property" Url="html/c3db56ac-4008-4598-1237-1459abecaf38.htm" />
+  <HelpKINode Title="ProgressWidget.PercentProgressValueProperty field" Url="html/e80239b5-d6c0-a403-4ec8-5d8e4ff0dc93.htm" />
+  <HelpKINode Title="ProgressWidget.ProgressArcColor property" Url="html/def7239c-f105-753e-ebf0-07935bf36422.htm" />
+  <HelpKINode Title="ProgressWidget.ProgressArcColorProperty field" Url="html/8370ba90-fd9f-6fc2-548b-d36ceb34b9a4.htm" />
+  <HelpKINode Title="ProgressWidget.ProgressWidget constructor" Url="html/b2e3e24c-0ef5-6463-bf63-285904aad1e0.htm" />
+  <HelpKINode Title="ProgressWidget.ShadowColor property" Url="html/abd4a2bd-486d-e7d7-6cb0-5067a5ab1aca.htm" />
+  <HelpKINode Title="ProgressWidget.ShadowColorProperty field" Url="html/c5e583da-dd77-7a3e-227e-a231d3a12038.htm" />
+  <HelpKINode Title="ProgressWidget.StrokeWidth property" Url="html/b551f161-8367-0eac-e78a-fa1e93b6f978.htm" />
+  <HelpKINode Title="ProgressWidget.StrokeWidthProperty field" Url="html/753f726b-4dc7-c68d-e64a-8f342c5d9c0b.htm" />
+  <HelpKINode Title="ProgressWidget.TextColor property" Url="html/9e6f7e3b-fcfa-8922-ac58-4b23bd81290c.htm" />
+  <HelpKINode Title="ProgressWidget.TextColorProperty field" Url="html/0e26ff7e-719e-5712-ac73-2c25ae2ce827.htm" />
+  <HelpKINode Title="ProgressWidget.TextMargin property" Url="html/184b8243-6b4d-9a4b-b116-e1ee04155756.htm" />
+  <HelpKINode Title="ProgressWidget.TextMarginProperty field" Url="html/683b9f97-d94e-d4f1-c39f-4e100d324eb5.htm" />
+  <HelpKINode Title="ShadowColor property">
+    <HelpKINode Title="LoadingWidget.ShadowColor Property " Url="html/73ba96ec-b2d5-294e-ee22-ed3f3f3b9c2a.htm" />
+    <HelpKINode Title="ProgressWidget.ShadowColor Property " Url="html/abd4a2bd-486d-e7d7-6cb0-5067a5ab1aca.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ShadowColorProperty field">
+    <HelpKINode Title="LoadingWidget.ShadowColorProperty Field" Url="html/deeb5c0d-02cc-93be-fe0b-62129d0fd7ec.htm" />
+    <HelpKINode Title="ProgressWidget.ShadowColorProperty Field" Url="html/c5e583da-dd77-7a3e-227e-a231d3a12038.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StartAnimating method" Url="html/10c0b871-5e7b-9a32-4de4-b7f39a88801b.htm" />
+  <HelpKINode Title="StopAnimating method" Url="html/7145a50d-95ca-3cd4-24b4-066283bad4a5.htm" />
+  <HelpKINode Title="StrokeWidth property">
+    <HelpKINode Title="LoadingWidget.StrokeWidth Property " Url="html/da4964a5-e0ac-6aca-38c5-f56a84c3f2ec.htm" />
+    <HelpKINode Title="ProgressWidget.StrokeWidth Property " Url="html/b551f161-8367-0eac-e78a-fa1e93b6f978.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StrokeWidthProperty field">
+    <HelpKINode Title="LoadingWidget.StrokeWidthProperty Field" Url="html/a625a150-12e8-006c-5f10-d3adc093f997.htm" />
+    <HelpKINode Title="ProgressWidget.StrokeWidthProperty Field" Url="html/753f726b-4dc7-c68d-e64a-8f342c5d9c0b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TextColor property" Url="html/9e6f7e3b-fcfa-8922-ac58-4b23bd81290c.htm" />
+  <HelpKINode Title="TextColorProperty field" Url="html/0e26ff7e-719e-5712-ac73-2c25ae2ce827.htm" />
+  <HelpKINode Title="TextMargin property" Url="html/184b8243-6b4d-9a4b-b116-e1ee04155756.htm" />
+  <HelpKINode Title="TextMarginProperty field" Url="html/683b9f97-d94e-d4f1-c39f-4e100d324eb5.htm" />
+  <HelpKINode Title="version">
+    <HelpKINode Title="1.0.0.0" Url="html/b59ddcdb-6d7e-4317-bdb7-5973a4a2df34.htm" />
+    <HelpKINode Title="history" Url="html/4710d9c0-c6f8-4b03-8df8-ae6d1b8a093c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Welcome" Url="html/3c620197-6240-400b-82a3-b2a3676db54a.htm" />
+</HelpKI>

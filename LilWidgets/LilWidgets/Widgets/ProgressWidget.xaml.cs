@@ -29,7 +29,7 @@ namespace LilWidgets.Widgets
         /// </summary>
         public const float DEFAULT_ANIMATION_DURATION = 2000;
         /// <summary>
-        /// The default framerate being targeted.
+        /// The default frame-rate being targeted.
         /// </summary>
         public const float DEFAULT_FRAME_RATE = 60f;
         /// <summary>
@@ -37,7 +37,7 @@ namespace LilWidgets.Widgets
         /// </summary>
         public const float DEFAULT_STROKE_WIDTH = 10;
         /// <summary>
-        /// The default spacing between the arc's innner lining and the text rectangle.
+        /// The default spacing between the arc's inner lining and the text rectangle.
         /// </summary>
         public const float DEFAULT_ARC_TO_TEXT_SPACING = 10;
         /// <summary>
@@ -54,7 +54,7 @@ namespace LilWidgets.Widgets
         public static readonly Color defaultTextColor = Color.Black;
         #endregion Constants
 
-        #region Bindable Properties
+        #region Bind-able Properties
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="PercentProgressValue"/> property.
         /// </summary>
@@ -91,7 +91,7 @@ namespace LilWidgets.Widgets
         /// <see cref="BindableProperty"/> for the <see cref="TextColor"/> property.
         /// </summary>
         public static readonly BindableProperty TextColorProperty = BindableProperty.Create(nameof(TextColor), typeof(Color), typeof(ProgressWidget), defaultTextColor, BindingMode.OneWay, null, TextColorPropertyChanged);
-        #endregion Bindable Properties
+        #endregion Bind-able Properties
 
         #region Properties
         /// <summary>
@@ -186,7 +186,7 @@ namespace LilWidgets.Widgets
                 else
                 {
                     debugWatch.Stop();
-                    Debug.WriteLine($"Animation Finished | Target Duration: {millisecondDuration} (milli) | Actual: {debugWatch.ElapsedMilliseconds} (milli) | " +
+                    Debug.WriteLine($"Animation Finished | Target Duration: {millisecondDuration} (milliseconds) | Actual: {debugWatch.ElapsedMilliseconds} (milliseconds) | " +
                         $"Error Percentage: {Math.Abs(millisecondDuration - debugWatch.ElapsedMilliseconds) / millisecondDuration:P}");
                 }
 #endif
@@ -256,16 +256,16 @@ namespace LilWidgets.Widgets
         /// </summary>
         double currentPercentageValue = 0;
         /// <summary>
-        /// The midx value of the <see cref="canvas"/>. Updates come from the <see cref="canvas_PaintSurface(object, SKPaintSurfaceEventArgs)"/> method.
+        /// The mid-x value of the <see cref="canvas"/>. Updates come from the <see cref="canvas_PaintSurface(object, SKPaintSurfaceEventArgs)"/> method.
         /// </summary>
         float midX = 0;
         /// <summary>
-        /// The midy value of the <see cref="canvas"/>. Updates come from the <see cref="canvas_PaintSurface(object, SKPaintSurfaceEventArgs)"/> method.
+        /// The mid-y value of the <see cref="canvas"/>. Updates come from the <see cref="canvas_PaintSurface(object, SKPaintSurfaceEventArgs)"/> method.
         /// </summary>
         float midY = 0;
         /// <summary>
         /// Used in conjunction with the <see cref="Device.StartTimer(TimeSpan, Func{bool})"/>'s lambda inside the <see cref="PercentValuePropertyChanged(BindableObject, object, object)"/>
-        /// to determine the amount of time passed from the last time being restarted. This is used as deltaTime to help smooth out animations and pull away from using framerate as a method of
+        /// to determine the amount of time passed from the last time being restarted. This is used as deltaTime to help smooth out animations and pull away from using frame-rate as a method of
         /// determining how much a target value should change over a given amount of time.
         /// </summary>
         Stopwatch stopwatch = null;
@@ -318,7 +318,7 @@ namespace LilWidgets.Widgets
         /// </summary>
         float relativeShadowSigma = 0;
         /// <summary>
-        /// Tthe color used for the drop shadow.
+        /// The color used for the drop shadow.
         /// </summary>
         SKColor shadowColor = defaultShadowColor.ToSKColor();
         /// <summary>
@@ -354,8 +354,6 @@ namespace LilWidgets.Widgets
         /// <summary>
         /// Applies the desired graphics to the <see cref="canvas"/>.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void canvas_PaintSurface(object sender, SKPaintSurfaceEventArgs e)
         {
             var canvas = e.Surface.Canvas;
@@ -376,10 +374,10 @@ namespace LilWidgets.Widgets
             halfOfRelativeStrokeWidth = relativeStrokeWidth / 2;
             relativeShadowSigma = BASE_SHADOW_SIGMA + BASE_SHADOW_SIGMA * strokeRatio;
             // Compensate for the shadow
-            halfShadowStrokeWidth = halfOfRelativeStrokeWidth + relativeShadowSigma * 3f;            
+            halfShadowStrokeWidth = halfOfRelativeStrokeWidth + relativeShadowSigma * 3f;                        
 
             // Determine top / bottom by finding the MidY then subtracting half the target width (get the radius of our circle) then subtract the half of stroke which acts as an offset
-            if (isWidthGreaterThanHeight) // Cavnas is wider than it is tall, hence computer for height
+            if (isWidthGreaterThanHeight) // Canvas is wider than it is tall, hence computer for height
             {
                 arcRect = new SKRect(midX - midY + halfShadowStrokeWidth, // left
                                      halfShadowStrokeWidth, // top
@@ -410,7 +408,7 @@ namespace LilWidgets.Widgets
                                                                          relativeShadowSigma,
                                                                          shadowColor);
 
-            // Creatings paths
+            // Creating paths
             progressPath = new SKPath();
             progressPath.AddArc(arcRect, SWEEP_START, PercentageToSweepAngle(currentPercentageValue));
             backgroundPath = new SKPath();
@@ -489,14 +487,14 @@ namespace LilWidgets.Widgets
             // Get the signed change needed each frame
             widget.difference = (nValue - oValue);
 
-            // No use of locking variables for thread safety should be needed because all modifications from timer are queue in the mainthread dispatcher
+            // No use of locking variables for thread safety should be needed because all modifications from timer are queue in the main-thread dispatcher
 
             if (widget.difference < 0) // If decreasing
                 widget.comparer = () => widget.currentPercentageValue > widget.PercentProgressValue + ALLOWED_DEVIATION; // When decreasing, if the value is larger than the target keep decreasing.
-            else // If inreasing
+            else // If increasing
                 widget.comparer = () => widget.currentPercentageValue < widget.PercentProgressValue - ALLOWED_DEVIATION; // When increasing, if the value is smaller than the target keep increasing.
 
-            if (widget.Animating) // Prevent another timer being started if the bindable widget is already animating itself
+            if (widget.Animating) // Prevent another timer being started if the bind-able widget is already animating itself
                 return;
             else // If the widget animating state is false then assign true because we shall start the animation
                 widget.Animating = true;
@@ -512,7 +510,7 @@ namespace LilWidgets.Widgets
                     widget.stopwatch.Stop();
 
                     // We want to take a percentage of the duration that is relative to the percentage of the total we are moving
-                    // Therefore moving from 0 to 50% will take 50% of the Duration propertys value in time
+                    // Therefore moving from 0 to 50% will take 50% of the Duration properties value in time
                     relativeDuration = widget.Duration / 1000 * Math.Abs(widget.difference);
 
                     // Add the correct difference based with respects the desired duration then multiplied by the time passed 
@@ -523,7 +521,7 @@ namespace LilWidgets.Widgets
 #if DEBUG
                     double beforeDelta = widget.difference / (widget.Duration / 1000);
                     Debug.WriteLine($"currentPercentageValue: {widget.currentPercentageValue} | Target: {widget.PercentProgressValue} || " +
-                        $"Target Cycle Time: {widget.cycleTime} (milli) | Actual: {widget.stopwatch.ElapsedMilliseconds} (milli) | " +
+                        $"Target Cycle Time: {widget.cycleTime} (milliseconds) | Actual: {widget.stopwatch.ElapsedMilliseconds} (milliseconds) | " +
                         $"Correction Percentage: {Math.Abs(beforeDelta - widget.currentPercentageValue) / beforeDelta:P}");
 #endif
                     widget.Animating = widget.comparer.Invoke();
@@ -606,7 +604,7 @@ namespace LilWidgets.Widgets
         /// <param name="widget"></param>
         private static void TryUpdate(ProgressWidget widget)
         {            
-            if (!widget.Animating) // Dont update if we are animating because the next frame will be updated anyway
+            if (!widget.Animating) // Don't update if we are animating because the next frame will be updated anyway
                 widget.canvas.InvalidateSurface();
         }
     }

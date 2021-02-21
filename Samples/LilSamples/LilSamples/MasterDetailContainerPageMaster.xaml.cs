@@ -1,4 +1,5 @@
 ﻿using LilSamples.Pages.ProgressWidgetPages;
+using LilSamples.Pages.LoadingWidgetExamples;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -35,6 +36,7 @@ namespace LilSamples
                 MenuItems = new ObservableCollection<MasterDetailContainerPageMasterMenuItem>(new[]
                 {
                     new MasterDetailContainerPageMasterMenuItem { Id = 0, Title = "Progress Widget", TargetType = typeof(ProgressWidgetPage) },
+                    new MasterDetailContainerPageMasterMenuItem { Id = 1, Title = "Loading Widget", TargetType = typeof(LoadingWidgetPage) },
                 });
             }
 
