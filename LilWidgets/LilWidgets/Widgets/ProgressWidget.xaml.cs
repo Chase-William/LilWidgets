@@ -8,6 +8,10 @@ using Xamarin.Forms.Xaml;
 
 namespace LilWidgets.Widgets
 {
+    /// <summary>
+    /// The Progress Widget is designed to show a percentage of a goal or objective. 
+    /// This can be anything from a quiz score where the user attained a 90%, or even a loading bar where the loading process’s progress can be given.
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProgressWidget : ContentView
     {

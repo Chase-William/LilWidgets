@@ -9,7 +9,7 @@
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile></DocumentationFile>
+    <DocumentationFile>C:\Dev\LilWidgets\LilWidgets\LilWidgets\LilWidgets.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
