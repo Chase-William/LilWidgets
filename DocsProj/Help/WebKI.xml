@@ -79,6 +79,14 @@
     <HelpKINode Title="ProgressWidget.DEFAULT_STROKE_WIDTH Field" Url="html/b062e34d-7c66-a0aa-b343-8884e5892c4a.htm" />
   </HelpKINode>
   <HelpKINode Title="difference field" Url="html/cc5c8de5-fbd4-72f8-a760-b9963e2e3e37.htm" />
+  <HelpKINode Title="DisplayUtil class">
+    <HelpKINode Title="DisplayUtil Class" Url="html/f5a7e00a-5c3a-58a8-ff15-1da34cb3a849.htm" />
+    <HelpKINode Title="constructor" Url="html/d23e7577-795a-5fa7-571a-cb8804500956.htm" />
+    <HelpKINode Title="properties" Url="html/f86690d6-0d12-47de-21ed-0595534b191d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DisplayUtil.DisplayUtil constructor" Url="html/d23e7577-795a-5fa7-571a-cb8804500956.htm" />
+  <HelpKINode Title="DisplayUtil.DPI property" Url="html/b9986434-e94c-3827-fd66-ca115e3922ab.htm" />
+  <HelpKINode Title="DPI property" Url="html/b9986434-e94c-3827-fd66-ca115e3922ab.htm" />
   <HelpKINode Title="Duration property">
     <HelpKINode Title="LoadingWidget.Duration Property " Url="html/fd7d2d02-edb2-0d22-2ce4-3de4b3ac9a6b.htm" />
     <HelpKINode Title="ProgressWidget.Duration Property " Url="html/14d32322-0c51-dfd7-fe7e-34e267793a31.htm" />
@@ -87,6 +95,8 @@
     <HelpKINode Title="LoadingWidget.DurationProperty Field" Url="html/45eceb08-cb88-88e0-b29f-c888793ceadc.htm" />
     <HelpKINode Title="ProgressWidget.DurationProperty Field" Url="html/d54d8f8d-572e-6378-33fb-5d32f2b12c96.htm" />
   </HelpKINode>
+  <HelpKINode Title="Element_SizeChanged method" Url="html/b70ced86-5a17-32dc-be70-c122b7df0fd5.htm" />
+  <HelpKINode Title="GetDisplayDPI method" Url="html/24dfd882-7679-8f9c-5fc7-5c8c845f0d86.htm" />
   <HelpKINode Title="halfOfRelativeStrokeWidth field">
     <HelpKINode Title="LoadingWidget.halfOfRelativeStrokeWidth Field" Url="html/91245de7-c133-ab30-69f4-93742a0466d9.htm" />
     <HelpKINode Title="ProgressWidget.halfOfRelativeStrokeWidth Field" Url="html/f098d841-84de-3d6b-2f61-cd1dc9ce293a.htm" />
@@ -95,6 +105,11 @@
     <HelpKINode Title="LoadingWidget.halfShadowStrokeWidth Field" Url="html/f311cd59-9c2e-db6b-5bec-337fac9b63a9.htm" />
     <HelpKINode Title="ProgressWidget.halfShadowStrokeWidth Field" Url="html/5795464e-e0e1-f6ed-5c82-041cd0032732.htm" />
   </HelpKINode>
+  <HelpKINode Title="IDisplayInfo interface">
+    <HelpKINode Title="IDisplayInfo Interface" Url="html/f272eeb3-2f93-8ac2-92f7-bb2a9d76c680.htm" />
+    <HelpKINode Title="methods" Url="html/a4749421-75d0-0c62-649b-5a96eefd9975.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IDisplayInfo.GetDisplayDPI method" Url="html/24dfd882-7679-8f9c-5fc7-5c8c845f0d86.htm" />
   <HelpKINode Title="info field">
     <HelpKINode Title="LoadingWidget.info Field" Url="html/f4892133-7f02-fb8b-8ab4-961ad23a4fe2.htm" />
     <HelpKINode Title="ProgressWidget.info Field" Url="html/ea4f91bf-cb96-b4bf-58b9-1b7083873f4f.htm" />
@@ -104,6 +119,7 @@
     <HelpKINode Title="ProgressWidget.InitializeComponent Method " Url="html/27d07a30-652c-a833-95f1-b565a2d24c04.htm" />
   </HelpKINode>
   <HelpKINode Title="isArcToTextRatioDirty field" Url="html/e4758ad9-1d2f-67d1-b069-cb802bab5932.htm" />
+  <HelpKINode Title="IsHeightTheLimitingSpan property" Url="html/6cb59a9c-e145-92d7-12f2-f8b160aad0f5.htm" />
   <HelpKINode Title="isStrokeRatioDirty field">
     <HelpKINode Title="LoadingWidget.isStrokeRatioDirty Field" Url="html/51370e7b-c0cc-174c-1417-4fd0f5f6dd22.htm" />
     <HelpKINode Title="ProgressWidget.isStrokeRatioDirty Field" Url="html/ebfc18cf-84e3-a291-7df6-2876adb41f18.htm" />
@@ -115,13 +131,31 @@
     <HelpKINode Title="LoadingWidget.isWidthGreaterThanHeight Field" Url="html/dcaeb765-e18f-60f1-6e01-e1663cc6f58f.htm" />
     <HelpKINode Title="ProgressWidget.isWidthGreaterThanHeight Field" Url="html/a00c2843-91d5-4a4b-4d0c-709f8b48426c.htm" />
   </HelpKINode>
+  <HelpKINode Title="LilWidgets.Interfaces namespace" Url="html/65a94b75-0ddf-6755-c8ef-2e18dd30d361.htm" />
+  <HelpKINode Title="LilWidgets.Interfaces.IDisplayInfo interface" Url="html/f272eeb3-2f93-8ac2-92f7-bb2a9d76c680.htm" />
+  <HelpKINode Title="LilWidgets.Lang namespace" Url="html/cb446a4d-dfd9-8ae6-37f0-436f2b9e4713.htm" />
+  <HelpKINode Title="LilWidgets.Lang.LimitingSpan class" Url="html/1ec53eb9-4a72-1de5-8515-e12645443297.htm" />
+  <HelpKINode Title="LilWidgets.Util namespace" Url="html/22d63cd3-2821-cb5f-50da-56a9a910784c.htm" />
+  <HelpKINode Title="LilWidgets.Util.DisplayUtil class" Url="html/f5a7e00a-5c3a-58a8-ff15-1da34cb3a849.htm" />
+  <HelpKINode Title="LilWidgets.Util.WeakReferenceManager class" Url="html/38a83157-aff4-d497-0fc0-ca7ed939c305.htm" />
   <HelpKINode Title="LilWidgets.Widgets namespace" Url="html/e5a2df85-cbe3-91f7-4044-eca8ce027640.htm" />
   <HelpKINode Title="LilWidgets.Widgets.LoadingWidget class" Url="html/976dbf40-aab3-c1b0-83df-d1a627865e97.htm" />
   <HelpKINode Title="LilWidgets.Widgets.ProgressWidget class" Url="html/b3783f13-ae08-9df7-7db1-0c125df745bf.htm" />
+  <HelpKINode Title="LimitingSpan class">
+    <HelpKINode Title="LimitingSpan Class" Url="html/1ec53eb9-4a72-1de5-8515-e12645443297.htm" />
+    <HelpKINode Title="constructor" Url="html/b1addfea-4cd4-6322-9d76-732579569a14.htm" />
+    <HelpKINode Title="methods" Url="html/9bfa4c02-0ddd-72d7-4594-fff2ea00c27e.htm" />
+    <HelpKINode Title="properties" Url="html/87099caf-872f-431c-88b6-f1138378509d.htm" />
+  </HelpKINode>
   <HelpKINode Title="limitingSpan field">
     <HelpKINode Title="LoadingWidget.limitingSpan Field" Url="html/2e836147-8b5c-8564-96bd-7797c6378ff5.htm" />
     <HelpKINode Title="ProgressWidget.limitingSpan Field" Url="html/efe53ff6-f576-fe07-83bf-c160d3ddfb8c.htm" />
   </HelpKINode>
+  <HelpKINode Title="LimitingSpan.Element_SizeChanged method" Url="html/b70ced86-5a17-32dc-be70-c122b7df0fd5.htm" />
+  <HelpKINode Title="LimitingSpan.IsHeightTheLimitingSpan property" Url="html/6cb59a9c-e145-92d7-12f2-f8b160aad0f5.htm" />
+  <HelpKINode Title="LimitingSpan.LimitingSpan constructor" Url="html/b1addfea-4cd4-6322-9d76-732579569a14.htm" />
+  <HelpKINode Title="LimitingSpan.SpanWidthInPixels property" Url="html/2d7d7108-f805-c227-36b3-7f34063d5092.htm" />
+  <HelpKINode Title="LimitingSpan.SpanWidthWithDensity property" Url="html/9a1445fd-5558-830d-7a76-e894799b261f.htm" />
   <HelpKINode Title="LoadingWidget class">
     <HelpKINode Title="LoadingWidget Class" Url="html/976dbf40-aab3-c1b0-83df-d1a627865e97.htm" />
     <HelpKINode Title="constructor" Url="html/e3d993e5-1678-ac19-3e9a-47eb5f91a5b6.htm" />
@@ -159,8 +193,8 @@
   <HelpKINode Title="LoadingWidget.isWidthGreaterThanHeight field" Url="html/dcaeb765-e18f-60f1-6e01-e1663cc6f58f.htm" />
   <HelpKINode Title="LoadingWidget.limitingSpan field" Url="html/2e836147-8b5c-8564-96bd-7797c6378ff5.htm" />
   <HelpKINode Title="LoadingWidget.LoadingWidget constructor">
-    <HelpKINode Title="LoadingWidget Constructor " Url="html/5b3a9b1e-340b-bbf7-d58a-c64e447e931c.htm" />
     <HelpKINode Title="LoadingWidget Constructor " Url="html/e3d993e5-1678-ac19-3e9a-47eb5f91a5b6.htm" />
+    <HelpKINode Title="LoadingWidget Constructor " Url="html/5b3a9b1e-340b-bbf7-d58a-c64e447e931c.htm" />
   </HelpKINode>
   <HelpKINode Title="LoadingWidget.midX field" Url="html/92633444-9a80-8535-3386-183ec2e3c21d.htm" />
   <HelpKINode Title="LoadingWidget.midY field" Url="html/7b8cdd45-21ba-1632-a8e4-5eae5d87b41d.htm" />
@@ -211,8 +245,8 @@
   <HelpKINode Title="ProgressRingColorPropertyChanged method" Url="html/00115114-858e-837b-e15a-a2b788c294d0.htm" />
   <HelpKINode Title="ProgressWidget class">
     <HelpKINode Title="ProgressWidget Class" Url="html/b3783f13-ae08-9df7-7db1-0c125df745bf.htm" />
-    <HelpKINode Title="constructor" Url="html/f9759574-1432-16c9-fc49-b61bee013a3a.htm" />
     <HelpKINode Title="constructor" Url="html/b2e3e24c-0ef5-6463-bf63-285904aad1e0.htm" />
+    <HelpKINode Title="constructor" Url="html/f9759574-1432-16c9-fc49-b61bee013a3a.htm" />
     <HelpKINode Title="fields" Url="html/39316d6e-cb1f-55ac-b73c-0ddde8765e26.htm" />
     <HelpKINode Title="methods" Url="html/3da99b6a-9184-f1d8-8852-e7533064caeb.htm" />
     <HelpKINode Title="properties" Url="html/e7fa6a05-c73e-d0f1-65f1-916c594f4f75.htm" />
@@ -297,6 +331,7 @@
   <HelpKINode Title="ProgressWidget.UpdateStrokeRatio method" Url="html/2fa08df0-3d6d-fe99-1c92-ca6527771f38.htm" />
   <HelpKINode Title="ProgressWidget.ValidatePercentage method" Url="html/505da984-e3d3-c6ea-26b2-03d64ad7f0f7.htm" />
   <HelpKINode Title="ProgressWidget.__InitComponentRuntime method" Url="html/712dde87-7e11-dcbf-1e5a-47ff4838f60d.htm" />
+  <HelpKINode Title="references field" Url="html/413853be-8a91-780f-aaed-b129c64048c2.htm" />
   <HelpKINode Title="relativeShadowSigma field">
     <HelpKINode Title="LoadingWidget.relativeShadowSigma Field" Url="html/ddbbdcb6-b25a-811b-877a-579f78160478.htm" />
     <HelpKINode Title="ProgressWidget.relativeShadowSigma Field" Url="html/6d886ae4-4c91-9dae-c604-0ef71c53db50.htm" />
@@ -321,6 +356,8 @@
     <HelpKINode Title="LoadingWidget.ShadowColorPropertyChanged Method " Url="html/1e2fadbe-2f30-c086-63e4-7715f0c573e6.htm" />
     <HelpKINode Title="ProgressWidget.ShadowColorPropertyChanged Method " Url="html/620b8aa1-dc54-ecb1-9b3f-6b8374c4fe3d.htm" />
   </HelpKINode>
+  <HelpKINode Title="SpanWidthInPixels property" Url="html/2d7d7108-f805-c227-36b3-7f34063d5092.htm" />
+  <HelpKINode Title="SpanWidthWithDensity property" Url="html/9a1445fd-5558-830d-7a76-e894799b261f.htm" />
   <HelpKINode Title="StartAnimating method" Url="html/10c0b871-5e7b-9a32-4de4-b7f39a88801b.htm" />
   <HelpKINode Title="StokeWidthPropertyChanged method">
     <HelpKINode Title="LoadingWidget.StokeWidthPropertyChanged Method " Url="html/07bb037f-57ef-3bfe-1078-12057508fede.htm" />
@@ -371,6 +408,13 @@
     <HelpKINode Title="1.0.0.0" Url="html/b59ddcdb-6d7e-4317-bdb7-5973a4a2df34.htm" />
     <HelpKINode Title="history" Url="html/4710d9c0-c6f8-4b03-8df8-ae6d1b8a093c.htm" />
   </HelpKINode>
+  <HelpKINode Title="WeakReferenceManager class">
+    <HelpKINode Title="WeakReferenceManager Class" Url="html/38a83157-aff4-d497-0fc0-ca7ed939c305.htm" />
+    <HelpKINode Title="constructor" Url="html/509b207e-9912-3933-41c1-6536771ac258.htm" />
+    <HelpKINode Title="fields" Url="html/558281eb-1bed-c2fe-fd8b-834bbcd0855a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WeakReferenceManager.references field" Url="html/413853be-8a91-780f-aaed-b129c64048c2.htm" />
+  <HelpKINode Title="WeakReferenceManager.WeakReferenceManager constructor" Url="html/509b207e-9912-3933-41c1-6536771ac258.htm" />
   <HelpKINode Title="Welcome" Url="html/3c620197-6240-400b-82a3-b2a3676db54a.htm" />
   <HelpKINode Title="__InitComponentRuntime method">
     <HelpKINode Title="LoadingWidget.__InitComponentRuntime Method " Url="html/12231725-61b8-420f-7a26-39f66ae5f42b.htm" />

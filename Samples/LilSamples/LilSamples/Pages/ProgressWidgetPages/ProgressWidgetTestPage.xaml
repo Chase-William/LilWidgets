@@ -4,16 +4,6 @@
              x:Class="LilSamples.Pages.ProgressWidgetPages.ProgressWidgetTestPage"
              Style="{StaticResource DefaultPageStyle}"
              Title="Progress Widget Testing">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style x:Key="controlGrid" TargetType="Grid">
-                <Setter Property="Margin" Value="20,0,20,0"/>
-            </Style>
-            <Style x:Key="propertyLblStyle" TargetType="Label">
-                <Setter Property="VerticalTextAlignment" Value="Center"/>
-            </Style>
-        </ResourceDictionary>
-    </ContentPage.Resources>
 
     <StackLayout>
         <Grid VerticalOptions="FillAndExpand">
@@ -79,7 +69,7 @@
                     Grid.Column="1"
                     Grid.Row="4"/>
         </Grid>
-        <Grid Style="{StaticResource controlGrid}">
+        <Grid Style="{StaticResource controlGrid}" Grid.Row="5" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>

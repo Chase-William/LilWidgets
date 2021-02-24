@@ -2,21 +2,55 @@
 <HelpTOC>
 
   <HelpTOCNode Title="Welcome to the [TODO: Add project name]" Url="html/3c620197-6240-400b-82a3-b2a3676db54a.htm" />
-  <HelpTOCNode Id="0262b444-cd8d-421d-839b-141e61b5fcce" Title="Version History" Url="html/4710d9c0-c6f8-4b03-8df8-ae6d1b8a093c.htm">
+  <HelpTOCNode Id="f880c516-e17b-40ca-99cd-a06125510827" Title="Version History" Url="html/4710d9c0-c6f8-4b03-8df8-ae6d1b8a093c.htm">
     <HelpTOCNode Title="Version 1.0.0.0" Url="html/b59ddcdb-6d7e-4317-bdb7-5973a4a2df34.htm" />
   </HelpTOCNode>
-  <HelpTOCNode Id="4996a3d7-9334-4e5f-a974-e1fe2ffe59ba" Title="LilWidgets.Widgets" Url="html/e5a2df85-cbe3-91f7-4044-eca8ce027640.htm">
-    <HelpTOCNode Id="1a233587-cc6f-4670-a575-154af596f778" Title="LoadingWidget Class" Url="html/976dbf40-aab3-c1b0-83df-d1a627865e97.htm">
+  <HelpTOCNode Id="1daf213a-d2df-4e93-88a9-2c2287208ae5" Title="LilWidgets.Interfaces" Url="html/65a94b75-0ddf-6755-c8ef-2e18dd30d361.htm">
+    <HelpTOCNode Id="48fae21c-ba85-4ef0-89e4-79a10fe7c1b5" Title="IDisplayInfo Interface" Url="html/f272eeb3-2f93-8ac2-92f7-bb2a9d76c680.htm">
+      <HelpTOCNode Id="7e170c33-4784-49d4-8ff0-c773c6c5c1b4" Title="IDisplayInfo Methods" Url="html/a4749421-75d0-0c62-649b-5a96eefd9975.htm">
+        <HelpTOCNode Title="GetDisplayDPI Method " Url="html/24dfd882-7679-8f9c-5fc7-5c8c845f0d86.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="56d17932-ddd7-4207-a7df-795e76c26e12" Title="LilWidgets.Lang" Url="html/cb446a4d-dfd9-8ae6-37f0-436f2b9e4713.htm">
+    <HelpTOCNode Id="d46b5a33-4a64-4995-b855-40e49ea023fe" Title="LimitingSpan Class" Url="html/1ec53eb9-4a72-1de5-8515-e12645443297.htm">
+      <HelpTOCNode Title="LimitingSpan Constructor " Url="html/b1addfea-4cd4-6322-9d76-732579569a14.htm" />
+      <HelpTOCNode Id="f3940e1a-4f0c-4725-be3e-8431f024af1f" Title="LimitingSpan Properties" Url="html/87099caf-872f-431c-88b6-f1138378509d.htm">
+        <HelpTOCNode Title="IsHeightTheLimitingSpan Property " Url="html/6cb59a9c-e145-92d7-12f2-f8b160aad0f5.htm" />
+        <HelpTOCNode Title="SpanWidthInPixels Property " Url="html/2d7d7108-f805-c227-36b3-7f34063d5092.htm" />
+        <HelpTOCNode Title="SpanWidthWithDensity Property " Url="html/9a1445fd-5558-830d-7a76-e894799b261f.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="ab7b9f32-7928-48b9-958d-985831202473" Title="LimitingSpan Methods" Url="html/9bfa4c02-0ddd-72d7-4594-fff2ea00c27e.htm">
+        <HelpTOCNode Title="Element_SizeChanged Method " Url="html/b70ced86-5a17-32dc-be70-c122b7df0fd5.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="ca7886d5-29ee-49c7-936e-ac50105ef982" Title="LilWidgets.Util" Url="html/22d63cd3-2821-cb5f-50da-56a9a910784c.htm">
+    <HelpTOCNode Id="127bc9b3-2510-4d19-a9b4-332ed3674082" Title="DisplayUtil Class" Url="html/f5a7e00a-5c3a-58a8-ff15-1da34cb3a849.htm">
+      <HelpTOCNode Title="DisplayUtil Constructor " Url="html/d23e7577-795a-5fa7-571a-cb8804500956.htm" />
+      <HelpTOCNode Id="74367be2-395e-405d-b296-ccca28cd4cba" Title="DisplayUtil Properties" Url="html/f86690d6-0d12-47de-21ed-0595534b191d.htm">
+        <HelpTOCNode Title="DPI Property " Url="html/b9986434-e94c-3827-fd66-ca115e3922ab.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d8543af8-9874-4214-8d76-0c1b5ef6ae0b" Title="WeakReferenceManager Class" Url="html/38a83157-aff4-d497-0fc0-ca7ed939c305.htm">
+      <HelpTOCNode Title="WeakReferenceManager Constructor " Url="html/509b207e-9912-3933-41c1-6536771ac258.htm" />
+      <HelpTOCNode Id="3bedac18-6c11-4e48-a8d7-a780a268bba9" Title="WeakReferenceManager Fields" Url="html/558281eb-1bed-c2fe-fd8b-834bbcd0855a.htm">
+        <HelpTOCNode Title="references Field" Url="html/413853be-8a91-780f-aaed-b129c64048c2.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="b999e518-2c6b-4fad-b7b9-7d752675ac6e" Title="LilWidgets.Widgets" Url="html/e5a2df85-cbe3-91f7-4044-eca8ce027640.htm">
+    <HelpTOCNode Id="4e59916a-5ddf-40e2-91e1-457e9c217f37" Title="LoadingWidget Class" Url="html/976dbf40-aab3-c1b0-83df-d1a627865e97.htm">
       <HelpTOCNode Title="LoadingWidget Constructor " Url="html/5b3a9b1e-340b-bbf7-d58a-c64e447e931c.htm" />
       <HelpTOCNode Title="LoadingWidget Constructor " Url="html/e3d993e5-1678-ac19-3e9a-47eb5f91a5b6.htm" />
-      <HelpTOCNode Id="155f7a23-4462-4f7c-ba81-b2226cd8852a" Title="LoadingWidget Properties" Url="html/9ef3a2f9-1174-16aa-be13-76da5ee590aa.htm">
+      <HelpTOCNode Id="70840251-ba06-4b4c-ac84-20364f6e73c8" Title="LoadingWidget Properties" Url="html/9ef3a2f9-1174-16aa-be13-76da5ee590aa.htm">
         <HelpTOCNode Title="Animating Property " Url="html/5b2c4493-79c6-0e18-0fae-1cf9824d9621.htm" />
         <HelpTOCNode Title="BackArcColor Property " Url="html/a071f7c9-dbe6-8b35-d056-8d8ac41411dc.htm" />
         <HelpTOCNode Title="Duration Property " Url="html/fd7d2d02-edb2-0d22-2ce4-3de4b3ac9a6b.htm" />
         <HelpTOCNode Title="ShadowColor Property " Url="html/73ba96ec-b2d5-294e-ee22-ed3f3f3b9c2a.htm" />
         <HelpTOCNode Title="StrokeWidth Property " Url="html/da4964a5-e0ac-6aca-38c5-f56a84c3f2ec.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="03968656-3af6-4684-97b7-df25f1ddc0d3" Title="LoadingWidget Methods" Url="html/30580ecf-149c-6c9e-cfe3-5cfda17c203b.htm">
+      <HelpTOCNode Id="fec169c1-ea66-45b6-b5d8-20a0bba831df" Title="LoadingWidget Methods" Url="html/30580ecf-149c-6c9e-cfe3-5cfda17c203b.htm">
         <HelpTOCNode Title="__InitComponentRuntime Method " Url="html/12231725-61b8-420f-7a26-39f66ae5f42b.htm" />
         <HelpTOCNode Title="Animate Method " Url="html/d4892e1b-0c94-7dc8-ed38-91538b36ca9e.htm" />
         <HelpTOCNode Title="BackgroundRingColorPropertyChanged Method " Url="html/fb350c21-7cdc-d6e8-042e-ffde2dd7a30b.htm" />
@@ -30,7 +64,7 @@
         <HelpTOCNode Title="TryUpdate Method " Url="html/1607fcbf-f746-8efa-9f82-dcbdaf0c40d1.htm" />
         <HelpTOCNode Title="UpdateStrokeRatio Method " Url="html/f6ace7a6-e8fe-290e-b0d2-9d4162f1bb6e.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="66d942ed-0a58-4cae-8a45-a8344c1ea27a" Title="LoadingWidget Fields" Url="html/bc3671e9-647c-a39f-569d-d0abd364c7d3.htm">
+      <HelpTOCNode Id="51e18974-3179-4b23-af0e-2d851e4af084" Title="LoadingWidget Fields" Url="html/bc3671e9-647c-a39f-569d-d0abd364c7d3.htm">
         <HelpTOCNode Title="ALLOWED_DEVIATION Field" Url="html/1d3b1ea0-e398-e3d3-8fbf-5d620e3b6561.htm" />
         <HelpTOCNode Title="animating Field" Url="html/8bd416bf-9a38-fd90-b648-932cab20510d.htm" />
         <HelpTOCNode Title="arcRect Field" Url="html/efcc6268-af90-77fd-a0ca-780aaac24252.htm" />
@@ -66,10 +100,10 @@
         <HelpTOCNode Title="sweepPercentage Field" Url="html/01e7126a-eed4-a07c-9f20-0464e73345f7.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="a627f9c5-5fd0-459a-831b-91ba8616acd2" Title="ProgressWidget Class" Url="html/b3783f13-ae08-9df7-7db1-0c125df745bf.htm">
+    <HelpTOCNode Id="5f095b9d-b3d0-4573-a258-9d5dc58c75db" Title="ProgressWidget Class" Url="html/b3783f13-ae08-9df7-7db1-0c125df745bf.htm">
       <HelpTOCNode Title="ProgressWidget Constructor " Url="html/b2e3e24c-0ef5-6463-bf63-285904aad1e0.htm" />
       <HelpTOCNode Title="ProgressWidget Constructor " Url="html/f9759574-1432-16c9-fc49-b61bee013a3a.htm" />
-      <HelpTOCNode Id="f5b722ad-588a-4ff1-add5-18ec787801d2" Title="ProgressWidget Properties" Url="html/e7fa6a05-c73e-d0f1-65f1-916c594f4f75.htm">
+      <HelpTOCNode Id="f0d289f3-de00-4515-a228-bb69b5539c1f" Title="ProgressWidget Properties" Url="html/e7fa6a05-c73e-d0f1-65f1-916c594f4f75.htm">
         <HelpTOCNode Title="Animating Property " Url="html/93e0092f-fba9-7813-fa62-fb54c129eec3.htm" />
         <HelpTOCNode Title="BackArcColor Property " Url="html/d3b3cc0c-48aa-ab1f-801a-01a371b5fc59.htm" />
         <HelpTOCNode Title="Duration Property " Url="html/14d32322-0c51-dfd7-fe7e-34e267793a31.htm" />
@@ -81,7 +115,7 @@
         <HelpTOCNode Title="TextColor Property " Url="html/9e6f7e3b-fcfa-8922-ac58-4b23bd81290c.htm" />
         <HelpTOCNode Title="TextMargin Property " Url="html/184b8243-6b4d-9a4b-b116-e1ee04155756.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="57528f1d-6786-4e11-9073-18556c3d9c16" Title="ProgressWidget Methods" Url="html/3da99b6a-9184-f1d8-8852-e7533064caeb.htm">
+      <HelpTOCNode Id="8bd51d71-0c0c-4033-be31-00193016e2da" Title="ProgressWidget Methods" Url="html/3da99b6a-9184-f1d8-8852-e7533064caeb.htm">
         <HelpTOCNode Title="__InitComponentRuntime Method " Url="html/712dde87-7e11-dcbf-1e5a-47ff4838f60d.htm" />
         <HelpTOCNode Title="ArcToTextSpacingPropertyChanged Method " Url="html/9f6bdb6c-4a54-4ae9-df52-3e10214ea422.htm" />
         <HelpTOCNode Title="BackgroundRingColorPropertyChanged Method " Url="html/3c4b1b8f-05f1-8840-0734-dbe7ef8d93f4.htm" />
@@ -99,7 +133,7 @@
         <HelpTOCNode Title="UpdateStrokeRatio Method " Url="html/2fa08df0-3d6d-fe99-1c92-ca6527771f38.htm" />
         <HelpTOCNode Title="ValidatePercentage Method " Url="html/505da984-e3d3-c6ea-26b2-03d64ad7f0f7.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="e671b349-90d4-4ffb-8612-d431b705324f" Title="ProgressWidget Fields" Url="html/39316d6e-cb1f-55ac-b73c-0ddde8765e26.htm">
+      <HelpTOCNode Id="daa7e454-34b8-41ef-890e-b2bc6654d09c" Title="ProgressWidget Fields" Url="html/39316d6e-cb1f-55ac-b73c-0ddde8765e26.htm">
         <HelpTOCNode Title="ALLOWED_DEVIATION Field" Url="html/e72a1525-d029-cc5f-eefe-63fc68482e7a.htm" />
         <HelpTOCNode Title="animating Field" Url="html/13f15cb2-1cb0-2273-11f7-b98b0b02a87f.htm" />
         <HelpTOCNode Title="arcRect Field" Url="html/8614e9e4-68e3-dfec-e130-8046b9579ab8.htm" />

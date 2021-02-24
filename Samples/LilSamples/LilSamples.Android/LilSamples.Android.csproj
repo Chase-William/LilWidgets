@@ -70,7 +70,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.xml" />
-    <AndroidResource Include="Resources\layout\Toolbar.xml" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
@@ -90,10 +89,19 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\LilWidgets\LilWidgets.Android\LilWidgets.Android.csproj">
+      <Project>{96daecda-def7-45f0-86b8-c12dcc255c5f}</Project>
+      <Name>LilWidgets.Android</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LilSamples\LilSamples.csproj">
       <Project>{FE163861-36BA-4657-B6FB-9CCC764015EA}</Project>
       <Name>LilSamples</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Toolbar.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

@@ -129,6 +129,12 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
+    <ProjectReference Include="..\..\..\LilWidgets\LilWidgets.iOS\LilWidgets.iOS.csproj">
+      <Project>{16d9776f-6d6c-4657-b42e-75f17d75b50b}</Project>
+      <Name>LilWidgets.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
     <ProjectReference Include="..\LilSamples\LilSamples.csproj">
       <Project>{FE163861-36BA-4657-B6FB-9CCC764015EA}</Project>
       <Name>LilSamples</Name>

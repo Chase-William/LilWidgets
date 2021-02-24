@@ -18,6 +18,13 @@
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource ColorContrast}"/>
             </Style>
+
+            <Style x:Key="controlGrid" TargetType="Grid">
+                <Setter Property="Margin" Value="20,0,20,0"/>
+            </Style>
+            <Style x:Key="propertyLblStyle" TargetType="Label">
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

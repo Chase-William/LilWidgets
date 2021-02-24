@@ -1,4 +1,5 @@
-﻿using SkiaSharp;
+﻿using LilWidgets.Lang;
+using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using System;
 using System.Collections.Generic;
@@ -193,7 +194,7 @@ namespace LilWidgets.Widgets
         /// The smallest span of the <see cref="canvas"/>. This can either be the span from the top to the bottom aka the height
         /// or the left to the right aka the width.
         /// </summary>
-        float limitingSpan = 0;
+        //float limitingSpan = 0;
         /// <summary>
         /// The shadow sigma used for the drop shadow which is relative to the <see cref="strokeRatio"/>. This helps the shadow resize correctly. Without this the
         /// shadow can be come obnoxious when scaling from a larger size to a smaller one.
@@ -227,7 +228,13 @@ namespace LilWidgets.Widgets
         /// <summary>
         /// Primary Constructor.
         /// </summary>
-        public LoadingWidget() => InitializeComponent();
+        public LoadingWidget()
+        {
+            InitializeComponent();
+            limitingSpan = new LimitingSpan(this);
+        }      
+
+        private LimitingSpan limitingSpan;
 
         /// <summary>
         /// Applies the desired graphics to the <see cref="canvas"/>.
@@ -235,7 +242,7 @@ namespace LilWidgets.Widgets
         private void canvas_PaintSurface(object sender, SKPaintSurfaceEventArgs e)
         {
             var canvas = e.Surface.Canvas;
-            info = e.Info;
+            info = e.Info;             
 
             canvas.Clear();
 
@@ -243,12 +250,12 @@ namespace LilWidgets.Widgets
             midY = info.Rect.MidY;
 
             isWidthGreaterThanHeight = info.Width > info.Height;
-            limitingSpan = (isWidthGreaterThanHeight ? info.Height : info.Width);
+            //limitingSpan = (isWidthGreaterThanHeight ? info.Height : info.Width);
 
             if (isStrokeRatioDirty) // Calculate the correct strokeRatio if needed
                 UpdateStrokeRatio();
 
-            relativeStrokeWidth = limitingSpan * strokeRatio;
+            relativeStrokeWidth = limitingSpan.SpanWidthInPixels * strokeRatio;
             halfOfRelativeStrokeWidth = relativeStrokeWidth / 2;
             relativeShadowSigma = BASE_SHADOW_SIGMA + BASE_SHADOW_SIGMA * strokeRatio;
             // Compensate for the shadow
@@ -362,7 +369,7 @@ namespace LilWidgets.Widgets
         private float PercentageToSweepAngle(double percentage)
           => (float)percentage * 100 / 100f * 360f;
 
-#region Property Change Handlers
+        #region Property Change Handlers
         private static void BackgroundRingColorPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
             var widget = (LoadingWidget)bindable;
@@ -381,14 +388,14 @@ namespace LilWidgets.Widgets
             widget.shadowColor = ((Color)newValue).ToSKColor();
             TryUpdate(widget);
         }
-#endregion
+        #endregion
 
         /// <summary>
         /// Calculates a new ratio for the <see cref="strokeRatio"/> based off the target <see cref="StrokeWidth"/> and the current <see cref="limitingSpan"/>.
         /// </summary>
         private void UpdateStrokeRatio()
         {
-            strokeRatio = 1.0f - (limitingSpan - StrokeWidth) / limitingSpan;
+            strokeRatio = 1.0f - ((limitingSpan.SpanWidthInPixels - StrokeWidth) / limitingSpan.SpanWidthInPixels);
             isStrokeRatioDirty = false;
         }
 

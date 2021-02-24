@@ -9,14 +9,8 @@
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>C:\Dev\LilWidgets\LilWidgets\LilWidgets\LilWidgets.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netstandard2.0\LilWidgets.xml</DocumentationFile>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Lang\**" />
-    <EmbeddedResource Remove="Lang\**" />
-    <None Remove="Lang\**" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="SkiaSharp.Views.Forms" Version="2.80.2" />

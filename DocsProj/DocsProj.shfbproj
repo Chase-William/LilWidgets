@@ -13,7 +13,7 @@
     <RootNamespace>DocsProj</RootNamespace>
     <Name>DocsProj</Name>
     <!-- SHFB properties -->
-    <FrameworkVersion>.NET Framework 4.7.2</FrameworkVersion>
+    <FrameworkVersion>Cross-platform (.NET Core/.NET Standard)</FrameworkVersion>
     <OutputPath>.\Help\</OutputPath>
     <HtmlHelpName>DocsProj</HtmlHelpName>
     <Language>en-US</Language>
@@ -37,8 +37,8 @@
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
     <DocumentationSources>
       <DocumentationSource sourceFile="..\LilWidgets\LilWidgets\LilWidgets.csproj" />
+      <DocumentationSource sourceFile="..\LilWidgets\LilWidgets\bin\Debug\netstandard2.0\LilWidgets.xml" />
       <DocumentationSource sourceFile="..\LilWidgets\LilWidgets\bin\Debug\netstandard2.0\LilWidgets.dll" />
-      <DocumentationSource sourceFile="..\LilWidgets\LilWidgets\LilWidgets.xml" />
     </DocumentationSources>
     <HelpTitle>A Sandcastle Documented Class Library</HelpTitle>
     <HelpFileVersion>1.0.0.0</HelpFileVersion>
@@ -47,10 +47,13 @@
     <RootNamespaceContainer>False</RootNamespaceContainer>
     <RootNamespaceTitle>Lil Widgets Documentation</RootNamespaceTitle>
     <NamespaceGrouping>False</NamespaceGrouping>
-    <MaximumGroupParts>2</MaximumGroupParts>
+    <MaximumGroupParts>3</MaximumGroupParts>
     <Preliminary>False</Preliminary>
     <SdkLinkTarget>Blank</SdkLinkTarget>
     <VisibleItems>Privates, PrivateFields, Protected, SealedProtected, ProtectedInternalAsProtected, NonBrowsable</VisibleItems>
+    <MissingTags>Summary, Parameter, Returns, Value, Remarks, AutoDocumentCtors, Namespace, TypeParameter, IncludeTargets, AutoDocumentDispose</MissingTags>
+    <PlugInConfigurations>
+    </PlugInConfigurations>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->
