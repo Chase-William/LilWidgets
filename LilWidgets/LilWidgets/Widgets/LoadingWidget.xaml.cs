@@ -231,10 +231,15 @@ namespace LilWidgets.Widgets
         public LoadingWidget()
         {
             InitializeComponent();
-            limitingSpan = new LimitingSpan(this);
-        }      
+        }
 
-        private LimitingSpan limitingSpan;
+        protected override void OnSizeAllocated(double width, double height)
+        {
+            base.OnSizeAllocated(width, height);
+            limitingSpan.Update((float)width, (float)height);
+        }
+
+        private LimitingSpan limitingSpan = new LimitingSpan(2);
 
         /// <summary>
         /// Applies the desired graphics to the <see cref="canvas"/>.
@@ -255,7 +260,7 @@ namespace LilWidgets.Widgets
             if (isStrokeRatioDirty) // Calculate the correct strokeRatio if needed
                 UpdateStrokeRatio();
 
-            relativeStrokeWidth = limitingSpan.SpanWidthInPixels * strokeRatio;
+            relativeStrokeWidth = limitingSpan.SpanLengthInPixels * strokeRatio;
             halfOfRelativeStrokeWidth = relativeStrokeWidth / 2;
             relativeShadowSigma = BASE_SHADOW_SIGMA + BASE_SHADOW_SIGMA * strokeRatio;
             // Compensate for the shadow
@@ -395,7 +400,7 @@ namespace LilWidgets.Widgets
         /// </summary>
         private void UpdateStrokeRatio()
         {
-            strokeRatio = 1.0f - ((limitingSpan.SpanWidthInPixels - StrokeWidth) / limitingSpan.SpanWidthInPixels);
+            strokeRatio = 1.0f - ((limitingSpan.SpanLengthInPixels - StrokeWidth) / limitingSpan.SpanLengthInPixels);
             isStrokeRatioDirty = false;
         }
 

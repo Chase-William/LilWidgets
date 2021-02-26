@@ -5,41 +5,64 @@ using System.Text;
 using Xamarin.Forms;
 
 using LilWidgets.Util;
+using LilWidgets.Exceptions;
+using System.Diagnostics;
 
 namespace LilWidgets.Lang
 {
     public class LimitingSpan
     {
+        public const int UNASSIGNED_DPI_KEY = -1;
+
         /// <summary>
         /// The width of the limiting span in pixels.
         /// </summary>
-        public float SpanWidthInPixels { get; private set; }
+        public float SpanLengthInPixels { get; private set; }
         /// <summary>
         /// The width of the limiting span in the common density unit.
         /// </summary>
-        public float SpanWidthWithDensity { get; private set; }
+        public float SpanLengthInDpi { get; private set; }
         /// <summary>
         /// Indicates whether the Height is limiting span or the width is the limiting span.
         /// </summary>
         public bool IsHeightTheLimitingSpan { get; private set; }
 
-        
-        public LimitingSpan(VisualElement element) // TODO: use a weakreference manager to prevent memory leaks
+        public int Dpi { get; set; } = -1;
+
+        private LimitingSpan() { }
+
+        public LimitingSpan(int dpi)
+            => Dpi = dpi;
+
+        public LimitingSpan(float width, float height, int dpi)
         {
-            element.SizeChanged += Element_SizeChanged;
-            
+            Dpi = dpi;
+            Update(width, height);
         }
 
-        private void Element_SizeChanged(object sender, EventArgs e)
+        
+        public void Update(float width, float height)
         {
-            var element = (VisualElement)sender;
+            CheckDpiValue();
+
             // Determine the limiting span, is it the height or width
-            IsHeightTheLimitingSpan = element.Height < element.Width;
+            IsHeightTheLimitingSpan = height < width;
             // Get the appropriate width
-            float width = (float)(IsHeightTheLimitingSpan ? element.Height : element.Width);
+            float limiter = (float)(IsHeightTheLimitingSpan ? height : width);
             // Update SpanWidth
-            SpanWidthInPixels = width * DisplayUtil.DPI;
-            SpanWidthWithDensity = width;
+            
+            SpanLengthInPixels = limiter * Dpi;
+            SpanLengthInDpi = limiter;
+        }
+
+        [Conditional("DEBUG")]
+        private void CheckDpiValue()
+        {
+            throw new UnassignedException(nameof(Dpi));
+            if (Dpi == UNASSIGNED_DPI_KEY)
+            {
+                throw new UnassignedException(nameof(Dpi));
+            }
         }
     }
 }
