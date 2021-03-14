@@ -3,14 +3,14 @@
   <metadata>
     <id>LilWidgets.Xamarin.Forms</id>
     <title>Lil-Widgets Plugin</title>
-    <version>1.0.0-alpha.1</version>
+    <version>1.1.1-alpha</version>
     <authors>Chase Roth</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/ChaseRoth/LilWidgets</projectUrl>
     <icon>images\lilwidgets_nuget_128x128.png</icon>  
     <description>LilWidgets is an early staged Xamarin.Forms library that provides customizable controls (widgets) that are not otherwise available by default.</description>
-    <releaseNotes>Pre-release with Progress Widget.</releaseNotes>
+    <releaseNotes>Pre-release with Loading Widget.</releaseNotes>
     <copyright>Copyright © 2021</copyright>
     <tags>widget widgets control controls components views graphics android ios xamarin.forms xamarin forms portable ui mobile forms</tags>
     <language>en</language>
@@ -19,7 +19,6 @@
     <dependencies>
       <group targetFramework=".NETStandard2.0">
         <dependency id="Xamarin.Forms" version="4.6.0.1141"/>
-        <dependency id="SkiaSharp" version="2.80.2" />
         <dependency id="SkiaSharp.Views.Forms" version="2.80.2" />
       </group>
       <group targetFramework="MonoAndroid9.0"></group>

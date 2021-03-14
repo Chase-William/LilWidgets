@@ -228,7 +228,7 @@ namespace LilWidgets.Widgets
             info = e.Info;             
 
             canvas.Clear();
-
+            
             midX = info.Rect.MidX;
             midY = info.Rect.MidY;
 
