@@ -6,7 +6,7 @@
 
 # LilWidgets [![nuget](https://img.shields.io/nuget/v/LilWidgets.Xamarin.Forms)](https://www.nuget.org/packages/LilWidgets.Xamarin.Forms/)
 
-LilWidgets is an early staged Xamarin.Forms library that provides customizable controls (widgets) that are not otherwise available by default.
+LilWidgets is an early staged Xamarin.Forms library that provides customizable controls (widgets).
 
 ## The Plan
 The plan for LilWidgets is to empower Xamarin.Forms developers by providing unique custom controls that otherwise would take away from the core app development. This repository will always be open source and under the MIT license. Therefore, future releases and updates will be fully available.
