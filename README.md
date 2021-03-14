@@ -11,13 +11,13 @@ LilWidgets is an early staged Xamarin.Forms library that provides customizable c
 ## The Plan
 The plan for LilWidgets is to empower Xamarin.Forms developers by providing unique custom controls that otherwise would take away from the core app development. This repository will always be open source and under the MIT license. Therefore, future releases and updates will be fully available.
 
-### Available
+### Available Widgets
 
 - <a href="https://github.com/ChaseRoth/LilWidgets/wiki/Progress-Widget">*Progress Widget*</a>
+- <a href="https://github.com/ChaseRoth/LilWidgets/wiki/Loading-Widget">*Loading Widget*</a>
 
 ### Coming Soon:
 
-- Loading Widget
 - Pie Chart Widget
 
 ## Supported Platforms
