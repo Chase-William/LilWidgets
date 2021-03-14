@@ -24,18 +24,16 @@ namespace LilSamples.Pages.LoadingWidgetExamples
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            loadingWidget.StartAnimating();
+            loadingWidget.IsAnimating = true;
         }
 
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-            loadingWidget.StopAnimating();
+            loadingWidget.IsAnimating = false;
         }
 
         private void Button_Clicked(object sender, EventArgs e)
-        {
-
-        }
+            => this.Navigation.PushAsync(new LoadingWidgetTestPage());        
     }
 }

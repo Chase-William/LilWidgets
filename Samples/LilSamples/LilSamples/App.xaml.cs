@@ -2,7 +2,6 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using Xamarin.Essentials;
 using LilSamples.Interfaces;
 
 namespace LilSamples

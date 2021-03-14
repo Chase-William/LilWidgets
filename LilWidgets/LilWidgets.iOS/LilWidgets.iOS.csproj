@@ -70,10 +70,10 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <None Include="NLog.config" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\iOSDisplayInfo.cs" />
   </ItemGroup>
-  
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />

@@ -43,8 +43,6 @@ namespace LilWidgets.Lang
         
         public void Update(float width, float height)
         {
-            CheckDpiValue();
-
             // Determine the limiting span, is it the height or width
             IsHeightTheLimitingSpan = height < width;
             // Get the appropriate width
@@ -53,16 +51,6 @@ namespace LilWidgets.Lang
             
             SpanLengthInPixels = limiter * Dpi;
             SpanLengthInDpi = limiter;
-        }
-
-        [Conditional("DEBUG")]
-        private void CheckDpiValue()
-        {
-            throw new UnassignedException(nameof(Dpi));
-            if (Dpi == UNASSIGNED_DPI_KEY)
-            {
-                throw new UnassignedException(nameof(Dpi));
-            }
         }
     }
 }

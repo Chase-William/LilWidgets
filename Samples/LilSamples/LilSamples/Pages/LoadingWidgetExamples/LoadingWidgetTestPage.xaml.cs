@@ -19,15 +19,22 @@ namespace LilSamples.Pages.LoadingWidgetExamples
         public LoadingWidgetTestPage()
         {
             InitializeComponent();
-            BindingContext = loadingWidget;
-            loadingWidget.SizeChanged += LoadingWidget_SizeChanged;
+            try
+            {
+                BindingContext = loadingWidget;
+            }            
+            catch (Exception ex)
+            {
+                Console.WriteLine();
+            }
+            loadingWidget.SizeChanged += OnLoadingWidget_SizeChanged;
 
             On<iOS>().SetUseSafeArea(true);
         }
 
-        private void LoadingWidget_SizeChanged(object sender, EventArgs e)
+        private void OnLoadingWidget_SizeChanged(object sender, EventArgs e)
         {
-            loadingWidget.SizeChanged -= LoadingWidget_SizeChanged;
+            loadingWidget.SizeChanged -= OnLoadingWidget_SizeChanged;
             heightSlider.Maximum = ((Grid)loadingWidget.Parent).Height;
             widthSlider.Maximum = ((Grid)loadingWidget.Parent).Width;
             heightSlider.Value = loadingWidget.Height;
@@ -35,13 +42,18 @@ namespace LilSamples.Pages.LoadingWidgetExamples
             strokeWidthSlider.Value = LoadingWidget.DEFAULT_STROKE_WIDTH;
         }
 
-        private void heightSlider_ValueChanged(object sender, ValueChangedEventArgs e)
+        private void OnHeightSlider_ValueChanged(object sender, ValueChangedEventArgs e)
             => loadingWidget.HeightRequest = e.NewValue;        
 
-        private void widthSlider_ValueChanged(object sender, ValueChangedEventArgs e)
+        private void OnWidthSlider_ValueChanged(object sender, ValueChangedEventArgs e)
             => loadingWidget.WidthRequest = e.NewValue;
 
-        private void strokeWidthSlider_ValueChanged(object sender, ValueChangedEventArgs e)
+        private void OnStrokeWidthSlider_ValueChanged(object sender, ValueChangedEventArgs e)
             => loadingWidget.StrokeWidth = (float)e.NewValue;
+
+        private void OnToggleAnimation(object sender, EventArgs e)
+        {
+            loadingWidget.IsAnimating = !loadingWidget.IsAnimating;
+        }
     }
 }

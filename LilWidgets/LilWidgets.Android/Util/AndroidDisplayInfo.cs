@@ -26,6 +26,8 @@ namespace LilWidgets.Droid.Util
         /// <returns>DPI</returns>
         public int GetDisplayDPI()
         {
+            //var logger = LogManager.GetCurrentClassLogger();
+            //logger.Info("Android project logging here.");
             Console.WriteLine();
             return (int)Android.App.Application.Context.Resources.DisplayMetrics.DensityDpi;
         }

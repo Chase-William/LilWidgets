@@ -23,8 +23,15 @@ namespace LilSamples
             var item = e.SelectedItem as MasterDetailContainerPageMasterMenuItem;
             if (item == null)
                 return;
-
-            var page = (Page)Activator.CreateInstance(item.TargetType);
+            Page page = null;
+            try
+            {
+                page = (Page)Activator.CreateInstance(item.TargetType);
+            }            
+            catch(Exception ex)
+            {
+                Console.WriteLine();
+            }
             page.Title = item.Title;
 
             Detail = new NavigationPage(page)

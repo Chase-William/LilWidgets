@@ -1,4 +1,5 @@
-﻿using SkiaSharp;
+﻿using LilWidgets.Lang;
+using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using System;
 using System.Diagnostics;
@@ -25,13 +26,9 @@ namespace LilWidgets.Widgets
         /// </summary>
         const float SWEEP_START = -90;
         /// <summary>
-        /// The allowed deviation for the progress animation.
-        /// </summary>
-        const float ALLOWED_DEVIATION = 0.009f;
-        /// <summary>
         /// The default value for the duration of the progress animation.
         /// </summary>
-        public const float DEFAULT_ANIMATION_DURATION = 2000;
+        public const uint DEFAULT_ANIMATION_DURATION = 2000;
         /// <summary>
         /// The default frame-rate being targeted.
         /// </summary>
@@ -44,10 +41,6 @@ namespace LilWidgets.Widgets
         /// The default spacing between the arc's inner lining and the text rectangle.
         /// </summary>
         public const float DEFAULT_ARC_TO_TEXT_SPACING = 10;
-        /// <summary>
-        /// The default cycle time to be aimed for.
-        /// </summary>
-        readonly float cycleTime = 1f / DEFAULT_FRAME_RATE;
         /// <summary>
         /// The default shadow color used with the arcs.
         /// </summary>
@@ -78,7 +71,7 @@ namespace LilWidgets.Widgets
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="Duration"/> property.
         /// </summary>
-        public static readonly BindableProperty DurationProperty = BindableProperty.Create(nameof(Duration), typeof(float), typeof(ProgressWidget), DEFAULT_ANIMATION_DURATION);
+        public static readonly BindableProperty DurationProperty = BindableProperty.Create(nameof(Duration), typeof(uint), typeof(ProgressWidget), DEFAULT_ANIMATION_DURATION);
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="StrokeWidth"/> property.
         /// </summary>
@@ -143,9 +136,9 @@ namespace LilWidgets.Widgets
         /// Therefore if <see cref="PercentProgressValue"/> is changing from 0.0 to 0.5 and the <see cref="Duration"/> is set to 2000 milliseconds; it will take
         /// one second to complete the animation. The equation looks like this (relativeDuration == milliseconds * difference).
         /// </summary>
-        public float Duration
+        public uint Duration
         {
-            get => (float)GetValue(DurationProperty);
+            get => (uint)GetValue(DurationProperty);
             set => SetValue(DurationProperty, value);
         }
         /// <summary>
@@ -353,8 +346,13 @@ namespace LilWidgets.Widgets
         /// <summary>
         /// Primary Constructor.
         /// </summary>
-        public ProgressWidget() => InitializeComponent();
-       
+        public ProgressWidget()
+        {
+            InitializeComponent();           
+        }
+
+        LimitingSpan span = new LimitingSpan(Util.DisplayUtil.DPI);
+
         /// <summary>
         /// Applies the desired graphics to the <see cref="canvas"/>.
         /// </summary>
@@ -445,16 +443,7 @@ namespace LilWidgets.Widgets
                                 arcRect.MidY - textBounds.MidY, 
                                 textPaint); // Progress Text
             }            
-        }
-        
-
-        private void Animate(double v)
-        {
-            // Add the correct difference based with respects the desired duration then multiplied by the time passed 
-            currentPercentageValue = v;
-            // Informing the SKCanvasView that it must redraw itself
-            canvas.InvalidateSurface();
-        }
+        }        
 
         /// <summary>
         /// Converts a percentage value (1.0 to 0.0) to a sweep angle (0 to 360).
@@ -493,7 +482,13 @@ namespace LilWidgets.Widgets
             else // If increasing
                 comparer = () => currentPercentageValue < PercentProgressValue; // When increasing, until the value is larger than the target keep executing.
 
-            Animation anim = new Animation(Animate, currentPercentageValue, PercentProgressValue);
+            Animation anim = new Animation((value) =>
+            {
+                // Add the correct difference based with respects the desired duration then multiplied by the time passed 
+                currentPercentageValue = value;
+                // Informing the SKCanvasView that it must redraw itself
+                canvas.InvalidateSurface();
+            }, currentPercentageValue, PercentProgressValue);
             anim.Commit(this, 
                         "percentage", 
                         16, 
