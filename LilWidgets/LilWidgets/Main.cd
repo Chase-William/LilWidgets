@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LilWidgets.Widgets.ProgressWidget">
+    <Position X="1.75" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>GjwQMCAAFGBDEBCMoRhBBJZBYgDQgAEASBABBFo0QII=</HashCode>
+      <FileName>Widgets\ProgressWidget.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LilWidgets.Widgets.LoadingWidget">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADgACBIABCGCABCEABBABNIjAACBgAMBxBgABBIQCAI=</HashCode>
+      <FileName>Widgets\LoadingWidget.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LilWidgets.Components.ViewRect">
+    <Position X="8.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Components\ViewRect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="LilWidgets.Enumerations.ViewSpans">
+    <Position X="8.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAgAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enumerations\ViewSpans.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,4 +1,5 @@
-﻿using LilWidgets.Lang;
+﻿using LilWidgets.Components;
+using LilWidgets.Lang;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using System;
@@ -203,8 +204,10 @@ namespace LilWidgets.Widgets
         /// Contains the width and height of this composite view. Provides extra information about the relationship between the two "spans"
         /// that are used in the rendering pipeline.
         /// </summary>
-        private LimitingSpan limitingSpan = new LimitingSpan(Util.DisplayUtil.DPI);
+        //private LimitingSpan limitingSpan = new LimitingSpan(Util.DisplayUtil.DPI);
 
+
+        private ViewRectHelper viewRectHelper = new ViewRectHelper();
         #endregion Fields
         
 
@@ -214,9 +217,9 @@ namespace LilWidgets.Widgets
         public LoadingWidget() => InitializeComponent();
 
         protected override void OnSizeAllocated(double width, double height)
-        {
+        {           
             base.OnSizeAllocated(width, height);
-            limitingSpan.Update((float)width, (float)height);
+            viewRectHelper.Update((float)width * Util.DisplayUtil.DPI, (float)height * Util.DisplayUtil.DPI);
         }       
 
         /// <summary>
@@ -237,14 +240,14 @@ namespace LilWidgets.Widgets
             if (isStrokeRatioDirty) // Calculate the correct strokeRatio if needed
                 UpdateStrokeRatio();
 
-            relativeStrokeWidth = limitingSpan.SpanLengthInPixels * strokeRatio;
+            relativeStrokeWidth = viewRectHelper.LimitingSpanLength * strokeRatio;
             halfOfRelativeStrokeWidth = relativeStrokeWidth / 2;
             relativeShadowSigma = BASE_SHADOW_SIGMA + BASE_SHADOW_SIGMA * strokeRatio;
             // Compensate for the shadow
             halfShadowStrokeWidth = halfOfRelativeStrokeWidth + relativeShadowSigma * 3f;
 
             // Determine top / bottom by finding the MidY then subtracting half the target width (get the radius of our circle) then subtract the half of stroke which acts as an offset
-            if (limitingSpan.IsHeightTheLimitingSpan) // Canvas is wider than it is tall, hence computer for height
+            if (viewRectHelper.LimitingSpan == Enumerations.ViewSpans.Height) // Canvas is wider than it is tall, hence compute for height
             {
                 arcRect = new SKRect(midX - midY + halfShadowStrokeWidth, // left
                                      halfShadowStrokeWidth, // top
@@ -368,7 +371,7 @@ namespace LilWidgets.Widgets
         /// </summary>
         private void UpdateStrokeRatio()
         {
-            strokeRatio = 1.0f - ((limitingSpan.SpanLengthInPixels - StrokeWidth) / limitingSpan.SpanLengthInPixels);
+            strokeRatio = 1.0f - ((viewRectHelper.LimitingSpanLength - StrokeWidth) / viewRectHelper.LimitingSpanLength);
             isStrokeRatioDirty = false;
         }
 
