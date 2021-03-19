@@ -6,18 +6,18 @@
 
 # LilWidgets [![nuget](https://img.shields.io/nuget/v/LilWidgets.Xamarin.Forms)](https://www.nuget.org/packages/LilWidgets.Xamarin.Forms/)
 
-LilWidgets is an early staged Xamarin.Forms library that provides customizable controls (widgets) that are not otherwise available by default.
+LilWidgets is an early staged Xamarin.Forms library that provides customizable controls (widgets).
 
 ## The Plan
 The plan for LilWidgets is to empower Xamarin.Forms developers by providing unique custom controls that otherwise would take away from the core app development. This repository will always be open source and under the MIT license. Therefore, future releases and updates will be fully available.
 
-### Available
+### Available Widgets
 
 - <a href="https://github.com/ChaseRoth/LilWidgets/wiki/Progress-Widget">*Progress Widget*</a>
+- <a href="https://github.com/ChaseRoth/LilWidgets/wiki/Loading-Widget">*Loading Widget*</a>
 
 ### Coming Soon:
 
-- Loading Widget
 - Pie Chart Widget
 
 ## Supported Platforms
@@ -27,42 +27,35 @@ The plan for LilWidgets is to empower Xamarin.Forms developers by providing uniq
 
 ## Dependencies
 
-- <a href="https://www.nuget.org/packages/SkiaSharp/2.80.2">SkiaSharp</a> (>= 2.80.2)
 - <a href="https://www.nuget.org/packages/SkiaSharp.Views.Forms/2.80.2">SkiaSharp.Views.Forms</a> (>= 2.80.2)
 - <a href="https://www.nuget.org/packages/Xamarin.Forms/%204.6.0.1141">Xamarin.Forms</a> (>= 4.6.0.1141)
 
-## Most Recent Addition - Progress Widget
+## Most Recent Addition - Loading Widget
 
-The *Progress Widget* is designed to show a percentage of a goal or objective. This can be anything from a quiz score where the user attained a 90%, or even a loading bar where the loading process’s progress can be given.
+The *Loading Widget* is designed to show an infinite loading cycle. This can be used when your app is making a web request and its unknown how long it will take for the targeted resources to return and be populated into the user interface.
 
 
-Progress Widget Example Page | Progress Widget Test Page
+Loading Widget Example Page | Loading Widget Test Page
 -------------------------|-------------------------
-![Progress Widget Example Page](https://raw.githubusercontent.com/ChaseRoth/LilWidgets/main/Resources/Sceenshots/ProgressWidget/screenshot_example1.png)  |  ![Progress Widget Testing Page](https://raw.githubusercontent.com/ChaseRoth/LilWidgets/main/Resources/Sceenshots/ProgressWidget/screenshot_test1.png)
+![Progress Widget Example Page](https://raw.githubusercontent.com/ChaseRoth/LilWidgets/main/Resources/Sceenshots/LoadingWidget/screenshot_example1.png)  |  ![Progress Widget Testing Page](https://raw.githubusercontent.com/ChaseRoth/LilWidgets/main/Resources/Sceenshots/LoadingWidget/screenshot_test1.png)
 
 ## How to Implement
 
-A simple example of implementing the Progress Widget into your xaml is as follows:
+A simple example of implementing the Loading Widget into your xaml is as follows:
 ```xaml
-<lilWidget:ProgressWidget PercentProgressValue="0.65"                                                    
-                          TextColor="#323031"
-                          BackArcColor="#FFC857"
-                          ProgressArcColor="#DB3A34"/>
+<lilWidget:LoadingWidget VerticalOptions="CenterAndExpand"                        
+                         ArcColor="#DB3A34"/>
 ```
 
-Here we are providing a percent value to be displayed while also overriding the default colors for the text and arcs.
+Here we are providing a *ArcLength* value of 180° which will make our arc's length be half of a circle.
 
 A more customized implementation would look as follows:
 ```xaml
-<lilWidget:ProgressWidget HorizontalOptions="FillAndExpand"
-                          VerticalOptions="FillAndExpand"
-                          PercentProgressValue="0.65"
-                          StrokeWidth="20"
-                          TextMargin="70"             
-                          Margin="40"                                                                    
-                          TextColor="#323031"
-                          BackArcColor="#FFC857"
-                          ProgressArcColor="#DB3A34"/>
+ <lilWidget:LoadingWidget VerticalOptions="CenterAndExpand"
+                          WidthRequest="100"
+                          HeightRequest="100"
+                          ArcLength="180"
+                          ArcColor="#DB3A34"/>
 ```
 
-Find out more on the <a href="https://github.com/ChaseRoth/LilWidgets/wiki/Progress-Widget">*Progress Widget*</a> wiki page.
+Find out more on the <a href="https://github.com/ChaseRoth/LilWidgets/wiki/Loading-Widget">*Loading Widget*</a> wiki page.
