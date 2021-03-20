@@ -23,6 +23,11 @@ namespace SandboxApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            
+            Util.NativeNonClientAreaStyler.Init(app);
+
+            LilWidgets.LilWidgets.Init((float)UIScreen.MainScreen.Scale);
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

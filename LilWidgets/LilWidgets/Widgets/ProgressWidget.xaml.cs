@@ -1,5 +1,4 @@
-﻿using LilWidgets.Lang;
-using SkiaSharp;
+﻿using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using System;
 using System.Diagnostics;
@@ -350,8 +349,6 @@ namespace LilWidgets.Widgets
         {
             InitializeComponent();           
         }
-
-        LimitingSpan span = new LimitingSpan(Util.DisplayUtil.DPI);
 
         /// <summary>
         /// Applies the desired graphics to the <see cref="canvas"/>.

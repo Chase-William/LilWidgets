@@ -35,7 +35,7 @@ namespace SandboxApp.Droid.Util
                 TargetActivity.Window.DecorView.SystemUiVisibility = (StatusBarVisibility)(SystemUiFlags.LightStatusBar | SystemUiFlags.LightNavigationBar);
             else
                 TargetActivity.Window.DecorView.SystemUiVisibility = StatusBarVisibility.Visible;
-        }        
+        }
 
         private Android.Graphics.Color XFColorToAndroidColor(Xamarin.Forms.Color color) => Android.Graphics.Color.Rgb((int)(color.R * byte.MaxValue), (int)(color.G * byte.MaxValue), (int)(color.B * byte.MaxValue));
     }

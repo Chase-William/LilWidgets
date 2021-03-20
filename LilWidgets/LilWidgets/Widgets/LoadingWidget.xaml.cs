@@ -1,5 +1,5 @@
 ﻿using LilWidgets.Components;
-using LilWidgets.Lang;
+using LilWidgets.Enumerations;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using System;
@@ -15,7 +15,7 @@ using Xamarin.Forms.Xaml;
 namespace LilWidgets.Widgets
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoadingWidget : ContentView
+    public partial class LoadingWidget : Widget, ILimitingSpanProviderComponent
     {
         #region Constants
         /// <summary>
@@ -58,7 +58,7 @@ namespace LilWidgets.Widgets
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="StrokeWidth"/> property.
         /// </summary>
-        public static readonly BindableProperty StrokeWidthProperty = BindableProperty.Create(nameof(StrokeWidth), typeof(float), typeof(LoadingWidget), DEFAULT_STROKE_WIDTH, BindingMode.OneWay, null, StokeWidthPropertyChanged);
+        public static readonly BindableProperty StrokeWidthProperty = BindableProperty.Create(nameof(StrokeWidth), typeof(float), typeof(LoadingWidget), DEFAULT_STROKE_WIDTH, BindingMode.TwoWay, null, StokeWidthPropertyChanged);
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="ShadowColor"/> property.
         /// </summary>
@@ -125,6 +125,15 @@ namespace LilWidgets.Widgets
             set => SetValue(IsAnimatingProperty, value);
         }
         #endregion Properties
+
+
+        #region Component Properties / Fields
+        
+        private readonly ILimitingSpanProviderComponent viewRectable;
+        ViewSpans ILimitingSpanProviderComponent.LimitingSpan { get; set; }
+        float ILimitingSpanProviderComponent.LimitingSpanLength { get; set; }        
+
+        #endregion
 
         #region Fields
         /// <summary>
@@ -200,27 +209,30 @@ namespace LilWidgets.Widgets
         /// The animation's supporting Xamarin.Forms type. Carries out the actual animating and manipulation of the animation values.
         /// </summary>
         Animation animation;
-        /// <summary>
-        /// Contains the width and height of this composite view. Provides extra information about the relationship between the two "spans"
-        /// that are used in the rendering pipeline.
-        /// </summary>
-        //private LimitingSpan limitingSpan = new LimitingSpan(Util.DisplayUtil.DPI);
-
-
-        private ViewRectHelper viewRectHelper = new ViewRectHelper();
-        #endregion Fields
-        
+        #endregion Fields       
 
         /// <summary>
         /// Primary Constructor.
         /// </summary>
-        public LoadingWidget() => InitializeComponent();
+        public LoadingWidget()
+        {
+            viewRectable = this;
+            InitializeComponent();            
+        }
+        
 
         protected override void OnSizeAllocated(double width, double height)
         {           
             base.OnSizeAllocated(width, height);
-            viewRectHelper.Update((float)width * Util.DisplayUtil.DPI, (float)height * Util.DisplayUtil.DPI);
-        }       
+            if (!(width == -1 || height == -1)) // Skip when either are equal to negative one.. first call to this method will skip Update()
+                viewRectable.Update((float)width * LilWidgets.DPI, (float)height * LilWidgets.DPI);
+        }
+
+        public float StrokeWidthInPixels
+        {
+            get => StrokeWidth * LilWidgets.DPI;
+            set => StrokeWidth = value / LilWidgets.DPI;
+        }
 
         /// <summary>
         /// Applies the desired graphics to the <see cref="canvas"/>.
@@ -229,25 +241,30 @@ namespace LilWidgets.Widgets
         {
             var canvas = e.Surface.Canvas;
             info = e.Info;             
-
+            
             canvas.Clear();
             
             midX = info.Rect.MidX;
             midY = info.Rect.MidY;
 
-            //limitingSpan = (isWidthGreaterThanHeight ? info.Height : info.Width);
-
+            
             if (isStrokeRatioDirty) // Calculate the correct strokeRatio if needed
-                UpdateStrokeRatio();
+                UpdateStrokeRatioTester();
 
-            relativeStrokeWidth = viewRectHelper.LimitingSpanLength * strokeRatio;
+            relativeStrokeWidth = viewRectable.LimitingSpanLength * strokeRatio;
             halfOfRelativeStrokeWidth = relativeStrokeWidth / 2;
-            relativeShadowSigma = BASE_SHADOW_SIGMA + BASE_SHADOW_SIGMA * strokeRatio;
+            relativeShadowSigma = halfOfRelativeStrokeWidth * 0.03f;// * strokeRatio;
             // Compensate for the shadow
-            halfShadowStrokeWidth = halfOfRelativeStrokeWidth + relativeShadowSigma * 3f;
+            halfShadowStrokeWidth = halfOfRelativeStrokeWidth + relativeShadowSigma;// * 3f;
+
+
+
+            //relativeStrokeWidth = viewRectable.LimitingSpanLength * strokeRatio;
+            //halfOfRelativeStrokeWidth = relativeStrokeWidth / 2;
+            //relativeShadowSigma = BASE_SHADOW_SIGMA * strokeRatio;
 
             // Determine top / bottom by finding the MidY then subtracting half the target width (get the radius of our circle) then subtract the half of stroke which acts as an offset
-            if (viewRectHelper.LimitingSpan == Enumerations.ViewSpans.Height) // Canvas is wider than it is tall, hence compute for height
+            if (viewRectable.LimitingSpan == Enumerations.ViewSpans.Height) // Canvas is wider than it is tall, so compute for height
             {
                 arcRect = new SKRect(midX - midY + halfShadowStrokeWidth, // left
                                      halfShadowStrokeWidth, // top
@@ -282,8 +299,30 @@ namespace LilWidgets.Widgets
             
             // Applying path widths aka strike widths
             arcPaint.StrokeWidth = relativeStrokeWidth;
+            //StrokeWidth = relativeStrokeWidth;
+
+            SKPaint ss = new SKPaint
+            {
+                Color = SKColors.AliceBlue,
+                StrokeWidth = 1,
+                Style = SKPaintStyle.Stroke,
+                IsAntialias = true,
+                ImageFilter = SKImageFilter.CreateDropShadow(0, 0, BASE_SHADOW_SIGMA, BASE_SHADOW_SIGMA, defaultShadowColor.ToSKColor())
+            };
+
+            SKPaint sss = new SKPaint
+            {
+                Color = SKColors.Yellow,
+                StrokeWidth = 1,
+                Style = SKPaintStyle.Stroke,
+                IsAntialias = true,
+                ImageFilter = SKImageFilter.CreateDropShadow(0, 0, BASE_SHADOW_SIGMA, BASE_SHADOW_SIGMA, defaultShadowColor.ToSKColor())
+            };
+
             // Draw Calls
-            canvas.DrawPath(backgroundPath, arcPaint); // Background Arc
+            canvas.DrawRect(arcRect, sss);
+            canvas.DrawRect(e.Info.Rect, ss);
+            canvas.DrawPath(backgroundPath, arcPaint); // Background Arc                
         }        
 
         /// <summary>
@@ -335,6 +374,7 @@ namespace LilWidgets.Widgets
         {
             var widget = (LoadingWidget)bindable;
             widget.isStrokeRatioDirty = true;
+            var test = widget.StrokeWidth;
             TryUpdate(widget);
         }
         /// <summary>
@@ -371,7 +411,16 @@ namespace LilWidgets.Widgets
         /// </summary>
         private void UpdateStrokeRatio()
         {
-            strokeRatio = 1.0f - ((viewRectHelper.LimitingSpanLength - StrokeWidth) / viewRectHelper.LimitingSpanLength);
+            strokeRatio = ((viewRectable.LimitingSpanLength - StrokeWidthInPixels) / viewRectable.LimitingSpanLength);
+            isStrokeRatioDirty = false;
+        }
+
+        /// <summary>
+        /// Calculates a new ratio for the <see cref="strokeRatio"/> based off the target <see cref="StrokeWidth"/> and the current <see cref="limitingSpan"/>.
+        /// </summary>
+        private void UpdateStrokeRatioTester()
+        {
+            strokeRatio = 1.0f - ((viewRectable.LimitingSpanLength - StrokeWidthInPixels) / viewRectable.LimitingSpanLength);
             isStrokeRatioDirty = false;
         }
 

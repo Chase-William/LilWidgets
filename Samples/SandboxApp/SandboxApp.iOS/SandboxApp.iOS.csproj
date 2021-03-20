@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Util\NativeNonClientAreaStyler.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -128,6 +129,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
+    <ProjectReference Include="..\..\..\LilWidgets\LilWidgets\LilWidgets.csproj">
+      <Project>{148a5cf0-b32b-48eb-9869-8b97544dd2ec}</Project>
+      <Name>LilWidgets</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SandboxApp\SandboxApp.csproj">
       <Project>{FEFC8A37-8A0D-4595-BF10-54B0D6927F68}</Project>
       <Name>SandboxApp</Name>

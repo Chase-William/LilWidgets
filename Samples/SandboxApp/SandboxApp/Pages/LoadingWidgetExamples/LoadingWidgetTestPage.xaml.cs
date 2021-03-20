@@ -39,7 +39,7 @@ namespace SandboxApp.Pages.LoadingWidgetExamples
             widthSlider.Maximum = ((Grid)loadingWidget.Parent).Width;
             heightSlider.Value = loadingWidget.Height;
             widthSlider.Value = loadingWidget.Width;
-            strokeWidthSlider.Value = LoadingWidget.DEFAULT_STROKE_WIDTH;
+            //strokeWidthSlider.Value = LoadingWidget.DEFAULT_STROKE_WIDTH;
         }
 
         private void OnHeightSlider_ValueChanged(object sender, ValueChangedEventArgs e)
@@ -48,8 +48,8 @@ namespace SandboxApp.Pages.LoadingWidgetExamples
         private void OnWidthSlider_ValueChanged(object sender, ValueChangedEventArgs e)
             => loadingWidget.WidthRequest = e.NewValue;
 
-        private void OnStrokeWidthSlider_ValueChanged(object sender, ValueChangedEventArgs e)
-            => loadingWidget.StrokeWidth = (float)e.NewValue;
+        //private void OnStrokeWidthSlider_ValueChanged(object sender, ValueChangedEventArgs e)
+        //    => loadingWidget.StrokeWidth = (float)e.NewValue;
 
         private void OnToggleAnimation(object sender, EventArgs e)
         {

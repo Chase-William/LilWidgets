@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace LilSamples.iOS
+namespace SandboxApp.iOS
 {
     public class Application
     {

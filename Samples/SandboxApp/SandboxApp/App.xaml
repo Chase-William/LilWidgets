@@ -3,6 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SandboxApp.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="ColorPrimary">#F1E4F3</Color>
+            <Color x:Key="ColorSecondary">#084C61</Color>
+            <Color x:Key="AccentPrimary">#DB3A34</Color>
+            <Color x:Key="AccentSecondary">#FFC857</Color>
+            <Color x:Key="ColorContrast">#323031</Color>
 
+            <!-- Styles -->
+            <Style x:Key="DefaultPageStyle" TargetType="Page">
+                <Setter Property="BackgroundColor" Value="{StaticResource ColorPrimary}"/>
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource ColorContrast}"/>
+            </Style>
+
+            <Style x:Key="controlGrid" TargetType="Grid">
+                <Setter Property="Margin" Value="20,0,20,0"/>
+            </Style>
+            <Style x:Key="propertyLblStyle" TargetType="Label">
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

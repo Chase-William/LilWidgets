@@ -36,7 +36,7 @@ namespace SandboxApp
                 MenuItems = new ObservableCollection<MasterDetailContainerPageMasterMenuItem>(new[]
                 {
                     new MasterDetailContainerPageMasterMenuItem { Id = 0, Title = "Home", TargetType = typeof(MainPage) },
-                    new MasterDetailContainerPageMasterMenuItem { Id = 1, Title = "Progress Widget", TargetType = typeof(ProgressWidgetPage) },                    
+                    new MasterDetailContainerPageMasterMenuItem { Id = 1, Title = "Progress Widget", TargetType = typeof(ProgressWidgetPage) },
                     new MasterDetailContainerPageMasterMenuItem { Id = 2, Title = "Loading Widget", TargetType = typeof(LoadingWidgetPage) },
                 });
             }

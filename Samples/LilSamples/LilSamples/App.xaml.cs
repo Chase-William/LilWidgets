@@ -2,9 +2,9 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using LilSamples.Interfaces;
+using SandboxApp.Interfaces;
 
-namespace LilSamples
+namespace SandboxApp
 {
     public partial class App : Application
     {

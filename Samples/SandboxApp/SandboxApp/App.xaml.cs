@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SandboxApp.Interfaces;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,8 @@ namespace SandboxApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            DependencyService.Get<INonClientAreaStyler>().SetNonClientArea((Color)Resources["ColorPrimary"], Enumerations.DisplayThemes.Light);
+            MainPage = new MasterDetailContainerPage();
         }
 
         protected override void OnStart()
