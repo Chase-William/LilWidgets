@@ -5,14 +5,14 @@
              x:Class="SandboxApp.Pages.LoadingWidgetExamples.LoadingWidgetPage"
              Style="{StaticResource DefaultPageStyle}">
     <StackLayout>
-        <lilWidget:LoadingWidget x:Name="loadingWidget"
+        <!--<lilWidget:LoadingWidget x:Name="loadingWidget"
                                  VerticalOptions="CenterAndExpand"
                                  HeightRequest="300"
                                  WidthRequest="300"
                                  ArcLength="100"
-                                 ArcColor="{StaticResource AccentPrimary}"/>
-        <Button Text="Goto Test Page"
+                                 ArcColor="{StaticResource AccentPrimary}"/>-->
+        <!--<Button Text="Goto Test Page"
                 HorizontalOptions="Center"
-                Clicked="Button_Clicked"/>
+                Clicked="Button_Clicked"/>-->
     </StackLayout>
 </ContentPage>

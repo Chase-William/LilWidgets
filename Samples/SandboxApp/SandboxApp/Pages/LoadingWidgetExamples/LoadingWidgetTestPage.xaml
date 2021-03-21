@@ -7,7 +7,7 @@
              Title="Loading Widget Test">
 
     <StackLayout>
-        <Grid VerticalOptions="FillAndExpand">
+        <!--<Grid VerticalOptions="FillAndExpand">
             <skia:LoadingWidget x:Name="loadingWidget"
                                 VerticalOptions="Center"
                                 HorizontalOptions="Center"
@@ -52,13 +52,13 @@
             <Label Text="Stroke Width"
                    Style="{StaticResource propertyLblStyle}"
                    Grid.Row="3"/>
-            <!--<Slider x:Name="strokeWidthSlider"
+            --><!--<Slider x:Name="strokeWidthSlider"
                     Minimum="1"
                     BindingContext="{x:Reference Name=loadingWidget}"
                     Value="{Binding StrokeWidth}"
                     Maximum="200"
                     Grid.Column="1"
-                    Grid.Row="3"/>-->
+                    Grid.Row="3"/>--><!--
 
             <Grid Style="{StaticResource controlGrid}" Grid.Row="4" Grid.ColumnSpan="2">
                 <Grid.RowDefinitions>
@@ -86,7 +86,7 @@
                     Grid.Row="1"
                     Grid.Column="1"/>
             </Grid>
-        </Grid>          
+        </Grid>-->          
     </StackLayout>
     
 </ContentPage>

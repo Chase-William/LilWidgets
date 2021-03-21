@@ -10,12 +10,12 @@ using Xamarin.Forms;
 namespace SandboxApp
 {
     public partial class MainPage : ContentPage
-    {
-        const float DEFAULT_EXAMPLE_PERCENT_VALUE = 0.75f;
-
+    {       
         public MainPage()
         {
             InitializeComponent();
+            widget.Widget = new CircularWidget();            
+            widget.InvalidateSurface();
         }
     }
 }

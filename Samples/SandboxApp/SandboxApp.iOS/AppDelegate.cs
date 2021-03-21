@@ -26,7 +26,7 @@ namespace SandboxApp.iOS
             
             Util.NativeNonClientAreaStyler.Init(app);
 
-            LilWidgets.LilWidgets.Init((float)UIScreen.MainScreen.Scale);
+            //LilWidgets.LilWidgets.Init((float)UIScreen.MainScreen.Scale);
 
             LoadApplication(new App());
 

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:skia="clr-namespace:LilWidgets.Widgets;assembly=LilWidgets"
+             xmlns:forms="clr-namespace:LilWidgets.Forms;assembly=LilWidgets.Forms"
              x:Class="SandboxApp.MainPage">
 
     <ContentPage.Resources>
@@ -13,6 +13,9 @@
     </ContentPage.Resources>
     
     <StackLayout>
-        <Label Text="Hello!"/>
+        <forms:ProgressWidgetView x:Name="widget"                          
+                                  WidthRequest="200"                          
+                                  HeightRequest="200"
+                                  BackgroundColor="{StaticResource ColorPrimary}"/>
     </StackLayout>
 </ContentPage>

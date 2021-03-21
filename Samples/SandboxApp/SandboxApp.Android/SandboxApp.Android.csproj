@@ -58,7 +58,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.1141" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
   </ItemGroup>
   <ItemGroup>
@@ -94,8 +94,12 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\LilWidgets\LilWidgets\LilWidgets.csproj">
-      <Project>{148a5cf0-b32b-48eb-9869-8b97544dd2ec}</Project>
+    <ProjectReference Include="..\..\..\Sources\LilWidgets.Android\LilWidgets.Android.csproj">
+      <Project>{fbaacbf2-5262-4fef-8319-c3977aaa5b36}</Project>
+      <Name>LilWidgets.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Sources\LilWidgets\LilWidgets.csproj">
+      <Project>{c07e5f50-1edb-46a4-ad9e-6faeff2f5166}</Project>
       <Name>LilWidgets</Name>
     </ProjectReference>
     <ProjectReference Include="..\SandboxApp\SandboxApp.csproj">

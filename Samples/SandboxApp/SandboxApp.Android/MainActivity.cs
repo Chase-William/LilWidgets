@@ -25,7 +25,7 @@ namespace SandboxApp.Droid
             Util.NativeNonClientAreaStyler.Init(this);
 
 
-            LilWidgets.LilWidgets.Init((float)this.Application.BaseContext.Resources.DisplayMetrics.Density); 
+            //LilWidgets.LilWidgets.Init((float)this.Application.BaseContext.Resources.DisplayMetrics.Density); 
             
 
             LoadApplication(new App());

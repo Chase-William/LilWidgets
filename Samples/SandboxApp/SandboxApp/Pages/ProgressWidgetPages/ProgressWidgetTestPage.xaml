@@ -6,15 +6,15 @@
              Title="Progress Widget Testing">
 
     <StackLayout>
-        <Grid VerticalOptions="FillAndExpand">
-            <skia:ProgressWidget x:Name="progressWidget"
+        <!--<Grid VerticalOptions="FillAndExpand">
+            --><!--<skia:ProgressWidget x:Name="progressWidget"
                                  VerticalOptions="Center"
                                  HorizontalOptions="Center"
                                  WidthRequest="100"
                                  HeightRequest="100"
                                  TextColor="{StaticResource ColorContrast}"
                                  BackArcColor="{StaticResource AccentSecondary}"
-                                 ProgressArcColor="{StaticResource AccentPrimary}"/>
+                                 ProgressArcColor="{StaticResource AccentPrimary}"/>--><!--
         </Grid>
         <Grid Style="{StaticResource controlGrid}">
             <Grid.RowDefinitions>
@@ -94,6 +94,6 @@
                     Minimum="0"
                     Grid.Row="1"
                     Grid.Column="1"/>
-        </Grid>
+        </Grid>-->
     </StackLayout>
 </ContentPage>
