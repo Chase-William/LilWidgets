@@ -14,8 +14,6 @@ namespace SandboxApp
         public MainPage()
         {
             InitializeComponent();
-            widget.Widget = new CircularWidget();            
-            widget.InvalidateSurface();
         }
     }
 }

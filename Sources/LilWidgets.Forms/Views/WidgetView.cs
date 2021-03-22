@@ -1,45 +1,42 @@
-﻿using SkiaSharp.Views.Forms;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
-using LilWidgets.Widgets;
+using SkiaSharp.Views.Forms;
 using SkiaSharp;
+
+using LilWidgets.Forms.Extensions;
+using LilWidgets.Widgets;
 
 namespace LilWidgets.Forms.Views
 {
     public abstract class WidgetView : SKCanvasView
     {
-        public static readonly BindableProperty WidgetProperty = BindableProperty.Create(nameof(Widget), typeof(Widget), typeof(WidgetView), propertyChanged: OnWidgetChanged);
-        private InvalidatedWeakEventHandler<WidgetView> handler;
-        private Widget widget;
-        public Widget Widget
+        /// <summary>
+        /// <see cref="BindableProperty"/> for the <see cref="IsAnimating"/> property.
+        /// </summary>
+        public static readonly BindableProperty IsAnimatingProperty = BindableProperty.Create(nameof(IsAnimating), typeof(bool), typeof(CircularWidgetView), false, BindingMode.OneWay, propertyChanged: OnAnimatingPropertyChanged);
+
+        /// <summary>
+        /// The underlying <see cref="Widget"/> that the <see cref="WidgetView"/> interfaces with.
+        /// </summary>
+        internal Widget UnderlyingWidget { get; set; }
+
+        /// <summary>
+        /// Indicates the state of the animation.
+        /// True == Running, False == Inactive
+        /// </summary>
+        public bool IsAnimating
         {
-            get => (Widget)GetValue(WidgetProperty);
-            set => SetValue(WidgetProperty, value);
+            get => (bool)GetValue(IsAnimatingProperty);
+            set => SetValue(IsAnimatingProperty, value);
         }
+
+        private InvalidatedWeakEventHandler<WidgetView> handler;
+
         public WidgetView()
         {
             BackgroundColor = Color.Transparent;
             PaintSurface += OnPaintCanvas;
-        }
-        private static void OnWidgetChanged(BindableObject bindable, object oldValue, object value)
-        {
-            var view = bindable as WidgetView;
-
-            if (view.widget != null)
-            {
-                view.handler.Dispose();
-                view.handler = null;
-            }
-
-            view.widget = value as Widget;
-            view.InvalidateSurface();
-
-            if (view.widget != null)            
-                view.handler = view.widget.ObserveInvalidate(view, (v) => v.InvalidateSurface());            
-        }
+        }       
 
         /// <summary>
         /// Triggers the underlying libraries draw methods.
@@ -48,13 +45,33 @@ namespace LilWidgets.Forms.Views
         /// <param name="e"></param>
         private void OnPaintCanvas(object sender, SKPaintSurfaceEventArgs e)
         {
-            if (widget != null)
+            if (UnderlyingWidget != null)
             {
                 var rect = e.Info.Rect;
-                widget.Draw(e.Surface.Canvas, in rect);
+                UnderlyingWidget.Draw(e.Surface.Canvas, in rect);
             }          
             else            
                 e.Surface.Canvas.Clear(SKColors.Transparent);            
+        }
+
+        private static void OnAnimatingPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+            => bindable.GetCastedWidgetView<WidgetView>().GetCastedWidget<Widget>().IsAnimating = (bool)newValue;
+
+        private static void OnWidgetChanged(BindableObject bindable, object oldValue, object value)
+        {
+            var view = bindable as WidgetView;
+
+            if (view.UnderlyingWidget != null)
+            {
+                view.handler.Dispose();
+                view.handler = null;
+            }
+
+            view.UnderlyingWidget = value as Widget;
+            view.InvalidateSurface();
+
+            if (view.UnderlyingWidget != null)
+                view.handler = view.UnderlyingWidget.ObserveInvalidate(view, (v) => v.InvalidateSurface());
         }
     }
 }

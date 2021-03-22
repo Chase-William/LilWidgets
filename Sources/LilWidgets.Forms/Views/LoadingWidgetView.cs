@@ -1,18 +1,20 @@
-﻿using LilWidgets.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
+
+using LilWidgets.Widgets;
 
 namespace LilWidgets.Forms.Views
 {
-    public class LoadingWidgetView : CircularWidgetView, ILoadingWidgetBindables
+    public class LoadingWidgetView : CircularWidgetView
     {
+        #region Constant Properties
+        const short DEFAULT_ARC_LENGTH = 90;
+        #endregion
+
         #region Bind-able Properties
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="ArcLength"/> property.
         /// </summary>
-        public static readonly BindableProperty ArcLengthProperty = BindableProperty.Create(nameof(ArcLength), typeof(short), typeof(CircularWidgetView), DEFAULT_ARC_LENGTH, BindingMode.OneWay, ValidateValueDelegate, ArcLengthPropertyChanged);
+        public static readonly BindableProperty ArcLengthProperty = BindableProperty.Create(nameof(ArcLength), typeof(short), typeof(CircularWidgetView), DEFAULT_ARC_LENGTH, BindingMode.OneWay);
 
         #endregion
 
@@ -28,5 +30,10 @@ namespace LilWidgets.Forms.Views
         }
         #endregion
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LoadingWidgetView"/> class.
+        /// </summary>
+        public LoadingWidgetView()
+            => UnderlyingWidget = new LoadingWidget();
     }
 }

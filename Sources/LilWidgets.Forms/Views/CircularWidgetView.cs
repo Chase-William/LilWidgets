@@ -1,17 +1,16 @@
-﻿using LilWidgets.Interfaces;
+﻿using Xamarin.Forms;
+
+using SkiaSharp.Views.Forms;
+
 using LilWidgets.Widgets;
-using SkiaSharp;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
+using LilWidgets.Forms.Extensions;
 
 namespace LilWidgets.Forms.Views
 {
     /// <summary>
-    /// Generic class for circular widgets that contains front-end bindings for Xamarin.Forms applications.
+    /// A <see cref="CircularWidgetView"/> is a supporting class for circular-widget-views.
     /// </summary>
-    public abstract class CircularWidgetView : WidgetView, ICircularWidgetBindables
+    public abstract class CircularWidgetView : WidgetView
     {
         #region Constants
         /// <summary>
@@ -32,23 +31,19 @@ namespace LilWidgets.Forms.Views
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="ArcColorProperty"/> property.
         /// </summary
-        public static readonly BindableProperty ArcColorProperty = BindableProperty.Create(nameof(ArcColor), typeof(Color), typeof(CircularWidgetView), Color.Black, BindingMode.OneWay);
+        public static readonly BindableProperty ArcColorProperty = BindableProperty.Create(nameof(ArcColor), typeof(Color), typeof(CircularWidgetView), Color.Black, BindingMode.OneWay, propertyChanged: OnArcColorPropertyChanged);
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="Duration"/> property.
         /// </summary>
-        public static readonly BindableProperty DurationProperty = BindableProperty.Create(nameof(Duration), typeof(uint), typeof(CircularWidgetView), DEFAULT_ANIMATION_DURATION, BindingMode.OneWay);
+        public static readonly BindableProperty DurationProperty = BindableProperty.Create(nameof(Duration), typeof(uint), typeof(CircularWidgetView), DEFAULT_ANIMATION_DURATION, BindingMode.OneWay, propertyChanged: OnDurationPropertyChanged);
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="StrokeWidth"/> property.
         /// </summary>
-        public static readonly BindableProperty StrokeWidthProperty = BindableProperty.Create(nameof(StrokeWidth), typeof(float), typeof(CircularWidgetView), DEFAULT_STROKE_WIDTH, BindingMode.OneWay);
+        public static readonly BindableProperty StrokeWidthProperty = BindableProperty.Create(nameof(StrokeWidth), typeof(float), typeof(CircularWidgetView), DEFAULT_STROKE_WIDTH, BindingMode.OneWay, propertyChanged: OnStrokeWidthPropertyChanged);
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="ShadowColor"/> property.
         /// </summary>
-        public static readonly BindableProperty ShadowColorProperty = BindableProperty.Create(nameof(ShadowColor), typeof(Color), typeof(CircularWidgetView), defaultShadowColor, BindingMode.OneWay);
-        /// <summary>
-        /// <see cref="BindableProperty"/> for the <see cref="IsAnimating"/> property.
-        /// </summary>
-        public static readonly BindableProperty IsAnimatingProperty = BindableProperty.Create(nameof(IsAnimating), typeof(bool), typeof(CircularWidgetView), false, BindingMode.OneWay);        
+        public static readonly BindableProperty ShadowColorProperty = BindableProperty.Create(nameof(ShadowColor), typeof(Color), typeof(CircularWidgetView), defaultShadowColor, BindingMode.OneWay, propertyChanged: OnShadowColorPropertyChanged);               
         #endregion Bind-able Properties
 
         #region Properties           
@@ -58,10 +53,7 @@ namespace LilWidgets.Forms.Views
         public Color ArcColor
         {
             get => (Color)GetValue(ArcColorProperty);
-            set 
-            {
-                SetValue(ArcColorProperty, value);                
-            }
+            set => SetValue(ArcColorProperty, value);
         }
         /// <summary>
         /// The color of the shadow to be used with the arcs.
@@ -87,17 +79,17 @@ namespace LilWidgets.Forms.Views
             get => (float)GetValue(StrokeWidthProperty);
             set => SetValue(StrokeWidthProperty, value);
         }
-        /// <summary>
-        /// Determines the state of the animation.
-        /// True == Running, False == Inactive
-        /// </summary>
-        public bool IsAnimating
-        {
-            get => (bool)GetValue(IsAnimatingProperty);
-            set => SetValue(IsAnimatingProperty, value);
-        }
-        SKColor ICircularWidgetBindables.ArcColor { get; set; }
-        SKColor ICircularWidgetBindables.ShadowColor { get; set; }
         #endregion Properties
+
+        #region OnPropertyChanged Handlers
+        private static void OnArcColorPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+            => bindable.GetCastedWidgetView<CircularWidgetView>().GetCastedWidget<CircularWidget>().ArcColor = ((Color)newValue).ToSKColor();
+        private static void OnShadowColorPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+            => bindable.GetCastedWidgetView<CircularWidgetView>().GetCastedWidget<CircularWidget>().ShadowColor = ((Color)newValue).ToSKColor();
+        private static void OnDurationPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+            => bindable.GetCastedWidgetView<CircularWidgetView>().GetCastedWidget<CircularWidget>().Duration = (uint)newValue;
+        private static void OnStrokeWidthPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+            => bindable.GetCastedWidgetView<CircularWidgetView>().GetCastedWidget<CircularWidget>().StrokeWidth = (float)newValue;
+        #endregion
     }
 }
