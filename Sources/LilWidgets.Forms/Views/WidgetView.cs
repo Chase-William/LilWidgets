@@ -8,6 +8,9 @@ using LilWidgets.Widgets;
 
 namespace LilWidgets.Forms.Views
 {
+    /// <summary>
+    /// A <see cref="WidgetView"/> class that is the highest parent to all other derived widget-view classes.
+    /// </summary>
     public abstract class WidgetView : SKCanvasView
     {
         /// <summary>
@@ -36,7 +39,7 @@ namespace LilWidgets.Forms.Views
         {
             BackgroundColor = Color.Transparent;
             PaintSurface += OnPaintCanvas;
-        }       
+        }
 
         /// <summary>
         /// Triggers the underlying libraries draw methods.
@@ -49,9 +52,9 @@ namespace LilWidgets.Forms.Views
             {
                 var rect = e.Info.Rect;
                 UnderlyingWidget.Draw(e.Surface.Canvas, in rect);
-            }          
-            else            
-                e.Surface.Canvas.Clear(SKColors.Transparent);            
+            }
+            else
+                e.Surface.Canvas.Clear(SKColors.Transparent);
         }
 
         private static void OnAnimatingPropertyChanged(BindableObject bindable, object oldValue, object newValue)

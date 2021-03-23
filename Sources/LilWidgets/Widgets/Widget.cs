@@ -8,24 +8,27 @@ using SkiaSharp;
 namespace LilWidgets.Widgets
 {
     /// <summary>
-    /// A <see cref="LilWidgets.Widgets.Widget"/> class that is the highest parent to all other widget classes.
+    /// A <see cref="Widget"/> class that is the highest parent to all other derived widget classes.
     /// </summary>
     public abstract class Widget : INotifyPropertyChanged
     {
         /// <summary>
-        /// The background color for all widgets.
+        /// Gets or sets the background color for a <see cref="Widget"/>.
         /// </summary>   
         public SKColor BackgroundColor { get; set; } = SKColors.Yellow;
 
         /// <summary>
-        /// Indicates if the widget is animating.
+        /// Gets or sets whether the animation is animating.
         /// </summary>
         public bool IsAnimating { get; set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-       
         /// <summary>
-        /// Occurs when the chart is invalidated.
+        /// Notifies subscribers that a property has changed.
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Notifies subscribers that the drawing canvas has been invalidated.
         /// </summary>
         public event EventHandler Invalidated;
 
@@ -36,9 +39,9 @@ namespace LilWidgets.Widgets
         /// <param name="width">Width of the canvas.</param>
         /// <param name="height">Height of the canvas.</param
         public void Draw(SKCanvas canvas, in SKRectI rect)
-        {           
+        {
             canvas.Clear(BackgroundColor);
-            
+
 
             DrawContent(canvas, rect);
         }

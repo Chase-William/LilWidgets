@@ -14,15 +14,15 @@ namespace LilWidgets.Forms.Views
     {
         #region Constants
         /// <summary>
-        /// The default value for the duration of the progress animation.
+        /// Default value for the duration of the progress animation.
         /// </summary>
         public const uint DEFAULT_ANIMATION_DURATION = 1000;
         /// <summary>
-        /// The default stroke width used for the arcs.
+        /// Default stroke width used for the arcs.
         /// </summary>
         public const float DEFAULT_STROKE_WIDTH = 15;
         /// <summary>
-        /// The default shadow color used with the arcs.
+        /// Default shadow color used with the arcs.
         /// </summary>
         public static readonly Color defaultShadowColor = Color.FromHex("#5555");
         #endregion Constants
@@ -30,7 +30,7 @@ namespace LilWidgets.Forms.Views
         #region Bind-able Properties
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="ArcColorProperty"/> property.
-        /// </summary
+        /// </summary>
         public static readonly BindableProperty ArcColorProperty = BindableProperty.Create(nameof(ArcColor), typeof(Color), typeof(CircularWidgetView), Color.Black, BindingMode.OneWay, propertyChanged: OnArcColorPropertyChanged);
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="Duration"/> property.
@@ -43,12 +43,12 @@ namespace LilWidgets.Forms.Views
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="ShadowColor"/> property.
         /// </summary>
-        public static readonly BindableProperty ShadowColorProperty = BindableProperty.Create(nameof(ShadowColor), typeof(Color), typeof(CircularWidgetView), defaultShadowColor, BindingMode.OneWay, propertyChanged: OnShadowColorPropertyChanged);               
+        public static readonly BindableProperty ShadowColorProperty = BindableProperty.Create(nameof(ShadowColor), typeof(Color), typeof(CircularWidgetView), defaultShadowColor, BindingMode.OneWay, propertyChanged: OnShadowColorPropertyChanged);
         #endregion Bind-able Properties
 
         #region Properties           
         /// <summary>
-        /// The color of the arc.
+        /// Gets or sets the color of the primary arc.
         /// </summary>
         public Color ArcColor
         {
@@ -56,7 +56,7 @@ namespace LilWidgets.Forms.Views
             set => SetValue(ArcColorProperty, value);
         }
         /// <summary>
-        /// The color of the shadow to be used with the arcs.
+        /// Gets or sets the color of the primary arc's shadow.
         /// </summary>
         public Color ShadowColor
         {
@@ -64,7 +64,7 @@ namespace LilWidgets.Forms.Views
             set => SetValue(ShadowColorProperty, value);
         }
         /// <summary>
-        /// The time in milliseconds it takes for 1 complete cycle of the animation.
+        /// Gets or sets the time in milliseconds for a one complete cycle of the animation.
         /// </summary>
         public uint Duration
         {
@@ -72,7 +72,7 @@ namespace LilWidgets.Forms.Views
             set => SetValue(DurationProperty, value);
         }
         /// <summary>
-        /// The target stroke width value to be used for all arcs that make up the widget.
+        /// Gets or sets the width of the primary arc.
         /// </summary>
         public float StrokeWidth
         {
@@ -82,12 +82,36 @@ namespace LilWidgets.Forms.Views
         #endregion Properties
 
         #region OnPropertyChanged Handlers
+        /// <summary>
+        /// Updates the underlying <see cref="CircularWidget.ArcColor"/> property to match <see cref="ArcColor"/>.
+        /// </summary>
+        /// <param name="bindable"><see cref="CircularWidgetView"/> instance.</param>
+        /// <param name="oldValue">Old <see cref="Color"/> value.</param>
+        /// <param name="newValue">New <see cref="Color"/> value.</param>
         private static void OnArcColorPropertyChanged(BindableObject bindable, object oldValue, object newValue)
             => bindable.GetCastedWidgetView<CircularWidgetView>().GetCastedWidget<CircularWidget>().ArcColor = ((Color)newValue).ToSKColor();
+        /// <summary>
+        /// Updates the underlying <see cref="CircularWidget.ShadowColor"/> property to match <see cref="ShadowColor"/>.
+        /// </summary>
+        /// <param name="bindable"><see cref="CircularWidgetView"/> instance.</param>
+        /// <param name="oldValue">Old <see cref="ShadowColor"/> value.</param>
+        /// <param name="newValue">New <see cref="ShadowColor"/> value.</param>
         private static void OnShadowColorPropertyChanged(BindableObject bindable, object oldValue, object newValue)
             => bindable.GetCastedWidgetView<CircularWidgetView>().GetCastedWidget<CircularWidget>().ShadowColor = ((Color)newValue).ToSKColor();
+        /// <summary>
+        /// Updates the underlying <see cref="CircularWidget.Duration"/> property to match <see cref="Duration"/>.
+        /// </summary>
+        /// <param name="bindable"><see cref="CircularWidgetView"/> instance.</param>
+        /// <param name="oldValue">Old <see cref="Duration"/> value.</param>
+        /// <param name="newValue">New <see cref="Duration"/> value.</param>
         private static void OnDurationPropertyChanged(BindableObject bindable, object oldValue, object newValue)
             => bindable.GetCastedWidgetView<CircularWidgetView>().GetCastedWidget<CircularWidget>().Duration = (uint)newValue;
+        /// <summary>
+        /// Updates the underlying <see cref="CircularWidget.StrokeWidth"/> property to match <see cref="StrokeWidth"/>.
+        /// </summary>
+        /// <param name="bindable"><see cref="CircularWidgetView"/> instance.</param>
+        /// <param name="oldValue">Old <see cref="StrokeWidth"/> value.</param>
+        /// <param name="newValue">New <see cref="StrokeWidth"/> value.</param>
         private static void OnStrokeWidthPropertyChanged(BindableObject bindable, object oldValue, object newValue)
             => bindable.GetCastedWidgetView<CircularWidgetView>().GetCastedWidget<CircularWidget>().StrokeWidth = (float)newValue;
         #endregion

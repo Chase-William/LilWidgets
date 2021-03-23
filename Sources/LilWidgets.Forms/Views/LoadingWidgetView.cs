@@ -7,6 +7,9 @@ namespace LilWidgets.Forms.Views
     public class LoadingWidgetView : CircularWidgetView
     {
         #region Constant Properties
+        /// <summary>
+        /// Default length of the arc.
+        /// </summary>
         const short DEFAULT_ARC_LENGTH = 90;
         #endregion
 
@@ -20,7 +23,7 @@ namespace LilWidgets.Forms.Views
 
         #region Properties
         /// <summary>
-        /// The length of the arc in degrees relative to it's start position. 
+        /// Length of the arc in degrees relative to it's start position. 
         /// For example the value of <see cref="DEFAULT_ARC_LENGTH"/> is 90 and that would be a quarter of a full 360 degree arc.
         /// </summary>
         public short ArcLength
