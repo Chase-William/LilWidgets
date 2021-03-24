@@ -23,13 +23,13 @@ namespace SandboxApp.Pages.LoadingWidgetExamples
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            loadingWidget.IsAnimating = true;
+            //loadingWidget.IsAnimating = true;
         }
 
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-            loadingWidget.IsAnimating = false;
+            //loadingWidget.IsAnimating = false;
         }
 
         private void Button_Clicked(object sender, EventArgs e)

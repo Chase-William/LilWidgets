@@ -60,21 +60,23 @@ namespace LilWidgets.Forms.Views
         private static void OnAnimatingPropertyChanged(BindableObject bindable, object oldValue, object newValue)
             => bindable.GetCastedWidgetView<WidgetView>().GetCastedWidget<Widget>().IsAnimating = (bool)newValue;
 
-        private static void OnWidgetChanged(BindableObject bindable, object oldValue, object value)
-        {
-            var view = bindable as WidgetView;
 
-            if (view.UnderlyingWidget != null)
-            {
-                view.handler.Dispose();
-                view.handler = null;
-            }
 
-            view.UnderlyingWidget = value as Widget;
-            view.InvalidateSurface();
+        //private static void OnWidgetChanged(BindableObject bindable, object oldValue, object value)
+        //{
+        //    var view = bindable as WidgetView;
 
-            if (view.UnderlyingWidget != null)
-                view.handler = view.UnderlyingWidget.ObserveInvalidate(view, (v) => v.InvalidateSurface());
-        }
+        //    if (view.UnderlyingWidget != null)
+        //    {
+        //        view.handler.Dispose();
+        //        view.handler = null;
+        //    }
+
+        //    view.UnderlyingWidget = value as Widget;
+        //    view.InvalidateSurface();
+
+        //    if (view.UnderlyingWidget != null)
+        //        view.handler = view.UnderlyingWidget.ObserveInvalidate(view, (v) => v.InvalidateSurface());
+        //}
     }
 }

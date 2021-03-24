@@ -1,7 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿/*
+ * Copyright (c) Chase Roth <cxr6988@rit.edu>
+ * Licensed under the MIT License. See project root directory for more info.
+*/
+
+using System;
 using System.ComponentModel;
-using System.Text;
 using System.Runtime.CompilerServices;
 using SkiaSharp;
 
@@ -32,6 +35,23 @@ namespace LilWidgets.Widgets
         /// </summary>
         public event EventHandler Invalidated;
 
+
+        private SKRectI drawingRect;
+        /// <summary>
+        /// Dimensions of the <see cref="SKCanvas"/> that is checked for updates each draw call.
+        /// </summary>
+        protected SKRectI DrawingRect
+        {
+            get => drawingRect;
+            set
+            {
+                if (drawingRect != value) // Update if different
+                    drawingRect = value;
+                OnCanvasRectChanged(DrawingRect);
+                NotifyPropertyChanged();
+            }
+        }
+
         /// <summary>
         /// Draws content to canvas.
         /// </summary>
@@ -39,9 +59,11 @@ namespace LilWidgets.Widgets
         /// <param name="width">Width of the canvas.</param>
         /// <param name="height">Height of the canvas.</param
         public void Draw(SKCanvas canvas, in SKRectI rect)
-        {
+        {           
             canvas.Clear(BackgroundColor);
 
+            // Update rect prop
+            DrawingRect = rect;
 
             DrawContent(canvas, rect);
         }
@@ -60,6 +82,8 @@ namespace LilWidgets.Widgets
         protected void NotifyPropertyChanged([CallerMemberName] string prop = "")
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
 
+        protected abstract void OnCanvasRectChanged(in SKRectI rect);
+
         /// <summary>
         /// Adds a weak event handler to observe invalidate changes.
         /// Based off dotnet-ad's microcharts implementation.
@@ -71,7 +95,7 @@ namespace LilWidgets.Widgets
             where TTarget : class
         {
             var weakHandler = new InvalidatedWeakEventHandler<TTarget>(this, target, onInvalidate);
-            weakHandler.Subsribe();
+            weakHandler.Subscribe();
             return weakHandler;
         }
 
@@ -82,16 +106,18 @@ namespace LilWidgets.Widgets
         /// Based off dotnet-ad's microcharts implementation.
         /// </summary>
         /// <typeparam name="T">Type of <paramref name="field"/> and <paramref name="value"/>.</typeparam>
-        /// <param name="field">Field to be assigned <paramref name="value"/>.</param>
-        /// <param name="value">The value to be assigned to <paramref name="field"/>.</param>
-        /// <param name="prop">The calling property.</param>
+        /// <param name="field">To be assigned <paramref name="value"/>.</param>
+        /// <param name="value">Value to be assigned to <paramref name="field"/>.</param>
+        /// <param name="prop">Calling property.</param>
+        /// <param name="notifyPropertyChanged">Should call <see cref="NotifyPropertyChanged(string)"/> which invokes <see cref="PropertyChanged"/>.</param>
         /// <returns>Indication of success or failure.</returns>
-        protected bool Set<T>(ref T field, T value, [CallerMemberName] string prop = "")
+        protected bool Set<T>(ref T field, T value, [CallerMemberName] string prop = "", bool notifyPropertyChanged = true)
         {
             if (!Equals(field, prop))
             {
                 field = value;
-                NotifyPropertyChanged(prop);
+                if (notifyPropertyChanged)
+                    NotifyPropertyChanged(prop);
                 return true;
             }
             return false;

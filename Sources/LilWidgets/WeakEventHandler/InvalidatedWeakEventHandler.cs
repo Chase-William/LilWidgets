@@ -61,7 +61,7 @@ namespace LilWidgets
         /// <summary>
         /// Subscribe this handler to the source.
         /// </summary>
-        public void Subsribe()
+        public void Subscribe()
         {
             if (!this.isSubscribed && this.sourceReference.TryGetTarget(out Widget source))
             {

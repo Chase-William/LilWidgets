@@ -6,7 +6,8 @@
              Style="{StaticResource DefaultPageStyle}">
     <StackLayout>
         <lw:LoadingWidgetView x:Name="loadingWidget"
-                            VerticalOptions="CenterAndExpand"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
                             HeightRequest="300"
                             WidthRequest="300"
                             ArcLength="100"                            

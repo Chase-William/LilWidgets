@@ -16,7 +16,7 @@ namespace LilWidgets.Android
         {
             get => widget;
             set
-            {
+            {                
                 if (widget != value)
                 {
                     if (widget != null)
@@ -29,7 +29,7 @@ namespace LilWidgets.Android
                     Invalidate();
 
                     if (widget != null)
-                    {
+                    {                                                
                         handler = widget.ObserveInvalidate(this, (view) => view.Invalidate());
                     }
                 }

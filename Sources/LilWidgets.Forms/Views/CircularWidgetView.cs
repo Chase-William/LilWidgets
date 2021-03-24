@@ -83,37 +83,37 @@ namespace LilWidgets.Forms.Views
 
         #region OnPropertyChanged Handlers
         /// <summary>
-        /// Updates the underlying <see cref="CircularWidget.ArcColor"/> property to match <see cref="ArcColor"/>.
+        /// Updates the underlying <see cref="StrokeWidget.ArcColor"/> property to match <see cref="ArcColor"/>.
         /// </summary>
         /// <param name="bindable"><see cref="CircularWidgetView"/> instance.</param>
         /// <param name="oldValue">Old <see cref="Color"/> value.</param>
         /// <param name="newValue">New <see cref="Color"/> value.</param>
         private static void OnArcColorPropertyChanged(BindableObject bindable, object oldValue, object newValue)
-            => bindable.GetCastedWidgetView<CircularWidgetView>().GetCastedWidget<CircularWidget>().ArcColor = ((Color)newValue).ToSKColor();
+            => bindable.GetCastedWidgetView<CircularWidgetView>().GetCastedWidget<StrokeWidget>().ArcColor = ((Color)newValue).ToSKColor();
         /// <summary>
-        /// Updates the underlying <see cref="CircularWidget.ShadowColor"/> property to match <see cref="ShadowColor"/>.
+        /// Updates the underlying <see cref="StrokeWidget.ShadowColor"/> property to match <see cref="ShadowColor"/>.
         /// </summary>
         /// <param name="bindable"><see cref="CircularWidgetView"/> instance.</param>
         /// <param name="oldValue">Old <see cref="ShadowColor"/> value.</param>
         /// <param name="newValue">New <see cref="ShadowColor"/> value.</param>
         private static void OnShadowColorPropertyChanged(BindableObject bindable, object oldValue, object newValue)
-            => bindable.GetCastedWidgetView<CircularWidgetView>().GetCastedWidget<CircularWidget>().ShadowColor = ((Color)newValue).ToSKColor();
+            => bindable.GetCastedWidgetView<CircularWidgetView>().GetCastedWidget<StrokeWidget>().ShadowColor = ((Color)newValue).ToSKColor();
         /// <summary>
-        /// Updates the underlying <see cref="CircularWidget.Duration"/> property to match <see cref="Duration"/>.
+        /// Updates the underlying <see cref="StrokeWidget.Duration"/> property to match <see cref="Duration"/>.
         /// </summary>
         /// <param name="bindable"><see cref="CircularWidgetView"/> instance.</param>
         /// <param name="oldValue">Old <see cref="Duration"/> value.</param>
         /// <param name="newValue">New <see cref="Duration"/> value.</param>
         private static void OnDurationPropertyChanged(BindableObject bindable, object oldValue, object newValue)
-            => bindable.GetCastedWidgetView<CircularWidgetView>().GetCastedWidget<CircularWidget>().Duration = (uint)newValue;
+            => bindable.GetCastedWidgetView<CircularWidgetView>().GetCastedWidget<StrokeWidget>().Duration = (uint)newValue;
         /// <summary>
-        /// Updates the underlying <see cref="CircularWidget.StrokeWidth"/> property to match <see cref="StrokeWidth"/>.
+        /// Updates the underlying <see cref="StrokeWidget.StrokeWidth"/> property to match <see cref="StrokeWidth"/>.
         /// </summary>
         /// <param name="bindable"><see cref="CircularWidgetView"/> instance.</param>
         /// <param name="oldValue">Old <see cref="StrokeWidth"/> value.</param>
         /// <param name="newValue">New <see cref="StrokeWidth"/> value.</param>
         private static void OnStrokeWidthPropertyChanged(BindableObject bindable, object oldValue, object newValue)
-            => bindable.GetCastedWidgetView<CircularWidgetView>().GetCastedWidget<CircularWidget>().StrokeWidth = (float)newValue;
+            => bindable.GetCastedWidgetView<CircularWidgetView>().GetCastedWidget<StrokeWidget>().StrokeWidth = (float)newValue;
         #endregion
     }
 }
