@@ -1,9 +1,13 @@
 ﻿using Foundation;
 using UIKit;
-using SkiaSharp.Views.iOS;
+
 using System;
-using LilWidgets.Widgets;
+
 using SkiaSharp;
+using SkiaSharp.Views.iOS;
+
+using LilWidgets.Widgets;
+using LilWidgets.WeakEventHandlers;
 
 namespace LilWidgets.iOS
 {
@@ -30,7 +34,7 @@ namespace LilWidgets.iOS
 
                     if (widget != null)
                     {
-                        handler = widget.ObserveInvalidate(this, (view) => view.InvalidateWidget());
+                        handler = widget.ObserveChanges<InvalidatedWeakEventHandler<WidgetView>, WidgetView>(this, (view) => view.InvalidateWidget());
                     }
                 }
             }

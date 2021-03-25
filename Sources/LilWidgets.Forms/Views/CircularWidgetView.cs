@@ -1,4 +1,9 @@
-﻿using Xamarin.Forms;
+﻿/*
+ * Copyright (c) Chase Roth <cxr6988@rit.edu>
+ * Licensed under the MIT License. See project root directory for more info.
+*/
+
+using Xamarin.Forms;
 
 using SkiaSharp.Views.Forms;
 
@@ -12,11 +17,7 @@ namespace LilWidgets.Forms.Views
     /// </summary>
     public abstract class CircularWidgetView : WidgetView
     {
-        #region Constants
-        /// <summary>
-        /// Default value for the duration of the progress animation.
-        /// </summary>
-        public const uint DEFAULT_ANIMATION_DURATION = 1000;
+        #region Constants 
         /// <summary>
         /// Default stroke width used for the arcs.
         /// </summary>
@@ -35,7 +36,7 @@ namespace LilWidgets.Forms.Views
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="Duration"/> property.
         /// </summary>
-        public static readonly BindableProperty DurationProperty = BindableProperty.Create(nameof(Duration), typeof(uint), typeof(CircularWidgetView), DEFAULT_ANIMATION_DURATION, BindingMode.OneWay, propertyChanged: OnDurationPropertyChanged);
+        public static readonly BindableProperty DurationProperty = BindableProperty.Create(nameof(Duration), typeof(uint), typeof(CircularWidgetView), Widget.DEFAULT_DURATION_VALUE, BindingMode.OneWay, propertyChanged: OnDurationPropertyChanged);
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="StrokeWidth"/> property.
         /// </summary>
@@ -86,8 +87,8 @@ namespace LilWidgets.Forms.Views
         /// Updates the underlying <see cref="StrokeWidget.ArcColor"/> property to match <see cref="ArcColor"/>.
         /// </summary>
         /// <param name="bindable"><see cref="CircularWidgetView"/> instance.</param>
-        /// <param name="oldValue">Old <see cref="Color"/> value.</param>
-        /// <param name="newValue">New <see cref="Color"/> value.</param>
+        /// <param name="oldValue">Old <see cref="ArcColor"/> value.</param>
+        /// <param name="newValue">New <see cref="ArcColor"/> value.</param>
         private static void OnArcColorPropertyChanged(BindableObject bindable, object oldValue, object newValue)
             => bindable.GetCastedWidgetView<CircularWidgetView>().GetCastedWidget<StrokeWidget>().ArcColor = ((Color)newValue).ToSKColor();
         /// <summary>

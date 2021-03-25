@@ -37,7 +37,13 @@ namespace LilWidgets.Widgets
         public SKColor ArcColor
         {
             get => strokeColor;
-            set => Set(ref strokeColor, value);
+            set
+            {
+                if (Set(ref strokeColor, value))
+                {
+                    ArcPaint.Color = value;
+                }
+            }
         }
         private SKColor shadowColor;
         /// <summary>
@@ -47,16 +53,7 @@ namespace LilWidgets.Widgets
         {
             get => shadowColor;
             set => Set(ref shadowColor, value);
-        }
-        private uint duration;
-        /// <summary>
-        /// Gets or sets the time in milliseconds for a one complete cycle of the animation.
-        /// </summary>
-        public uint Duration
-        {
-            get => duration;
-            set => Set(ref duration, value);
-        }
+        }       
         private float strokeWidth;
         /// <summary>
         /// Gets or sets the width of the primary arc.

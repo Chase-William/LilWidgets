@@ -6,7 +6,11 @@
 using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+
 using SkiaSharp;
+
+using LilWidgets.WeakEventHandlers;
+using LilWidgets.EventArguments;
 
 namespace LilWidgets.Widgets
 {
@@ -16,14 +20,38 @@ namespace LilWidgets.Widgets
     public abstract class Widget : INotifyPropertyChanged
     {
         /// <summary>
+        /// Default duration for animations.
+        /// </summary>
+        public const uint DEFAULT_DURATION_VALUE = 2000;
+
+        /// <summary>
         /// Gets or sets the background color for a <see cref="Widget"/>.
         /// </summary>   
-        public SKColor BackgroundColor { get; set; } = SKColors.Yellow;
+        public SKColor BackgroundColor { get; set; } = SKColors.LightBlue;
 
+        private bool isAnimating = false;
         /// <summary>
         /// Gets or sets whether the animation is animating.
         /// </summary>
-        public bool IsAnimating { get; set; }
+        public bool IsAnimating
+        {
+            get => isAnimating;
+            set
+            {
+                if (Set(ref isAnimating, value)) // If animation state has changed raise event
+                    IsAnimatingChanged?.Invoke(this, new IsAnimatingChangedEventArgs(value));
+            }
+        }
+
+        private uint duration = DEFAULT_DURATION_VALUE;
+        /// <summary>
+        /// Gets or sets the time in milliseconds for a one complete cycle of the animation.
+        /// </summary>
+        public uint Duration
+        {
+            get => duration;
+            set => Set(ref duration, value);
+        }
 
         /// <summary>
         /// Notifies subscribers that a property has changed.
@@ -35,6 +63,12 @@ namespace LilWidgets.Widgets
         /// </summary>
         public event EventHandler Invalidated;
 
+        /// <summary>
+        /// Notifies subscribers that the <see cref="IsAnimating"/> property has changed.
+        /// </summary>
+        public event EventHandler<IsAnimatingChangedEventArgs> IsAnimatingChanged;
+
+        public Action<double> AnimateCallback { get; protected set; }
 
         private SKRectI drawingRect;
         /// <summary>
@@ -82,22 +116,33 @@ namespace LilWidgets.Widgets
         protected void NotifyPropertyChanged([CallerMemberName] string prop = "")
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
 
+        /// <summary>
+        /// Handles the canvas changing sizes.
+        /// </summary>
+        /// <param name="rect"></param>
         protected abstract void OnCanvasRectChanged(in SKRectI rect);
 
         /// <summary>
-        /// Adds a weak event handler to observe invalidate changes.
-        /// Based off dotnet-ad's microcharts implementation.
+        /// Initializes a new <see cref="WeakEventHandler{TTarget}"/> instance of the specified derived type. Before returned, the <see cref="WeakEventHandler{TTarget}"/> is
+        /// subscribed to the source to receive updates from the event the <see cref="WeakEventHandler{TTarget}"/> targets.
         /// </summary>
-        /// <param name="target">The target instance.</param>
-        /// <param name="onInvalidate">Callback when chart is invalidated.</param>
-        /// <typeparam name="TTarget">The target subscriber type.</typeparam>
-        public InvalidatedWeakEventHandler<TTarget> ObserveInvalidate<TTarget>(TTarget target, Action<TTarget> onInvalidate)
-            where TTarget : class
-        {
-            var weakHandler = new InvalidatedWeakEventHandler<TTarget>(this, target, onInvalidate);
+        /// <typeparam name="THandler"><see cref="WeakEventHandler{TTarget}"/> derived type.</typeparam>
+        /// <typeparam name="TTarget"><see cref="class"/> that is the source type.</typeparam>
+        /// <param name="target"><see cref="class"/> instance that is of the <typeparamref name="TTarget"/> type.</param>
+        /// <param name="onChanged"><see cref="Action{T}"/> callback that will be invoked when updates occur.</param>
+        /// <returns>Subscribed <see cref="WeakEventHandler{TTarget}"/> of derived type given.</returns>
+        public THandler ObserveChanges<THandler, TTarget>(TTarget target, Action<TTarget> onChanged) where TTarget : class where THandler : WeakEventHandler<TTarget>
+        {            
+            var weakHandler = (THandler)Activator.CreateInstance(typeof(THandler), this, target, onChanged);                             
             weakHandler.Subscribe();
             return weakHandler;
         }
+
+        /// <summary>
+        /// Invalidates the source's canvas by invoking the <see cref="Invalidated"/> event.
+        /// </summary>
+        protected void Invalidate()
+            => Invalidated?.Invoke(this, EventArgs.Empty);
 
         /// <summary>
         /// Set the <paramref name="field"/> to the given <paramref name="value"/> if they are different.

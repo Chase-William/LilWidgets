@@ -1,10 +1,16 @@
-﻿using Xamarin.Forms;
+﻿/*
+ * Copyright (c) Chase Roth <cxr6988@rit.edu>
+ * Licensed under the MIT License. See project root directory for more info.
+*/
+
+using Xamarin.Forms;
 
 using SkiaSharp.Views.Forms;
 using SkiaSharp;
 
 using LilWidgets.Forms.Extensions;
 using LilWidgets.Widgets;
+using LilWidgets.WeakEventHandlers;
 
 namespace LilWidgets.Forms.Views
 {
@@ -18,10 +24,20 @@ namespace LilWidgets.Forms.Views
         /// </summary>
         public static readonly BindableProperty IsAnimatingProperty = BindableProperty.Create(nameof(IsAnimating), typeof(bool), typeof(CircularWidgetView), false, BindingMode.OneWay, propertyChanged: OnAnimatingPropertyChanged);
 
+        private Widget underlyingWidget;
         /// <summary>
-        /// The underlying <see cref="Widget"/> that the <see cref="WidgetView"/> interfaces with.
+        /// Gets or sets Underlying <see cref="Widget"/> that the <see cref="WidgetView"/> interfaces with.
         /// </summary>
-        internal Widget UnderlyingWidget { get; set; }
+        internal Widget UnderlyingWidget
+        {
+            get => underlyingWidget;
+            set
+            {
+                if (UnderlyingWidget == value) return;
+                underlyingWidget = value;
+                AttachWidgetToWidgetViewObserving();
+            }
+        }
 
         /// <summary>
         /// Indicates the state of the animation.
@@ -33,13 +49,40 @@ namespace LilWidgets.Forms.Views
             set => SetValue(IsAnimatingProperty, value);
         }
 
-        private InvalidatedWeakEventHandler<WidgetView> handler;
+        /// <summary>
+        /// Propagates <see cref="Widget.Invalidated"/> events from the <see cref="Widget"/> to this class.
+        /// </summary>
+        private InvalidatedWeakEventHandler<WidgetView> invalidationHandler;
+        /// <summary>
+        /// Propagates <see cref="Widget.IsAnimatingChanged"/> events from the <see cref="Widget"/> to this class.
+        /// </summary>
+        private AnimatingWeakEventHandler<WidgetView> animationHandler;
+        
+        /// <summary>
+        /// Gets or sets the <see cref="Xamarin.Forms.Animation"/> controller.
+        /// </summary>
+        protected Animation Animator { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WidgetView"/> class.
+        /// </summary>
         public WidgetView()
         {
             BackgroundColor = Color.Transparent;
             PaintSurface += OnPaintCanvas;
-        }
+        }       
+
+        /// <summary>
+        /// Starts the <see cref="Animator"/>.
+        /// </summary>
+        protected void Start()
+            => Animator.Commit(this, nameof(WidgetView), length: UnderlyingWidget.Duration, repeat: () => true);        
+
+        /// <summary>
+        /// Stops the <see cref="Animator"/>.
+        /// </summary>
+        protected void Stop()
+            => this.AbortAnimation(nameof(WidgetView));        
 
         /// <summary>
         /// Triggers the underlying libraries draw methods.
@@ -57,26 +100,47 @@ namespace LilWidgets.Forms.Views
                 e.Surface.Canvas.Clear(SKColors.Transparent);
         }
 
+        /// <summary>
+        /// Updates the <see cref="UnderlyingWidget"/>'s <see cref="Widget.IsAnimating"/> property.
+        /// </summary>
+        /// <param name="bindable"><see cref="WidgetView"/> instance.</param>
+        /// <param name="oldValue">Old <see cref="IsAnimating"/> value.</param>
+        /// <param name="newValue">New <see cref="IsAnimating"/> value.</param>
         private static void OnAnimatingPropertyChanged(BindableObject bindable, object oldValue, object newValue)
             => bindable.GetCastedWidgetView<WidgetView>().GetCastedWidget<Widget>().IsAnimating = (bool)newValue;
 
+        /// <summary>
+        /// Attaches <see cref="WeakEventHandler{TTarget}"/> to the <see cref="UnderlyingWidget"/>.
+        /// </summary>
+        private void AttachWidgetToWidgetViewObserving()
+        {
+            if (UnderlyingWidget != null)
+            {
+                if (invalidationHandler != null) // Clean up
+                {
+                    invalidationHandler.Dispose();
+                    invalidationHandler = null;
+                }                    
+                if (animationHandler != null) // Clean up
+                {
+                    animationHandler.Dispose();
+                    animationHandler = null;
+                }                
+            }           
 
+            InvalidateSurface();
 
-        //private static void OnWidgetChanged(BindableObject bindable, object oldValue, object value)
-        //{
-        //    var view = bindable as WidgetView;
-
-        //    if (view.UnderlyingWidget != null)
-        //    {
-        //        view.handler.Dispose();
-        //        view.handler = null;
-        //    }
-
-        //    view.UnderlyingWidget = value as Widget;
-        //    view.InvalidateSurface();
-
-        //    if (view.UnderlyingWidget != null)
-        //        view.handler = view.UnderlyingWidget.ObserveInvalidate(view, (v) => v.InvalidateSurface());
-        //}
+            if (UnderlyingWidget != null) // Bind to the underlying widget's events using our weak handlers
+            {
+                invalidationHandler = UnderlyingWidget.ObserveChanges<InvalidatedWeakEventHandler<WidgetView>, WidgetView>(this, (v) => v.InvalidateSurface());
+                animationHandler = UnderlyingWidget.ObserveChanges<AnimatingWeakEventHandler<WidgetView>, WidgetView>(this, 
+                    (v) => {
+                        if (!UnderlyingWidget.IsAnimating) // The UnderlyingWidget instructs this class when to start/stop animating
+                            v.Stop();
+                        else
+                            v.Start();
+                    });
+            }                
+        }
     }
 }

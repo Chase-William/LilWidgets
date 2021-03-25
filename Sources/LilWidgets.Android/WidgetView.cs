@@ -5,12 +5,14 @@ using Android.Util;
 using SkiaSharp.Views.Android;
 
 using LilWidgets.Widgets;
+using LilWidgets.WeakEventHandlers;
 
 namespace LilWidgets.Android
 {
     public class WidgetView : SKCanvasView
     {
         private InvalidatedWeakEventHandler<WidgetView> handler;
+
         private Widget widget;
         public Widget Widget
         {
@@ -30,7 +32,7 @@ namespace LilWidgets.Android
 
                     if (widget != null)
                     {                                                
-                        handler = widget.ObserveInvalidate(this, (view) => view.Invalidate());
+                        handler = widget.ObserveChanges<InvalidatedWeakEventHandler<WidgetView>, WidgetView>(this, (view) => view.Invalidate());
                     }
                 }
             }
