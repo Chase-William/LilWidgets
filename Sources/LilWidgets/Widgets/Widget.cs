@@ -27,7 +27,7 @@ namespace LilWidgets.Widgets
         /// <summary>
         /// Gets or sets the background color for a <see cref="Widget"/>.
         /// </summary>   
-        public SKColor BackgroundColor { get; set; } = SKColors.LightBlue;
+        public SKColor BackgroundColor { get; set; } = SKColors.Transparent;
 
         private bool isAnimating = false;
         /// <summary>
@@ -80,9 +80,11 @@ namespace LilWidgets.Widgets
             set
             {
                 if (drawingRect != value) // Update if different
+                {
                     drawingRect = value;
-                OnCanvasRectChanged(DrawingRect);
-                NotifyPropertyChanged();
+                    OnCanvasRectChanged(DrawingRect);
+                    NotifyPropertyChanged();
+                }
             }
         }
 

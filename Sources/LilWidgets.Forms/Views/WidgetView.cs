@@ -22,7 +22,7 @@ namespace LilWidgets.Forms.Views
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="IsAnimating"/> property.
         /// </summary>
-        public static readonly BindableProperty IsAnimatingProperty = BindableProperty.Create(nameof(IsAnimating), typeof(bool), typeof(CircularWidgetView), false, BindingMode.OneWay, propertyChanged: OnAnimatingPropertyChanged);
+        public static readonly BindableProperty IsAnimatingProperty = BindableProperty.Create(nameof(IsAnimating), typeof(bool), typeof(StrokedEquilateralWidgetView), false, BindingMode.OneWay, propertyChanged: OnAnimatingPropertyChanged);
 
         private Widget underlyingWidget;
         /// <summary>
@@ -70,19 +70,17 @@ namespace LilWidgets.Forms.Views
         {
             BackgroundColor = Color.Transparent;
             PaintSurface += OnPaintCanvas;
-        }       
+        }
 
         /// <summary>
         /// Starts the <see cref="Animator"/>.
         /// </summary>
-        protected void Start()
-            => Animator.Commit(this, nameof(WidgetView), length: UnderlyingWidget.Duration, repeat: () => true);        
+        protected abstract void Start();
 
         /// <summary>
         /// Stops the <see cref="Animator"/>.
         /// </summary>
-        protected void Stop()
-            => this.AbortAnimation(nameof(WidgetView));        
+        protected abstract void Stop();      
 
         /// <summary>
         /// Triggers the underlying libraries draw methods.

@@ -16,17 +16,15 @@ namespace LilWidgets.Widgets
         /// <summary>
         /// The base sigma for the drop shadow used with the backing arc.
         /// </summary>
-        protected const float BASE_SHADOW_SIGMA = 3f;        
+        protected const float BASE_SHADOW_SIGMA = 2.5f;
         /// <summary>
-        /// The default value for the duration of the progress animation.
+        /// Default stroke width used for the arcs.
         /// </summary>
-        protected const uint DEFAULT_ANIMATION_DURATION = 1000;
+        public const float DEFAULT_STROKE_WIDTH_PERCENTAGE = 0.15f;
         /// <summary>
-        /// The default stroke width used for the arcs.
+        /// Default shadow color used with the arcs.
         /// </summary>
-        protected const float DEFAULT_STROKE_WIDTH = 10;
-
-        protected const float DEFAULT_STOKE_RATIO = 0.1f;
+        public static readonly SKColor defaultShadowColor = SKColors.LightGray;
         #endregion Constants
 
         #region Properties
@@ -45,7 +43,7 @@ namespace LilWidgets.Widgets
                 }
             }
         }
-        private SKColor shadowColor;
+        private SKColor shadowColor = defaultShadowColor;
         /// <summary>
         /// Gets or sets the color of the primary arc's shadow.
         /// </summary>
@@ -54,28 +52,26 @@ namespace LilWidgets.Widgets
             get => shadowColor;
             set => Set(ref shadowColor, value);
         }       
-        private float strokeWidth;
+        private float strokeWidthPercentage = DEFAULT_STROKE_WIDTH_PERCENTAGE;
         /// <summary>
         /// Gets or sets the width of the primary arc.
         /// </summary>
-        public float StrokeWidth
+        public float StrokeWidthPercentage
         {
-            get => strokeWidth;
+            get => strokeWidthPercentage;
             set
             {
-                if (Set(ref strokeWidth, value, notifyPropertyChanged: false))
+                if (Set(ref strokeWidthPercentage, value, notifyPropertyChanged: false))
                 {
-                    // Disable propChanged so we can re-calculate StrokeRatio before the next frame
-                    IsStrokeRatioDirty = true;
+                    // Disable propChanged so we can re-calculate StrokeRatio before the next frame              
                     NotifyPropertyChanged();
+                    UpdatePathRect(DrawingRect);
+                    if (!IsAnimating)
+                        Invalidate();
                 }
             }
         }
         #endregion
-
-        protected float StrokeRatio { get; private set; } = DEFAULT_STOKE_RATIO;
-
-        protected bool IsStrokeRatioDirty { get; private set; }
 
         protected SKRect FittedRect { get; private set; }
 
@@ -87,101 +83,54 @@ namespace LilWidgets.Widgets
             Color = SKColors.White,
             StrokeWidth = 1,
             Style = SKPaintStyle.Stroke,
-            IsAntialias = true,
-            ImageFilter = SKImageFilter.CreateDropShadow(0, 0, BASE_SHADOW_SIGMA, BASE_SHADOW_SIGMA, SKColors.DarkGray)
+            IsAntialias = true
         };
-
-        protected SKRectI StrokedRect { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="StrokeWidget"/> class.
         /// </summary>
         public StrokeWidget() { }
 
-        public override void DrawContent(SKCanvas canvas, in SKRectI rect)
-        {
-            if (IsStrokeRatioDirty) // Calculate the correct strokeRatio if needed
-                UpdateStrokeRatio(rect);
-            
-            //float relativeStrokeWidth = LimitingDimensionLength * StrokeRatio;
-            //float halfOfRelativeStrokeWidth = relativeStrokeWidth / 2;
-            //float relativeShadowSigma = BASE_SHADOW_SIGMA + BASE_SHADOW_SIGMA * StrokeRatio;
-            //// Compensate for the shadow
-            //float halfShadowStrokeWidth = halfOfRelativeStrokeWidth + relativeShadowSigma * 3f;
-            
-            //// Determine top / bottom by finding the MidY then subtracting half the target width (get the radius of our circle) then subtract the half of stroke which acts as an offset
-            //if (LimitingDimension == Enumerations.LimitingDimensions.Height) // Canvas is wider than it is tall, hence compute for height
-            //{
-            //    FittedRect = new SKRect(rect.MidX - rect.MidY + halfShadowStrokeWidth, // left
-            //                         halfShadowStrokeWidth, // top
-            //                         rect.MidX + rect.MidY - halfShadowStrokeWidth, // right
-            //                         rect.Height - halfShadowStrokeWidth); // bottom
-            //}
-            //else // Canvas is taller than it is wide so compute for width
-            //{
-            //    FittedRect = new SKRect(halfShadowStrokeWidth, // left
-            //                         rect.MidY - rect.MidX + halfShadowStrokeWidth, // top
-            //                         rect.Width - halfShadowStrokeWidth, // right
-            //                         rect.MidY + rect.MidX - halfShadowStrokeWidth); // bottom
-            //}
-
-            //if (FittedRect.Width < 0 || FittedRect.Height < 0) // return if the control is becoming negatively sized
-            //    return;
-            //if (relativeStrokeWidth > FittedRect.Width)
-            //    return;
-
-            //ArcPaint.ImageFilter = SKImageFilter.CreateDropShadow(0,
-            //                                                      0,
-            //                                                      relativeShadowSigma,
-            //                                                      relativeShadowSigma,
-            //                                                      shadowColor);
-
-            // Applying path widths aka strike widths
-            //ArcPaint.StrokeWidth = relativeStrokeWidth;
-        }
-
-        private void UpdateStrokeRatio(in SKRectI rect)
-        {
-            StrokeRatio = 1.0f - (LimitingDimensionLength - StrokeWidth) / LimitingDimensionLength;
-            IsStrokeRatioDirty = false;
-        }
-
         protected override void OnCanvasRectChanged(in SKRectI rect)
         {
             base.OnCanvasRectChanged(in rect);
-            float relativeStrokeWidth = LimitingDimensionLength * StrokeRatio;
-            float halfOfRelativeStrokeWidth = relativeStrokeWidth / 2;
-            float relativeShadowSigma = BASE_SHADOW_SIGMA + BASE_SHADOW_SIGMA * StrokeRatio;
+            UpdatePathRect(rect);
+        }
+
+        private void UpdatePathRect(in SKRect rect)
+        {
+            float relativeStrokeWidth = LimitingDimensionLength * StrokeWidthPercentage / 2;
             // Compensate for the shadow
-            float halfShadowStrokeWidth = halfOfRelativeStrokeWidth + relativeShadowSigma * 3f;
+            float halfShadowStrokeWidth = relativeStrokeWidth / 2 + BASE_SHADOW_SIGMA;
 
             // Determine top / bottom by finding the MidY then subtracting half the target width (get the radius of our circle) then subtract the half of stroke which acts as an offset
             if (LimitingDimension == Enumerations.LimitingDimensions.Height) // Canvas is wider than it is tall, hence compute for height
             {
-                FittedRect = new SKRect(rect.MidX - rect.MidY + halfShadowStrokeWidth, // left
-                                     halfShadowStrokeWidth, // top
-                                     rect.MidX + rect.MidY - halfShadowStrokeWidth, // right
-                                     rect.Height - halfShadowStrokeWidth); // bottom
+                FittedRect = new SKRect
+                {
+                    Left = EquilateralRect.Left + halfShadowStrokeWidth,
+                    Top = halfShadowStrokeWidth,
+                    Right = EquilateralRect.Right - halfShadowStrokeWidth,
+                    Bottom = EquilateralRect.Bottom - halfShadowStrokeWidth
+                };
             }
-            else // Canvas is taller than it is wide so compute for width
+            else // Width is the limiting dimension
             {
-                FittedRect = new SKRect(halfShadowStrokeWidth, // left
-                                     rect.MidY - rect.MidX + halfShadowStrokeWidth, // top
-                                     rect.Width - halfShadowStrokeWidth, // right
-                                     rect.MidY + rect.MidX - halfShadowStrokeWidth); // bottom
+                FittedRect = new SKRect
+                {
+                    Left = halfShadowStrokeWidth,
+                    Top = EquilateralRect.Top + halfShadowStrokeWidth,
+                    Right = EquilateralRect.Right - halfShadowStrokeWidth,
+                    Bottom = EquilateralRect.Bottom - halfShadowStrokeWidth
+                };
             }
-
-            if (FittedRect.Width < 0 || FittedRect.Height < 0) // return if the control is becoming negatively sized
-                return;
-            if (relativeStrokeWidth > FittedRect.Width)
-                return;
 
             ArcPaint.ImageFilter = SKImageFilter.CreateDropShadow(0,
                                                                   0,
-                                                                  relativeShadowSigma,
-                                                                  relativeShadowSigma,
+                                                                  BASE_SHADOW_SIGMA,
+                                                                  BASE_SHADOW_SIGMA,
                                                                   shadowColor);
-
+            // Update the paint StrokeWidth of our SKPaint
             ArcPaint.StrokeWidth = relativeStrokeWidth;
         }
     }

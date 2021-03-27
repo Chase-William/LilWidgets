@@ -5,8 +5,16 @@
 
 namespace LilWidgets.Forms.Views
 {
-    public class ProgressWidgetView : CircularWidgetView
+    public class ProgressWidgetView : StrokedEquilateralWidgetView
     {
+        protected override void Start()
+        {
+            throw new System.NotImplementedException();
+        }
 
+        protected override void Stop()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

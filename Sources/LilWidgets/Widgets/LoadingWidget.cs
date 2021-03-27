@@ -20,14 +20,25 @@ namespace LilWidgets.Widgets
 
         public const short DEFAULT_ARC_LENGTH = 90;
 
+        private short arcLength = DEFAULT_ARC_LENGTH;
+        public short ArcLength
+        {
+            get => arcLength;
+            set 
+            {
+                if (Set(ref arcLength, value))
+                    Invalidate();
+            }
+        }
+
         private float baseSweepAngle = 0;
         public float BaseSweepAngle
         {
             get => baseSweepAngle;
             set
             {
-                baseSweepAngle = value;
-                Invalidate();
+                if (Set(ref baseSweepAngle, value))
+                    Invalidate();
             }
         }
 
@@ -54,14 +65,9 @@ namespace LilWidgets.Widgets
 
         public override void DrawContent(SKCanvas canvas, in SKRectI rect)
         {
-            base.DrawContent(canvas, in rect);
-
-            // Set the shadow for the background arc
-
-
             // Creating paths
             var backgroundPath = new SKPath();
-            backgroundPath.AddArc(FittedRect, BaseSweepAngle, DEFAULT_ARC_LENGTH);
+            backgroundPath.AddArc(FittedRect, BaseSweepAngle, ArcLength);
 
             System.Console.WriteLine($"BaseSweepAngle: {BaseSweepAngle}");
 

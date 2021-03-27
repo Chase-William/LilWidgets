@@ -24,7 +24,9 @@ namespace LilWidgets.Widgets
         /// <summary>
         /// Length of the limiting span given in the <see cref="Update(float, float)"/> method parameters.
         /// </summary>
-        public float LimitingDimensionLength { get; private set; }                
+        public float LimitingDimensionLength { get; private set; }
+
+        protected SKRectI EquilateralRect { get; private set; }
 
         protected override void OnCanvasRectChanged(in SKRectI rect)
         {
@@ -32,17 +34,33 @@ namespace LilWidgets.Widgets
             {
                 LimitingDimension = LimitingDimensions.Width;
                 LimitingDimensionLength = rect.Width;
+                int difference = rect.MidY - rect.MidX;
+                EquilateralRect = new SKRectI
+                {
+                    Left = 0,
+                    Top = difference, // Top offset
+                    Right = rect.Width,
+                    Bottom = difference + rect.Width // Bottom inset
+                };
             }
             else if (rect.Height < rect.Width) // The height is the smaller span of the two
             {
-
                 LimitingDimension = LimitingDimensions.Height;
                 LimitingDimensionLength = rect.Height;
+                int difference = rect.MidX - rect.MidY;
+                EquilateralRect = new SKRectI
+                {
+                    Left = difference, // Left offset
+                    Top = 0,
+                    Right = difference + rect.Height, // Right inset
+                    Bottom = rect.Height
+                };
             }
             else // The width and height are equal in value
             {
                 LimitingDimension = LimitingDimensions.Equal;
                 LimitingDimensionLength = rect.Width;
+                EquilateralRect = rect;
             }
         }
     }

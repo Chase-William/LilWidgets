@@ -6,11 +6,12 @@
              Style="{StaticResource DefaultPageStyle}">
     <StackLayout>
         <lw:LoadingWidgetView x:Name="loadingWidget"
-                            VerticalOptions="Center"
-                            HorizontalOptions="Center"
-                            HeightRequest="300"
-                            WidthRequest="300"
-                            ArcLength="100"                            
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            HeightRequest="150"
+                            WidthRequest="150"
+                            ArcLength="100"        
+                            Duration="1000"
                             ArcColor="{StaticResource AccentPrimary}"/>
         <Button Text="Goto Test Page"
                 HorizontalOptions="Center"
