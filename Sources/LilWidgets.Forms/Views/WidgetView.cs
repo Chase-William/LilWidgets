@@ -8,7 +8,6 @@ using Xamarin.Forms;
 using SkiaSharp.Views.Forms;
 using SkiaSharp;
 
-using LilWidgets.Forms.Extensions;
 using LilWidgets.Widgets;
 using LilWidgets.WeakEventHandlers;
 
@@ -75,12 +74,12 @@ namespace LilWidgets.Forms.Views
         /// <summary>
         /// Starts the <see cref="Animator"/>.
         /// </summary>
-        protected abstract void Start();
+        protected abstract void StartInternal();
 
         /// <summary>
         /// Stops the <see cref="Animator"/>.
         /// </summary>
-        protected abstract void Stop();      
+        protected abstract void StopInternal();      
 
         /// <summary>
         /// Triggers the underlying libraries draw methods.
@@ -134,9 +133,9 @@ namespace LilWidgets.Forms.Views
                 animationHandler = UnderlyingWidget.ObserveChanges<AnimatingWeakEventHandler<WidgetView>, WidgetView>(this, 
                     (v) => {
                         if (!UnderlyingWidget.IsAnimating) // The UnderlyingWidget instructs this class when to start/stop animating
-                            v.Stop();
+                            v.StopInternal();
                         else
-                            v.Start();
+                            v.StartInternal();
                     });
             }                
         }

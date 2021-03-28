@@ -1,19 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:lilWidget="clr-namespace:LilWidgets.Widgets;assembly=LilWidgets"
+             xmlns:lw="clr-namespace:LilWidgets.Forms.Views;assembly=LilWidgets.Forms"
              x:Class="SandboxApp.Pages.ProgressWidgetPages.ProgressWidgetPage"
              Style="{StaticResource DefaultPageStyle}">
     <StackLayout>
-        <!--<lilWidget:ProgressWidget HorizontalOptions="FillAndExpand"
-                                  VerticalOptions="FillAndExpand"
-                                  PercentProgressValue="0.65"
-                                  StrokeWidth="20"
-                                  TextMargin="70"             
-                                  Margin="40"                                                                    
-                                  TextColor="{StaticResource ColorContrast}"
-                                  BackArcColor="{StaticResource AccentSecondary}"
-                                  ProgressArcColor="{StaticResource AccentPrimary}"/>-->
+        <lw:ProgressWidgetView x:Name="progressWidgetView"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"
+                               HeightRequest="150"
+                               WidthRequest="150"                               
+                               ProgressPercentage="0.95"
+                               ArcColor="{StaticResource AccentPrimary}"/>
         <Button Text="Goto Test Page"                             
                 HorizontalOptions="Center"
                 Clicked="Test_BtnClicked"/>

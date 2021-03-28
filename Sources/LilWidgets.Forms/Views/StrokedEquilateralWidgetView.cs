@@ -8,7 +8,6 @@ using Xamarin.Forms;
 using SkiaSharp.Views.Forms;
 
 using LilWidgets.Widgets;
-using LilWidgets.Forms.Extensions;
 
 namespace LilWidgets.Forms.Views
 {

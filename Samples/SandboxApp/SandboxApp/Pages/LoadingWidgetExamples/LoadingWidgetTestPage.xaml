@@ -49,8 +49,8 @@
                        Grid.Column="1"/>
 
                 <Label Text="Stroke Width"
-                   Style="{StaticResource propertyLblStyle}"
-                   Grid.Row="3"/>
+                       Style="{StaticResource propertyLblStyle}"
+                       Grid.Row="3"/>
                 <Slider x:Name="strokeWidthSlider"
                         Minimum="0.0"
                         Value="0.5"

@@ -6,7 +6,6 @@
 using Xamarin.Forms;
 
 using LilWidgets.Widgets;
-using LilWidgets.Forms.Extensions;
 
 namespace LilWidgets.Forms.Views
 {
@@ -17,7 +16,6 @@ namespace LilWidgets.Forms.Views
         /// <see cref="BindableProperty"/> for the <see cref="ArcLength"/> property.
         /// </summary>
         public static readonly BindableProperty ArcLengthProperty = BindableProperty.Create(nameof(ArcLength), typeof(short), typeof(StrokedEquilateralWidgetView), LoadingWidget.DEFAULT_ARC_LENGTH, BindingMode.OneWay, propertyChanged: OnArcLengthPropertyChanged);
-
         #endregion
 
         #region Properties
@@ -41,7 +39,7 @@ namespace LilWidgets.Forms.Views
         private static void OnArcLengthPropertyChanged(BindableObject bindable, object oldValue, object newValue)
             => bindable.GetCastedWidgetView<LoadingWidgetView>().GetCastedWidget<LoadingWidget>().ArcLength = (short)newValue;
 
-        protected override void Start()
+        protected override void StartInternal()
         {
             // Create a new animation object each time we start because it needs to be relative to the last position when stopped.
             Animator = new Animation(UnderlyingWidget.AnimateCallback,
@@ -50,7 +48,7 @@ namespace LilWidgets.Forms.Views
             Animator.Commit(this, nameof(WidgetView), length: UnderlyingWidget.Duration, repeat: () => true);
         }
 
-        protected override void Stop()
+        protected override void StopInternal()
             => this.AbortAnimation(nameof(WidgetView));
     }
 }

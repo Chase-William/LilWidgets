@@ -67,7 +67,7 @@ namespace LilWidgets.Widgets
                     NotifyPropertyChanged();
                     UpdatePathRect(DrawingRect);
                     if (!IsAnimating)
-                        Invalidate();
+                        OnInvalidateCanvas();
                 }
             }
         }

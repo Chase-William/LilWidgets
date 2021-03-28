@@ -39,7 +39,7 @@ namespace LilWidgets.Widgets
             set
             {
                 if (Set(ref isAnimating, value)) // If animation state has changed raise event
-                    IsAnimatingChanged?.Invoke(this, new IsAnimatingChangedEventArgs(value));
+                    OnInvalidateAnimation();
             }
         }
 
@@ -86,6 +86,17 @@ namespace LilWidgets.Widgets
                     NotifyPropertyChanged();
                 }
             }
+        }
+
+        /// <summary>
+        /// Restarts a running animation or starts the animation.
+        /// </summary>
+        protected void RestartAnimation()
+        {
+            if (IsAnimating)
+                OnInvalidateAnimation();
+            else
+                IsAnimating = true;
         }
 
         /// <summary>
@@ -140,10 +151,13 @@ namespace LilWidgets.Widgets
             return weakHandler;
         }
 
+        protected virtual void OnInvalidateAnimation()
+            => IsAnimatingChanged?.Invoke(this, new IsAnimatingChangedEventArgs(IsAnimating));
+
         /// <summary>
         /// Invalidates the source's canvas by invoking the <see cref="Invalidated"/> event.
         /// </summary>
-        protected void Invalidate()
+        protected virtual void OnInvalidateCanvas()
             => Invalidated?.Invoke(this, EventArgs.Empty);
 
         /// <summary>

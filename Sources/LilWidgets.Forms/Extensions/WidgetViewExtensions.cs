@@ -3,7 +3,7 @@
 using LilWidgets.Forms.Views;
 using LilWidgets.Widgets;
 
-namespace LilWidgets.Forms.Extensions
+namespace LilWidgets.Forms
 {
     /// <summary>
     /// A <see cref="WidgetViewExtensions"/> class that provides commonly needed functions.

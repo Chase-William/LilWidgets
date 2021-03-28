@@ -15,6 +15,12 @@ namespace SandboxApp.Pages.ProgressWidgetPages
             On<iOS>().SetUseSafeArea(true);
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            progressWidgetView.Start();
+        }
+
         private void Test_BtnClicked(object sender, System.EventArgs e)
             => Navigation.PushAsync(new ProgressWidgetTestPage());        
     }

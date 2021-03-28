@@ -10,8 +10,8 @@
                             HorizontalOptions="CenterAndExpand"
                             HeightRequest="150"
                             WidthRequest="150"
-                            ArcLength="100"        
-                            Duration="1000"
+                            ArcLength="100"
+                            Duration="1200"
                             ArcColor="{StaticResource AccentPrimary}"/>
         <Button Text="Goto Test Page"
                 HorizontalOptions="Center"
