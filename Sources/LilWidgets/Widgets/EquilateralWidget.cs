@@ -6,7 +6,6 @@
 using SkiaSharp;
 
 using LilWidgets.Enumerations;
-using LilWidgets.Structures;
 
 namespace LilWidgets.Widgets
 {
@@ -16,6 +15,7 @@ namespace LilWidgets.Widgets
     /// </summary>
     public abstract class EquilateralWidget : Widget
     {
+        #region Properties
         /// <summary>
         /// Indicates whether the width and height are equal in length or which is the smaller of the two.
         /// </summary>
@@ -29,7 +29,8 @@ namespace LilWidgets.Widgets
         /// <summary>
         /// Equilateral Rectangle to be used for drawing.
         /// </summary>
-        protected SKRect EquilateralRect { get; private set; }        
+        protected SKRect EquilateralRect { get; private set; }
+        #endregion
 
         protected override void OnCanvasRectChanged(in SKRectI rect)
         {

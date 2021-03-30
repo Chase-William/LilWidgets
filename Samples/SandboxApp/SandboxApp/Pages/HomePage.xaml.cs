@@ -18,13 +18,15 @@ namespace SandboxApp.Pages
         private async void OnOpenGithub_BtnClicked(object sender, EventArgs e)
         {
             githubBtn.IsEnabled = false;
+            await ((VisualElement)sender).ScaleTo(1.1, 200, Easing.CubicInOut);
             await OpenGithubPageInBrowser();
-        }        
+            await ((VisualElement)sender).ScaleTo(1.0, 200, Easing.CubicInOut);
+        }
 
         private async Task OpenGithubPageInBrowser()
         {
             await Browser.OpenAsync("https://github.com/ChaseRoth/LilWidgets");
             Device.BeginInvokeOnMainThread(() => githubBtn.IsEnabled = true);
-        }       
+        }
     }
 }

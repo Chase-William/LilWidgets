@@ -11,7 +11,6 @@ namespace SandboxApp.Pages.ProgressWidgetPages
         public ProgressWidgetPage()
         {
             InitializeComponent();
-
             On<iOS>().SetUseSafeArea(true);
         }
 

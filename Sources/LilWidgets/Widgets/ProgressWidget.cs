@@ -8,6 +8,7 @@ using System;
 using SkiaSharp;
 
 using LilWidgets.Exceptions;
+using System.Runtime.CompilerServices;
 
 namespace LilWidgets.Widgets
 {
@@ -25,6 +26,7 @@ namespace LilWidgets.Widgets
         public const float MIN_TEXT_SIZE_PERCENTAGE = 0.01f;
         #endregion
 
+        #region Properties With Backing Fields
         private float progressPercentage;
         /// <summary>
         /// Gets or sets the target percentage to be displayed by the <see cref="ProgressWidget"/>.
@@ -76,6 +78,9 @@ namespace LilWidgets.Widgets
         }
 
         private float textSizePercentage = DEFAULT_TEXT_SIZE_PERCENTAGE;
+        /// <summary>
+        /// Gets or sets the size of the text within the <see cref="StrokeWidget.FittedRect"/>.
+        /// </summary>
         public float TextSizePercentage
         {
             get => textSizePercentage;
@@ -108,6 +113,15 @@ namespace LilWidgets.Widgets
             IsAntialias = true,
             TextSize = 1
         };
+        #endregion
+
+        #region Standalone Fields
+        /// <summary>
+        /// Max width available inside the offsets of <see cref="StrokeWidget.FittedRect"/>.
+        /// This is used when embedding for say text inside a rectangle.
+        /// </summary>
+        private float maxWidthInsideFittedRect = 0;
+        #endregion
 
         /// <summary>
         /// Initializes a new <see cref="ProgressWidget"/> instance.
@@ -120,13 +134,7 @@ namespace LilWidgets.Widgets
         /// </summary>
         /// <returns></returns>
         public uint GetRelativeDuration()
-            => (uint)(Duration * Math.Abs(ProgressPercentage - CurrentProgressPercentage));
-
-        /// <summary>
-        /// Max width available inside the offsets of <see cref="StrokeWidget.FittedRect"/>.
-        /// This is used when embedding for say text inside a rectangle.
-        /// </summary>
-        private float maxWidthInsideFittedRect = 0;
+            => (uint)(Duration * Math.Abs(ProgressPercentage - CurrentProgressPercentage));        
 
         protected override void OnInvalidateAnimation()
         {
@@ -134,14 +142,7 @@ namespace LilWidgets.Widgets
                 return; // Return if there is nothing to animate
 
             base.OnInvalidateAnimation();
-        }
-
-        protected override void OnCanvasRectChanged(in SKRectI rect)
-        {
-            base.OnCanvasRectChanged(rect);
-            // Getting the left and right offsets to fit out text nicely inside the FittedRect
-            maxWidthInsideFittedRect = FittedRect.Width - Offset * 2;
-        }
+        }       
 
         public override void DrawContent(SKCanvas canvas, in SKRectI rect)
         {
@@ -178,6 +179,13 @@ namespace LilWidgets.Widgets
                                 FittedRect.MidY - textBounds.MidY,
                                 TextPaint); // Progress Text
             }
+        }
+
+        protected override void OnNotifyPropertyChanged([CallerMemberName] string prop = "")
+        {
+            base.OnNotifyPropertyChanged(prop);
+            if (prop == nameof(Offset)) // When Offset changes we need to update this variable as well for our text.
+                maxWidthInsideFittedRect = FittedRect.Width - Offset * 2;
         }
     }
 }

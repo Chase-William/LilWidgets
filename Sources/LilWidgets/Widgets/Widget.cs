@@ -19,15 +19,14 @@ namespace LilWidgets.Widgets
     /// </summary>
     public abstract class Widget : INotifyPropertyChanged
     {
+        #region Constants
         /// <summary>
         /// Default duration for animations.
         /// </summary>
         public const uint DEFAULT_DURATION_VALUE = 2000;
+        #endregion
 
-        /// <summary>
-        /// Gets or sets the background color for a <see cref="Widget"/>.
-        /// </summary>   
-        public SKColor BackgroundColor { get; set; } = SKColors.Transparent;
+        #region Properties With Backing Fields
 
         private bool isAnimating = false;
         /// <summary>
@@ -53,23 +52,6 @@ namespace LilWidgets.Widgets
             set => Set(ref duration, value);
         }
 
-        /// <summary>
-        /// Notifies subscribers that a property has changed.
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// Notifies subscribers that the drawing canvas has been invalidated.
-        /// </summary>
-        public event EventHandler Invalidated;
-
-        /// <summary>
-        /// Notifies subscribers that the <see cref="IsAnimating"/> property has changed.
-        /// </summary>
-        public event EventHandler<IsAnimatingChangedEventArgs> IsAnimatingChanged;
-
-        public Action<double> AnimateCallback { get; protected set; }
-
         private SKRectI drawingRect;
         /// <summary>
         /// Dimensions of the <see cref="SKCanvas"/> that is checked for updates each draw call.
@@ -83,10 +65,31 @@ namespace LilWidgets.Widgets
                 {
                     drawingRect = value;
                     OnCanvasRectChanged(DrawingRect);
-                    NotifyPropertyChanged();
+                    OnNotifyPropertyChanged();
                 }
             }
         }
+
+        /// <summary>
+        /// Callback to be used by the platform specific projects.
+        /// </summary>
+        public Action<double> AnimateCallback { get; protected set; }
+        #endregion
+
+        /// <summary>
+        /// Notifies subscribers that a property has changed.
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Notifies subscribers that the drawing canvas has been invalidated.
+        /// </summary>
+        public event EventHandler Invalidated;
+
+        /// <summary>
+        /// Notifies subscribers that the <see cref="IsAnimating"/> property has changed.
+        /// </summary>
+        public event EventHandler<IsAnimatingChangedEventArgs> IsAnimatingChanged;               
 
         /// <summary>
         /// Restarts a running animation or starts the animation.
@@ -107,7 +110,7 @@ namespace LilWidgets.Widgets
         /// <param name="height">Height of the canvas.</param
         public void Draw(SKCanvas canvas, in SKRectI rect)
         {           
-            canvas.Clear(BackgroundColor);
+            canvas.Clear(SKColors.Transparent);
 
             // Update rect prop
             DrawingRect = rect;
@@ -120,14 +123,7 @@ namespace LilWidgets.Widgets
         /// </summary>
         /// <param name="canvas">To be drawn on.</param>
         /// <param name="rect">Dimensions of the canvas.</param>
-        public abstract void DrawContent(SKCanvas canvas, in SKRectI rect);
-
-        /// <summary>
-        /// Notifies specific subscribers of a change.
-        /// </summary>
-        /// <param name="prop">Property that changed.</param>
-        protected void NotifyPropertyChanged([CallerMemberName] string prop = "")
-            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
+        public abstract void DrawContent(SKCanvas canvas, in SKRectI rect);        
 
         /// <summary>
         /// Handles the canvas changing sizes.
@@ -151,6 +147,16 @@ namespace LilWidgets.Widgets
             return weakHandler;
         }
 
+        /// <summary>
+        /// Notifies specific subscribers of a change.
+        /// </summary>
+        /// <param name="prop">Property that changed.</param>
+        protected virtual void OnNotifyPropertyChanged([CallerMemberName] string prop = "")
+            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
+
+        /// <summary>
+        /// Notifies the source that the <see cref="IsAnimating"/> property has been changed in the backing library by invoking <see cref="IsAnimatingChanged"/>.
+        /// </summary>
         protected virtual void OnInvalidateAnimation()
             => IsAnimatingChanged?.Invoke(this, new IsAnimatingChangedEventArgs(IsAnimating));
 
@@ -161,24 +167,22 @@ namespace LilWidgets.Widgets
             => Invalidated?.Invoke(this, EventArgs.Empty);
 
         /// <summary>
-        /// Set the <paramref name="field"/> to the given <paramref name="value"/> if they are different.
-        /// Will raise the <see cref="PropertyChanged"/> by invoking <see cref="NotifyPropertyChanged(string)"/> if the field's current value is
-        /// different than the new.
-        /// Based off dotnet-ad's microcharts implementation.
+        /// Updates a targeted field with the given value if they are not already equal. 
+        /// This also applies to the calling of <see cref="OnNotifyPropertyChanged(string)"/>, meaning it won't be called if the field was not given a new value.    
         /// </summary>
-        /// <typeparam name="T">Type of <paramref name="field"/> and <paramref name="value"/>.</typeparam>
-        /// <param name="field">To be assigned <paramref name="value"/>.</param>
+        /// <typeparam name="T">The target type which is derived from <paramref name="field"/>.</typeparam>
+        /// <param name="field">Field to be targeted.</param>
         /// <param name="value">Value to be assigned to <paramref name="field"/>.</param>
-        /// <param name="prop">Calling property.</param>
-        /// <param name="notifyPropertyChanged">Should call <see cref="NotifyPropertyChanged(string)"/> which invokes <see cref="PropertyChanged"/>.</param>
-        /// <returns>Indication of success or failure.</returns>
-        protected bool Set<T>(ref T field, T value, [CallerMemberName] string prop = "", bool notifyPropertyChanged = true)
+        /// <param name="notifyPropertyChanged">Allows the prevention of <see cref="INotifyPropertyChanged"/> being invoked.</param>
+        /// <param name="prop">Property responsible for <see cref="INotifyPropertyChanged"/> being raised.</param>        
+        /// <returns>Indication if <paramref name="value"/> was assigned to <paramref name="field"/>.</returns>
+        protected bool Set<T>(ref T field, T value, bool notifyPropertyChanged = true, [CallerMemberName] string prop = "")
         {
             if (!Equals(field, prop))
             {
                 field = value;
                 if (notifyPropertyChanged)
-                    NotifyPropertyChanged(prop);
+                    OnNotifyPropertyChanged(prop);
                 return true;
             }
             return false;
