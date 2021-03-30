@@ -36,8 +36,7 @@ namespace LilWidgets.Forms.Views
         public LoadingWidgetView()
             => UnderlyingWidget = new LoadingWidget();
 
-        private static void OnArcLengthPropertyChanged(BindableObject bindable, object oldValue, object newValue)
-            => bindable.GetCastedWidgetView<LoadingWidgetView>().GetCastedWidget<LoadingWidget>().ArcLength = (short)newValue;
+        public void Stop() => IsAnimating = false;
 
         protected override void StartInternal()
         {
@@ -50,5 +49,14 @@ namespace LilWidgets.Forms.Views
 
         protected override void StopInternal()
             => this.AbortAnimation(nameof(WidgetView));
+
+        /// <summary>
+        /// Updates the underlying <see cref="LoadingWidget.ArcLength"/> property to match <see cref="ArcLength"/>.
+        /// </summary>
+        /// <param name="bindable"><see cref="LoadingWidgetView"/> instance.</param>
+        /// <param name="oldValue">Old <see cref="ArcLength"/> value.</param>
+        /// <param name="newValue">New <see cref="ArcLength"/> value.</param>
+        private static void OnArcLengthPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+            => bindable.GetCastedWidgetView<LoadingWidgetView>().GetCastedWidget<LoadingWidget>().ArcLength = (short)newValue;
     }
 }

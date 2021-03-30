@@ -26,9 +26,9 @@ namespace LilWidgets.Forms.Views
         /// </summary>
         public static readonly BindableProperty DurationProperty = BindableProperty.Create(nameof(Duration), typeof(uint), typeof(StrokedEquilateralWidgetView), Widget.DEFAULT_DURATION_VALUE, BindingMode.OneWay, propertyChanged: OnDurationPropertyChanged);
         /// <summary>
-        /// <see cref="BindableProperty"/> for the <see cref="StrokeWidth"/> property.
+        /// <see cref="BindableProperty"/> for the <see cref="StrokeWidthPercentage"/> property.
         /// </summary>
-        public static readonly BindableProperty StrokeWidthProperty = BindableProperty.Create(nameof(StrokeWidth), typeof(float), typeof(StrokedEquilateralWidgetView), StrokeWidget.DEFAULT_STROKE_WIDTH_PERCENTAGE, BindingMode.OneWay, propertyChanged: OnStrokeWidthPropertyChanged);
+        public static readonly BindableProperty StrokeWidthPercentageProperty = BindableProperty.Create(nameof(StrokeWidthPercentage), typeof(float), typeof(StrokedEquilateralWidgetView), StrokeWidget.DEFAULT_STROKE_WIDTH_PERCENTAGE, BindingMode.OneWay, propertyChanged: OnStrokeWidthPropertyChanged);
         /// <summary>
         /// <see cref="BindableProperty"/> for the <see cref="ShadowColor"/> property.
         /// </summary>
@@ -63,10 +63,10 @@ namespace LilWidgets.Forms.Views
         /// <summary>
         /// Gets or sets the width of the primary arc.
         /// </summary>
-        public float StrokeWidth
+        public float StrokeWidthPercentage
         {
-            get => (float)GetValue(StrokeWidthProperty);
-            set => SetValue(StrokeWidthProperty, value);
+            get => (float)GetValue(StrokeWidthPercentageProperty);
+            set => SetValue(StrokeWidthPercentageProperty, value);
         }
         #endregion Properties
 
@@ -96,11 +96,11 @@ namespace LilWidgets.Forms.Views
         private static void OnDurationPropertyChanged(BindableObject bindable, object oldValue, object newValue)
             => bindable.GetCastedWidgetView<StrokedEquilateralWidgetView>().GetCastedWidget<StrokeWidget>().Duration = (uint)newValue;
         /// <summary>
-        /// Updates the underlying <see cref="StrokeWidget.StrokeWidthPercentage"/> property to match <see cref="StrokeWidth"/>.
+        /// Updates the underlying <see cref="StrokeWidget.StrokeWidthPercentage"/> property to match <see cref="StrokeWidthPercentage"/>.
         /// </summary>
         /// <param name="bindable"><see cref="StrokedEquilateralWidgetView"/> instance.</param>
-        /// <param name="oldValue">Old <see cref="StrokeWidth"/> value.</param>
-        /// <param name="newValue">New <see cref="StrokeWidth"/> value.</param>
+        /// <param name="oldValue">Old <see cref="StrokeWidthPercentage"/> value.</param>
+        /// <param name="newValue">New <see cref="StrokeWidthPercentage"/> value.</param>
         private static void OnStrokeWidthPropertyChanged(BindableObject bindable, object oldValue, object newValue)
             => bindable.GetCastedWidgetView<StrokedEquilateralWidgetView>().GetCastedWidget<StrokeWidget>().StrokeWidthPercentage = (float)newValue;
         #endregion

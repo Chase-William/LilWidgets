@@ -10,7 +10,7 @@
                                VerticalOptions="CenterAndExpand"
                                HorizontalOptions="CenterAndExpand"
                                HeightRequest="150"
-                               WidthRequest="150"                               
+                               WidthRequest="150"
                                ProgressPercentage="0.95"
                                ArcColor="{StaticResource AccentPrimary}"/>
         <Button Text="Goto Sandbox Page"                             

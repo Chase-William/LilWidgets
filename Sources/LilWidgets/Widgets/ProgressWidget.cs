@@ -3,22 +3,34 @@
  * Licensed under the MIT License. See project root directory for more info.
 */
 
+using System;
+
 using SkiaSharp;
 
 namespace LilWidgets.Widgets
 {
     public class ProgressWidget : StrokeWidget
     {
+        #region Constants
         public const float DEFAULT_PROGRESS_PERCENTAGE = 0;
         public const short BASE_SWEEP_ANGLE = -90;
         public const bool DEFAULT_IS_TEXT_VISIBLE = true;
+        public const float MIN_PROGRESS_PERCENTAGE = 0f;
+        public const float MAX_PROGRESS_PERCENTAGE = 1f;
+        public const bool DEFAULT_AUTO_ANIMATE = false;
+        #endregion
 
         private float progressPercentage;
+        /// <summary>
+        /// Gets or sets the target percentage to be displayed by the <see cref="ProgressWidget"/>.
+        /// </summary>
         public float ProgressPercentage
         {
             get => progressPercentage;
             set
             {
+                if (value > MAX_PROGRESS_PERCENTAGE || value < MIN_PROGRESS_PERCENTAGE) // Range constraints
+                    throw new ArgumentOutOfRangeException($"Value {value} for property {nameof(ProgressPercentage)} is outside the valid range of {MIN_PROGRESS_PERCENTAGE} to {MAX_PROGRESS_PERCENTAGE} inclusive.");
                 if (Set(ref progressPercentage, value))
                 {
                     if (AutoAnimate) // Restart the running animation to use updated values
@@ -28,6 +40,10 @@ namespace LilWidgets.Widgets
         }
 
         private float currentProgressPercentage;
+        /// <summary>
+        /// Gets the current percentage the <see cref="ProgressWidget"/> is displaying.
+        /// This value will be updating constantly while the animation is running.
+        /// </summary>
         public float CurrentProgressPercentage
         {
             get => currentProgressPercentage;
@@ -38,11 +54,34 @@ namespace LilWidgets.Widgets
             }
         }
 
-        public bool IsTextVisible { get; set; } = DEFAULT_IS_TEXT_VISIBLE;
+        private bool isTextVisible = DEFAULT_IS_TEXT_VISIBLE;
+        /// <summary>
+        /// Gets or sets whether the percentage text should be visible.
+        /// </summary>
+        public bool IsTextVisible
+        {
+            get => isTextVisible;
+            set
+            {
+                if (Set(ref isTextVisible, value))                
+                    OnInvalidateCanvas();                
+            }
+        }
 
-        public bool AutoAnimate { get; set; }
+        private bool autoAnimate = DEFAULT_AUTO_ANIMATE;
+        /// <summary>
+        /// Gets or sets whether assigning a new value to the <see cref="ProgressPercentage"/> automatically starts the animation.
+        /// </summary>
+        public bool AutoAnimate
+        {
+            get => autoAnimate;
+            set => Set(ref autoAnimate, value);
+        }
 
-        private SKPaint textPaint = new SKPaint
+        /// <summary>
+        /// Gets or sets the <see cref="SKPaint"/> being used for drawing the text displaying the <see cref="CurrentProgressPercentage"/> property.
+        /// </summary>
+        protected SKPaint TextPaint { get; set; } = new SKPaint
         {
             Color = SKColors.Black,
             Style = SKPaintStyle.Fill,
@@ -60,7 +99,7 @@ namespace LilWidgets.Widgets
         /// </summary>
         /// <returns></returns>
         public uint GetRelativeDuration()
-            => (uint)(Duration * (ProgressPercentage - CurrentProgressPercentage));
+            => (uint)(Duration * Math.Abs(ProgressPercentage - CurrentProgressPercentage));
 
         protected override void OnInvalidateAnimation()
         {
@@ -93,20 +132,20 @@ namespace LilWidgets.Widgets
             {
                 string percentageMsg = CurrentProgressPercentage.ToString("P");
                 // Adjust TextSize property so text is 75% of screen width
-                var textWidth = textPaint.MeasureText(percentageMsg);
+                var textWidth = TextPaint.MeasureText(percentageMsg);
                 float width = FittedRect.Width / 2;
                 if (width > 1) // We don't want *lose* the text, the IsTextVisible property should be used for hiding the text
                 {
-                    textPaint.TextSize = width * textPaint.TextSize / textWidth;
+                    TextPaint.TextSize = width * TextPaint.TextSize / textWidth;
                 }
                 SKRect textBounds = new SKRect();
                 // Find the text bounds
-                textPaint.MeasureText(percentageMsg, ref textBounds);
+                TextPaint.MeasureText(percentageMsg, ref textBounds);
                 // Draw text in the center of the control vertically and horizontally
                 canvas.DrawText(percentageMsg,
                                 FittedRect.MidX - textBounds.MidX,
                                 FittedRect.MidY - textBounds.MidY,
-                                textPaint); // Progress Text
+                                TextPaint); // Progress Text
             }
         }
     }

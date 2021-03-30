@@ -73,10 +73,13 @@ namespace LilWidgets.Widgets
         }
         #endregion
 
+        /// <summary>
+        /// Gets the rectangle for drawing that proper offsets applied for a stroke.
+        /// </summary>
         protected SKRect FittedRect { get; private set; }
 
         /// <summary>
-        /// Used to draw the background arc.
+        /// Gets or sets the <see cref="SKPaint"/> to draw the background arc.
         /// </summary>
         protected SKPaint ArcPaint { get; set; } = new SKPaint
         {

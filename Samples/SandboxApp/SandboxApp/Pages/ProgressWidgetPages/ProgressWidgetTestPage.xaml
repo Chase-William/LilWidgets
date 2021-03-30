@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:skia="clr-namespace:LilWidgets.Widgets;assembly=LilWidgets"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:lw="clr-namespace:LilWidgets.Forms.Views;assembly=LilWidgets.Forms"
              x:Class="SandboxApp.Pages.ProgressWidgetPages.ProgressWidgetTestPage"
              Style="{StaticResource DefaultPageStyle}"
              Title="Progress Widget Testing">
 
     <StackLayout>
-        <!--<Grid VerticalOptions="FillAndExpand">
-            --><!--<skia:ProgressWidget x:Name="progressWidget"
-                                 VerticalOptions="Center"
-                                 HorizontalOptions="Center"
-                                 WidthRequest="100"
-                                 HeightRequest="100"
-                                 TextColor="{StaticResource ColorContrast}"
-                                 BackArcColor="{StaticResource AccentSecondary}"
-                                 ProgressArcColor="{StaticResource AccentPrimary}"/>--><!--
+        <Grid VerticalOptions="FillAndExpand">
+            <lw:ProgressWidgetView x:Name="progressWidget"
+                                WidthRequest="100"
+                                HeightRequest="100"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                ProgressPercentage="0.75"
+                                ArcColor="{StaticResource AccentPrimary}"/>
         </Grid>
         <Grid Style="{StaticResource controlGrid}">
             <Grid.RowDefinitions>
@@ -30,7 +30,7 @@
             </Grid.ColumnDefinitions>
 
             <Entry x:Name="percentValueEntry"
-                   Placeholder="Enter value from 0.00 to 1.00"/>
+                   Placeholder="0.00 to 1.00"/>
             <Button Text="Apply"
                     Grid.Column="1"
                     Clicked="Apply_BtnClicked"/>
@@ -94,6 +94,6 @@
                     Minimum="0"
                     Grid.Row="1"
                     Grid.Column="1"/>
-        </Grid>-->
+        </Grid>
     </StackLayout>
 </ContentPage>

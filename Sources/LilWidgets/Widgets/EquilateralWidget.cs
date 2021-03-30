@@ -26,6 +26,9 @@ namespace LilWidgets.Widgets
         /// </summary>
         public float LimitingDimensionLength { get; private set; }
 
+        /// <summary>
+        /// Equilateral Rectangle to be used for drawing.
+        /// </summary>
         protected SKRectI EquilateralRect { get; private set; }
 
         protected override void OnCanvasRectChanged(in SKRectI rect)

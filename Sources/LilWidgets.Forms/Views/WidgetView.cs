@@ -45,7 +45,7 @@ namespace LilWidgets.Forms.Views
         public bool IsAnimating
         {
             get => (bool)GetValue(IsAnimatingProperty);
-            set => SetValue(IsAnimatingProperty, value);
+            protected set => SetValue(IsAnimatingProperty, value);
         }
 
         /// <summary>
@@ -70,6 +70,11 @@ namespace LilWidgets.Forms.Views
             BackgroundColor = Color.Transparent;
             PaintSurface += OnPaintCanvas;
         }
+
+        /// <summary>
+        /// Starts the animation.
+        /// </summary>
+        public virtual void Start() => IsAnimating = true;
 
         /// <summary>
         /// Starts the <see cref="Animator"/>.
