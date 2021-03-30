@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:lw="clr-namespace:LilWidgets.Forms.Views;assembly=LilWidgets.Forms"
              x:Class="SandboxApp.Pages.ProgressWidgetPages.ProgressWidgetPage"
-             Style="{StaticResource DefaultPageStyle}">
+             Style="{StaticResource DefaultPageStyle}"
+             Title="Progress Widget">
     <StackLayout>
         <lw:ProgressWidgetView x:Name="progressWidgetView"
                                VerticalOptions="CenterAndExpand"
@@ -12,7 +13,7 @@
                                WidthRequest="150"                               
                                ProgressPercentage="0.95"
                                ArcColor="{StaticResource AccentPrimary}"/>
-        <Button Text="Goto Test Page"                             
+        <Button Text="Goto Sandbox Page"                             
                 HorizontalOptions="Center"
                 Clicked="Test_BtnClicked"/>
     </StackLayout>

@@ -25,1600 +25,6 @@ namespace SandboxApp.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::LilWidgets.Android.Resource.Animation.abc_fade_in = global::SandboxApp.Droid.Resource.Animation.abc_fade_in;
-			global::LilWidgets.Android.Resource.Animation.abc_fade_out = global::SandboxApp.Droid.Resource.Animation.abc_fade_out;
-			global::LilWidgets.Android.Resource.Animation.abc_grow_fade_in_from_bottom = global::SandboxApp.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
-			global::LilWidgets.Android.Resource.Animation.abc_popup_enter = global::SandboxApp.Droid.Resource.Animation.abc_popup_enter;
-			global::LilWidgets.Android.Resource.Animation.abc_popup_exit = global::SandboxApp.Droid.Resource.Animation.abc_popup_exit;
-			global::LilWidgets.Android.Resource.Animation.abc_shrink_fade_out_from_bottom = global::SandboxApp.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
-			global::LilWidgets.Android.Resource.Animation.abc_slide_in_bottom = global::SandboxApp.Droid.Resource.Animation.abc_slide_in_bottom;
-			global::LilWidgets.Android.Resource.Animation.abc_slide_in_top = global::SandboxApp.Droid.Resource.Animation.abc_slide_in_top;
-			global::LilWidgets.Android.Resource.Animation.abc_slide_out_bottom = global::SandboxApp.Droid.Resource.Animation.abc_slide_out_bottom;
-			global::LilWidgets.Android.Resource.Animation.abc_slide_out_top = global::SandboxApp.Droid.Resource.Animation.abc_slide_out_top;
-			global::LilWidgets.Android.Resource.Animation.abc_tooltip_enter = global::SandboxApp.Droid.Resource.Animation.abc_tooltip_enter;
-			global::LilWidgets.Android.Resource.Animation.abc_tooltip_exit = global::SandboxApp.Droid.Resource.Animation.abc_tooltip_exit;
-			global::LilWidgets.Android.Resource.Attribute.actionBarDivider = global::SandboxApp.Droid.Resource.Attribute.actionBarDivider;
-			global::LilWidgets.Android.Resource.Attribute.actionBarItemBackground = global::SandboxApp.Droid.Resource.Attribute.actionBarItemBackground;
-			global::LilWidgets.Android.Resource.Attribute.actionBarPopupTheme = global::SandboxApp.Droid.Resource.Attribute.actionBarPopupTheme;
-			global::LilWidgets.Android.Resource.Attribute.actionBarSize = global::SandboxApp.Droid.Resource.Attribute.actionBarSize;
-			global::LilWidgets.Android.Resource.Attribute.actionBarSplitStyle = global::SandboxApp.Droid.Resource.Attribute.actionBarSplitStyle;
-			global::LilWidgets.Android.Resource.Attribute.actionBarStyle = global::SandboxApp.Droid.Resource.Attribute.actionBarStyle;
-			global::LilWidgets.Android.Resource.Attribute.actionBarTabBarStyle = global::SandboxApp.Droid.Resource.Attribute.actionBarTabBarStyle;
-			global::LilWidgets.Android.Resource.Attribute.actionBarTabStyle = global::SandboxApp.Droid.Resource.Attribute.actionBarTabStyle;
-			global::LilWidgets.Android.Resource.Attribute.actionBarTabTextStyle = global::SandboxApp.Droid.Resource.Attribute.actionBarTabTextStyle;
-			global::LilWidgets.Android.Resource.Attribute.actionBarTheme = global::SandboxApp.Droid.Resource.Attribute.actionBarTheme;
-			global::LilWidgets.Android.Resource.Attribute.actionBarWidgetTheme = global::SandboxApp.Droid.Resource.Attribute.actionBarWidgetTheme;
-			global::LilWidgets.Android.Resource.Attribute.actionButtonStyle = global::SandboxApp.Droid.Resource.Attribute.actionButtonStyle;
-			global::LilWidgets.Android.Resource.Attribute.actionDropDownStyle = global::SandboxApp.Droid.Resource.Attribute.actionDropDownStyle;
-			global::LilWidgets.Android.Resource.Attribute.actionLayout = global::SandboxApp.Droid.Resource.Attribute.actionLayout;
-			global::LilWidgets.Android.Resource.Attribute.actionMenuTextAppearance = global::SandboxApp.Droid.Resource.Attribute.actionMenuTextAppearance;
-			global::LilWidgets.Android.Resource.Attribute.actionMenuTextColor = global::SandboxApp.Droid.Resource.Attribute.actionMenuTextColor;
-			global::LilWidgets.Android.Resource.Attribute.actionModeBackground = global::SandboxApp.Droid.Resource.Attribute.actionModeBackground;
-			global::LilWidgets.Android.Resource.Attribute.actionModeCloseButtonStyle = global::SandboxApp.Droid.Resource.Attribute.actionModeCloseButtonStyle;
-			global::LilWidgets.Android.Resource.Attribute.actionModeCloseDrawable = global::SandboxApp.Droid.Resource.Attribute.actionModeCloseDrawable;
-			global::LilWidgets.Android.Resource.Attribute.actionModeCopyDrawable = global::SandboxApp.Droid.Resource.Attribute.actionModeCopyDrawable;
-			global::LilWidgets.Android.Resource.Attribute.actionModeCutDrawable = global::SandboxApp.Droid.Resource.Attribute.actionModeCutDrawable;
-			global::LilWidgets.Android.Resource.Attribute.actionModeFindDrawable = global::SandboxApp.Droid.Resource.Attribute.actionModeFindDrawable;
-			global::LilWidgets.Android.Resource.Attribute.actionModePasteDrawable = global::SandboxApp.Droid.Resource.Attribute.actionModePasteDrawable;
-			global::LilWidgets.Android.Resource.Attribute.actionModePopupWindowStyle = global::SandboxApp.Droid.Resource.Attribute.actionModePopupWindowStyle;
-			global::LilWidgets.Android.Resource.Attribute.actionModeSelectAllDrawable = global::SandboxApp.Droid.Resource.Attribute.actionModeSelectAllDrawable;
-			global::LilWidgets.Android.Resource.Attribute.actionModeShareDrawable = global::SandboxApp.Droid.Resource.Attribute.actionModeShareDrawable;
-			global::LilWidgets.Android.Resource.Attribute.actionModeSplitBackground = global::SandboxApp.Droid.Resource.Attribute.actionModeSplitBackground;
-			global::LilWidgets.Android.Resource.Attribute.actionModeStyle = global::SandboxApp.Droid.Resource.Attribute.actionModeStyle;
-			global::LilWidgets.Android.Resource.Attribute.actionModeWebSearchDrawable = global::SandboxApp.Droid.Resource.Attribute.actionModeWebSearchDrawable;
-			global::LilWidgets.Android.Resource.Attribute.actionOverflowButtonStyle = global::SandboxApp.Droid.Resource.Attribute.actionOverflowButtonStyle;
-			global::LilWidgets.Android.Resource.Attribute.actionOverflowMenuStyle = global::SandboxApp.Droid.Resource.Attribute.actionOverflowMenuStyle;
-			global::LilWidgets.Android.Resource.Attribute.actionProviderClass = global::SandboxApp.Droid.Resource.Attribute.actionProviderClass;
-			global::LilWidgets.Android.Resource.Attribute.actionViewClass = global::SandboxApp.Droid.Resource.Attribute.actionViewClass;
-			global::LilWidgets.Android.Resource.Attribute.activityChooserViewStyle = global::SandboxApp.Droid.Resource.Attribute.activityChooserViewStyle;
-			global::LilWidgets.Android.Resource.Attribute.alertDialogButtonGroupStyle = global::SandboxApp.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
-			global::LilWidgets.Android.Resource.Attribute.alertDialogCenterButtons = global::SandboxApp.Droid.Resource.Attribute.alertDialogCenterButtons;
-			global::LilWidgets.Android.Resource.Attribute.alertDialogStyle = global::SandboxApp.Droid.Resource.Attribute.alertDialogStyle;
-			global::LilWidgets.Android.Resource.Attribute.alertDialogTheme = global::SandboxApp.Droid.Resource.Attribute.alertDialogTheme;
-			global::LilWidgets.Android.Resource.Attribute.allowStacking = global::SandboxApp.Droid.Resource.Attribute.allowStacking;
-			global::LilWidgets.Android.Resource.Attribute.alpha = global::SandboxApp.Droid.Resource.Attribute.alpha;
-			global::LilWidgets.Android.Resource.Attribute.alphabeticModifiers = global::SandboxApp.Droid.Resource.Attribute.alphabeticModifiers;
-			global::LilWidgets.Android.Resource.Attribute.arrowHeadLength = global::SandboxApp.Droid.Resource.Attribute.arrowHeadLength;
-			global::LilWidgets.Android.Resource.Attribute.arrowShaftLength = global::SandboxApp.Droid.Resource.Attribute.arrowShaftLength;
-			global::LilWidgets.Android.Resource.Attribute.autoCompleteTextViewStyle = global::SandboxApp.Droid.Resource.Attribute.autoCompleteTextViewStyle;
-			global::LilWidgets.Android.Resource.Attribute.autoSizeMaxTextSize = global::SandboxApp.Droid.Resource.Attribute.autoSizeMaxTextSize;
-			global::LilWidgets.Android.Resource.Attribute.autoSizeMinTextSize = global::SandboxApp.Droid.Resource.Attribute.autoSizeMinTextSize;
-			global::LilWidgets.Android.Resource.Attribute.autoSizePresetSizes = global::SandboxApp.Droid.Resource.Attribute.autoSizePresetSizes;
-			global::LilWidgets.Android.Resource.Attribute.autoSizeStepGranularity = global::SandboxApp.Droid.Resource.Attribute.autoSizeStepGranularity;
-			global::LilWidgets.Android.Resource.Attribute.autoSizeTextType = global::SandboxApp.Droid.Resource.Attribute.autoSizeTextType;
-			global::LilWidgets.Android.Resource.Attribute.background = global::SandboxApp.Droid.Resource.Attribute.background;
-			global::LilWidgets.Android.Resource.Attribute.backgroundSplit = global::SandboxApp.Droid.Resource.Attribute.backgroundSplit;
-			global::LilWidgets.Android.Resource.Attribute.backgroundStacked = global::SandboxApp.Droid.Resource.Attribute.backgroundStacked;
-			global::LilWidgets.Android.Resource.Attribute.backgroundTint = global::SandboxApp.Droid.Resource.Attribute.backgroundTint;
-			global::LilWidgets.Android.Resource.Attribute.backgroundTintMode = global::SandboxApp.Droid.Resource.Attribute.backgroundTintMode;
-			global::LilWidgets.Android.Resource.Attribute.barLength = global::SandboxApp.Droid.Resource.Attribute.barLength;
-			global::LilWidgets.Android.Resource.Attribute.borderlessButtonStyle = global::SandboxApp.Droid.Resource.Attribute.borderlessButtonStyle;
-			global::LilWidgets.Android.Resource.Attribute.buttonBarButtonStyle = global::SandboxApp.Droid.Resource.Attribute.buttonBarButtonStyle;
-			global::LilWidgets.Android.Resource.Attribute.buttonBarNegativeButtonStyle = global::SandboxApp.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
-			global::LilWidgets.Android.Resource.Attribute.buttonBarNeutralButtonStyle = global::SandboxApp.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
-			global::LilWidgets.Android.Resource.Attribute.buttonBarPositiveButtonStyle = global::SandboxApp.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
-			global::LilWidgets.Android.Resource.Attribute.buttonBarStyle = global::SandboxApp.Droid.Resource.Attribute.buttonBarStyle;
-			global::LilWidgets.Android.Resource.Attribute.buttonGravity = global::SandboxApp.Droid.Resource.Attribute.buttonGravity;
-			global::LilWidgets.Android.Resource.Attribute.buttonIconDimen = global::SandboxApp.Droid.Resource.Attribute.buttonIconDimen;
-			global::LilWidgets.Android.Resource.Attribute.buttonPanelSideLayout = global::SandboxApp.Droid.Resource.Attribute.buttonPanelSideLayout;
-			global::LilWidgets.Android.Resource.Attribute.buttonStyle = global::SandboxApp.Droid.Resource.Attribute.buttonStyle;
-			global::LilWidgets.Android.Resource.Attribute.buttonStyleSmall = global::SandboxApp.Droid.Resource.Attribute.buttonStyleSmall;
-			global::LilWidgets.Android.Resource.Attribute.buttonTint = global::SandboxApp.Droid.Resource.Attribute.buttonTint;
-			global::LilWidgets.Android.Resource.Attribute.buttonTintMode = global::SandboxApp.Droid.Resource.Attribute.buttonTintMode;
-			global::LilWidgets.Android.Resource.Attribute.checkboxStyle = global::SandboxApp.Droid.Resource.Attribute.checkboxStyle;
-			global::LilWidgets.Android.Resource.Attribute.checkedTextViewStyle = global::SandboxApp.Droid.Resource.Attribute.checkedTextViewStyle;
-			global::LilWidgets.Android.Resource.Attribute.closeIcon = global::SandboxApp.Droid.Resource.Attribute.closeIcon;
-			global::LilWidgets.Android.Resource.Attribute.closeItemLayout = global::SandboxApp.Droid.Resource.Attribute.closeItemLayout;
-			global::LilWidgets.Android.Resource.Attribute.collapseContentDescription = global::SandboxApp.Droid.Resource.Attribute.collapseContentDescription;
-			global::LilWidgets.Android.Resource.Attribute.collapseIcon = global::SandboxApp.Droid.Resource.Attribute.collapseIcon;
-			global::LilWidgets.Android.Resource.Attribute.color = global::SandboxApp.Droid.Resource.Attribute.color;
-			global::LilWidgets.Android.Resource.Attribute.colorAccent = global::SandboxApp.Droid.Resource.Attribute.colorAccent;
-			global::LilWidgets.Android.Resource.Attribute.colorBackgroundFloating = global::SandboxApp.Droid.Resource.Attribute.colorBackgroundFloating;
-			global::LilWidgets.Android.Resource.Attribute.colorButtonNormal = global::SandboxApp.Droid.Resource.Attribute.colorButtonNormal;
-			global::LilWidgets.Android.Resource.Attribute.colorControlActivated = global::SandboxApp.Droid.Resource.Attribute.colorControlActivated;
-			global::LilWidgets.Android.Resource.Attribute.colorControlHighlight = global::SandboxApp.Droid.Resource.Attribute.colorControlHighlight;
-			global::LilWidgets.Android.Resource.Attribute.colorControlNormal = global::SandboxApp.Droid.Resource.Attribute.colorControlNormal;
-			global::LilWidgets.Android.Resource.Attribute.colorError = global::SandboxApp.Droid.Resource.Attribute.colorError;
-			global::LilWidgets.Android.Resource.Attribute.colorPrimary = global::SandboxApp.Droid.Resource.Attribute.colorPrimary;
-			global::LilWidgets.Android.Resource.Attribute.colorPrimaryDark = global::SandboxApp.Droid.Resource.Attribute.colorPrimaryDark;
-			global::LilWidgets.Android.Resource.Attribute.colorSwitchThumbNormal = global::SandboxApp.Droid.Resource.Attribute.colorSwitchThumbNormal;
-			global::LilWidgets.Android.Resource.Attribute.commitIcon = global::SandboxApp.Droid.Resource.Attribute.commitIcon;
-			global::LilWidgets.Android.Resource.Attribute.contentDescription = global::SandboxApp.Droid.Resource.Attribute.contentDescription;
-			global::LilWidgets.Android.Resource.Attribute.contentInsetEnd = global::SandboxApp.Droid.Resource.Attribute.contentInsetEnd;
-			global::LilWidgets.Android.Resource.Attribute.contentInsetEndWithActions = global::SandboxApp.Droid.Resource.Attribute.contentInsetEndWithActions;
-			global::LilWidgets.Android.Resource.Attribute.contentInsetLeft = global::SandboxApp.Droid.Resource.Attribute.contentInsetLeft;
-			global::LilWidgets.Android.Resource.Attribute.contentInsetRight = global::SandboxApp.Droid.Resource.Attribute.contentInsetRight;
-			global::LilWidgets.Android.Resource.Attribute.contentInsetStart = global::SandboxApp.Droid.Resource.Attribute.contentInsetStart;
-			global::LilWidgets.Android.Resource.Attribute.contentInsetStartWithNavigation = global::SandboxApp.Droid.Resource.Attribute.contentInsetStartWithNavigation;
-			global::LilWidgets.Android.Resource.Attribute.controlBackground = global::SandboxApp.Droid.Resource.Attribute.controlBackground;
-			global::LilWidgets.Android.Resource.Attribute.coordinatorLayoutStyle = global::SandboxApp.Droid.Resource.Attribute.coordinatorLayoutStyle;
-			global::LilWidgets.Android.Resource.Attribute.customNavigationLayout = global::SandboxApp.Droid.Resource.Attribute.customNavigationLayout;
-			global::LilWidgets.Android.Resource.Attribute.defaultQueryHint = global::SandboxApp.Droid.Resource.Attribute.defaultQueryHint;
-			global::LilWidgets.Android.Resource.Attribute.dialogCornerRadius = global::SandboxApp.Droid.Resource.Attribute.dialogCornerRadius;
-			global::LilWidgets.Android.Resource.Attribute.dialogPreferredPadding = global::SandboxApp.Droid.Resource.Attribute.dialogPreferredPadding;
-			global::LilWidgets.Android.Resource.Attribute.dialogTheme = global::SandboxApp.Droid.Resource.Attribute.dialogTheme;
-			global::LilWidgets.Android.Resource.Attribute.displayOptions = global::SandboxApp.Droid.Resource.Attribute.displayOptions;
-			global::LilWidgets.Android.Resource.Attribute.divider = global::SandboxApp.Droid.Resource.Attribute.divider;
-			global::LilWidgets.Android.Resource.Attribute.dividerHorizontal = global::SandboxApp.Droid.Resource.Attribute.dividerHorizontal;
-			global::LilWidgets.Android.Resource.Attribute.dividerPadding = global::SandboxApp.Droid.Resource.Attribute.dividerPadding;
-			global::LilWidgets.Android.Resource.Attribute.dividerVertical = global::SandboxApp.Droid.Resource.Attribute.dividerVertical;
-			global::LilWidgets.Android.Resource.Attribute.drawableSize = global::SandboxApp.Droid.Resource.Attribute.drawableSize;
-			global::LilWidgets.Android.Resource.Attribute.drawerArrowStyle = global::SandboxApp.Droid.Resource.Attribute.drawerArrowStyle;
-			global::LilWidgets.Android.Resource.Attribute.dropdownListPreferredItemHeight = global::SandboxApp.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
-			global::LilWidgets.Android.Resource.Attribute.dropDownListViewStyle = global::SandboxApp.Droid.Resource.Attribute.dropDownListViewStyle;
-			global::LilWidgets.Android.Resource.Attribute.editTextBackground = global::SandboxApp.Droid.Resource.Attribute.editTextBackground;
-			global::LilWidgets.Android.Resource.Attribute.editTextColor = global::SandboxApp.Droid.Resource.Attribute.editTextColor;
-			global::LilWidgets.Android.Resource.Attribute.editTextStyle = global::SandboxApp.Droid.Resource.Attribute.editTextStyle;
-			global::LilWidgets.Android.Resource.Attribute.elevation = global::SandboxApp.Droid.Resource.Attribute.elevation;
-			global::LilWidgets.Android.Resource.Attribute.expandActivityOverflowButtonDrawable = global::SandboxApp.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
-			global::LilWidgets.Android.Resource.Attribute.firstBaselineToTopHeight = global::SandboxApp.Droid.Resource.Attribute.firstBaselineToTopHeight;
-			global::LilWidgets.Android.Resource.Attribute.font = global::SandboxApp.Droid.Resource.Attribute.font;
-			global::LilWidgets.Android.Resource.Attribute.fontFamily = global::SandboxApp.Droid.Resource.Attribute.fontFamily;
-			global::LilWidgets.Android.Resource.Attribute.fontProviderAuthority = global::SandboxApp.Droid.Resource.Attribute.fontProviderAuthority;
-			global::LilWidgets.Android.Resource.Attribute.fontProviderCerts = global::SandboxApp.Droid.Resource.Attribute.fontProviderCerts;
-			global::LilWidgets.Android.Resource.Attribute.fontProviderFetchStrategy = global::SandboxApp.Droid.Resource.Attribute.fontProviderFetchStrategy;
-			global::LilWidgets.Android.Resource.Attribute.fontProviderFetchTimeout = global::SandboxApp.Droid.Resource.Attribute.fontProviderFetchTimeout;
-			global::LilWidgets.Android.Resource.Attribute.fontProviderPackage = global::SandboxApp.Droid.Resource.Attribute.fontProviderPackage;
-			global::LilWidgets.Android.Resource.Attribute.fontProviderQuery = global::SandboxApp.Droid.Resource.Attribute.fontProviderQuery;
-			global::LilWidgets.Android.Resource.Attribute.fontStyle = global::SandboxApp.Droid.Resource.Attribute.fontStyle;
-			global::LilWidgets.Android.Resource.Attribute.fontVariationSettings = global::SandboxApp.Droid.Resource.Attribute.fontVariationSettings;
-			global::LilWidgets.Android.Resource.Attribute.fontWeight = global::SandboxApp.Droid.Resource.Attribute.fontWeight;
-			global::LilWidgets.Android.Resource.Attribute.gapBetweenBars = global::SandboxApp.Droid.Resource.Attribute.gapBetweenBars;
-			global::LilWidgets.Android.Resource.Attribute.goIcon = global::SandboxApp.Droid.Resource.Attribute.goIcon;
-			global::LilWidgets.Android.Resource.Attribute.height = global::SandboxApp.Droid.Resource.Attribute.height;
-			global::LilWidgets.Android.Resource.Attribute.hideOnContentScroll = global::SandboxApp.Droid.Resource.Attribute.hideOnContentScroll;
-			global::LilWidgets.Android.Resource.Attribute.homeAsUpIndicator = global::SandboxApp.Droid.Resource.Attribute.homeAsUpIndicator;
-			global::LilWidgets.Android.Resource.Attribute.homeLayout = global::SandboxApp.Droid.Resource.Attribute.homeLayout;
-			global::LilWidgets.Android.Resource.Attribute.icon = global::SandboxApp.Droid.Resource.Attribute.icon;
-			global::LilWidgets.Android.Resource.Attribute.iconifiedByDefault = global::SandboxApp.Droid.Resource.Attribute.iconifiedByDefault;
-			global::LilWidgets.Android.Resource.Attribute.iconTint = global::SandboxApp.Droid.Resource.Attribute.iconTint;
-			global::LilWidgets.Android.Resource.Attribute.iconTintMode = global::SandboxApp.Droid.Resource.Attribute.iconTintMode;
-			global::LilWidgets.Android.Resource.Attribute.imageButtonStyle = global::SandboxApp.Droid.Resource.Attribute.imageButtonStyle;
-			global::LilWidgets.Android.Resource.Attribute.indeterminateProgressStyle = global::SandboxApp.Droid.Resource.Attribute.indeterminateProgressStyle;
-			global::LilWidgets.Android.Resource.Attribute.initialActivityCount = global::SandboxApp.Droid.Resource.Attribute.initialActivityCount;
-			global::LilWidgets.Android.Resource.Attribute.isLightTheme = global::SandboxApp.Droid.Resource.Attribute.isLightTheme;
-			global::LilWidgets.Android.Resource.Attribute.itemPadding = global::SandboxApp.Droid.Resource.Attribute.itemPadding;
-			global::LilWidgets.Android.Resource.Attribute.keylines = global::SandboxApp.Droid.Resource.Attribute.keylines;
-			global::LilWidgets.Android.Resource.Attribute.lastBaselineToBottomHeight = global::SandboxApp.Droid.Resource.Attribute.lastBaselineToBottomHeight;
-			global::LilWidgets.Android.Resource.Attribute.layout = global::SandboxApp.Droid.Resource.Attribute.layout;
-			global::LilWidgets.Android.Resource.Attribute.layout_anchor = global::SandboxApp.Droid.Resource.Attribute.layout_anchor;
-			global::LilWidgets.Android.Resource.Attribute.layout_anchorGravity = global::SandboxApp.Droid.Resource.Attribute.layout_anchorGravity;
-			global::LilWidgets.Android.Resource.Attribute.layout_behavior = global::SandboxApp.Droid.Resource.Attribute.layout_behavior;
-			global::LilWidgets.Android.Resource.Attribute.layout_dodgeInsetEdges = global::SandboxApp.Droid.Resource.Attribute.layout_dodgeInsetEdges;
-			global::LilWidgets.Android.Resource.Attribute.layout_insetEdge = global::SandboxApp.Droid.Resource.Attribute.layout_insetEdge;
-			global::LilWidgets.Android.Resource.Attribute.layout_keyline = global::SandboxApp.Droid.Resource.Attribute.layout_keyline;
-			global::LilWidgets.Android.Resource.Attribute.lineHeight = global::SandboxApp.Droid.Resource.Attribute.lineHeight;
-			global::LilWidgets.Android.Resource.Attribute.listChoiceBackgroundIndicator = global::SandboxApp.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
-			global::LilWidgets.Android.Resource.Attribute.listDividerAlertDialog = global::SandboxApp.Droid.Resource.Attribute.listDividerAlertDialog;
-			global::LilWidgets.Android.Resource.Attribute.listItemLayout = global::SandboxApp.Droid.Resource.Attribute.listItemLayout;
-			global::LilWidgets.Android.Resource.Attribute.listLayout = global::SandboxApp.Droid.Resource.Attribute.listLayout;
-			global::LilWidgets.Android.Resource.Attribute.listMenuViewStyle = global::SandboxApp.Droid.Resource.Attribute.listMenuViewStyle;
-			global::LilWidgets.Android.Resource.Attribute.listPopupWindowStyle = global::SandboxApp.Droid.Resource.Attribute.listPopupWindowStyle;
-			global::LilWidgets.Android.Resource.Attribute.listPreferredItemHeight = global::SandboxApp.Droid.Resource.Attribute.listPreferredItemHeight;
-			global::LilWidgets.Android.Resource.Attribute.listPreferredItemHeightLarge = global::SandboxApp.Droid.Resource.Attribute.listPreferredItemHeightLarge;
-			global::LilWidgets.Android.Resource.Attribute.listPreferredItemHeightSmall = global::SandboxApp.Droid.Resource.Attribute.listPreferredItemHeightSmall;
-			global::LilWidgets.Android.Resource.Attribute.listPreferredItemPaddingLeft = global::SandboxApp.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
-			global::LilWidgets.Android.Resource.Attribute.listPreferredItemPaddingRight = global::SandboxApp.Droid.Resource.Attribute.listPreferredItemPaddingRight;
-			global::LilWidgets.Android.Resource.Attribute.logo = global::SandboxApp.Droid.Resource.Attribute.logo;
-			global::LilWidgets.Android.Resource.Attribute.logoDescription = global::SandboxApp.Droid.Resource.Attribute.logoDescription;
-			global::LilWidgets.Android.Resource.Attribute.maxButtonHeight = global::SandboxApp.Droid.Resource.Attribute.maxButtonHeight;
-			global::LilWidgets.Android.Resource.Attribute.measureWithLargestChild = global::SandboxApp.Droid.Resource.Attribute.measureWithLargestChild;
-			global::LilWidgets.Android.Resource.Attribute.multiChoiceItemLayout = global::SandboxApp.Droid.Resource.Attribute.multiChoiceItemLayout;
-			global::LilWidgets.Android.Resource.Attribute.navigationContentDescription = global::SandboxApp.Droid.Resource.Attribute.navigationContentDescription;
-			global::LilWidgets.Android.Resource.Attribute.navigationIcon = global::SandboxApp.Droid.Resource.Attribute.navigationIcon;
-			global::LilWidgets.Android.Resource.Attribute.navigationMode = global::SandboxApp.Droid.Resource.Attribute.navigationMode;
-			global::LilWidgets.Android.Resource.Attribute.numericModifiers = global::SandboxApp.Droid.Resource.Attribute.numericModifiers;
-			global::LilWidgets.Android.Resource.Attribute.overlapAnchor = global::SandboxApp.Droid.Resource.Attribute.overlapAnchor;
-			global::LilWidgets.Android.Resource.Attribute.paddingBottomNoButtons = global::SandboxApp.Droid.Resource.Attribute.paddingBottomNoButtons;
-			global::LilWidgets.Android.Resource.Attribute.paddingEnd = global::SandboxApp.Droid.Resource.Attribute.paddingEnd;
-			global::LilWidgets.Android.Resource.Attribute.paddingStart = global::SandboxApp.Droid.Resource.Attribute.paddingStart;
-			global::LilWidgets.Android.Resource.Attribute.paddingTopNoTitle = global::SandboxApp.Droid.Resource.Attribute.paddingTopNoTitle;
-			global::LilWidgets.Android.Resource.Attribute.panelBackground = global::SandboxApp.Droid.Resource.Attribute.panelBackground;
-			global::LilWidgets.Android.Resource.Attribute.panelMenuListTheme = global::SandboxApp.Droid.Resource.Attribute.panelMenuListTheme;
-			global::LilWidgets.Android.Resource.Attribute.panelMenuListWidth = global::SandboxApp.Droid.Resource.Attribute.panelMenuListWidth;
-			global::LilWidgets.Android.Resource.Attribute.popupMenuStyle = global::SandboxApp.Droid.Resource.Attribute.popupMenuStyle;
-			global::LilWidgets.Android.Resource.Attribute.popupTheme = global::SandboxApp.Droid.Resource.Attribute.popupTheme;
-			global::LilWidgets.Android.Resource.Attribute.popupWindowStyle = global::SandboxApp.Droid.Resource.Attribute.popupWindowStyle;
-			global::LilWidgets.Android.Resource.Attribute.preserveIconSpacing = global::SandboxApp.Droid.Resource.Attribute.preserveIconSpacing;
-			global::LilWidgets.Android.Resource.Attribute.progressBarPadding = global::SandboxApp.Droid.Resource.Attribute.progressBarPadding;
-			global::LilWidgets.Android.Resource.Attribute.progressBarStyle = global::SandboxApp.Droid.Resource.Attribute.progressBarStyle;
-			global::LilWidgets.Android.Resource.Attribute.queryBackground = global::SandboxApp.Droid.Resource.Attribute.queryBackground;
-			global::LilWidgets.Android.Resource.Attribute.queryHint = global::SandboxApp.Droid.Resource.Attribute.queryHint;
-			global::LilWidgets.Android.Resource.Attribute.radioButtonStyle = global::SandboxApp.Droid.Resource.Attribute.radioButtonStyle;
-			global::LilWidgets.Android.Resource.Attribute.ratingBarStyle = global::SandboxApp.Droid.Resource.Attribute.ratingBarStyle;
-			global::LilWidgets.Android.Resource.Attribute.ratingBarStyleIndicator = global::SandboxApp.Droid.Resource.Attribute.ratingBarStyleIndicator;
-			global::LilWidgets.Android.Resource.Attribute.ratingBarStyleSmall = global::SandboxApp.Droid.Resource.Attribute.ratingBarStyleSmall;
-			global::LilWidgets.Android.Resource.Attribute.searchHintIcon = global::SandboxApp.Droid.Resource.Attribute.searchHintIcon;
-			global::LilWidgets.Android.Resource.Attribute.searchIcon = global::SandboxApp.Droid.Resource.Attribute.searchIcon;
-			global::LilWidgets.Android.Resource.Attribute.searchViewStyle = global::SandboxApp.Droid.Resource.Attribute.searchViewStyle;
-			global::LilWidgets.Android.Resource.Attribute.seekBarStyle = global::SandboxApp.Droid.Resource.Attribute.seekBarStyle;
-			global::LilWidgets.Android.Resource.Attribute.selectableItemBackground = global::SandboxApp.Droid.Resource.Attribute.selectableItemBackground;
-			global::LilWidgets.Android.Resource.Attribute.selectableItemBackgroundBorderless = global::SandboxApp.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
-			global::LilWidgets.Android.Resource.Attribute.showAsAction = global::SandboxApp.Droid.Resource.Attribute.showAsAction;
-			global::LilWidgets.Android.Resource.Attribute.showDividers = global::SandboxApp.Droid.Resource.Attribute.showDividers;
-			global::LilWidgets.Android.Resource.Attribute.showText = global::SandboxApp.Droid.Resource.Attribute.showText;
-			global::LilWidgets.Android.Resource.Attribute.showTitle = global::SandboxApp.Droid.Resource.Attribute.showTitle;
-			global::LilWidgets.Android.Resource.Attribute.singleChoiceItemLayout = global::SandboxApp.Droid.Resource.Attribute.singleChoiceItemLayout;
-			global::LilWidgets.Android.Resource.Attribute.spinBars = global::SandboxApp.Droid.Resource.Attribute.spinBars;
-			global::LilWidgets.Android.Resource.Attribute.spinnerDropDownItemStyle = global::SandboxApp.Droid.Resource.Attribute.spinnerDropDownItemStyle;
-			global::LilWidgets.Android.Resource.Attribute.spinnerStyle = global::SandboxApp.Droid.Resource.Attribute.spinnerStyle;
-			global::LilWidgets.Android.Resource.Attribute.splitTrack = global::SandboxApp.Droid.Resource.Attribute.splitTrack;
-			global::LilWidgets.Android.Resource.Attribute.srcCompat = global::SandboxApp.Droid.Resource.Attribute.srcCompat;
-			global::LilWidgets.Android.Resource.Attribute.state_above_anchor = global::SandboxApp.Droid.Resource.Attribute.state_above_anchor;
-			global::LilWidgets.Android.Resource.Attribute.statusBarBackground = global::SandboxApp.Droid.Resource.Attribute.statusBarBackground;
-			global::LilWidgets.Android.Resource.Attribute.subMenuArrow = global::SandboxApp.Droid.Resource.Attribute.subMenuArrow;
-			global::LilWidgets.Android.Resource.Attribute.submitBackground = global::SandboxApp.Droid.Resource.Attribute.submitBackground;
-			global::LilWidgets.Android.Resource.Attribute.subtitle = global::SandboxApp.Droid.Resource.Attribute.subtitle;
-			global::LilWidgets.Android.Resource.Attribute.subtitleTextAppearance = global::SandboxApp.Droid.Resource.Attribute.subtitleTextAppearance;
-			global::LilWidgets.Android.Resource.Attribute.subtitleTextColor = global::SandboxApp.Droid.Resource.Attribute.subtitleTextColor;
-			global::LilWidgets.Android.Resource.Attribute.subtitleTextStyle = global::SandboxApp.Droid.Resource.Attribute.subtitleTextStyle;
-			global::LilWidgets.Android.Resource.Attribute.suggestionRowLayout = global::SandboxApp.Droid.Resource.Attribute.suggestionRowLayout;
-			global::LilWidgets.Android.Resource.Attribute.switchMinWidth = global::SandboxApp.Droid.Resource.Attribute.switchMinWidth;
-			global::LilWidgets.Android.Resource.Attribute.switchPadding = global::SandboxApp.Droid.Resource.Attribute.switchPadding;
-			global::LilWidgets.Android.Resource.Attribute.switchStyle = global::SandboxApp.Droid.Resource.Attribute.switchStyle;
-			global::LilWidgets.Android.Resource.Attribute.switchTextAppearance = global::SandboxApp.Droid.Resource.Attribute.switchTextAppearance;
-			global::LilWidgets.Android.Resource.Attribute.textAllCaps = global::SandboxApp.Droid.Resource.Attribute.textAllCaps;
-			global::LilWidgets.Android.Resource.Attribute.textAppearanceLargePopupMenu = global::SandboxApp.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
-			global::LilWidgets.Android.Resource.Attribute.textAppearanceListItem = global::SandboxApp.Droid.Resource.Attribute.textAppearanceListItem;
-			global::LilWidgets.Android.Resource.Attribute.textAppearanceListItemSecondary = global::SandboxApp.Droid.Resource.Attribute.textAppearanceListItemSecondary;
-			global::LilWidgets.Android.Resource.Attribute.textAppearanceListItemSmall = global::SandboxApp.Droid.Resource.Attribute.textAppearanceListItemSmall;
-			global::LilWidgets.Android.Resource.Attribute.textAppearancePopupMenuHeader = global::SandboxApp.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
-			global::LilWidgets.Android.Resource.Attribute.textAppearanceSearchResultSubtitle = global::SandboxApp.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
-			global::LilWidgets.Android.Resource.Attribute.textAppearanceSearchResultTitle = global::SandboxApp.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
-			global::LilWidgets.Android.Resource.Attribute.textAppearanceSmallPopupMenu = global::SandboxApp.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
-			global::LilWidgets.Android.Resource.Attribute.textColorAlertDialogListItem = global::SandboxApp.Droid.Resource.Attribute.textColorAlertDialogListItem;
-			global::LilWidgets.Android.Resource.Attribute.textColorSearchUrl = global::SandboxApp.Droid.Resource.Attribute.textColorSearchUrl;
-			global::LilWidgets.Android.Resource.Attribute.theme = global::SandboxApp.Droid.Resource.Attribute.theme;
-			global::LilWidgets.Android.Resource.Attribute.thickness = global::SandboxApp.Droid.Resource.Attribute.thickness;
-			global::LilWidgets.Android.Resource.Attribute.thumbTextPadding = global::SandboxApp.Droid.Resource.Attribute.thumbTextPadding;
-			global::LilWidgets.Android.Resource.Attribute.thumbTint = global::SandboxApp.Droid.Resource.Attribute.thumbTint;
-			global::LilWidgets.Android.Resource.Attribute.thumbTintMode = global::SandboxApp.Droid.Resource.Attribute.thumbTintMode;
-			global::LilWidgets.Android.Resource.Attribute.tickMark = global::SandboxApp.Droid.Resource.Attribute.tickMark;
-			global::LilWidgets.Android.Resource.Attribute.tickMarkTint = global::SandboxApp.Droid.Resource.Attribute.tickMarkTint;
-			global::LilWidgets.Android.Resource.Attribute.tickMarkTintMode = global::SandboxApp.Droid.Resource.Attribute.tickMarkTintMode;
-			global::LilWidgets.Android.Resource.Attribute.tint = global::SandboxApp.Droid.Resource.Attribute.tint;
-			global::LilWidgets.Android.Resource.Attribute.tintMode = global::SandboxApp.Droid.Resource.Attribute.tintMode;
-			global::LilWidgets.Android.Resource.Attribute.title = global::SandboxApp.Droid.Resource.Attribute.title;
-			global::LilWidgets.Android.Resource.Attribute.titleMargin = global::SandboxApp.Droid.Resource.Attribute.titleMargin;
-			global::LilWidgets.Android.Resource.Attribute.titleMarginBottom = global::SandboxApp.Droid.Resource.Attribute.titleMarginBottom;
-			global::LilWidgets.Android.Resource.Attribute.titleMarginEnd = global::SandboxApp.Droid.Resource.Attribute.titleMarginEnd;
-			global::LilWidgets.Android.Resource.Attribute.titleMargins = global::SandboxApp.Droid.Resource.Attribute.titleMargins;
-			global::LilWidgets.Android.Resource.Attribute.titleMarginStart = global::SandboxApp.Droid.Resource.Attribute.titleMarginStart;
-			global::LilWidgets.Android.Resource.Attribute.titleMarginTop = global::SandboxApp.Droid.Resource.Attribute.titleMarginTop;
-			global::LilWidgets.Android.Resource.Attribute.titleTextAppearance = global::SandboxApp.Droid.Resource.Attribute.titleTextAppearance;
-			global::LilWidgets.Android.Resource.Attribute.titleTextColor = global::SandboxApp.Droid.Resource.Attribute.titleTextColor;
-			global::LilWidgets.Android.Resource.Attribute.titleTextStyle = global::SandboxApp.Droid.Resource.Attribute.titleTextStyle;
-			global::LilWidgets.Android.Resource.Attribute.toolbarNavigationButtonStyle = global::SandboxApp.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
-			global::LilWidgets.Android.Resource.Attribute.toolbarStyle = global::SandboxApp.Droid.Resource.Attribute.toolbarStyle;
-			global::LilWidgets.Android.Resource.Attribute.tooltipForegroundColor = global::SandboxApp.Droid.Resource.Attribute.tooltipForegroundColor;
-			global::LilWidgets.Android.Resource.Attribute.tooltipFrameBackground = global::SandboxApp.Droid.Resource.Attribute.tooltipFrameBackground;
-			global::LilWidgets.Android.Resource.Attribute.tooltipText = global::SandboxApp.Droid.Resource.Attribute.tooltipText;
-			global::LilWidgets.Android.Resource.Attribute.track = global::SandboxApp.Droid.Resource.Attribute.track;
-			global::LilWidgets.Android.Resource.Attribute.trackTint = global::SandboxApp.Droid.Resource.Attribute.trackTint;
-			global::LilWidgets.Android.Resource.Attribute.trackTintMode = global::SandboxApp.Droid.Resource.Attribute.trackTintMode;
-			global::LilWidgets.Android.Resource.Attribute.ttcIndex = global::SandboxApp.Droid.Resource.Attribute.ttcIndex;
-			global::LilWidgets.Android.Resource.Attribute.viewInflaterClass = global::SandboxApp.Droid.Resource.Attribute.viewInflaterClass;
-			global::LilWidgets.Android.Resource.Attribute.voiceIcon = global::SandboxApp.Droid.Resource.Attribute.voiceIcon;
-			global::LilWidgets.Android.Resource.Attribute.windowActionBar = global::SandboxApp.Droid.Resource.Attribute.windowActionBar;
-			global::LilWidgets.Android.Resource.Attribute.windowActionBarOverlay = global::SandboxApp.Droid.Resource.Attribute.windowActionBarOverlay;
-			global::LilWidgets.Android.Resource.Attribute.windowActionModeOverlay = global::SandboxApp.Droid.Resource.Attribute.windowActionModeOverlay;
-			global::LilWidgets.Android.Resource.Attribute.windowFixedHeightMajor = global::SandboxApp.Droid.Resource.Attribute.windowFixedHeightMajor;
-			global::LilWidgets.Android.Resource.Attribute.windowFixedHeightMinor = global::SandboxApp.Droid.Resource.Attribute.windowFixedHeightMinor;
-			global::LilWidgets.Android.Resource.Attribute.windowFixedWidthMajor = global::SandboxApp.Droid.Resource.Attribute.windowFixedWidthMajor;
-			global::LilWidgets.Android.Resource.Attribute.windowFixedWidthMinor = global::SandboxApp.Droid.Resource.Attribute.windowFixedWidthMinor;
-			global::LilWidgets.Android.Resource.Attribute.windowMinWidthMajor = global::SandboxApp.Droid.Resource.Attribute.windowMinWidthMajor;
-			global::LilWidgets.Android.Resource.Attribute.windowMinWidthMinor = global::SandboxApp.Droid.Resource.Attribute.windowMinWidthMinor;
-			global::LilWidgets.Android.Resource.Attribute.windowNoTitle = global::SandboxApp.Droid.Resource.Attribute.windowNoTitle;
-			global::LilWidgets.Android.Resource.Boolean.abc_action_bar_embed_tabs = global::SandboxApp.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
-			global::LilWidgets.Android.Resource.Boolean.abc_allow_stacked_button_bar = global::SandboxApp.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
-			global::LilWidgets.Android.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::SandboxApp.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
-			global::LilWidgets.Android.Resource.Color.abc_background_cache_hint_selector_material_dark = global::SandboxApp.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
-			global::LilWidgets.Android.Resource.Color.abc_background_cache_hint_selector_material_light = global::SandboxApp.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
-			global::LilWidgets.Android.Resource.Color.abc_btn_colored_borderless_text_material = global::SandboxApp.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
-			global::LilWidgets.Android.Resource.Color.abc_btn_colored_text_material = global::SandboxApp.Droid.Resource.Color.abc_btn_colored_text_material;
-			global::LilWidgets.Android.Resource.Color.abc_color_highlight_material = global::SandboxApp.Droid.Resource.Color.abc_color_highlight_material;
-			global::LilWidgets.Android.Resource.Color.abc_hint_foreground_material_dark = global::SandboxApp.Droid.Resource.Color.abc_hint_foreground_material_dark;
-			global::LilWidgets.Android.Resource.Color.abc_hint_foreground_material_light = global::SandboxApp.Droid.Resource.Color.abc_hint_foreground_material_light;
-			global::LilWidgets.Android.Resource.Color.abc_primary_text_disable_only_material_dark = global::SandboxApp.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
-			global::LilWidgets.Android.Resource.Color.abc_primary_text_disable_only_material_light = global::SandboxApp.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
-			global::LilWidgets.Android.Resource.Color.abc_primary_text_material_dark = global::SandboxApp.Droid.Resource.Color.abc_primary_text_material_dark;
-			global::LilWidgets.Android.Resource.Color.abc_primary_text_material_light = global::SandboxApp.Droid.Resource.Color.abc_primary_text_material_light;
-			global::LilWidgets.Android.Resource.Color.abc_search_url_text = global::SandboxApp.Droid.Resource.Color.abc_search_url_text;
-			global::LilWidgets.Android.Resource.Color.abc_search_url_text_normal = global::SandboxApp.Droid.Resource.Color.abc_search_url_text_normal;
-			global::LilWidgets.Android.Resource.Color.abc_search_url_text_pressed = global::SandboxApp.Droid.Resource.Color.abc_search_url_text_pressed;
-			global::LilWidgets.Android.Resource.Color.abc_search_url_text_selected = global::SandboxApp.Droid.Resource.Color.abc_search_url_text_selected;
-			global::LilWidgets.Android.Resource.Color.abc_secondary_text_material_dark = global::SandboxApp.Droid.Resource.Color.abc_secondary_text_material_dark;
-			global::LilWidgets.Android.Resource.Color.abc_secondary_text_material_light = global::SandboxApp.Droid.Resource.Color.abc_secondary_text_material_light;
-			global::LilWidgets.Android.Resource.Color.abc_tint_btn_checkable = global::SandboxApp.Droid.Resource.Color.abc_tint_btn_checkable;
-			global::LilWidgets.Android.Resource.Color.abc_tint_default = global::SandboxApp.Droid.Resource.Color.abc_tint_default;
-			global::LilWidgets.Android.Resource.Color.abc_tint_edittext = global::SandboxApp.Droid.Resource.Color.abc_tint_edittext;
-			global::LilWidgets.Android.Resource.Color.abc_tint_seek_thumb = global::SandboxApp.Droid.Resource.Color.abc_tint_seek_thumb;
-			global::LilWidgets.Android.Resource.Color.abc_tint_spinner = global::SandboxApp.Droid.Resource.Color.abc_tint_spinner;
-			global::LilWidgets.Android.Resource.Color.abc_tint_switch_track = global::SandboxApp.Droid.Resource.Color.abc_tint_switch_track;
-			global::LilWidgets.Android.Resource.Color.accent_material_dark = global::SandboxApp.Droid.Resource.Color.accent_material_dark;
-			global::LilWidgets.Android.Resource.Color.accent_material_light = global::SandboxApp.Droid.Resource.Color.accent_material_light;
-			global::LilWidgets.Android.Resource.Color.background_floating_material_dark = global::SandboxApp.Droid.Resource.Color.background_floating_material_dark;
-			global::LilWidgets.Android.Resource.Color.background_floating_material_light = global::SandboxApp.Droid.Resource.Color.background_floating_material_light;
-			global::LilWidgets.Android.Resource.Color.background_material_dark = global::SandboxApp.Droid.Resource.Color.background_material_dark;
-			global::LilWidgets.Android.Resource.Color.background_material_light = global::SandboxApp.Droid.Resource.Color.background_material_light;
-			global::LilWidgets.Android.Resource.Color.bright_foreground_disabled_material_dark = global::SandboxApp.Droid.Resource.Color.bright_foreground_disabled_material_dark;
-			global::LilWidgets.Android.Resource.Color.bright_foreground_disabled_material_light = global::SandboxApp.Droid.Resource.Color.bright_foreground_disabled_material_light;
-			global::LilWidgets.Android.Resource.Color.bright_foreground_inverse_material_dark = global::SandboxApp.Droid.Resource.Color.bright_foreground_inverse_material_dark;
-			global::LilWidgets.Android.Resource.Color.bright_foreground_inverse_material_light = global::SandboxApp.Droid.Resource.Color.bright_foreground_inverse_material_light;
-			global::LilWidgets.Android.Resource.Color.bright_foreground_material_dark = global::SandboxApp.Droid.Resource.Color.bright_foreground_material_dark;
-			global::LilWidgets.Android.Resource.Color.bright_foreground_material_light = global::SandboxApp.Droid.Resource.Color.bright_foreground_material_light;
-			global::LilWidgets.Android.Resource.Color.button_material_dark = global::SandboxApp.Droid.Resource.Color.button_material_dark;
-			global::LilWidgets.Android.Resource.Color.button_material_light = global::SandboxApp.Droid.Resource.Color.button_material_light;
-			global::LilWidgets.Android.Resource.Color.dim_foreground_disabled_material_dark = global::SandboxApp.Droid.Resource.Color.dim_foreground_disabled_material_dark;
-			global::LilWidgets.Android.Resource.Color.dim_foreground_disabled_material_light = global::SandboxApp.Droid.Resource.Color.dim_foreground_disabled_material_light;
-			global::LilWidgets.Android.Resource.Color.dim_foreground_material_dark = global::SandboxApp.Droid.Resource.Color.dim_foreground_material_dark;
-			global::LilWidgets.Android.Resource.Color.dim_foreground_material_light = global::SandboxApp.Droid.Resource.Color.dim_foreground_material_light;
-			global::LilWidgets.Android.Resource.Color.error_color_material_dark = global::SandboxApp.Droid.Resource.Color.error_color_material_dark;
-			global::LilWidgets.Android.Resource.Color.error_color_material_light = global::SandboxApp.Droid.Resource.Color.error_color_material_light;
-			global::LilWidgets.Android.Resource.Color.foreground_material_dark = global::SandboxApp.Droid.Resource.Color.foreground_material_dark;
-			global::LilWidgets.Android.Resource.Color.foreground_material_light = global::SandboxApp.Droid.Resource.Color.foreground_material_light;
-			global::LilWidgets.Android.Resource.Color.highlighted_text_material_dark = global::SandboxApp.Droid.Resource.Color.highlighted_text_material_dark;
-			global::LilWidgets.Android.Resource.Color.highlighted_text_material_light = global::SandboxApp.Droid.Resource.Color.highlighted_text_material_light;
-			global::LilWidgets.Android.Resource.Color.material_blue_grey_800 = global::SandboxApp.Droid.Resource.Color.material_blue_grey_800;
-			global::LilWidgets.Android.Resource.Color.material_blue_grey_900 = global::SandboxApp.Droid.Resource.Color.material_blue_grey_900;
-			global::LilWidgets.Android.Resource.Color.material_blue_grey_950 = global::SandboxApp.Droid.Resource.Color.material_blue_grey_950;
-			global::LilWidgets.Android.Resource.Color.material_deep_teal_200 = global::SandboxApp.Droid.Resource.Color.material_deep_teal_200;
-			global::LilWidgets.Android.Resource.Color.material_deep_teal_500 = global::SandboxApp.Droid.Resource.Color.material_deep_teal_500;
-			global::LilWidgets.Android.Resource.Color.material_grey_100 = global::SandboxApp.Droid.Resource.Color.material_grey_100;
-			global::LilWidgets.Android.Resource.Color.material_grey_300 = global::SandboxApp.Droid.Resource.Color.material_grey_300;
-			global::LilWidgets.Android.Resource.Color.material_grey_50 = global::SandboxApp.Droid.Resource.Color.material_grey_50;
-			global::LilWidgets.Android.Resource.Color.material_grey_600 = global::SandboxApp.Droid.Resource.Color.material_grey_600;
-			global::LilWidgets.Android.Resource.Color.material_grey_800 = global::SandboxApp.Droid.Resource.Color.material_grey_800;
-			global::LilWidgets.Android.Resource.Color.material_grey_850 = global::SandboxApp.Droid.Resource.Color.material_grey_850;
-			global::LilWidgets.Android.Resource.Color.material_grey_900 = global::SandboxApp.Droid.Resource.Color.material_grey_900;
-			global::LilWidgets.Android.Resource.Color.notification_action_color_filter = global::SandboxApp.Droid.Resource.Color.notification_action_color_filter;
-			global::LilWidgets.Android.Resource.Color.notification_icon_bg_color = global::SandboxApp.Droid.Resource.Color.notification_icon_bg_color;
-			global::LilWidgets.Android.Resource.Color.primary_dark_material_dark = global::SandboxApp.Droid.Resource.Color.primary_dark_material_dark;
-			global::LilWidgets.Android.Resource.Color.primary_dark_material_light = global::SandboxApp.Droid.Resource.Color.primary_dark_material_light;
-			global::LilWidgets.Android.Resource.Color.primary_material_dark = global::SandboxApp.Droid.Resource.Color.primary_material_dark;
-			global::LilWidgets.Android.Resource.Color.primary_material_light = global::SandboxApp.Droid.Resource.Color.primary_material_light;
-			global::LilWidgets.Android.Resource.Color.primary_text_default_material_dark = global::SandboxApp.Droid.Resource.Color.primary_text_default_material_dark;
-			global::LilWidgets.Android.Resource.Color.primary_text_default_material_light = global::SandboxApp.Droid.Resource.Color.primary_text_default_material_light;
-			global::LilWidgets.Android.Resource.Color.primary_text_disabled_material_dark = global::SandboxApp.Droid.Resource.Color.primary_text_disabled_material_dark;
-			global::LilWidgets.Android.Resource.Color.primary_text_disabled_material_light = global::SandboxApp.Droid.Resource.Color.primary_text_disabled_material_light;
-			global::LilWidgets.Android.Resource.Color.ripple_material_dark = global::SandboxApp.Droid.Resource.Color.ripple_material_dark;
-			global::LilWidgets.Android.Resource.Color.ripple_material_light = global::SandboxApp.Droid.Resource.Color.ripple_material_light;
-			global::LilWidgets.Android.Resource.Color.secondary_text_default_material_dark = global::SandboxApp.Droid.Resource.Color.secondary_text_default_material_dark;
-			global::LilWidgets.Android.Resource.Color.secondary_text_default_material_light = global::SandboxApp.Droid.Resource.Color.secondary_text_default_material_light;
-			global::LilWidgets.Android.Resource.Color.secondary_text_disabled_material_dark = global::SandboxApp.Droid.Resource.Color.secondary_text_disabled_material_dark;
-			global::LilWidgets.Android.Resource.Color.secondary_text_disabled_material_light = global::SandboxApp.Droid.Resource.Color.secondary_text_disabled_material_light;
-			global::LilWidgets.Android.Resource.Color.switch_thumb_disabled_material_dark = global::SandboxApp.Droid.Resource.Color.switch_thumb_disabled_material_dark;
-			global::LilWidgets.Android.Resource.Color.switch_thumb_disabled_material_light = global::SandboxApp.Droid.Resource.Color.switch_thumb_disabled_material_light;
-			global::LilWidgets.Android.Resource.Color.switch_thumb_material_dark = global::SandboxApp.Droid.Resource.Color.switch_thumb_material_dark;
-			global::LilWidgets.Android.Resource.Color.switch_thumb_material_light = global::SandboxApp.Droid.Resource.Color.switch_thumb_material_light;
-			global::LilWidgets.Android.Resource.Color.switch_thumb_normal_material_dark = global::SandboxApp.Droid.Resource.Color.switch_thumb_normal_material_dark;
-			global::LilWidgets.Android.Resource.Color.switch_thumb_normal_material_light = global::SandboxApp.Droid.Resource.Color.switch_thumb_normal_material_light;
-			global::LilWidgets.Android.Resource.Color.tooltip_background_dark = global::SandboxApp.Droid.Resource.Color.tooltip_background_dark;
-			global::LilWidgets.Android.Resource.Color.tooltip_background_light = global::SandboxApp.Droid.Resource.Color.tooltip_background_light;
-			global::LilWidgets.Android.Resource.Dimension.abc_action_bar_content_inset_material = global::SandboxApp.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::SandboxApp.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
-			global::LilWidgets.Android.Resource.Dimension.abc_action_bar_default_height_material = global::SandboxApp.Droid.Resource.Dimension.abc_action_bar_default_height_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_action_bar_default_padding_end_material = global::SandboxApp.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_action_bar_default_padding_start_material = global::SandboxApp.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_action_bar_elevation_material = global::SandboxApp.Droid.Resource.Dimension.abc_action_bar_elevation_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::SandboxApp.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::SandboxApp.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::SandboxApp.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_action_bar_stacked_max_height = global::SandboxApp.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
-			global::LilWidgets.Android.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::SandboxApp.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
-			global::LilWidgets.Android.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::SandboxApp.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::SandboxApp.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_action_button_min_height_material = global::SandboxApp.Droid.Resource.Dimension.abc_action_button_min_height_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_action_button_min_width_material = global::SandboxApp.Droid.Resource.Dimension.abc_action_button_min_width_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_action_button_min_width_overflow_material = global::SandboxApp.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_alert_dialog_button_bar_height = global::SandboxApp.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
-			global::LilWidgets.Android.Resource.Dimension.abc_alert_dialog_button_dimen = global::SandboxApp.Droid.Resource.Dimension.abc_alert_dialog_button_dimen;
-			global::LilWidgets.Android.Resource.Dimension.abc_button_inset_horizontal_material = global::SandboxApp.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_button_inset_vertical_material = global::SandboxApp.Droid.Resource.Dimension.abc_button_inset_vertical_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_button_padding_horizontal_material = global::SandboxApp.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_button_padding_vertical_material = global::SandboxApp.Droid.Resource.Dimension.abc_button_padding_vertical_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::SandboxApp.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
-			global::LilWidgets.Android.Resource.Dimension.abc_config_prefDialogWidth = global::SandboxApp.Droid.Resource.Dimension.abc_config_prefDialogWidth;
-			global::LilWidgets.Android.Resource.Dimension.abc_control_corner_material = global::SandboxApp.Droid.Resource.Dimension.abc_control_corner_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_control_inset_material = global::SandboxApp.Droid.Resource.Dimension.abc_control_inset_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_control_padding_material = global::SandboxApp.Droid.Resource.Dimension.abc_control_padding_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_dialog_corner_radius_material = global::SandboxApp.Droid.Resource.Dimension.abc_dialog_corner_radius_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_dialog_fixed_height_major = global::SandboxApp.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
-			global::LilWidgets.Android.Resource.Dimension.abc_dialog_fixed_height_minor = global::SandboxApp.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
-			global::LilWidgets.Android.Resource.Dimension.abc_dialog_fixed_width_major = global::SandboxApp.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
-			global::LilWidgets.Android.Resource.Dimension.abc_dialog_fixed_width_minor = global::SandboxApp.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
-			global::LilWidgets.Android.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::SandboxApp.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
-			global::LilWidgets.Android.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::SandboxApp.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
-			global::LilWidgets.Android.Resource.Dimension.abc_dialog_min_width_major = global::SandboxApp.Droid.Resource.Dimension.abc_dialog_min_width_major;
-			global::LilWidgets.Android.Resource.Dimension.abc_dialog_min_width_minor = global::SandboxApp.Droid.Resource.Dimension.abc_dialog_min_width_minor;
-			global::LilWidgets.Android.Resource.Dimension.abc_dialog_padding_material = global::SandboxApp.Droid.Resource.Dimension.abc_dialog_padding_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_dialog_padding_top_material = global::SandboxApp.Droid.Resource.Dimension.abc_dialog_padding_top_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_dialog_title_divider_material = global::SandboxApp.Droid.Resource.Dimension.abc_dialog_title_divider_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_disabled_alpha_material_dark = global::SandboxApp.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
-			global::LilWidgets.Android.Resource.Dimension.abc_disabled_alpha_material_light = global::SandboxApp.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
-			global::LilWidgets.Android.Resource.Dimension.abc_dropdownitem_icon_width = global::SandboxApp.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
-			global::LilWidgets.Android.Resource.Dimension.abc_dropdownitem_text_padding_left = global::SandboxApp.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
-			global::LilWidgets.Android.Resource.Dimension.abc_dropdownitem_text_padding_right = global::SandboxApp.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
-			global::LilWidgets.Android.Resource.Dimension.abc_edit_text_inset_bottom_material = global::SandboxApp.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::SandboxApp.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_edit_text_inset_top_material = global::SandboxApp.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_floating_window_z = global::SandboxApp.Droid.Resource.Dimension.abc_floating_window_z;
-			global::LilWidgets.Android.Resource.Dimension.abc_list_item_padding_horizontal_material = global::SandboxApp.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_panel_menu_list_width = global::SandboxApp.Droid.Resource.Dimension.abc_panel_menu_list_width;
-			global::LilWidgets.Android.Resource.Dimension.abc_progress_bar_height_material = global::SandboxApp.Droid.Resource.Dimension.abc_progress_bar_height_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_search_view_preferred_height = global::SandboxApp.Droid.Resource.Dimension.abc_search_view_preferred_height;
-			global::LilWidgets.Android.Resource.Dimension.abc_search_view_preferred_width = global::SandboxApp.Droid.Resource.Dimension.abc_search_view_preferred_width;
-			global::LilWidgets.Android.Resource.Dimension.abc_seekbar_track_background_height_material = global::SandboxApp.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_seekbar_track_progress_height_material = global::SandboxApp.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_select_dialog_padding_start_material = global::SandboxApp.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_switch_padding = global::SandboxApp.Droid.Resource.Dimension.abc_switch_padding;
-			global::LilWidgets.Android.Resource.Dimension.abc_text_size_body_1_material = global::SandboxApp.Droid.Resource.Dimension.abc_text_size_body_1_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_text_size_body_2_material = global::SandboxApp.Droid.Resource.Dimension.abc_text_size_body_2_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_text_size_button_material = global::SandboxApp.Droid.Resource.Dimension.abc_text_size_button_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_text_size_caption_material = global::SandboxApp.Droid.Resource.Dimension.abc_text_size_caption_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_text_size_display_1_material = global::SandboxApp.Droid.Resource.Dimension.abc_text_size_display_1_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_text_size_display_2_material = global::SandboxApp.Droid.Resource.Dimension.abc_text_size_display_2_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_text_size_display_3_material = global::SandboxApp.Droid.Resource.Dimension.abc_text_size_display_3_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_text_size_display_4_material = global::SandboxApp.Droid.Resource.Dimension.abc_text_size_display_4_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_text_size_headline_material = global::SandboxApp.Droid.Resource.Dimension.abc_text_size_headline_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_text_size_large_material = global::SandboxApp.Droid.Resource.Dimension.abc_text_size_large_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_text_size_medium_material = global::SandboxApp.Droid.Resource.Dimension.abc_text_size_medium_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_text_size_menu_header_material = global::SandboxApp.Droid.Resource.Dimension.abc_text_size_menu_header_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_text_size_menu_material = global::SandboxApp.Droid.Resource.Dimension.abc_text_size_menu_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_text_size_small_material = global::SandboxApp.Droid.Resource.Dimension.abc_text_size_small_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_text_size_subhead_material = global::SandboxApp.Droid.Resource.Dimension.abc_text_size_subhead_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::SandboxApp.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
-			global::LilWidgets.Android.Resource.Dimension.abc_text_size_title_material = global::SandboxApp.Droid.Resource.Dimension.abc_text_size_title_material;
-			global::LilWidgets.Android.Resource.Dimension.abc_text_size_title_material_toolbar = global::SandboxApp.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
-			global::LilWidgets.Android.Resource.Dimension.compat_button_inset_horizontal_material = global::SandboxApp.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
-			global::LilWidgets.Android.Resource.Dimension.compat_button_inset_vertical_material = global::SandboxApp.Droid.Resource.Dimension.compat_button_inset_vertical_material;
-			global::LilWidgets.Android.Resource.Dimension.compat_button_padding_horizontal_material = global::SandboxApp.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
-			global::LilWidgets.Android.Resource.Dimension.compat_button_padding_vertical_material = global::SandboxApp.Droid.Resource.Dimension.compat_button_padding_vertical_material;
-			global::LilWidgets.Android.Resource.Dimension.compat_control_corner_material = global::SandboxApp.Droid.Resource.Dimension.compat_control_corner_material;
-			global::LilWidgets.Android.Resource.Dimension.compat_notification_large_icon_max_height = global::SandboxApp.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
-			global::LilWidgets.Android.Resource.Dimension.compat_notification_large_icon_max_width = global::SandboxApp.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
-			global::LilWidgets.Android.Resource.Dimension.disabled_alpha_material_dark = global::SandboxApp.Droid.Resource.Dimension.disabled_alpha_material_dark;
-			global::LilWidgets.Android.Resource.Dimension.disabled_alpha_material_light = global::SandboxApp.Droid.Resource.Dimension.disabled_alpha_material_light;
-			global::LilWidgets.Android.Resource.Dimension.highlight_alpha_material_colored = global::SandboxApp.Droid.Resource.Dimension.highlight_alpha_material_colored;
-			global::LilWidgets.Android.Resource.Dimension.highlight_alpha_material_dark = global::SandboxApp.Droid.Resource.Dimension.highlight_alpha_material_dark;
-			global::LilWidgets.Android.Resource.Dimension.highlight_alpha_material_light = global::SandboxApp.Droid.Resource.Dimension.highlight_alpha_material_light;
-			global::LilWidgets.Android.Resource.Dimension.hint_alpha_material_dark = global::SandboxApp.Droid.Resource.Dimension.hint_alpha_material_dark;
-			global::LilWidgets.Android.Resource.Dimension.hint_alpha_material_light = global::SandboxApp.Droid.Resource.Dimension.hint_alpha_material_light;
-			global::LilWidgets.Android.Resource.Dimension.hint_pressed_alpha_material_dark = global::SandboxApp.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
-			global::LilWidgets.Android.Resource.Dimension.hint_pressed_alpha_material_light = global::SandboxApp.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
-			global::LilWidgets.Android.Resource.Dimension.notification_action_icon_size = global::SandboxApp.Droid.Resource.Dimension.notification_action_icon_size;
-			global::LilWidgets.Android.Resource.Dimension.notification_action_text_size = global::SandboxApp.Droid.Resource.Dimension.notification_action_text_size;
-			global::LilWidgets.Android.Resource.Dimension.notification_big_circle_margin = global::SandboxApp.Droid.Resource.Dimension.notification_big_circle_margin;
-			global::LilWidgets.Android.Resource.Dimension.notification_content_margin_start = global::SandboxApp.Droid.Resource.Dimension.notification_content_margin_start;
-			global::LilWidgets.Android.Resource.Dimension.notification_large_icon_height = global::SandboxApp.Droid.Resource.Dimension.notification_large_icon_height;
-			global::LilWidgets.Android.Resource.Dimension.notification_large_icon_width = global::SandboxApp.Droid.Resource.Dimension.notification_large_icon_width;
-			global::LilWidgets.Android.Resource.Dimension.notification_main_column_padding_top = global::SandboxApp.Droid.Resource.Dimension.notification_main_column_padding_top;
-			global::LilWidgets.Android.Resource.Dimension.notification_media_narrow_margin = global::SandboxApp.Droid.Resource.Dimension.notification_media_narrow_margin;
-			global::LilWidgets.Android.Resource.Dimension.notification_right_icon_size = global::SandboxApp.Droid.Resource.Dimension.notification_right_icon_size;
-			global::LilWidgets.Android.Resource.Dimension.notification_right_side_padding_top = global::SandboxApp.Droid.Resource.Dimension.notification_right_side_padding_top;
-			global::LilWidgets.Android.Resource.Dimension.notification_small_icon_background_padding = global::SandboxApp.Droid.Resource.Dimension.notification_small_icon_background_padding;
-			global::LilWidgets.Android.Resource.Dimension.notification_small_icon_size_as_large = global::SandboxApp.Droid.Resource.Dimension.notification_small_icon_size_as_large;
-			global::LilWidgets.Android.Resource.Dimension.notification_subtext_size = global::SandboxApp.Droid.Resource.Dimension.notification_subtext_size;
-			global::LilWidgets.Android.Resource.Dimension.notification_top_pad = global::SandboxApp.Droid.Resource.Dimension.notification_top_pad;
-			global::LilWidgets.Android.Resource.Dimension.notification_top_pad_large_text = global::SandboxApp.Droid.Resource.Dimension.notification_top_pad_large_text;
-			global::LilWidgets.Android.Resource.Dimension.tooltip_corner_radius = global::SandboxApp.Droid.Resource.Dimension.tooltip_corner_radius;
-			global::LilWidgets.Android.Resource.Dimension.tooltip_horizontal_padding = global::SandboxApp.Droid.Resource.Dimension.tooltip_horizontal_padding;
-			global::LilWidgets.Android.Resource.Dimension.tooltip_margin = global::SandboxApp.Droid.Resource.Dimension.tooltip_margin;
-			global::LilWidgets.Android.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::SandboxApp.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
-			global::LilWidgets.Android.Resource.Dimension.tooltip_precise_anchor_threshold = global::SandboxApp.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
-			global::LilWidgets.Android.Resource.Dimension.tooltip_vertical_padding = global::SandboxApp.Droid.Resource.Dimension.tooltip_vertical_padding;
-			global::LilWidgets.Android.Resource.Dimension.tooltip_y_offset_non_touch = global::SandboxApp.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
-			global::LilWidgets.Android.Resource.Dimension.tooltip_y_offset_touch = global::SandboxApp.Droid.Resource.Dimension.tooltip_y_offset_touch;
-			global::LilWidgets.Android.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::SandboxApp.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
-			global::LilWidgets.Android.Resource.Drawable.abc_action_bar_item_background_material = global::SandboxApp.Droid.Resource.Drawable.abc_action_bar_item_background_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_btn_borderless_material = global::SandboxApp.Droid.Resource.Drawable.abc_btn_borderless_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_btn_check_material = global::SandboxApp.Droid.Resource.Drawable.abc_btn_check_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::SandboxApp.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
-			global::LilWidgets.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::SandboxApp.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
-			global::LilWidgets.Android.Resource.Drawable.abc_btn_colored_material = global::SandboxApp.Droid.Resource.Drawable.abc_btn_colored_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_btn_default_mtrl_shape = global::SandboxApp.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
-			global::LilWidgets.Android.Resource.Drawable.abc_btn_radio_material = global::SandboxApp.Droid.Resource.Drawable.abc_btn_radio_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::SandboxApp.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
-			global::LilWidgets.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::SandboxApp.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
-			global::LilWidgets.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::SandboxApp.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
-			global::LilWidgets.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::SandboxApp.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
-			global::LilWidgets.Android.Resource.Drawable.abc_cab_background_internal_bg = global::SandboxApp.Droid.Resource.Drawable.abc_cab_background_internal_bg;
-			global::LilWidgets.Android.Resource.Drawable.abc_cab_background_top_material = global::SandboxApp.Droid.Resource.Drawable.abc_cab_background_top_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::SandboxApp.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
-			global::LilWidgets.Android.Resource.Drawable.abc_control_background_material = global::SandboxApp.Droid.Resource.Drawable.abc_control_background_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_dialog_material_background = global::SandboxApp.Droid.Resource.Drawable.abc_dialog_material_background;
-			global::LilWidgets.Android.Resource.Drawable.abc_edit_text_material = global::SandboxApp.Droid.Resource.Drawable.abc_edit_text_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_ic_ab_back_material = global::SandboxApp.Droid.Resource.Drawable.abc_ic_ab_back_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::SandboxApp.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
-			global::LilWidgets.Android.Resource.Drawable.abc_ic_clear_material = global::SandboxApp.Droid.Resource.Drawable.abc_ic_clear_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::SandboxApp.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
-			global::LilWidgets.Android.Resource.Drawable.abc_ic_go_search_api_material = global::SandboxApp.Droid.Resource.Drawable.abc_ic_go_search_api_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::SandboxApp.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
-			global::LilWidgets.Android.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::SandboxApp.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
-			global::LilWidgets.Android.Resource.Drawable.abc_ic_menu_overflow_material = global::SandboxApp.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::SandboxApp.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
-			global::LilWidgets.Android.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::SandboxApp.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
-			global::LilWidgets.Android.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::SandboxApp.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
-			global::LilWidgets.Android.Resource.Drawable.abc_ic_search_api_material = global::SandboxApp.Droid.Resource.Drawable.abc_ic_search_api_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_ic_star_black_16dp = global::SandboxApp.Droid.Resource.Drawable.abc_ic_star_black_16dp;
-			global::LilWidgets.Android.Resource.Drawable.abc_ic_star_black_36dp = global::SandboxApp.Droid.Resource.Drawable.abc_ic_star_black_36dp;
-			global::LilWidgets.Android.Resource.Drawable.abc_ic_star_black_48dp = global::SandboxApp.Droid.Resource.Drawable.abc_ic_star_black_48dp;
-			global::LilWidgets.Android.Resource.Drawable.abc_ic_star_half_black_16dp = global::SandboxApp.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
-			global::LilWidgets.Android.Resource.Drawable.abc_ic_star_half_black_36dp = global::SandboxApp.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
-			global::LilWidgets.Android.Resource.Drawable.abc_ic_star_half_black_48dp = global::SandboxApp.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
-			global::LilWidgets.Android.Resource.Drawable.abc_ic_voice_search_api_material = global::SandboxApp.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_item_background_holo_dark = global::SandboxApp.Droid.Resource.Drawable.abc_item_background_holo_dark;
-			global::LilWidgets.Android.Resource.Drawable.abc_item_background_holo_light = global::SandboxApp.Droid.Resource.Drawable.abc_item_background_holo_light;
-			global::LilWidgets.Android.Resource.Drawable.abc_list_divider_material = global::SandboxApp.Droid.Resource.Drawable.abc_list_divider_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_list_divider_mtrl_alpha = global::SandboxApp.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
-			global::LilWidgets.Android.Resource.Drawable.abc_list_focused_holo = global::SandboxApp.Droid.Resource.Drawable.abc_list_focused_holo;
-			global::LilWidgets.Android.Resource.Drawable.abc_list_longpressed_holo = global::SandboxApp.Droid.Resource.Drawable.abc_list_longpressed_holo;
-			global::LilWidgets.Android.Resource.Drawable.abc_list_pressed_holo_dark = global::SandboxApp.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
-			global::LilWidgets.Android.Resource.Drawable.abc_list_pressed_holo_light = global::SandboxApp.Droid.Resource.Drawable.abc_list_pressed_holo_light;
-			global::LilWidgets.Android.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::SandboxApp.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
-			global::LilWidgets.Android.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::SandboxApp.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
-			global::LilWidgets.Android.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::SandboxApp.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
-			global::LilWidgets.Android.Resource.Drawable.abc_list_selector_disabled_holo_light = global::SandboxApp.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
-			global::LilWidgets.Android.Resource.Drawable.abc_list_selector_holo_dark = global::SandboxApp.Droid.Resource.Drawable.abc_list_selector_holo_dark;
-			global::LilWidgets.Android.Resource.Drawable.abc_list_selector_holo_light = global::SandboxApp.Droid.Resource.Drawable.abc_list_selector_holo_light;
-			global::LilWidgets.Android.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::SandboxApp.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
-			global::LilWidgets.Android.Resource.Drawable.abc_popup_background_mtrl_mult = global::SandboxApp.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
-			global::LilWidgets.Android.Resource.Drawable.abc_ratingbar_indicator_material = global::SandboxApp.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_ratingbar_material = global::SandboxApp.Droid.Resource.Drawable.abc_ratingbar_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_ratingbar_small_material = global::SandboxApp.Droid.Resource.Drawable.abc_ratingbar_small_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::SandboxApp.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
-			global::LilWidgets.Android.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::SandboxApp.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
-			global::LilWidgets.Android.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::SandboxApp.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
-			global::LilWidgets.Android.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::SandboxApp.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
-			global::LilWidgets.Android.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::SandboxApp.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
-			global::LilWidgets.Android.Resource.Drawable.abc_seekbar_thumb_material = global::SandboxApp.Droid.Resource.Drawable.abc_seekbar_thumb_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_seekbar_tick_mark_material = global::SandboxApp.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_seekbar_track_material = global::SandboxApp.Droid.Resource.Drawable.abc_seekbar_track_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::SandboxApp.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
-			global::LilWidgets.Android.Resource.Drawable.abc_spinner_textfield_background_material = global::SandboxApp.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_switch_thumb_material = global::SandboxApp.Droid.Resource.Drawable.abc_switch_thumb_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_switch_track_mtrl_alpha = global::SandboxApp.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
-			global::LilWidgets.Android.Resource.Drawable.abc_tab_indicator_material = global::SandboxApp.Droid.Resource.Drawable.abc_tab_indicator_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::SandboxApp.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
-			global::LilWidgets.Android.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::SandboxApp.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
-			global::LilWidgets.Android.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::SandboxApp.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
-			global::LilWidgets.Android.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::SandboxApp.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
-			global::LilWidgets.Android.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::SandboxApp.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
-			global::LilWidgets.Android.Resource.Drawable.abc_textfield_search_material = global::SandboxApp.Droid.Resource.Drawable.abc_textfield_search_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_text_cursor_material = global::SandboxApp.Droid.Resource.Drawable.abc_text_cursor_material;
-			global::LilWidgets.Android.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::SandboxApp.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
-			global::LilWidgets.Android.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::SandboxApp.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
-			global::LilWidgets.Android.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::SandboxApp.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
-			global::LilWidgets.Android.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::SandboxApp.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
-			global::LilWidgets.Android.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::SandboxApp.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
-			global::LilWidgets.Android.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::SandboxApp.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
-			global::LilWidgets.Android.Resource.Drawable.abc_vector_test = global::SandboxApp.Droid.Resource.Drawable.abc_vector_test;
-			global::LilWidgets.Android.Resource.Drawable.notification_action_background = global::SandboxApp.Droid.Resource.Drawable.notification_action_background;
-			global::LilWidgets.Android.Resource.Drawable.notification_bg = global::SandboxApp.Droid.Resource.Drawable.notification_bg;
-			global::LilWidgets.Android.Resource.Drawable.notification_bg_low = global::SandboxApp.Droid.Resource.Drawable.notification_bg_low;
-			global::LilWidgets.Android.Resource.Drawable.notification_bg_low_normal = global::SandboxApp.Droid.Resource.Drawable.notification_bg_low_normal;
-			global::LilWidgets.Android.Resource.Drawable.notification_bg_low_pressed = global::SandboxApp.Droid.Resource.Drawable.notification_bg_low_pressed;
-			global::LilWidgets.Android.Resource.Drawable.notification_bg_normal = global::SandboxApp.Droid.Resource.Drawable.notification_bg_normal;
-			global::LilWidgets.Android.Resource.Drawable.notification_bg_normal_pressed = global::SandboxApp.Droid.Resource.Drawable.notification_bg_normal_pressed;
-			global::LilWidgets.Android.Resource.Drawable.notification_icon_background = global::SandboxApp.Droid.Resource.Drawable.notification_icon_background;
-			global::LilWidgets.Android.Resource.Drawable.notification_template_icon_bg = global::SandboxApp.Droid.Resource.Drawable.notification_template_icon_bg;
-			global::LilWidgets.Android.Resource.Drawable.notification_template_icon_low_bg = global::SandboxApp.Droid.Resource.Drawable.notification_template_icon_low_bg;
-			global::LilWidgets.Android.Resource.Drawable.notification_tile_bg = global::SandboxApp.Droid.Resource.Drawable.notification_tile_bg;
-			global::LilWidgets.Android.Resource.Drawable.notify_panel_notification_icon_bg = global::SandboxApp.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
-			global::LilWidgets.Android.Resource.Drawable.tooltip_frame_dark = global::SandboxApp.Droid.Resource.Drawable.tooltip_frame_dark;
-			global::LilWidgets.Android.Resource.Drawable.tooltip_frame_light = global::SandboxApp.Droid.Resource.Drawable.tooltip_frame_light;
-			global::LilWidgets.Android.Resource.Id.actions = global::SandboxApp.Droid.Resource.Id.actions;
-			global::LilWidgets.Android.Resource.Id.action_bar = global::SandboxApp.Droid.Resource.Id.action_bar;
-			global::LilWidgets.Android.Resource.Id.action_bar_activity_content = global::SandboxApp.Droid.Resource.Id.action_bar_activity_content;
-			global::LilWidgets.Android.Resource.Id.action_bar_container = global::SandboxApp.Droid.Resource.Id.action_bar_container;
-			global::LilWidgets.Android.Resource.Id.action_bar_root = global::SandboxApp.Droid.Resource.Id.action_bar_root;
-			global::LilWidgets.Android.Resource.Id.action_bar_spinner = global::SandboxApp.Droid.Resource.Id.action_bar_spinner;
-			global::LilWidgets.Android.Resource.Id.action_bar_subtitle = global::SandboxApp.Droid.Resource.Id.action_bar_subtitle;
-			global::LilWidgets.Android.Resource.Id.action_bar_title = global::SandboxApp.Droid.Resource.Id.action_bar_title;
-			global::LilWidgets.Android.Resource.Id.action_container = global::SandboxApp.Droid.Resource.Id.action_container;
-			global::LilWidgets.Android.Resource.Id.action_context_bar = global::SandboxApp.Droid.Resource.Id.action_context_bar;
-			global::LilWidgets.Android.Resource.Id.action_divider = global::SandboxApp.Droid.Resource.Id.action_divider;
-			global::LilWidgets.Android.Resource.Id.action_image = global::SandboxApp.Droid.Resource.Id.action_image;
-			global::LilWidgets.Android.Resource.Id.action_menu_divider = global::SandboxApp.Droid.Resource.Id.action_menu_divider;
-			global::LilWidgets.Android.Resource.Id.action_menu_presenter = global::SandboxApp.Droid.Resource.Id.action_menu_presenter;
-			global::LilWidgets.Android.Resource.Id.action_mode_bar = global::SandboxApp.Droid.Resource.Id.action_mode_bar;
-			global::LilWidgets.Android.Resource.Id.action_mode_bar_stub = global::SandboxApp.Droid.Resource.Id.action_mode_bar_stub;
-			global::LilWidgets.Android.Resource.Id.action_mode_close_button = global::SandboxApp.Droid.Resource.Id.action_mode_close_button;
-			global::LilWidgets.Android.Resource.Id.action_text = global::SandboxApp.Droid.Resource.Id.action_text;
-			global::LilWidgets.Android.Resource.Id.activity_chooser_view_content = global::SandboxApp.Droid.Resource.Id.activity_chooser_view_content;
-			global::LilWidgets.Android.Resource.Id.add = global::SandboxApp.Droid.Resource.Id.add;
-			global::LilWidgets.Android.Resource.Id.alertTitle = global::SandboxApp.Droid.Resource.Id.alertTitle;
-			global::LilWidgets.Android.Resource.Id.all = global::SandboxApp.Droid.Resource.Id.all;
-			global::LilWidgets.Android.Resource.Id.ALT = global::SandboxApp.Droid.Resource.Id.ALT;
-			global::LilWidgets.Android.Resource.Id.always = global::SandboxApp.Droid.Resource.Id.always;
-			global::LilWidgets.Android.Resource.Id.async = global::SandboxApp.Droid.Resource.Id.async;
-			global::LilWidgets.Android.Resource.Id.beginning = global::SandboxApp.Droid.Resource.Id.beginning;
-			global::LilWidgets.Android.Resource.Id.blocking = global::SandboxApp.Droid.Resource.Id.blocking;
-			global::LilWidgets.Android.Resource.Id.bottom = global::SandboxApp.Droid.Resource.Id.bottom;
-			global::LilWidgets.Android.Resource.Id.buttonPanel = global::SandboxApp.Droid.Resource.Id.buttonPanel;
-			global::LilWidgets.Android.Resource.Id.center = global::SandboxApp.Droid.Resource.Id.center;
-			global::LilWidgets.Android.Resource.Id.center_horizontal = global::SandboxApp.Droid.Resource.Id.center_horizontal;
-			global::LilWidgets.Android.Resource.Id.center_vertical = global::SandboxApp.Droid.Resource.Id.center_vertical;
-			global::LilWidgets.Android.Resource.Id.checkbox = global::SandboxApp.Droid.Resource.Id.checkbox;
-			global::LilWidgets.Android.Resource.Id.chronometer = global::SandboxApp.Droid.Resource.Id.chronometer;
-			global::LilWidgets.Android.Resource.Id.clip_horizontal = global::SandboxApp.Droid.Resource.Id.clip_horizontal;
-			global::LilWidgets.Android.Resource.Id.clip_vertical = global::SandboxApp.Droid.Resource.Id.clip_vertical;
-			global::LilWidgets.Android.Resource.Id.collapseActionView = global::SandboxApp.Droid.Resource.Id.collapseActionView;
-			global::LilWidgets.Android.Resource.Id.content = global::SandboxApp.Droid.Resource.Id.content;
-			global::LilWidgets.Android.Resource.Id.contentPanel = global::SandboxApp.Droid.Resource.Id.contentPanel;
-			global::LilWidgets.Android.Resource.Id.CTRL = global::SandboxApp.Droid.Resource.Id.CTRL;
-			global::LilWidgets.Android.Resource.Id.custom = global::SandboxApp.Droid.Resource.Id.custom;
-			global::LilWidgets.Android.Resource.Id.customPanel = global::SandboxApp.Droid.Resource.Id.customPanel;
-			global::LilWidgets.Android.Resource.Id.decor_content_parent = global::SandboxApp.Droid.Resource.Id.decor_content_parent;
-			global::LilWidgets.Android.Resource.Id.default_activity_button = global::SandboxApp.Droid.Resource.Id.default_activity_button;
-			global::LilWidgets.Android.Resource.Id.disableHome = global::SandboxApp.Droid.Resource.Id.disableHome;
-			global::LilWidgets.Android.Resource.Id.edit_query = global::SandboxApp.Droid.Resource.Id.edit_query;
-			global::LilWidgets.Android.Resource.Id.end = global::SandboxApp.Droid.Resource.Id.end;
-			global::LilWidgets.Android.Resource.Id.expanded_menu = global::SandboxApp.Droid.Resource.Id.expanded_menu;
-			global::LilWidgets.Android.Resource.Id.expand_activities_button = global::SandboxApp.Droid.Resource.Id.expand_activities_button;
-			global::LilWidgets.Android.Resource.Id.fill = global::SandboxApp.Droid.Resource.Id.fill;
-			global::LilWidgets.Android.Resource.Id.fill_horizontal = global::SandboxApp.Droid.Resource.Id.fill_horizontal;
-			global::LilWidgets.Android.Resource.Id.fill_vertical = global::SandboxApp.Droid.Resource.Id.fill_vertical;
-			global::LilWidgets.Android.Resource.Id.forever = global::SandboxApp.Droid.Resource.Id.forever;
-			global::LilWidgets.Android.Resource.Id.FUNCTION = global::SandboxApp.Droid.Resource.Id.FUNCTION;
-			global::LilWidgets.Android.Resource.Id.group_divider = global::SandboxApp.Droid.Resource.Id.group_divider;
-			global::LilWidgets.Android.Resource.Id.home = global::SandboxApp.Droid.Resource.Id.home;
-			global::LilWidgets.Android.Resource.Id.homeAsUp = global::SandboxApp.Droid.Resource.Id.homeAsUp;
-			global::LilWidgets.Android.Resource.Id.icon = global::SandboxApp.Droid.Resource.Id.icon;
-			global::LilWidgets.Android.Resource.Id.icon_group = global::SandboxApp.Droid.Resource.Id.icon_group;
-			global::LilWidgets.Android.Resource.Id.ifRoom = global::SandboxApp.Droid.Resource.Id.ifRoom;
-			global::LilWidgets.Android.Resource.Id.image = global::SandboxApp.Droid.Resource.Id.image;
-			global::LilWidgets.Android.Resource.Id.info = global::SandboxApp.Droid.Resource.Id.info;
-			global::LilWidgets.Android.Resource.Id.italic = global::SandboxApp.Droid.Resource.Id.italic;
-			global::LilWidgets.Android.Resource.Id.left = global::SandboxApp.Droid.Resource.Id.left;
-			global::LilWidgets.Android.Resource.Id.line1 = global::SandboxApp.Droid.Resource.Id.line1;
-			global::LilWidgets.Android.Resource.Id.line3 = global::SandboxApp.Droid.Resource.Id.line3;
-			global::LilWidgets.Android.Resource.Id.listMode = global::SandboxApp.Droid.Resource.Id.listMode;
-			global::LilWidgets.Android.Resource.Id.list_item = global::SandboxApp.Droid.Resource.Id.list_item;
-			global::LilWidgets.Android.Resource.Id.message = global::SandboxApp.Droid.Resource.Id.message;
-			global::LilWidgets.Android.Resource.Id.META = global::SandboxApp.Droid.Resource.Id.META;
-			global::LilWidgets.Android.Resource.Id.middle = global::SandboxApp.Droid.Resource.Id.middle;
-			global::LilWidgets.Android.Resource.Id.multiply = global::SandboxApp.Droid.Resource.Id.multiply;
-			global::LilWidgets.Android.Resource.Id.never = global::SandboxApp.Droid.Resource.Id.never;
-			global::LilWidgets.Android.Resource.Id.none = global::SandboxApp.Droid.Resource.Id.none;
-			global::LilWidgets.Android.Resource.Id.normal = global::SandboxApp.Droid.Resource.Id.normal;
-			global::LilWidgets.Android.Resource.Id.notification_background = global::SandboxApp.Droid.Resource.Id.notification_background;
-			global::LilWidgets.Android.Resource.Id.notification_main_column = global::SandboxApp.Droid.Resource.Id.notification_main_column;
-			global::LilWidgets.Android.Resource.Id.notification_main_column_container = global::SandboxApp.Droid.Resource.Id.notification_main_column_container;
-			global::LilWidgets.Android.Resource.Id.parentPanel = global::SandboxApp.Droid.Resource.Id.parentPanel;
-			global::LilWidgets.Android.Resource.Id.progress_circular = global::SandboxApp.Droid.Resource.Id.progress_circular;
-			global::LilWidgets.Android.Resource.Id.progress_horizontal = global::SandboxApp.Droid.Resource.Id.progress_horizontal;
-			global::LilWidgets.Android.Resource.Id.radio = global::SandboxApp.Droid.Resource.Id.radio;
-			global::LilWidgets.Android.Resource.Id.right = global::SandboxApp.Droid.Resource.Id.right;
-			global::LilWidgets.Android.Resource.Id.right_icon = global::SandboxApp.Droid.Resource.Id.right_icon;
-			global::LilWidgets.Android.Resource.Id.right_side = global::SandboxApp.Droid.Resource.Id.right_side;
-			global::LilWidgets.Android.Resource.Id.screen = global::SandboxApp.Droid.Resource.Id.screen;
-			global::LilWidgets.Android.Resource.Id.scrollIndicatorDown = global::SandboxApp.Droid.Resource.Id.scrollIndicatorDown;
-			global::LilWidgets.Android.Resource.Id.scrollIndicatorUp = global::SandboxApp.Droid.Resource.Id.scrollIndicatorUp;
-			global::LilWidgets.Android.Resource.Id.scrollView = global::SandboxApp.Droid.Resource.Id.scrollView;
-			global::LilWidgets.Android.Resource.Id.search_badge = global::SandboxApp.Droid.Resource.Id.search_badge;
-			global::LilWidgets.Android.Resource.Id.search_bar = global::SandboxApp.Droid.Resource.Id.search_bar;
-			global::LilWidgets.Android.Resource.Id.search_button = global::SandboxApp.Droid.Resource.Id.search_button;
-			global::LilWidgets.Android.Resource.Id.search_close_btn = global::SandboxApp.Droid.Resource.Id.search_close_btn;
-			global::LilWidgets.Android.Resource.Id.search_edit_frame = global::SandboxApp.Droid.Resource.Id.search_edit_frame;
-			global::LilWidgets.Android.Resource.Id.search_go_btn = global::SandboxApp.Droid.Resource.Id.search_go_btn;
-			global::LilWidgets.Android.Resource.Id.search_mag_icon = global::SandboxApp.Droid.Resource.Id.search_mag_icon;
-			global::LilWidgets.Android.Resource.Id.search_plate = global::SandboxApp.Droid.Resource.Id.search_plate;
-			global::LilWidgets.Android.Resource.Id.search_src_text = global::SandboxApp.Droid.Resource.Id.search_src_text;
-			global::LilWidgets.Android.Resource.Id.search_voice_btn = global::SandboxApp.Droid.Resource.Id.search_voice_btn;
-			global::LilWidgets.Android.Resource.Id.select_dialog_listview = global::SandboxApp.Droid.Resource.Id.select_dialog_listview;
-			global::LilWidgets.Android.Resource.Id.SHIFT = global::SandboxApp.Droid.Resource.Id.SHIFT;
-			global::LilWidgets.Android.Resource.Id.shortcut = global::SandboxApp.Droid.Resource.Id.shortcut;
-			global::LilWidgets.Android.Resource.Id.showCustom = global::SandboxApp.Droid.Resource.Id.showCustom;
-			global::LilWidgets.Android.Resource.Id.showHome = global::SandboxApp.Droid.Resource.Id.showHome;
-			global::LilWidgets.Android.Resource.Id.showTitle = global::SandboxApp.Droid.Resource.Id.showTitle;
-			global::LilWidgets.Android.Resource.Id.spacer = global::SandboxApp.Droid.Resource.Id.spacer;
-			global::LilWidgets.Android.Resource.Id.split_action_bar = global::SandboxApp.Droid.Resource.Id.split_action_bar;
-			global::LilWidgets.Android.Resource.Id.src_atop = global::SandboxApp.Droid.Resource.Id.src_atop;
-			global::LilWidgets.Android.Resource.Id.src_in = global::SandboxApp.Droid.Resource.Id.src_in;
-			global::LilWidgets.Android.Resource.Id.src_over = global::SandboxApp.Droid.Resource.Id.src_over;
-			global::LilWidgets.Android.Resource.Id.start = global::SandboxApp.Droid.Resource.Id.start;
-			global::LilWidgets.Android.Resource.Id.submenuarrow = global::SandboxApp.Droid.Resource.Id.submenuarrow;
-			global::LilWidgets.Android.Resource.Id.submit_area = global::SandboxApp.Droid.Resource.Id.submit_area;
-			global::LilWidgets.Android.Resource.Id.SYM = global::SandboxApp.Droid.Resource.Id.SYM;
-			global::LilWidgets.Android.Resource.Id.tabMode = global::SandboxApp.Droid.Resource.Id.tabMode;
-			global::LilWidgets.Android.Resource.Id.tag_transition_group = global::SandboxApp.Droid.Resource.Id.tag_transition_group;
-			global::LilWidgets.Android.Resource.Id.tag_unhandled_key_event_manager = global::SandboxApp.Droid.Resource.Id.tag_unhandled_key_event_manager;
-			global::LilWidgets.Android.Resource.Id.tag_unhandled_key_listeners = global::SandboxApp.Droid.Resource.Id.tag_unhandled_key_listeners;
-			global::LilWidgets.Android.Resource.Id.text = global::SandboxApp.Droid.Resource.Id.text;
-			global::LilWidgets.Android.Resource.Id.text2 = global::SandboxApp.Droid.Resource.Id.text2;
-			global::LilWidgets.Android.Resource.Id.textSpacerNoButtons = global::SandboxApp.Droid.Resource.Id.textSpacerNoButtons;
-			global::LilWidgets.Android.Resource.Id.textSpacerNoTitle = global::SandboxApp.Droid.Resource.Id.textSpacerNoTitle;
-			global::LilWidgets.Android.Resource.Id.time = global::SandboxApp.Droid.Resource.Id.time;
-			global::LilWidgets.Android.Resource.Id.title = global::SandboxApp.Droid.Resource.Id.title;
-			global::LilWidgets.Android.Resource.Id.titleDividerNoCustom = global::SandboxApp.Droid.Resource.Id.titleDividerNoCustom;
-			global::LilWidgets.Android.Resource.Id.title_template = global::SandboxApp.Droid.Resource.Id.title_template;
-			global::LilWidgets.Android.Resource.Id.top = global::SandboxApp.Droid.Resource.Id.top;
-			global::LilWidgets.Android.Resource.Id.topPanel = global::SandboxApp.Droid.Resource.Id.topPanel;
-			global::LilWidgets.Android.Resource.Id.uniform = global::SandboxApp.Droid.Resource.Id.uniform;
-			global::LilWidgets.Android.Resource.Id.up = global::SandboxApp.Droid.Resource.Id.up;
-			global::LilWidgets.Android.Resource.Id.useLogo = global::SandboxApp.Droid.Resource.Id.useLogo;
-			global::LilWidgets.Android.Resource.Id.withText = global::SandboxApp.Droid.Resource.Id.withText;
-			global::LilWidgets.Android.Resource.Id.wrap_content = global::SandboxApp.Droid.Resource.Id.wrap_content;
-			global::LilWidgets.Android.Resource.Integer.abc_config_activityDefaultDur = global::SandboxApp.Droid.Resource.Integer.abc_config_activityDefaultDur;
-			global::LilWidgets.Android.Resource.Integer.abc_config_activityShortDur = global::SandboxApp.Droid.Resource.Integer.abc_config_activityShortDur;
-			global::LilWidgets.Android.Resource.Integer.cancel_button_image_alpha = global::SandboxApp.Droid.Resource.Integer.cancel_button_image_alpha;
-			global::LilWidgets.Android.Resource.Integer.config_tooltipAnimTime = global::SandboxApp.Droid.Resource.Integer.config_tooltipAnimTime;
-			global::LilWidgets.Android.Resource.Integer.status_bar_notification_info_maxnum = global::SandboxApp.Droid.Resource.Integer.status_bar_notification_info_maxnum;
-			global::LilWidgets.Android.Resource.Layout.abc_action_bar_title_item = global::SandboxApp.Droid.Resource.Layout.abc_action_bar_title_item;
-			global::LilWidgets.Android.Resource.Layout.abc_action_bar_up_container = global::SandboxApp.Droid.Resource.Layout.abc_action_bar_up_container;
-			global::LilWidgets.Android.Resource.Layout.abc_action_menu_item_layout = global::SandboxApp.Droid.Resource.Layout.abc_action_menu_item_layout;
-			global::LilWidgets.Android.Resource.Layout.abc_action_menu_layout = global::SandboxApp.Droid.Resource.Layout.abc_action_menu_layout;
-			global::LilWidgets.Android.Resource.Layout.abc_action_mode_bar = global::SandboxApp.Droid.Resource.Layout.abc_action_mode_bar;
-			global::LilWidgets.Android.Resource.Layout.abc_action_mode_close_item_material = global::SandboxApp.Droid.Resource.Layout.abc_action_mode_close_item_material;
-			global::LilWidgets.Android.Resource.Layout.abc_activity_chooser_view = global::SandboxApp.Droid.Resource.Layout.abc_activity_chooser_view;
-			global::LilWidgets.Android.Resource.Layout.abc_activity_chooser_view_list_item = global::SandboxApp.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
-			global::LilWidgets.Android.Resource.Layout.abc_alert_dialog_button_bar_material = global::SandboxApp.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
-			global::LilWidgets.Android.Resource.Layout.abc_alert_dialog_material = global::SandboxApp.Droid.Resource.Layout.abc_alert_dialog_material;
-			global::LilWidgets.Android.Resource.Layout.abc_alert_dialog_title_material = global::SandboxApp.Droid.Resource.Layout.abc_alert_dialog_title_material;
-			global::LilWidgets.Android.Resource.Layout.abc_cascading_menu_item_layout = global::SandboxApp.Droid.Resource.Layout.abc_cascading_menu_item_layout;
-			global::LilWidgets.Android.Resource.Layout.abc_dialog_title_material = global::SandboxApp.Droid.Resource.Layout.abc_dialog_title_material;
-			global::LilWidgets.Android.Resource.Layout.abc_expanded_menu_layout = global::SandboxApp.Droid.Resource.Layout.abc_expanded_menu_layout;
-			global::LilWidgets.Android.Resource.Layout.abc_list_menu_item_checkbox = global::SandboxApp.Droid.Resource.Layout.abc_list_menu_item_checkbox;
-			global::LilWidgets.Android.Resource.Layout.abc_list_menu_item_icon = global::SandboxApp.Droid.Resource.Layout.abc_list_menu_item_icon;
-			global::LilWidgets.Android.Resource.Layout.abc_list_menu_item_layout = global::SandboxApp.Droid.Resource.Layout.abc_list_menu_item_layout;
-			global::LilWidgets.Android.Resource.Layout.abc_list_menu_item_radio = global::SandboxApp.Droid.Resource.Layout.abc_list_menu_item_radio;
-			global::LilWidgets.Android.Resource.Layout.abc_popup_menu_header_item_layout = global::SandboxApp.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
-			global::LilWidgets.Android.Resource.Layout.abc_popup_menu_item_layout = global::SandboxApp.Droid.Resource.Layout.abc_popup_menu_item_layout;
-			global::LilWidgets.Android.Resource.Layout.abc_screen_content_include = global::SandboxApp.Droid.Resource.Layout.abc_screen_content_include;
-			global::LilWidgets.Android.Resource.Layout.abc_screen_simple = global::SandboxApp.Droid.Resource.Layout.abc_screen_simple;
-			global::LilWidgets.Android.Resource.Layout.abc_screen_simple_overlay_action_mode = global::SandboxApp.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
-			global::LilWidgets.Android.Resource.Layout.abc_screen_toolbar = global::SandboxApp.Droid.Resource.Layout.abc_screen_toolbar;
-			global::LilWidgets.Android.Resource.Layout.abc_search_dropdown_item_icons_2line = global::SandboxApp.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
-			global::LilWidgets.Android.Resource.Layout.abc_search_view = global::SandboxApp.Droid.Resource.Layout.abc_search_view;
-			global::LilWidgets.Android.Resource.Layout.abc_select_dialog_material = global::SandboxApp.Droid.Resource.Layout.abc_select_dialog_material;
-			global::LilWidgets.Android.Resource.Layout.abc_tooltip = global::SandboxApp.Droid.Resource.Layout.abc_tooltip;
-			global::LilWidgets.Android.Resource.Layout.notification_action = global::SandboxApp.Droid.Resource.Layout.notification_action;
-			global::LilWidgets.Android.Resource.Layout.notification_action_tombstone = global::SandboxApp.Droid.Resource.Layout.notification_action_tombstone;
-			global::LilWidgets.Android.Resource.Layout.notification_template_custom_big = global::SandboxApp.Droid.Resource.Layout.notification_template_custom_big;
-			global::LilWidgets.Android.Resource.Layout.notification_template_icon_group = global::SandboxApp.Droid.Resource.Layout.notification_template_icon_group;
-			global::LilWidgets.Android.Resource.Layout.notification_template_part_chronometer = global::SandboxApp.Droid.Resource.Layout.notification_template_part_chronometer;
-			global::LilWidgets.Android.Resource.Layout.notification_template_part_time = global::SandboxApp.Droid.Resource.Layout.notification_template_part_time;
-			global::LilWidgets.Android.Resource.Layout.select_dialog_item_material = global::SandboxApp.Droid.Resource.Layout.select_dialog_item_material;
-			global::LilWidgets.Android.Resource.Layout.select_dialog_multichoice_material = global::SandboxApp.Droid.Resource.Layout.select_dialog_multichoice_material;
-			global::LilWidgets.Android.Resource.Layout.select_dialog_singlechoice_material = global::SandboxApp.Droid.Resource.Layout.select_dialog_singlechoice_material;
-			global::LilWidgets.Android.Resource.Layout.support_simple_spinner_dropdown_item = global::SandboxApp.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
-			global::LilWidgets.Android.Resource.String.abc_action_bar_home_description = global::SandboxApp.Droid.Resource.String.abc_action_bar_home_description;
-			global::LilWidgets.Android.Resource.String.abc_action_bar_up_description = global::SandboxApp.Droid.Resource.String.abc_action_bar_up_description;
-			global::LilWidgets.Android.Resource.String.abc_action_menu_overflow_description = global::SandboxApp.Droid.Resource.String.abc_action_menu_overflow_description;
-			global::LilWidgets.Android.Resource.String.abc_action_mode_done = global::SandboxApp.Droid.Resource.String.abc_action_mode_done;
-			global::LilWidgets.Android.Resource.String.abc_activitychooserview_choose_application = global::SandboxApp.Droid.Resource.String.abc_activitychooserview_choose_application;
-			global::LilWidgets.Android.Resource.String.abc_activity_chooser_view_see_all = global::SandboxApp.Droid.Resource.String.abc_activity_chooser_view_see_all;
-			global::LilWidgets.Android.Resource.String.abc_capital_off = global::SandboxApp.Droid.Resource.String.abc_capital_off;
-			global::LilWidgets.Android.Resource.String.abc_capital_on = global::SandboxApp.Droid.Resource.String.abc_capital_on;
-			global::LilWidgets.Android.Resource.String.abc_menu_alt_shortcut_label = global::SandboxApp.Droid.Resource.String.abc_menu_alt_shortcut_label;
-			global::LilWidgets.Android.Resource.String.abc_menu_ctrl_shortcut_label = global::SandboxApp.Droid.Resource.String.abc_menu_ctrl_shortcut_label;
-			global::LilWidgets.Android.Resource.String.abc_menu_delete_shortcut_label = global::SandboxApp.Droid.Resource.String.abc_menu_delete_shortcut_label;
-			global::LilWidgets.Android.Resource.String.abc_menu_enter_shortcut_label = global::SandboxApp.Droid.Resource.String.abc_menu_enter_shortcut_label;
-			global::LilWidgets.Android.Resource.String.abc_menu_function_shortcut_label = global::SandboxApp.Droid.Resource.String.abc_menu_function_shortcut_label;
-			global::LilWidgets.Android.Resource.String.abc_menu_meta_shortcut_label = global::SandboxApp.Droid.Resource.String.abc_menu_meta_shortcut_label;
-			global::LilWidgets.Android.Resource.String.abc_menu_shift_shortcut_label = global::SandboxApp.Droid.Resource.String.abc_menu_shift_shortcut_label;
-			global::LilWidgets.Android.Resource.String.abc_menu_space_shortcut_label = global::SandboxApp.Droid.Resource.String.abc_menu_space_shortcut_label;
-			global::LilWidgets.Android.Resource.String.abc_menu_sym_shortcut_label = global::SandboxApp.Droid.Resource.String.abc_menu_sym_shortcut_label;
-			global::LilWidgets.Android.Resource.String.abc_prepend_shortcut_label = global::SandboxApp.Droid.Resource.String.abc_prepend_shortcut_label;
-			global::LilWidgets.Android.Resource.String.abc_searchview_description_clear = global::SandboxApp.Droid.Resource.String.abc_searchview_description_clear;
-			global::LilWidgets.Android.Resource.String.abc_searchview_description_query = global::SandboxApp.Droid.Resource.String.abc_searchview_description_query;
-			global::LilWidgets.Android.Resource.String.abc_searchview_description_search = global::SandboxApp.Droid.Resource.String.abc_searchview_description_search;
-			global::LilWidgets.Android.Resource.String.abc_searchview_description_submit = global::SandboxApp.Droid.Resource.String.abc_searchview_description_submit;
-			global::LilWidgets.Android.Resource.String.abc_searchview_description_voice = global::SandboxApp.Droid.Resource.String.abc_searchview_description_voice;
-			global::LilWidgets.Android.Resource.String.abc_search_hint = global::SandboxApp.Droid.Resource.String.abc_search_hint;
-			global::LilWidgets.Android.Resource.String.abc_shareactionprovider_share_with = global::SandboxApp.Droid.Resource.String.abc_shareactionprovider_share_with;
-			global::LilWidgets.Android.Resource.String.abc_shareactionprovider_share_with_application = global::SandboxApp.Droid.Resource.String.abc_shareactionprovider_share_with_application;
-			global::LilWidgets.Android.Resource.String.abc_toolbar_collapse_description = global::SandboxApp.Droid.Resource.String.abc_toolbar_collapse_description;
-			global::LilWidgets.Android.Resource.String.app_name = global::SandboxApp.Droid.Resource.String.app_name;
-			global::LilWidgets.Android.Resource.String.hello = global::SandboxApp.Droid.Resource.String.hello;
-			global::LilWidgets.Android.Resource.String.search_menu_title = global::SandboxApp.Droid.Resource.String.search_menu_title;
-			global::LilWidgets.Android.Resource.String.status_bar_notification_info_overflow = global::SandboxApp.Droid.Resource.String.status_bar_notification_info_overflow;
-			global::LilWidgets.Android.Resource.Style.AlertDialog_AppCompat = global::SandboxApp.Droid.Resource.Style.AlertDialog_AppCompat;
-			global::LilWidgets.Android.Resource.Style.AlertDialog_AppCompat_Light = global::SandboxApp.Droid.Resource.Style.AlertDialog_AppCompat_Light;
-			global::LilWidgets.Android.Resource.Style.Animation_AppCompat_Dialog = global::SandboxApp.Droid.Resource.Style.Animation_AppCompat_Dialog;
-			global::LilWidgets.Android.Resource.Style.Animation_AppCompat_DropDownUp = global::SandboxApp.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
-			global::LilWidgets.Android.Resource.Style.Animation_AppCompat_Tooltip = global::SandboxApp.Droid.Resource.Style.Animation_AppCompat_Tooltip;
-			global::LilWidgets.Android.Resource.Style.Base_AlertDialog_AppCompat = global::SandboxApp.Droid.Resource.Style.Base_AlertDialog_AppCompat;
-			global::LilWidgets.Android.Resource.Style.Base_AlertDialog_AppCompat_Light = global::SandboxApp.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
-			global::LilWidgets.Android.Resource.Style.Base_Animation_AppCompat_Dialog = global::SandboxApp.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
-			global::LilWidgets.Android.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::SandboxApp.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
-			global::LilWidgets.Android.Resource.Style.Base_Animation_AppCompat_Tooltip = global::SandboxApp.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
-			global::LilWidgets.Android.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::SandboxApp.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
-			global::LilWidgets.Android.Resource.Style.Base_DialogWindowTitle_AppCompat = global::SandboxApp.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Button = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Large = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Small = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Title = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::LilWidgets.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::SandboxApp.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::LilWidgets.Android.Resource.Style.Base_ThemeOverlay_AppCompat = global::SandboxApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
-			global::LilWidgets.Android.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::SandboxApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
-			global::LilWidgets.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::SandboxApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
-			global::LilWidgets.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::SandboxApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::LilWidgets.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::SandboxApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
-			global::LilWidgets.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::SandboxApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
-			global::LilWidgets.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::SandboxApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
-			global::LilWidgets.Android.Resource.Style.Base_Theme_AppCompat = global::SandboxApp.Droid.Resource.Style.Base_Theme_AppCompat;
-			global::LilWidgets.Android.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::SandboxApp.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
-			global::LilWidgets.Android.Resource.Style.Base_Theme_AppCompat_Dialog = global::SandboxApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
-			global::LilWidgets.Android.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::SandboxApp.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
-			global::LilWidgets.Android.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::SandboxApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
-			global::LilWidgets.Android.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::SandboxApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
-			global::LilWidgets.Android.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::SandboxApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
-			global::LilWidgets.Android.Resource.Style.Base_Theme_AppCompat_Light = global::SandboxApp.Droid.Resource.Style.Base_Theme_AppCompat_Light;
-			global::LilWidgets.Android.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::SandboxApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
-			global::LilWidgets.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::SandboxApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
-			global::LilWidgets.Android.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::SandboxApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
-			global::LilWidgets.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::SandboxApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
-			global::LilWidgets.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::SandboxApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
-			global::LilWidgets.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::SandboxApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
-			global::LilWidgets.Android.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::SandboxApp.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
-			global::LilWidgets.Android.Resource.Style.Base_V21_Theme_AppCompat = global::SandboxApp.Droid.Resource.Style.Base_V21_Theme_AppCompat;
-			global::LilWidgets.Android.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::SandboxApp.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
-			global::LilWidgets.Android.Resource.Style.Base_V21_Theme_AppCompat_Light = global::SandboxApp.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
-			global::LilWidgets.Android.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::SandboxApp.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
-			global::LilWidgets.Android.Resource.Style.Base_V22_Theme_AppCompat = global::SandboxApp.Droid.Resource.Style.Base_V22_Theme_AppCompat;
-			global::LilWidgets.Android.Resource.Style.Base_V22_Theme_AppCompat_Light = global::SandboxApp.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
-			global::LilWidgets.Android.Resource.Style.Base_V23_Theme_AppCompat = global::SandboxApp.Droid.Resource.Style.Base_V23_Theme_AppCompat;
-			global::LilWidgets.Android.Resource.Style.Base_V23_Theme_AppCompat_Light = global::SandboxApp.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
-			global::LilWidgets.Android.Resource.Style.Base_V26_Theme_AppCompat = global::SandboxApp.Droid.Resource.Style.Base_V26_Theme_AppCompat;
-			global::LilWidgets.Android.Resource.Style.Base_V26_Theme_AppCompat_Light = global::SandboxApp.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
-			global::LilWidgets.Android.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::SandboxApp.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
-			global::LilWidgets.Android.Resource.Style.Base_V28_Theme_AppCompat = global::SandboxApp.Droid.Resource.Style.Base_V28_Theme_AppCompat;
-			global::LilWidgets.Android.Resource.Style.Base_V28_Theme_AppCompat_Light = global::SandboxApp.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light;
-			global::LilWidgets.Android.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::SandboxApp.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
-			global::LilWidgets.Android.Resource.Style.Base_V7_Theme_AppCompat = global::SandboxApp.Droid.Resource.Style.Base_V7_Theme_AppCompat;
-			global::LilWidgets.Android.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::SandboxApp.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
-			global::LilWidgets.Android.Resource.Style.Base_V7_Theme_AppCompat_Light = global::SandboxApp.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
-			global::LilWidgets.Android.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::SandboxApp.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
-			global::LilWidgets.Android.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::SandboxApp.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
-			global::LilWidgets.Android.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::SandboxApp.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
-			global::LilWidgets.Android.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::SandboxApp.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ActionBar = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ActionButton = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ActionMode = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_Button = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_Button;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_Button_Small = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_EditText = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ImageButton = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ListView = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_RatingBar = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_SearchView = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_SeekBar = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_Spinner = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_Toolbar = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
-			global::LilWidgets.Android.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::SandboxApp.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
-			global::LilWidgets.Android.Resource.Style.Platform_AppCompat = global::SandboxApp.Droid.Resource.Style.Platform_AppCompat;
-			global::LilWidgets.Android.Resource.Style.Platform_AppCompat_Light = global::SandboxApp.Droid.Resource.Style.Platform_AppCompat_Light;
-			global::LilWidgets.Android.Resource.Style.Platform_ThemeOverlay_AppCompat = global::SandboxApp.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
-			global::LilWidgets.Android.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::SandboxApp.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
-			global::LilWidgets.Android.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::SandboxApp.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
-			global::LilWidgets.Android.Resource.Style.Platform_V21_AppCompat = global::SandboxApp.Droid.Resource.Style.Platform_V21_AppCompat;
-			global::LilWidgets.Android.Resource.Style.Platform_V21_AppCompat_Light = global::SandboxApp.Droid.Resource.Style.Platform_V21_AppCompat_Light;
-			global::LilWidgets.Android.Resource.Style.Platform_V25_AppCompat = global::SandboxApp.Droid.Resource.Style.Platform_V25_AppCompat;
-			global::LilWidgets.Android.Resource.Style.Platform_V25_AppCompat_Light = global::SandboxApp.Droid.Resource.Style.Platform_V25_AppCompat_Light;
-			global::LilWidgets.Android.Resource.Style.Platform_Widget_AppCompat_Spinner = global::SandboxApp.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
-			global::LilWidgets.Android.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::SandboxApp.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
-			global::LilWidgets.Android.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::SandboxApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
-			global::LilWidgets.Android.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::SandboxApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
-			global::LilWidgets.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::SandboxApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
-			global::LilWidgets.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::SandboxApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
-			global::LilWidgets.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::SandboxApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
-			global::LilWidgets.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::SandboxApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
-			global::LilWidgets.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::SandboxApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
-			global::LilWidgets.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::SandboxApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
-			global::LilWidgets.Android.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::SandboxApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
-			global::LilWidgets.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::SandboxApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
-			global::LilWidgets.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::SandboxApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
-			global::LilWidgets.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::SandboxApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
-			global::LilWidgets.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::SandboxApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
-			global::LilWidgets.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::SandboxApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
-			global::LilWidgets.Android.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::SandboxApp.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
-			global::LilWidgets.Android.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::SandboxApp.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Body1 = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Body2 = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Button = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Button;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Caption = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Display1 = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Display2 = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Display3 = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Display4 = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Headline = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Inverse = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Large = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Large;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Medium = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Menu = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Small = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Small;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Subhead = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Title = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Title;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Tooltip = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::SandboxApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_Compat_Notification = global::SandboxApp.Droid.Resource.Style.TextAppearance_Compat_Notification;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_Compat_Notification_Info = global::SandboxApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::SandboxApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_Compat_Notification_Time = global::SandboxApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_Compat_Notification_Title = global::SandboxApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::SandboxApp.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::SandboxApp.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::LilWidgets.Android.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::SandboxApp.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::LilWidgets.Android.Resource.Style.ThemeOverlay_AppCompat = global::SandboxApp.Droid.Resource.Style.ThemeOverlay_AppCompat;
-			global::LilWidgets.Android.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::SandboxApp.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
-			global::LilWidgets.Android.Resource.Style.ThemeOverlay_AppCompat_Dark = global::SandboxApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
-			global::LilWidgets.Android.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::SandboxApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::LilWidgets.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::SandboxApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
-			global::LilWidgets.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::SandboxApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
-			global::LilWidgets.Android.Resource.Style.ThemeOverlay_AppCompat_Light = global::SandboxApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_CompactMenu = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_DayNight = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_DayNight;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_Dialog = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_Dialog;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_Dialog_Alert = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_Light = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_Light;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_Light_Dialog = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
-			global::LilWidgets.Android.Resource.Style.Theme_AppCompat_NoActionBar = global::SandboxApp.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ActionBar = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ActionBar;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ActionButton = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ActionButton;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ActionMode = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ActionMode;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ActivityChooserView = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Button = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Button;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ButtonBar = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Button_Borderless = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Button_Colored = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Button_Small = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Button_Small;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_EditText = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_EditText;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ImageButton = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ImageButton;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_ActionBar = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_ActionButton = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_SearchView = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ListMenuView = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ListPopupWindow = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ListView = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ListView;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ListView_DropDown = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ListView_Menu = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_PopupMenu = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_PopupWindow = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ProgressBar = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_RatingBar = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_RatingBar;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_RatingBar_Small = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_SearchView = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_SearchView;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_SeekBar = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_SeekBar;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Spinner = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Spinner;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Toolbar = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Toolbar;
-			global::LilWidgets.Android.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::SandboxApp.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
-			global::LilWidgets.Android.Resource.Style.Widget_Compat_NotificationActionContainer = global::SandboxApp.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
-			global::LilWidgets.Android.Resource.Style.Widget_Compat_NotificationActionText = global::SandboxApp.Droid.Resource.Style.Widget_Compat_NotificationActionText;
-			global::LilWidgets.Android.Resource.Style.Widget_Support_CoordinatorLayout = global::SandboxApp.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar = global::SandboxApp.Droid.Resource.Styleable.ActionBar;
-			global::LilWidgets.Android.Resource.Styleable.ActionBarLayout = global::SandboxApp.Droid.Resource.Styleable.ActionBarLayout;
-			global::LilWidgets.Android.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::SandboxApp.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_background = global::SandboxApp.Droid.Resource.Styleable.ActionBar_background;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_backgroundSplit = global::SandboxApp.Droid.Resource.Styleable.ActionBar_backgroundSplit;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_backgroundStacked = global::SandboxApp.Droid.Resource.Styleable.ActionBar_backgroundStacked;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_contentInsetEnd = global::SandboxApp.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::SandboxApp.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_contentInsetLeft = global::SandboxApp.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_contentInsetRight = global::SandboxApp.Droid.Resource.Styleable.ActionBar_contentInsetRight;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_contentInsetStart = global::SandboxApp.Droid.Resource.Styleable.ActionBar_contentInsetStart;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::SandboxApp.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_customNavigationLayout = global::SandboxApp.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_displayOptions = global::SandboxApp.Droid.Resource.Styleable.ActionBar_displayOptions;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_divider = global::SandboxApp.Droid.Resource.Styleable.ActionBar_divider;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_elevation = global::SandboxApp.Droid.Resource.Styleable.ActionBar_elevation;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_height = global::SandboxApp.Droid.Resource.Styleable.ActionBar_height;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_hideOnContentScroll = global::SandboxApp.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_homeAsUpIndicator = global::SandboxApp.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_homeLayout = global::SandboxApp.Droid.Resource.Styleable.ActionBar_homeLayout;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_icon = global::SandboxApp.Droid.Resource.Styleable.ActionBar_icon;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::SandboxApp.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_itemPadding = global::SandboxApp.Droid.Resource.Styleable.ActionBar_itemPadding;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_logo = global::SandboxApp.Droid.Resource.Styleable.ActionBar_logo;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_navigationMode = global::SandboxApp.Droid.Resource.Styleable.ActionBar_navigationMode;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_popupTheme = global::SandboxApp.Droid.Resource.Styleable.ActionBar_popupTheme;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_progressBarPadding = global::SandboxApp.Droid.Resource.Styleable.ActionBar_progressBarPadding;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_progressBarStyle = global::SandboxApp.Droid.Resource.Styleable.ActionBar_progressBarStyle;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_subtitle = global::SandboxApp.Droid.Resource.Styleable.ActionBar_subtitle;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_subtitleTextStyle = global::SandboxApp.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_title = global::SandboxApp.Droid.Resource.Styleable.ActionBar_title;
-			global::LilWidgets.Android.Resource.Styleable.ActionBar_titleTextStyle = global::SandboxApp.Droid.Resource.Styleable.ActionBar_titleTextStyle;
-			global::LilWidgets.Android.Resource.Styleable.ActionMenuItemView = global::SandboxApp.Droid.Resource.Styleable.ActionMenuItemView;
-			global::LilWidgets.Android.Resource.Styleable.ActionMenuItemView_android_minWidth = global::SandboxApp.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
-			global::LilWidgets.Android.Resource.Styleable.ActionMenuView = global::SandboxApp.Droid.Resource.Styleable.ActionMenuView;
-			global::LilWidgets.Android.Resource.Styleable.ActionMode = global::SandboxApp.Droid.Resource.Styleable.ActionMode;
-			global::LilWidgets.Android.Resource.Styleable.ActionMode_background = global::SandboxApp.Droid.Resource.Styleable.ActionMode_background;
-			global::LilWidgets.Android.Resource.Styleable.ActionMode_backgroundSplit = global::SandboxApp.Droid.Resource.Styleable.ActionMode_backgroundSplit;
-			global::LilWidgets.Android.Resource.Styleable.ActionMode_closeItemLayout = global::SandboxApp.Droid.Resource.Styleable.ActionMode_closeItemLayout;
-			global::LilWidgets.Android.Resource.Styleable.ActionMode_height = global::SandboxApp.Droid.Resource.Styleable.ActionMode_height;
-			global::LilWidgets.Android.Resource.Styleable.ActionMode_subtitleTextStyle = global::SandboxApp.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
-			global::LilWidgets.Android.Resource.Styleable.ActionMode_titleTextStyle = global::SandboxApp.Droid.Resource.Styleable.ActionMode_titleTextStyle;
-			global::LilWidgets.Android.Resource.Styleable.ActivityChooserView = global::SandboxApp.Droid.Resource.Styleable.ActivityChooserView;
-			global::LilWidgets.Android.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::SandboxApp.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
-			global::LilWidgets.Android.Resource.Styleable.ActivityChooserView_initialActivityCount = global::SandboxApp.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
-			global::LilWidgets.Android.Resource.Styleable.AlertDialog = global::SandboxApp.Droid.Resource.Styleable.AlertDialog;
-			global::LilWidgets.Android.Resource.Styleable.AlertDialog_android_layout = global::SandboxApp.Droid.Resource.Styleable.AlertDialog_android_layout;
-			global::LilWidgets.Android.Resource.Styleable.AlertDialog_buttonIconDimen = global::SandboxApp.Droid.Resource.Styleable.AlertDialog_buttonIconDimen;
-			global::LilWidgets.Android.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::SandboxApp.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
-			global::LilWidgets.Android.Resource.Styleable.AlertDialog_listItemLayout = global::SandboxApp.Droid.Resource.Styleable.AlertDialog_listItemLayout;
-			global::LilWidgets.Android.Resource.Styleable.AlertDialog_listLayout = global::SandboxApp.Droid.Resource.Styleable.AlertDialog_listLayout;
-			global::LilWidgets.Android.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::SandboxApp.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
-			global::LilWidgets.Android.Resource.Styleable.AlertDialog_showTitle = global::SandboxApp.Droid.Resource.Styleable.AlertDialog_showTitle;
-			global::LilWidgets.Android.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::SandboxApp.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
-			global::LilWidgets.Android.Resource.Styleable.AnimatedStateListDrawableCompat = global::SandboxApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat;
-			global::LilWidgets.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::SandboxApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
-			global::LilWidgets.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::SandboxApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
-			global::LilWidgets.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::SandboxApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
-			global::LilWidgets.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::SandboxApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
-			global::LilWidgets.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::SandboxApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
-			global::LilWidgets.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::SandboxApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
-			global::LilWidgets.Android.Resource.Styleable.AnimatedStateListDrawableItem = global::SandboxApp.Droid.Resource.Styleable.AnimatedStateListDrawableItem;
-			global::LilWidgets.Android.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::SandboxApp.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
-			global::LilWidgets.Android.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::SandboxApp.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
-			global::LilWidgets.Android.Resource.Styleable.AnimatedStateListDrawableTransition = global::SandboxApp.Droid.Resource.Styleable.AnimatedStateListDrawableTransition;
-			global::LilWidgets.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::SandboxApp.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
-			global::LilWidgets.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::SandboxApp.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
-			global::LilWidgets.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::SandboxApp.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
-			global::LilWidgets.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::SandboxApp.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatImageView = global::SandboxApp.Droid.Resource.Styleable.AppCompatImageView;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatImageView_android_src = global::SandboxApp.Droid.Resource.Styleable.AppCompatImageView_android_src;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatImageView_srcCompat = global::SandboxApp.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatImageView_tint = global::SandboxApp.Droid.Resource.Styleable.AppCompatImageView_tint;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatImageView_tintMode = global::SandboxApp.Droid.Resource.Styleable.AppCompatImageView_tintMode;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatSeekBar = global::SandboxApp.Droid.Resource.Styleable.AppCompatSeekBar;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatSeekBar_android_thumb = global::SandboxApp.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatSeekBar_tickMark = global::SandboxApp.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::SandboxApp.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::SandboxApp.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextHelper = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextHelper;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextView = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextView;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextView_android_textAppearance = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextView_fontFamily = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextView_lineHeight = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTextView_textAllCaps = global::SandboxApp.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionBarDivider = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionBarSize = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionBarStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionBarTheme = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionModeBackground = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionModeStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_buttonStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_checkboxStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_colorAccent = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_colorControlActivated = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_colorControlNormal = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_colorError = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_colorError;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_colorPrimary = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_controlBackground = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_dialogTheme = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_dividerVertical = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_editTextBackground = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_editTextColor = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_editTextStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_panelBackground = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_searchViewStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_seekBarStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_spinnerStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_switchStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_toolbarStyle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_windowActionBar = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
-			global::LilWidgets.Android.Resource.Styleable.AppCompatTheme_windowNoTitle = global::SandboxApp.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
-			global::LilWidgets.Android.Resource.Styleable.ButtonBarLayout = global::SandboxApp.Droid.Resource.Styleable.ButtonBarLayout;
-			global::LilWidgets.Android.Resource.Styleable.ButtonBarLayout_allowStacking = global::SandboxApp.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
-			global::LilWidgets.Android.Resource.Styleable.ColorStateListItem = global::SandboxApp.Droid.Resource.Styleable.ColorStateListItem;
-			global::LilWidgets.Android.Resource.Styleable.ColorStateListItem_alpha = global::SandboxApp.Droid.Resource.Styleable.ColorStateListItem_alpha;
-			global::LilWidgets.Android.Resource.Styleable.ColorStateListItem_android_alpha = global::SandboxApp.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
-			global::LilWidgets.Android.Resource.Styleable.ColorStateListItem_android_color = global::SandboxApp.Droid.Resource.Styleable.ColorStateListItem_android_color;
-			global::LilWidgets.Android.Resource.Styleable.CompoundButton = global::SandboxApp.Droid.Resource.Styleable.CompoundButton;
-			global::LilWidgets.Android.Resource.Styleable.CompoundButton_android_button = global::SandboxApp.Droid.Resource.Styleable.CompoundButton_android_button;
-			global::LilWidgets.Android.Resource.Styleable.CompoundButton_buttonTint = global::SandboxApp.Droid.Resource.Styleable.CompoundButton_buttonTint;
-			global::LilWidgets.Android.Resource.Styleable.CompoundButton_buttonTintMode = global::SandboxApp.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
-			global::LilWidgets.Android.Resource.Styleable.CoordinatorLayout = global::SandboxApp.Droid.Resource.Styleable.CoordinatorLayout;
-			global::LilWidgets.Android.Resource.Styleable.CoordinatorLayout_keylines = global::SandboxApp.Droid.Resource.Styleable.CoordinatorLayout_keylines;
-			global::LilWidgets.Android.Resource.Styleable.CoordinatorLayout_Layout = global::SandboxApp.Droid.Resource.Styleable.CoordinatorLayout_Layout;
-			global::LilWidgets.Android.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::SandboxApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
-			global::LilWidgets.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::SandboxApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
-			global::LilWidgets.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::SandboxApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
-			global::LilWidgets.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::SandboxApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
-			global::LilWidgets.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::SandboxApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
-			global::LilWidgets.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::SandboxApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
-			global::LilWidgets.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::SandboxApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
-			global::LilWidgets.Android.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::SandboxApp.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
-			global::LilWidgets.Android.Resource.Styleable.DrawerArrowToggle = global::SandboxApp.Droid.Resource.Styleable.DrawerArrowToggle;
-			global::LilWidgets.Android.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::SandboxApp.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
-			global::LilWidgets.Android.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::SandboxApp.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
-			global::LilWidgets.Android.Resource.Styleable.DrawerArrowToggle_barLength = global::SandboxApp.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
-			global::LilWidgets.Android.Resource.Styleable.DrawerArrowToggle_color = global::SandboxApp.Droid.Resource.Styleable.DrawerArrowToggle_color;
-			global::LilWidgets.Android.Resource.Styleable.DrawerArrowToggle_drawableSize = global::SandboxApp.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
-			global::LilWidgets.Android.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::SandboxApp.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
-			global::LilWidgets.Android.Resource.Styleable.DrawerArrowToggle_spinBars = global::SandboxApp.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
-			global::LilWidgets.Android.Resource.Styleable.DrawerArrowToggle_thickness = global::SandboxApp.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
-			global::LilWidgets.Android.Resource.Styleable.FontFamily = global::SandboxApp.Droid.Resource.Styleable.FontFamily;
-			global::LilWidgets.Android.Resource.Styleable.FontFamilyFont = global::SandboxApp.Droid.Resource.Styleable.FontFamilyFont;
-			global::LilWidgets.Android.Resource.Styleable.FontFamilyFont_android_font = global::SandboxApp.Droid.Resource.Styleable.FontFamilyFont_android_font;
-			global::LilWidgets.Android.Resource.Styleable.FontFamilyFont_android_fontStyle = global::SandboxApp.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
-			global::LilWidgets.Android.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::SandboxApp.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
-			global::LilWidgets.Android.Resource.Styleable.FontFamilyFont_android_fontWeight = global::SandboxApp.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
-			global::LilWidgets.Android.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::SandboxApp.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
-			global::LilWidgets.Android.Resource.Styleable.FontFamilyFont_font = global::SandboxApp.Droid.Resource.Styleable.FontFamilyFont_font;
-			global::LilWidgets.Android.Resource.Styleable.FontFamilyFont_fontStyle = global::SandboxApp.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
-			global::LilWidgets.Android.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::SandboxApp.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
-			global::LilWidgets.Android.Resource.Styleable.FontFamilyFont_fontWeight = global::SandboxApp.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
-			global::LilWidgets.Android.Resource.Styleable.FontFamilyFont_ttcIndex = global::SandboxApp.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
-			global::LilWidgets.Android.Resource.Styleable.FontFamily_fontProviderAuthority = global::SandboxApp.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
-			global::LilWidgets.Android.Resource.Styleable.FontFamily_fontProviderCerts = global::SandboxApp.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
-			global::LilWidgets.Android.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::SandboxApp.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
-			global::LilWidgets.Android.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::SandboxApp.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
-			global::LilWidgets.Android.Resource.Styleable.FontFamily_fontProviderPackage = global::SandboxApp.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
-			global::LilWidgets.Android.Resource.Styleable.FontFamily_fontProviderQuery = global::SandboxApp.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
-			global::LilWidgets.Android.Resource.Styleable.GradientColor = global::SandboxApp.Droid.Resource.Styleable.GradientColor;
-			global::LilWidgets.Android.Resource.Styleable.GradientColorItem = global::SandboxApp.Droid.Resource.Styleable.GradientColorItem;
-			global::LilWidgets.Android.Resource.Styleable.GradientColorItem_android_color = global::SandboxApp.Droid.Resource.Styleable.GradientColorItem_android_color;
-			global::LilWidgets.Android.Resource.Styleable.GradientColorItem_android_offset = global::SandboxApp.Droid.Resource.Styleable.GradientColorItem_android_offset;
-			global::LilWidgets.Android.Resource.Styleable.GradientColor_android_centerColor = global::SandboxApp.Droid.Resource.Styleable.GradientColor_android_centerColor;
-			global::LilWidgets.Android.Resource.Styleable.GradientColor_android_centerX = global::SandboxApp.Droid.Resource.Styleable.GradientColor_android_centerX;
-			global::LilWidgets.Android.Resource.Styleable.GradientColor_android_centerY = global::SandboxApp.Droid.Resource.Styleable.GradientColor_android_centerY;
-			global::LilWidgets.Android.Resource.Styleable.GradientColor_android_endColor = global::SandboxApp.Droid.Resource.Styleable.GradientColor_android_endColor;
-			global::LilWidgets.Android.Resource.Styleable.GradientColor_android_endX = global::SandboxApp.Droid.Resource.Styleable.GradientColor_android_endX;
-			global::LilWidgets.Android.Resource.Styleable.GradientColor_android_endY = global::SandboxApp.Droid.Resource.Styleable.GradientColor_android_endY;
-			global::LilWidgets.Android.Resource.Styleable.GradientColor_android_gradientRadius = global::SandboxApp.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
-			global::LilWidgets.Android.Resource.Styleable.GradientColor_android_startColor = global::SandboxApp.Droid.Resource.Styleable.GradientColor_android_startColor;
-			global::LilWidgets.Android.Resource.Styleable.GradientColor_android_startX = global::SandboxApp.Droid.Resource.Styleable.GradientColor_android_startX;
-			global::LilWidgets.Android.Resource.Styleable.GradientColor_android_startY = global::SandboxApp.Droid.Resource.Styleable.GradientColor_android_startY;
-			global::LilWidgets.Android.Resource.Styleable.GradientColor_android_tileMode = global::SandboxApp.Droid.Resource.Styleable.GradientColor_android_tileMode;
-			global::LilWidgets.Android.Resource.Styleable.GradientColor_android_type = global::SandboxApp.Droid.Resource.Styleable.GradientColor_android_type;
-			global::LilWidgets.Android.Resource.Styleable.LinearLayoutCompat = global::SandboxApp.Droid.Resource.Styleable.LinearLayoutCompat;
-			global::LilWidgets.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::SandboxApp.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
-			global::LilWidgets.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::SandboxApp.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
-			global::LilWidgets.Android.Resource.Styleable.LinearLayoutCompat_android_gravity = global::SandboxApp.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
-			global::LilWidgets.Android.Resource.Styleable.LinearLayoutCompat_android_orientation = global::SandboxApp.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
-			global::LilWidgets.Android.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::SandboxApp.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
-			global::LilWidgets.Android.Resource.Styleable.LinearLayoutCompat_divider = global::SandboxApp.Droid.Resource.Styleable.LinearLayoutCompat_divider;
-			global::LilWidgets.Android.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::SandboxApp.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
-			global::LilWidgets.Android.Resource.Styleable.LinearLayoutCompat_Layout = global::SandboxApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
-			global::LilWidgets.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::SandboxApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
-			global::LilWidgets.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::SandboxApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
-			global::LilWidgets.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::SandboxApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
-			global::LilWidgets.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::SandboxApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
-			global::LilWidgets.Android.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::SandboxApp.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
-			global::LilWidgets.Android.Resource.Styleable.LinearLayoutCompat_showDividers = global::SandboxApp.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
-			global::LilWidgets.Android.Resource.Styleable.ListPopupWindow = global::SandboxApp.Droid.Resource.Styleable.ListPopupWindow;
-			global::LilWidgets.Android.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::SandboxApp.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
-			global::LilWidgets.Android.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::SandboxApp.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
-			global::LilWidgets.Android.Resource.Styleable.MenuGroup = global::SandboxApp.Droid.Resource.Styleable.MenuGroup;
-			global::LilWidgets.Android.Resource.Styleable.MenuGroup_android_checkableBehavior = global::SandboxApp.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
-			global::LilWidgets.Android.Resource.Styleable.MenuGroup_android_enabled = global::SandboxApp.Droid.Resource.Styleable.MenuGroup_android_enabled;
-			global::LilWidgets.Android.Resource.Styleable.MenuGroup_android_id = global::SandboxApp.Droid.Resource.Styleable.MenuGroup_android_id;
-			global::LilWidgets.Android.Resource.Styleable.MenuGroup_android_menuCategory = global::SandboxApp.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
-			global::LilWidgets.Android.Resource.Styleable.MenuGroup_android_orderInCategory = global::SandboxApp.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
-			global::LilWidgets.Android.Resource.Styleable.MenuGroup_android_visible = global::SandboxApp.Droid.Resource.Styleable.MenuGroup_android_visible;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem = global::SandboxApp.Droid.Resource.Styleable.MenuItem;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_actionLayout = global::SandboxApp.Droid.Resource.Styleable.MenuItem_actionLayout;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_actionProviderClass = global::SandboxApp.Droid.Resource.Styleable.MenuItem_actionProviderClass;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_actionViewClass = global::SandboxApp.Droid.Resource.Styleable.MenuItem_actionViewClass;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_alphabeticModifiers = global::SandboxApp.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::SandboxApp.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_android_checkable = global::SandboxApp.Droid.Resource.Styleable.MenuItem_android_checkable;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_android_checked = global::SandboxApp.Droid.Resource.Styleable.MenuItem_android_checked;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_android_enabled = global::SandboxApp.Droid.Resource.Styleable.MenuItem_android_enabled;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_android_icon = global::SandboxApp.Droid.Resource.Styleable.MenuItem_android_icon;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_android_id = global::SandboxApp.Droid.Resource.Styleable.MenuItem_android_id;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_android_menuCategory = global::SandboxApp.Droid.Resource.Styleable.MenuItem_android_menuCategory;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_android_numericShortcut = global::SandboxApp.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_android_onClick = global::SandboxApp.Droid.Resource.Styleable.MenuItem_android_onClick;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_android_orderInCategory = global::SandboxApp.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_android_title = global::SandboxApp.Droid.Resource.Styleable.MenuItem_android_title;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_android_titleCondensed = global::SandboxApp.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_android_visible = global::SandboxApp.Droid.Resource.Styleable.MenuItem_android_visible;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_contentDescription = global::SandboxApp.Droid.Resource.Styleable.MenuItem_contentDescription;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_iconTint = global::SandboxApp.Droid.Resource.Styleable.MenuItem_iconTint;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_iconTintMode = global::SandboxApp.Droid.Resource.Styleable.MenuItem_iconTintMode;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_numericModifiers = global::SandboxApp.Droid.Resource.Styleable.MenuItem_numericModifiers;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_showAsAction = global::SandboxApp.Droid.Resource.Styleable.MenuItem_showAsAction;
-			global::LilWidgets.Android.Resource.Styleable.MenuItem_tooltipText = global::SandboxApp.Droid.Resource.Styleable.MenuItem_tooltipText;
-			global::LilWidgets.Android.Resource.Styleable.MenuView = global::SandboxApp.Droid.Resource.Styleable.MenuView;
-			global::LilWidgets.Android.Resource.Styleable.MenuView_android_headerBackground = global::SandboxApp.Droid.Resource.Styleable.MenuView_android_headerBackground;
-			global::LilWidgets.Android.Resource.Styleable.MenuView_android_horizontalDivider = global::SandboxApp.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
-			global::LilWidgets.Android.Resource.Styleable.MenuView_android_itemBackground = global::SandboxApp.Droid.Resource.Styleable.MenuView_android_itemBackground;
-			global::LilWidgets.Android.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::SandboxApp.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
-			global::LilWidgets.Android.Resource.Styleable.MenuView_android_itemTextAppearance = global::SandboxApp.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
-			global::LilWidgets.Android.Resource.Styleable.MenuView_android_verticalDivider = global::SandboxApp.Droid.Resource.Styleable.MenuView_android_verticalDivider;
-			global::LilWidgets.Android.Resource.Styleable.MenuView_android_windowAnimationStyle = global::SandboxApp.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
-			global::LilWidgets.Android.Resource.Styleable.MenuView_preserveIconSpacing = global::SandboxApp.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
-			global::LilWidgets.Android.Resource.Styleable.MenuView_subMenuArrow = global::SandboxApp.Droid.Resource.Styleable.MenuView_subMenuArrow;
-			global::LilWidgets.Android.Resource.Styleable.PopupWindow = global::SandboxApp.Droid.Resource.Styleable.PopupWindow;
-			global::LilWidgets.Android.Resource.Styleable.PopupWindowBackgroundState = global::SandboxApp.Droid.Resource.Styleable.PopupWindowBackgroundState;
-			global::LilWidgets.Android.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::SandboxApp.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
-			global::LilWidgets.Android.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::SandboxApp.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
-			global::LilWidgets.Android.Resource.Styleable.PopupWindow_android_popupBackground = global::SandboxApp.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
-			global::LilWidgets.Android.Resource.Styleable.PopupWindow_overlapAnchor = global::SandboxApp.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
-			global::LilWidgets.Android.Resource.Styleable.RecycleListView = global::SandboxApp.Droid.Resource.Styleable.RecycleListView;
-			global::LilWidgets.Android.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::SandboxApp.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
-			global::LilWidgets.Android.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::SandboxApp.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
-			global::LilWidgets.Android.Resource.Styleable.SearchView = global::SandboxApp.Droid.Resource.Styleable.SearchView;
-			global::LilWidgets.Android.Resource.Styleable.SearchView_android_focusable = global::SandboxApp.Droid.Resource.Styleable.SearchView_android_focusable;
-			global::LilWidgets.Android.Resource.Styleable.SearchView_android_imeOptions = global::SandboxApp.Droid.Resource.Styleable.SearchView_android_imeOptions;
-			global::LilWidgets.Android.Resource.Styleable.SearchView_android_inputType = global::SandboxApp.Droid.Resource.Styleable.SearchView_android_inputType;
-			global::LilWidgets.Android.Resource.Styleable.SearchView_android_maxWidth = global::SandboxApp.Droid.Resource.Styleable.SearchView_android_maxWidth;
-			global::LilWidgets.Android.Resource.Styleable.SearchView_closeIcon = global::SandboxApp.Droid.Resource.Styleable.SearchView_closeIcon;
-			global::LilWidgets.Android.Resource.Styleable.SearchView_commitIcon = global::SandboxApp.Droid.Resource.Styleable.SearchView_commitIcon;
-			global::LilWidgets.Android.Resource.Styleable.SearchView_defaultQueryHint = global::SandboxApp.Droid.Resource.Styleable.SearchView_defaultQueryHint;
-			global::LilWidgets.Android.Resource.Styleable.SearchView_goIcon = global::SandboxApp.Droid.Resource.Styleable.SearchView_goIcon;
-			global::LilWidgets.Android.Resource.Styleable.SearchView_iconifiedByDefault = global::SandboxApp.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
-			global::LilWidgets.Android.Resource.Styleable.SearchView_layout = global::SandboxApp.Droid.Resource.Styleable.SearchView_layout;
-			global::LilWidgets.Android.Resource.Styleable.SearchView_queryBackground = global::SandboxApp.Droid.Resource.Styleable.SearchView_queryBackground;
-			global::LilWidgets.Android.Resource.Styleable.SearchView_queryHint = global::SandboxApp.Droid.Resource.Styleable.SearchView_queryHint;
-			global::LilWidgets.Android.Resource.Styleable.SearchView_searchHintIcon = global::SandboxApp.Droid.Resource.Styleable.SearchView_searchHintIcon;
-			global::LilWidgets.Android.Resource.Styleable.SearchView_searchIcon = global::SandboxApp.Droid.Resource.Styleable.SearchView_searchIcon;
-			global::LilWidgets.Android.Resource.Styleable.SearchView_submitBackground = global::SandboxApp.Droid.Resource.Styleable.SearchView_submitBackground;
-			global::LilWidgets.Android.Resource.Styleable.SearchView_suggestionRowLayout = global::SandboxApp.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
-			global::LilWidgets.Android.Resource.Styleable.SearchView_voiceIcon = global::SandboxApp.Droid.Resource.Styleable.SearchView_voiceIcon;
-			global::LilWidgets.Android.Resource.Styleable.Spinner = global::SandboxApp.Droid.Resource.Styleable.Spinner;
-			global::LilWidgets.Android.Resource.Styleable.Spinner_android_dropDownWidth = global::SandboxApp.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
-			global::LilWidgets.Android.Resource.Styleable.Spinner_android_entries = global::SandboxApp.Droid.Resource.Styleable.Spinner_android_entries;
-			global::LilWidgets.Android.Resource.Styleable.Spinner_android_popupBackground = global::SandboxApp.Droid.Resource.Styleable.Spinner_android_popupBackground;
-			global::LilWidgets.Android.Resource.Styleable.Spinner_android_prompt = global::SandboxApp.Droid.Resource.Styleable.Spinner_android_prompt;
-			global::LilWidgets.Android.Resource.Styleable.Spinner_popupTheme = global::SandboxApp.Droid.Resource.Styleable.Spinner_popupTheme;
-			global::LilWidgets.Android.Resource.Styleable.StateListDrawable = global::SandboxApp.Droid.Resource.Styleable.StateListDrawable;
-			global::LilWidgets.Android.Resource.Styleable.StateListDrawableItem = global::SandboxApp.Droid.Resource.Styleable.StateListDrawableItem;
-			global::LilWidgets.Android.Resource.Styleable.StateListDrawableItem_android_drawable = global::SandboxApp.Droid.Resource.Styleable.StateListDrawableItem_android_drawable;
-			global::LilWidgets.Android.Resource.Styleable.StateListDrawable_android_constantSize = global::SandboxApp.Droid.Resource.Styleable.StateListDrawable_android_constantSize;
-			global::LilWidgets.Android.Resource.Styleable.StateListDrawable_android_dither = global::SandboxApp.Droid.Resource.Styleable.StateListDrawable_android_dither;
-			global::LilWidgets.Android.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::SandboxApp.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
-			global::LilWidgets.Android.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::SandboxApp.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
-			global::LilWidgets.Android.Resource.Styleable.StateListDrawable_android_variablePadding = global::SandboxApp.Droid.Resource.Styleable.StateListDrawable_android_variablePadding;
-			global::LilWidgets.Android.Resource.Styleable.StateListDrawable_android_visible = global::SandboxApp.Droid.Resource.Styleable.StateListDrawable_android_visible;
-			global::LilWidgets.Android.Resource.Styleable.SwitchCompat = global::SandboxApp.Droid.Resource.Styleable.SwitchCompat;
-			global::LilWidgets.Android.Resource.Styleable.SwitchCompat_android_textOff = global::SandboxApp.Droid.Resource.Styleable.SwitchCompat_android_textOff;
-			global::LilWidgets.Android.Resource.Styleable.SwitchCompat_android_textOn = global::SandboxApp.Droid.Resource.Styleable.SwitchCompat_android_textOn;
-			global::LilWidgets.Android.Resource.Styleable.SwitchCompat_android_thumb = global::SandboxApp.Droid.Resource.Styleable.SwitchCompat_android_thumb;
-			global::LilWidgets.Android.Resource.Styleable.SwitchCompat_showText = global::SandboxApp.Droid.Resource.Styleable.SwitchCompat_showText;
-			global::LilWidgets.Android.Resource.Styleable.SwitchCompat_splitTrack = global::SandboxApp.Droid.Resource.Styleable.SwitchCompat_splitTrack;
-			global::LilWidgets.Android.Resource.Styleable.SwitchCompat_switchMinWidth = global::SandboxApp.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
-			global::LilWidgets.Android.Resource.Styleable.SwitchCompat_switchPadding = global::SandboxApp.Droid.Resource.Styleable.SwitchCompat_switchPadding;
-			global::LilWidgets.Android.Resource.Styleable.SwitchCompat_switchTextAppearance = global::SandboxApp.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
-			global::LilWidgets.Android.Resource.Styleable.SwitchCompat_thumbTextPadding = global::SandboxApp.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
-			global::LilWidgets.Android.Resource.Styleable.SwitchCompat_thumbTint = global::SandboxApp.Droid.Resource.Styleable.SwitchCompat_thumbTint;
-			global::LilWidgets.Android.Resource.Styleable.SwitchCompat_thumbTintMode = global::SandboxApp.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
-			global::LilWidgets.Android.Resource.Styleable.SwitchCompat_track = global::SandboxApp.Droid.Resource.Styleable.SwitchCompat_track;
-			global::LilWidgets.Android.Resource.Styleable.SwitchCompat_trackTint = global::SandboxApp.Droid.Resource.Styleable.SwitchCompat_trackTint;
-			global::LilWidgets.Android.Resource.Styleable.SwitchCompat_trackTintMode = global::SandboxApp.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
-			global::LilWidgets.Android.Resource.Styleable.TextAppearance = global::SandboxApp.Droid.Resource.Styleable.TextAppearance;
-			global::LilWidgets.Android.Resource.Styleable.TextAppearance_android_fontFamily = global::SandboxApp.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
-			global::LilWidgets.Android.Resource.Styleable.TextAppearance_android_shadowColor = global::SandboxApp.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
-			global::LilWidgets.Android.Resource.Styleable.TextAppearance_android_shadowDx = global::SandboxApp.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
-			global::LilWidgets.Android.Resource.Styleable.TextAppearance_android_shadowDy = global::SandboxApp.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
-			global::LilWidgets.Android.Resource.Styleable.TextAppearance_android_shadowRadius = global::SandboxApp.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
-			global::LilWidgets.Android.Resource.Styleable.TextAppearance_android_textColor = global::SandboxApp.Droid.Resource.Styleable.TextAppearance_android_textColor;
-			global::LilWidgets.Android.Resource.Styleable.TextAppearance_android_textColorHint = global::SandboxApp.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
-			global::LilWidgets.Android.Resource.Styleable.TextAppearance_android_textColorLink = global::SandboxApp.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
-			global::LilWidgets.Android.Resource.Styleable.TextAppearance_android_textSize = global::SandboxApp.Droid.Resource.Styleable.TextAppearance_android_textSize;
-			global::LilWidgets.Android.Resource.Styleable.TextAppearance_android_textStyle = global::SandboxApp.Droid.Resource.Styleable.TextAppearance_android_textStyle;
-			global::LilWidgets.Android.Resource.Styleable.TextAppearance_android_typeface = global::SandboxApp.Droid.Resource.Styleable.TextAppearance_android_typeface;
-			global::LilWidgets.Android.Resource.Styleable.TextAppearance_fontFamily = global::SandboxApp.Droid.Resource.Styleable.TextAppearance_fontFamily;
-			global::LilWidgets.Android.Resource.Styleable.TextAppearance_textAllCaps = global::SandboxApp.Droid.Resource.Styleable.TextAppearance_textAllCaps;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar = global::SandboxApp.Droid.Resource.Styleable.Toolbar;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_android_gravity = global::SandboxApp.Droid.Resource.Styleable.Toolbar_android_gravity;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_android_minHeight = global::SandboxApp.Droid.Resource.Styleable.Toolbar_android_minHeight;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_buttonGravity = global::SandboxApp.Droid.Resource.Styleable.Toolbar_buttonGravity;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_collapseContentDescription = global::SandboxApp.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_collapseIcon = global::SandboxApp.Droid.Resource.Styleable.Toolbar_collapseIcon;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_contentInsetEnd = global::SandboxApp.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::SandboxApp.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_contentInsetLeft = global::SandboxApp.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_contentInsetRight = global::SandboxApp.Droid.Resource.Styleable.Toolbar_contentInsetRight;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_contentInsetStart = global::SandboxApp.Droid.Resource.Styleable.Toolbar_contentInsetStart;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::SandboxApp.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_logo = global::SandboxApp.Droid.Resource.Styleable.Toolbar_logo;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_logoDescription = global::SandboxApp.Droid.Resource.Styleable.Toolbar_logoDescription;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_maxButtonHeight = global::SandboxApp.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_navigationContentDescription = global::SandboxApp.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_navigationIcon = global::SandboxApp.Droid.Resource.Styleable.Toolbar_navigationIcon;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_popupTheme = global::SandboxApp.Droid.Resource.Styleable.Toolbar_popupTheme;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_subtitle = global::SandboxApp.Droid.Resource.Styleable.Toolbar_subtitle;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_subtitleTextAppearance = global::SandboxApp.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_subtitleTextColor = global::SandboxApp.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_title = global::SandboxApp.Droid.Resource.Styleable.Toolbar_title;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_titleMargin = global::SandboxApp.Droid.Resource.Styleable.Toolbar_titleMargin;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_titleMarginBottom = global::SandboxApp.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_titleMarginEnd = global::SandboxApp.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_titleMargins = global::SandboxApp.Droid.Resource.Styleable.Toolbar_titleMargins;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_titleMarginStart = global::SandboxApp.Droid.Resource.Styleable.Toolbar_titleMarginStart;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_titleMarginTop = global::SandboxApp.Droid.Resource.Styleable.Toolbar_titleMarginTop;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_titleTextAppearance = global::SandboxApp.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
-			global::LilWidgets.Android.Resource.Styleable.Toolbar_titleTextColor = global::SandboxApp.Droid.Resource.Styleable.Toolbar_titleTextColor;
-			global::LilWidgets.Android.Resource.Styleable.View = global::SandboxApp.Droid.Resource.Styleable.View;
-			global::LilWidgets.Android.Resource.Styleable.ViewBackgroundHelper = global::SandboxApp.Droid.Resource.Styleable.ViewBackgroundHelper;
-			global::LilWidgets.Android.Resource.Styleable.ViewBackgroundHelper_android_background = global::SandboxApp.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
-			global::LilWidgets.Android.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::SandboxApp.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
-			global::LilWidgets.Android.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::SandboxApp.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
-			global::LilWidgets.Android.Resource.Styleable.ViewStubCompat = global::SandboxApp.Droid.Resource.Styleable.ViewStubCompat;
-			global::LilWidgets.Android.Resource.Styleable.ViewStubCompat_android_id = global::SandboxApp.Droid.Resource.Styleable.ViewStubCompat_android_id;
-			global::LilWidgets.Android.Resource.Styleable.ViewStubCompat_android_inflatedId = global::SandboxApp.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
-			global::LilWidgets.Android.Resource.Styleable.ViewStubCompat_android_layout = global::SandboxApp.Droid.Resource.Styleable.ViewStubCompat_android_layout;
-			global::LilWidgets.Android.Resource.Styleable.View_android_focusable = global::SandboxApp.Droid.Resource.Styleable.View_android_focusable;
-			global::LilWidgets.Android.Resource.Styleable.View_android_theme = global::SandboxApp.Droid.Resource.Styleable.View_android_theme;
-			global::LilWidgets.Android.Resource.Styleable.View_paddingEnd = global::SandboxApp.Droid.Resource.Styleable.View_paddingEnd;
-			global::LilWidgets.Android.Resource.Styleable.View_paddingStart = global::SandboxApp.Droid.Resource.Styleable.View_paddingStart;
-			global::LilWidgets.Android.Resource.Styleable.View_theme = global::SandboxApp.Droid.Resource.Styleable.View_theme;
 			global::SkiaSharp.Views.Forms.Resource.Animation.abc_fade_in = global::SandboxApp.Droid.Resource.Animation.abc_fade_in;
 			global::SkiaSharp.Views.Forms.Resource.Animation.abc_fade_out = global::SandboxApp.Droid.Resource.Animation.abc_fade_out;
 			global::SkiaSharp.Views.Forms.Resource.Animation.abc_grow_fade_in_from_bottom = global::SandboxApp.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -15828,100 +14234,103 @@ namespace SandboxApp.Droid
 			public const int ic_mtrl_chip_close_circle = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int material_ic_calendar_black_24dp = 2131165296;
+			public const int LilWidgetsLogo = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int material_ic_clear_black_24dp = 2131165297;
+			public const int material_ic_calendar_black_24dp = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int material_ic_edit_black_24dp = 2131165298;
+			public const int material_ic_clear_black_24dp = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165299;
+			public const int material_ic_edit_black_24dp = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165300;
+			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int material_ic_menu_arrow_down_black_24dp = 2131165301;
+			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int material_ic_menu_arrow_up_black_24dp = 2131165302;
+			public const int material_ic_menu_arrow_down_black_24dp = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int mtrl_dialog_background = 2131165303;
+			public const int material_ic_menu_arrow_up_black_24dp = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int mtrl_dropdown_arrow = 2131165304;
+			public const int mtrl_dialog_background = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int mtrl_ic_arrow_drop_down = 2131165305;
+			public const int mtrl_dropdown_arrow = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int mtrl_ic_arrow_drop_up = 2131165306;
+			public const int mtrl_ic_arrow_drop_down = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int mtrl_ic_cancel = 2131165307;
+			public const int mtrl_ic_arrow_drop_up = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int mtrl_ic_error = 2131165308;
+			public const int mtrl_ic_cancel = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int mtrl_popupmenu_background = 2131165309;
+			public const int mtrl_ic_error = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int mtrl_popupmenu_background_dark = 2131165310;
+			public const int mtrl_popupmenu_background = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int mtrl_tabs_default_indicator = 2131165311;
+			public const int mtrl_popupmenu_background_dark = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int navigation_empty_icon = 2131165312;
+			public const int mtrl_tabs_default_indicator = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int notification_action_background = 2131165313;
+			public const int navigation_empty_icon = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int notification_bg = 2131165314;
+			public const int notification_action_background = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int notification_bg_low = 2131165315;
+			public const int notification_bg = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int notification_bg_low_normal = 2131165316;
+			public const int notification_bg_low = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int notification_bg_low_pressed = 2131165317;
+			public const int notification_bg_low_normal = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int notification_bg_normal = 2131165318;
+			public const int notification_bg_low_pressed = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int notification_bg_normal_pressed = 2131165319;
+			public const int notification_bg_normal = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int notification_icon_background = 2131165320;
+			public const int notification_bg_normal_pressed = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int notification_template_icon_bg = 2131165321;
+			public const int notification_icon_background = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int notification_template_icon_low_bg = 2131165322;
+			public const int notification_template_icon_bg = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int notification_tile_bg = 2131165323;
+			public const int notification_template_icon_low_bg = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int notify_panel_notification_icon_bg = 2131165324;
+			public const int notification_tile_bg = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int test_custom_background = 2131165325;
+			public const int notify_panel_notification_icon_bg = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int tooltip_frame_dark = 2131165326;
+			public const int test_custom_background = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int tooltip_frame_light = 2131165327;
+			public const int tooltip_frame_dark = 2131165327;
+			
+			// aapt resource value: 0x7F070090
+			public const int tooltip_frame_light = 2131165328;
 			
 			static Drawable()
 			{
@@ -17499,200 +15908,194 @@ namespace SandboxApp.Droid
 			// aapt resource value: 0x7F0E001A
 			public const int abc_toolbar_collapse_description = 2131623962;
 			
-			// aapt resource value: 0x7F0E001C
-			public const int appbar_scrolling_view_behavior = 2131623964;
-			
 			// aapt resource value: 0x7F0E001B
-			public const int app_name = 2131623963;
+			public const int appbar_scrolling_view_behavior = 2131623963;
+			
+			// aapt resource value: 0x7F0E001C
+			public const int bottom_sheet_behavior = 2131623964;
 			
 			// aapt resource value: 0x7F0E001D
-			public const int bottom_sheet_behavior = 2131623965;
+			public const int character_counter_content_description = 2131623965;
 			
 			// aapt resource value: 0x7F0E001E
-			public const int character_counter_content_description = 2131623966;
+			public const int character_counter_overflowed_content_description = 2131623966;
 			
 			// aapt resource value: 0x7F0E001F
-			public const int character_counter_overflowed_content_description = 2131623967;
+			public const int character_counter_pattern = 2131623967;
 			
 			// aapt resource value: 0x7F0E0020
-			public const int character_counter_pattern = 2131623968;
+			public const int chip_text = 2131623968;
 			
 			// aapt resource value: 0x7F0E0021
-			public const int chip_text = 2131623969;
+			public const int clear_text_end_icon_content_description = 2131623969;
 			
 			// aapt resource value: 0x7F0E0022
-			public const int clear_text_end_icon_content_description = 2131623970;
+			public const int copy_toast_msg = 2131623970;
 			
 			// aapt resource value: 0x7F0E0023
-			public const int copy_toast_msg = 2131623971;
+			public const int error_icon_content_description = 2131623971;
 			
 			// aapt resource value: 0x7F0E0024
-			public const int error_icon_content_description = 2131623972;
+			public const int exposed_dropdown_menu_content_description = 2131623972;
 			
 			// aapt resource value: 0x7F0E0025
-			public const int exposed_dropdown_menu_content_description = 2131623973;
+			public const int fab_transformation_scrim_behavior = 2131623973;
 			
 			// aapt resource value: 0x7F0E0026
-			public const int fab_transformation_scrim_behavior = 2131623974;
+			public const int fab_transformation_sheet_behavior = 2131623974;
 			
 			// aapt resource value: 0x7F0E0027
-			public const int fab_transformation_sheet_behavior = 2131623975;
+			public const int fallback_menu_item_copy_link = 2131623975;
 			
 			// aapt resource value: 0x7F0E0028
-			public const int fallback_menu_item_copy_link = 2131623976;
+			public const int fallback_menu_item_open_in_browser = 2131623976;
 			
 			// aapt resource value: 0x7F0E0029
-			public const int fallback_menu_item_open_in_browser = 2131623977;
+			public const int fallback_menu_item_share_link = 2131623977;
 			
 			// aapt resource value: 0x7F0E002A
-			public const int fallback_menu_item_share_link = 2131623978;
+			public const int hide_bottom_view_on_scroll_behavior = 2131623978;
 			
 			// aapt resource value: 0x7F0E002B
-			public const int hello = 2131623979;
+			public const int icon_content_description = 2131623979;
 			
 			// aapt resource value: 0x7F0E002C
-			public const int hide_bottom_view_on_scroll_behavior = 2131623980;
+			public const int item_view_role_description = 2131623980;
 			
 			// aapt resource value: 0x7F0E002D
-			public const int icon_content_description = 2131623981;
+			public const int material_slider_range_end = 2131623981;
 			
 			// aapt resource value: 0x7F0E002E
-			public const int item_view_role_description = 2131623982;
+			public const int material_slider_range_start = 2131623982;
 			
 			// aapt resource value: 0x7F0E002F
-			public const int material_slider_range_end = 2131623983;
+			public const int mtrl_badge_numberless_content_description = 2131623983;
 			
 			// aapt resource value: 0x7F0E0030
-			public const int material_slider_range_start = 2131623984;
+			public const int mtrl_chip_close_icon_content_description = 2131623984;
 			
 			// aapt resource value: 0x7F0E0031
-			public const int mtrl_badge_numberless_content_description = 2131623985;
+			public const int mtrl_exceed_max_badge_number_content_description = 2131623985;
 			
 			// aapt resource value: 0x7F0E0032
-			public const int mtrl_chip_close_icon_content_description = 2131623986;
+			public const int mtrl_exceed_max_badge_number_suffix = 2131623986;
 			
 			// aapt resource value: 0x7F0E0033
-			public const int mtrl_exceed_max_badge_number_content_description = 2131623987;
+			public const int mtrl_picker_a11y_next_month = 2131623987;
 			
 			// aapt resource value: 0x7F0E0034
-			public const int mtrl_exceed_max_badge_number_suffix = 2131623988;
+			public const int mtrl_picker_a11y_prev_month = 2131623988;
 			
 			// aapt resource value: 0x7F0E0035
-			public const int mtrl_picker_a11y_next_month = 2131623989;
+			public const int mtrl_picker_announce_current_selection = 2131623989;
 			
 			// aapt resource value: 0x7F0E0036
-			public const int mtrl_picker_a11y_prev_month = 2131623990;
+			public const int mtrl_picker_cancel = 2131623990;
 			
 			// aapt resource value: 0x7F0E0037
-			public const int mtrl_picker_announce_current_selection = 2131623991;
+			public const int mtrl_picker_confirm = 2131623991;
 			
 			// aapt resource value: 0x7F0E0038
-			public const int mtrl_picker_cancel = 2131623992;
+			public const int mtrl_picker_date_header_selected = 2131623992;
 			
 			// aapt resource value: 0x7F0E0039
-			public const int mtrl_picker_confirm = 2131623993;
+			public const int mtrl_picker_date_header_title = 2131623993;
 			
 			// aapt resource value: 0x7F0E003A
-			public const int mtrl_picker_date_header_selected = 2131623994;
+			public const int mtrl_picker_date_header_unselected = 2131623994;
 			
 			// aapt resource value: 0x7F0E003B
-			public const int mtrl_picker_date_header_title = 2131623995;
+			public const int mtrl_picker_day_of_week_column_header = 2131623995;
 			
 			// aapt resource value: 0x7F0E003C
-			public const int mtrl_picker_date_header_unselected = 2131623996;
+			public const int mtrl_picker_invalid_format = 2131623996;
 			
 			// aapt resource value: 0x7F0E003D
-			public const int mtrl_picker_day_of_week_column_header = 2131623997;
+			public const int mtrl_picker_invalid_format_example = 2131623997;
 			
 			// aapt resource value: 0x7F0E003E
-			public const int mtrl_picker_invalid_format = 2131623998;
+			public const int mtrl_picker_invalid_format_use = 2131623998;
 			
 			// aapt resource value: 0x7F0E003F
-			public const int mtrl_picker_invalid_format_example = 2131623999;
+			public const int mtrl_picker_invalid_range = 2131623999;
 			
 			// aapt resource value: 0x7F0E0040
-			public const int mtrl_picker_invalid_format_use = 2131624000;
+			public const int mtrl_picker_navigate_to_year_description = 2131624000;
 			
 			// aapt resource value: 0x7F0E0041
-			public const int mtrl_picker_invalid_range = 2131624001;
+			public const int mtrl_picker_out_of_range = 2131624001;
 			
 			// aapt resource value: 0x7F0E0042
-			public const int mtrl_picker_navigate_to_year_description = 2131624002;
+			public const int mtrl_picker_range_header_only_end_selected = 2131624002;
 			
 			// aapt resource value: 0x7F0E0043
-			public const int mtrl_picker_out_of_range = 2131624003;
+			public const int mtrl_picker_range_header_only_start_selected = 2131624003;
 			
 			// aapt resource value: 0x7F0E0044
-			public const int mtrl_picker_range_header_only_end_selected = 2131624004;
+			public const int mtrl_picker_range_header_selected = 2131624004;
 			
 			// aapt resource value: 0x7F0E0045
-			public const int mtrl_picker_range_header_only_start_selected = 2131624005;
+			public const int mtrl_picker_range_header_title = 2131624005;
 			
 			// aapt resource value: 0x7F0E0046
-			public const int mtrl_picker_range_header_selected = 2131624006;
+			public const int mtrl_picker_range_header_unselected = 2131624006;
 			
 			// aapt resource value: 0x7F0E0047
-			public const int mtrl_picker_range_header_title = 2131624007;
+			public const int mtrl_picker_save = 2131624007;
 			
 			// aapt resource value: 0x7F0E0048
-			public const int mtrl_picker_range_header_unselected = 2131624008;
+			public const int mtrl_picker_text_input_date_hint = 2131624008;
 			
 			// aapt resource value: 0x7F0E0049
-			public const int mtrl_picker_save = 2131624009;
+			public const int mtrl_picker_text_input_date_range_end_hint = 2131624009;
 			
 			// aapt resource value: 0x7F0E004A
-			public const int mtrl_picker_text_input_date_hint = 2131624010;
+			public const int mtrl_picker_text_input_date_range_start_hint = 2131624010;
 			
 			// aapt resource value: 0x7F0E004B
-			public const int mtrl_picker_text_input_date_range_end_hint = 2131624011;
+			public const int mtrl_picker_text_input_day_abbr = 2131624011;
 			
 			// aapt resource value: 0x7F0E004C
-			public const int mtrl_picker_text_input_date_range_start_hint = 2131624012;
+			public const int mtrl_picker_text_input_month_abbr = 2131624012;
 			
 			// aapt resource value: 0x7F0E004D
-			public const int mtrl_picker_text_input_day_abbr = 2131624013;
+			public const int mtrl_picker_text_input_year_abbr = 2131624013;
 			
 			// aapt resource value: 0x7F0E004E
-			public const int mtrl_picker_text_input_month_abbr = 2131624014;
+			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131624014;
 			
 			// aapt resource value: 0x7F0E004F
-			public const int mtrl_picker_text_input_year_abbr = 2131624015;
+			public const int mtrl_picker_toggle_to_day_selection = 2131624015;
 			
 			// aapt resource value: 0x7F0E0050
-			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131624016;
+			public const int mtrl_picker_toggle_to_text_input_mode = 2131624016;
 			
 			// aapt resource value: 0x7F0E0051
-			public const int mtrl_picker_toggle_to_day_selection = 2131624017;
+			public const int mtrl_picker_toggle_to_year_selection = 2131624017;
 			
 			// aapt resource value: 0x7F0E0052
-			public const int mtrl_picker_toggle_to_text_input_mode = 2131624018;
+			public const int overflow_tab_title = 2131624018;
 			
 			// aapt resource value: 0x7F0E0053
-			public const int mtrl_picker_toggle_to_year_selection = 2131624019;
+			public const int password_toggle_content_description = 2131624019;
 			
 			// aapt resource value: 0x7F0E0054
-			public const int overflow_tab_title = 2131624020;
+			public const int path_password_eye = 2131624020;
 			
 			// aapt resource value: 0x7F0E0055
-			public const int password_toggle_content_description = 2131624021;
+			public const int path_password_eye_mask_strike_through = 2131624021;
 			
 			// aapt resource value: 0x7F0E0056
-			public const int path_password_eye = 2131624022;
+			public const int path_password_eye_mask_visible = 2131624022;
 			
 			// aapt resource value: 0x7F0E0057
-			public const int path_password_eye_mask_strike_through = 2131624023;
+			public const int path_password_strike_through = 2131624023;
 			
 			// aapt resource value: 0x7F0E0058
-			public const int path_password_eye_mask_visible = 2131624024;
+			public const int search_menu_title = 2131624024;
 			
 			// aapt resource value: 0x7F0E0059
-			public const int path_password_strike_through = 2131624025;
-			
-			// aapt resource value: 0x7F0E005A
-			public const int search_menu_title = 2131624026;
-			
-			// aapt resource value: 0x7F0E005B
-			public const int status_bar_notification_info_overflow = 2131624027;
+			public const int status_bar_notification_info_overflow = 2131624025;
 			
 			static String()
 			{

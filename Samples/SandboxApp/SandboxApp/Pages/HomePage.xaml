@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SandboxApp.Pages.HomePage"
+             Style="{StaticResource DefaultPageStyle}"
+             Title="Home">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Welcome to the LilWidgets Sandbox application!"
+                   FontSize="Large"/>
+            <Label Text="Here all widgets have a preview like page and then a sandbox page where you can edit their various properties in real time."
+                   FontSize="Caption"
+                   Margin="0,20,0,0"/>
+            <Image Source="LilWidgetsLogo"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
+                   WidthRequest="300"
+                   HeightRequest="300"/>
+            <Button x:Name="githubBtn"
+                    Text="Checkout the Github Page!"
+                    Clicked="OnOpenGithub_BtnClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

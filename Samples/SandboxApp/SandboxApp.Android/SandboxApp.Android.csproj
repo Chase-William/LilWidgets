@@ -91,13 +91,6 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Sources\LilWidgets.Android\LilWidgets.Android.csproj">
-      <Project>{fbaacbf2-5262-4fef-8319-c3977aaa5b36}</Project>
-      <Name>LilWidgets.Android</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\Sources\LilWidgets\LilWidgets.csproj">
       <Project>{c07e5f50-1edb-46a4-ad9e-6faeff2f5166}</Project>
       <Name>LilWidgets</Name>
@@ -106,6 +99,9 @@
       <Project>{FEFC8A37-8A0D-4595-BF10-54B0D6927F68}</Project>
       <Name>SandboxApp</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\LilWidgetsLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

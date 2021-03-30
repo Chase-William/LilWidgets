@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace SandboxApp
 {
 
-    public class MasterDetailContainerPageMasterMenuItem
+    public class FlyoutPageItem
     {
-        public MasterDetailContainerPageMasterMenuItem()
-            => TargetType = typeof(MasterDetailContainerPageMasterMenuItem);
+        public FlyoutPageItem()
+            => TargetType = typeof(FlyoutPageItem);
         
         public int Id { get; set; }
         public string Title { get; set; }

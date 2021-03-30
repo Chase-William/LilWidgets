@@ -134,4 +134,7 @@
       <Name>SandboxApp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\LilWidgetsLogo.png" />
+  </ItemGroup>
 </Project>

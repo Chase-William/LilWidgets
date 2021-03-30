@@ -25,7 +25,7 @@ namespace SandboxApp.Pages.LoadingWidgetExamples
             }
             catch (Exception ex)
             {
-                Console.WriteLine();
+                throw new Exception(ex.Message);
             }
             loadingWidget.SizeChanged += OnLoadingWidget_SizeChanged;
 

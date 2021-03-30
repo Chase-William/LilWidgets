@@ -4,7 +4,7 @@
              xmlns:lw="clr-namespace:LilWidgets.Forms.Views;assembly=LilWidgets.Forms"
              x:Class="SandboxApp.Pages.LoadingWidgetExamples.LoadingWidgetTestPage"
              Style="{StaticResource DefaultPageStyle}"
-             Title="Loading Widget Test">
+             Title="Loading Widget Sandbox">
 
     <ScrollView>
         <StackLayout>

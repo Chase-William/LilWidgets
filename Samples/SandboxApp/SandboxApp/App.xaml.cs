@@ -12,7 +12,7 @@ namespace SandboxApp
             InitializeComponent();
 
             DependencyService.Get<INonClientAreaStyler>().SetNonClientArea((Color)Resources["ColorPrimary"], Enumerations.DisplayThemes.Light);
-            MainPage = new MasterDetailContainerPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

@@ -16,11 +16,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\" />
+    <ProjectReference Include="..\..\..\Sources\LilWidgets.Forms\LilWidgets.Forms.csproj" />
+    <ProjectReference Include="..\..\..\Sources\LilWidgets\LilWidgets.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Sources\LilWidgets.Forms\LilWidgets.Forms.csproj" />
-    <ProjectReference Include="..\..\..\Sources\LilWidgets\LilWidgets.csproj" />
+    <Compile Update="Pages\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="FlyoutMenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
