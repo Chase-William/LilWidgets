@@ -16,6 +16,6 @@
                             ArcColor="{StaticResource AccentPrimary}"/>
         <Button Text="Goto Sandbox Page"
                 HorizontalOptions="Center"
-                Clicked="Button_Clicked"/>
+                Clicked="OnGotoSandboxPage_BtnClicked"/>
     </StackLayout>
 </ContentPage>

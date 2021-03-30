@@ -17,7 +17,7 @@
                    WidthRequest="300"
                    HeightRequest="300"/>
             <Button x:Name="githubBtn"
-                    Text="Checkout the Github Page!"
+                    Text="Checkout the Github Repo!"
                     Clicked="OnOpenGithub_BtnClicked"/>
         </StackLayout>
     </ContentPage.Content>

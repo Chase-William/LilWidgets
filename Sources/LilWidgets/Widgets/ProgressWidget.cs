@@ -7,17 +7,22 @@ using System;
 
 using SkiaSharp;
 
+using LilWidgets.Exceptions;
+
 namespace LilWidgets.Widgets
 {
     public class ProgressWidget : StrokeWidget
     {
         #region Constants
+        // Todo: comment constants
         public const float DEFAULT_PROGRESS_PERCENTAGE = 0;
         public const short BASE_SWEEP_ANGLE = -90;
         public const bool DEFAULT_IS_TEXT_VISIBLE = true;
-        public const float MIN_PROGRESS_PERCENTAGE = 0f;
-        public const float MAX_PROGRESS_PERCENTAGE = 1f;
+        public const float MIN_PERCENTAGE = 0f;
+        public const float MAX_PERCENTAGE = 1f;
         public const bool DEFAULT_AUTO_ANIMATE = false;
+        public const float DEFAULT_TEXT_SIZE_PERCENTAGE = 0.8f;
+        public const float MIN_TEXT_SIZE_PERCENTAGE = 0.01f;
         #endregion
 
         private float progressPercentage;
@@ -29,8 +34,8 @@ namespace LilWidgets.Widgets
             get => progressPercentage;
             set
             {
-                if (value > MAX_PROGRESS_PERCENTAGE || value < MIN_PROGRESS_PERCENTAGE) // Range constraints
-                    throw new ArgumentOutOfRangeException($"Value {value} for property {nameof(ProgressPercentage)} is outside the valid range of {MIN_PROGRESS_PERCENTAGE} to {MAX_PROGRESS_PERCENTAGE} inclusive.");
+                if (value > MAX_PERCENTAGE || value < MIN_PERCENTAGE) // Throw exception if invalid percentage given.
+                    throw new PropertyValueOutOfRangeException(value, MIN_PERCENTAGE, MAX_PERCENTAGE);
                 if (Set(ref progressPercentage, value))
                 {
                     if (AutoAnimate) // Restart the running animation to use updated values
@@ -50,6 +55,8 @@ namespace LilWidgets.Widgets
             protected set
             {
                 currentProgressPercentage = value;
+                if (currentProgressPercentage == ProgressPercentage)
+                    IsAnimating = false; // Mark the animation as off when the actual is equal to the target
                 OnInvalidateCanvas();
             }
         }
@@ -63,10 +70,23 @@ namespace LilWidgets.Widgets
             get => isTextVisible;
             set
             {
-                if (Set(ref isTextVisible, value))                
-                    OnInvalidateCanvas();                
+                if (Set(ref isTextVisible, value) && !IsAnimating)                
+                    OnInvalidateCanvas(); // Update the canvas when a new value is given and we are not currently animating.                
             }
         }
+
+        private float textSizePercentage = DEFAULT_TEXT_SIZE_PERCENTAGE;
+        public float TextSizePercentage
+        {
+            get => textSizePercentage;
+            set
+            {
+                if (value > MAX_PERCENTAGE || value < MIN_TEXT_SIZE_PERCENTAGE) // Throw exception if invalid percentage given.
+                    throw new PropertyValueOutOfRangeException(value, MIN_TEXT_SIZE_PERCENTAGE, MAX_PERCENTAGE);
+                if (Set(ref textSizePercentage, value) && !IsAnimating)                
+                    OnInvalidateCanvas(); // Update the canvas when a new value is given and we are not currently animating.         
+            }
+        }      
 
         private bool autoAnimate = DEFAULT_AUTO_ANIMATE;
         /// <summary>
@@ -85,7 +105,8 @@ namespace LilWidgets.Widgets
         {
             Color = SKColors.Black,
             Style = SKPaintStyle.Fill,
-            IsAntialias = true
+            IsAntialias = true,
+            TextSize = 1
         };
 
         /// <summary>
@@ -101,12 +122,25 @@ namespace LilWidgets.Widgets
         public uint GetRelativeDuration()
             => (uint)(Duration * Math.Abs(ProgressPercentage - CurrentProgressPercentage));
 
+        /// <summary>
+        /// Max width available inside the offsets of <see cref="StrokeWidget.FittedRect"/>.
+        /// This is used when embedding for say text inside a rectangle.
+        /// </summary>
+        private float maxWidthInsideFittedRect = 0;
+
         protected override void OnInvalidateAnimation()
         {
             if (CurrentProgressPercentage == ProgressPercentage)
                 return; // Return if there is nothing to animate
 
             base.OnInvalidateAnimation();
+        }
+
+        protected override void OnCanvasRectChanged(in SKRectI rect)
+        {
+            base.OnCanvasRectChanged(rect);
+            // Getting the left and right offsets to fit out text nicely inside the FittedRect
+            maxWidthInsideFittedRect = FittedRect.Width - Offset * 2;
         }
 
         public override void DrawContent(SKCanvas canvas, in SKRectI rect)
@@ -130,14 +164,11 @@ namespace LilWidgets.Widgets
 
             if (IsTextVisible) // Draw text only if enabled
             {
-                string percentageMsg = CurrentProgressPercentage.ToString("P");
-                // Adjust TextSize property so text is 75% of screen width
-                var textWidth = TextPaint.MeasureText(percentageMsg);
-                float width = FittedRect.Width / 2;
-                if (width > 1) // We don't want *lose* the text, the IsTextVisible property should be used for hiding the text
-                {
-                    TextPaint.TextSize = width * TextPaint.TextSize / textWidth;
-                }
+                string percentageMsg = CurrentProgressPercentage.ToString("P");                
+                // Adjust TextSize property so text is 90% of screen width
+                float textWidth = TextPaint.MeasureText(percentageMsg);
+                TextPaint.TextSize = TextSizePercentage * maxWidthInsideFittedRect * TextPaint.TextSize / textWidth;
+                // Getting the text's bounds
                 SKRect textBounds = new SKRect();
                 // Find the text bounds
                 TextPaint.MeasureText(percentageMsg, ref textBounds);

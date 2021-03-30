@@ -12,6 +12,7 @@ namespace LilWidgets.Widgets
     public class LoadingWidget : StrokeWidget
     {
         #region Constants
+        // Todo: comment constants
         public const float FULL_REVOLUTION = 360f;
         public const short MAX_ARC_LENGTH = 359;
         public const short MIN_ACC_LENGTH = 1;

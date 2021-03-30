@@ -65,7 +65,7 @@ namespace LilWidgets.Widgets
                 {
                     // Disable propChanged so we can re-calculate StrokeRatio before the next frame              
                     NotifyPropertyChanged();
-                    UpdatePathRect(DrawingRect);
+                    UpdateFittedRect();
                     if (!IsAnimating)
                         OnInvalidateCanvas();
                 }
@@ -77,6 +77,11 @@ namespace LilWidgets.Widgets
         /// Gets the rectangle for drawing that proper offsets applied for a stroke.
         /// </summary>
         protected SKRect FittedRect { get; private set; }
+        
+        /// <summary>
+        /// Gets the offset used when calculating the <see cref="FittedRect"/> from the <see cref="EquilateralWidget.EquilateralRect"/>.
+        /// </summary>
+        protected float Offset { get; private set; }
 
         /// <summary>
         /// Gets or sets the <see cref="SKPaint"/> to draw the background arc.
@@ -97,14 +102,22 @@ namespace LilWidgets.Widgets
         protected override void OnCanvasRectChanged(in SKRectI rect)
         {
             base.OnCanvasRectChanged(in rect);
-            UpdatePathRect(rect);
+            UpdateFittedRect();
         }
 
-        private void UpdatePathRect(in SKRect rect)
+        /// <summary>
+        /// Updates the <see cref="FittedRect"/> property by calculating the correct offsets needed based off 
+        /// the <see cref="StrokeWidthPercentage"/> while using the inherited <see cref="EquilateralWidget.EquilateralRect"/>.
+        /// </summary>
+        /// <param name="rect"></param>
+        private void UpdateFittedRect()
         {
             float relativeStrokeWidth = LimitingDimensionLength * StrokeWidthPercentage / 2;
             // Compensate for the shadow
             float halfShadowStrokeWidth = relativeStrokeWidth / 2 + BASE_SHADOW_SIGMA;
+
+            // Saving this offset to be used in other places like TextBounds calculation
+            Offset = halfShadowStrokeWidth;
 
             // Determine top / bottom by finding the MidY then subtracting half the target width (get the radius of our circle) then subtract the half of stroke which acts as an offset
             if (LimitingDimension == Enumerations.LimitingDimensions.Height) // Canvas is wider than it is tall, hence compute for height

@@ -21,7 +21,7 @@ namespace SandboxApp.Pages.ProgressWidgetPages
             progressWidgetView.Start();
         }
 
-        private void Test_BtnClicked(object sender, System.EventArgs e)
+        private void OnGotoSandboxPage_BtnClicked(object sender, System.EventArgs e)
             => Navigation.PushAsync(new ProgressWidgetTestPage());        
     }
 }

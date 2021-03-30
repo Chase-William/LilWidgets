@@ -50,7 +50,7 @@ namespace SandboxApp.Pages.LoadingWidgetExamples
         private void OnStrokeWidthSlider_ValueChanged(object sender, ValueChangedEventArgs e)
             => loadingWidget.StrokeWidthPercentage = (float)e.NewValue;
 
-        private void OnToggleAnimation(object sender, EventArgs e)
+        private void OnToggleAnimation_BtnClicked(object sender, EventArgs e)
         {
             if (loadingWidget.IsAnimating)
                 loadingWidget.Stop();

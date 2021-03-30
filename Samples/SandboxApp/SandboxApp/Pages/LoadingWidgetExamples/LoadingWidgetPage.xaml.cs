@@ -32,7 +32,7 @@ namespace SandboxApp.Pages.LoadingWidgetExamples
             loadingWidget.Stop();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void OnGotoSandboxPage_BtnClicked(object sender, EventArgs e)
             => this.Navigation.PushAsync(new LoadingWidgetTestPage());
     }
 }

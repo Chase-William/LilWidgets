@@ -4,7 +4,8 @@
              xmlns:lw="clr-namespace:LilWidgets.Forms.Views;assembly=LilWidgets.Forms"
              x:Class="SandboxApp.Pages.LoadingWidgetExamples.LoadingWidgetTestPage"
              Style="{StaticResource DefaultPageStyle}"
-             Title="Loading Widget Sandbox">
+             Title="Loading Widget Sandbox"
+             x:DataType="lw:LoadingWidgetView">
 
     <ScrollView>
         <StackLayout>
@@ -29,7 +30,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Text="Toggle" 
-                        Clicked="OnToggleAnimation" 
+                        Clicked="OnToggleAnimation_BtnClicked" 
                         Grid.ColumnSpan="2"/>
 
                 <Label Text="Arc Length"
@@ -41,14 +42,14 @@
                         Grid.Row="1"
                         Grid.Column="1"/>
 
-                <Label Text="Animation Duration (milli)"            
+                <Label Text="Animation Duration (Milli)"            
                        Style="{StaticResource propertyLblStyle}"
                        Grid.Row="2"/>
                 <Entry Text="{Binding Duration}"
                        Grid.Row="2"
                        Grid.Column="1"/>
 
-                <Label Text="Stroke Width"
+                <Label Text="Stroke Width Percentage"
                        Style="{StaticResource propertyLblStyle}"
                        Grid.Row="3"/>
                 <Slider x:Name="strokeWidthSlider"

@@ -17,6 +17,8 @@ namespace LilWidgets.Forms.Views
 
         public static readonly BindableProperty AutoAnimateProperty = BindableProperty.Create(nameof(AutoAnimate), typeof(bool), typeof(ProgressWidgetView), ProgressWidget.DEFAULT_AUTO_ANIMATE, BindingMode.OneWay, propertyChanged: OnAutoAnimateChanged);
 
+        public static readonly BindableProperty TextSizePercentageProperty = BindableProperty.Create(nameof(TextSizePercentage), typeof(float), typeof(ProgressWidgetView), ProgressWidget.DEFAULT_TEXT_SIZE_PERCENTAGE, BindingMode.OneWay, propertyChanged: OnTextSizePercentageChanged);
+
         public float ProgressPercentage
         {
             get => (float)GetValue(ProgressPercentageProperty);
@@ -33,6 +35,12 @@ namespace LilWidgets.Forms.Views
         {
             get => (bool)GetValue(AutoAnimateProperty);
             set => SetValue(AutoAnimateProperty, value);
+        }
+
+        public float TextSizePercentage
+        {
+            get => (float)GetValue(TextSizePercentageProperty);
+            set => SetValue(TextSizePercentageProperty, value);
         }
 
         /// <summary>
@@ -86,5 +94,14 @@ namespace LilWidgets.Forms.Views
         /// <param name="newValue"></param>
         private static void OnAutoAnimateChanged(BindableObject bindable, object oldValue, object newValue)
             => bindable.GetCastedWidgetView<ProgressWidgetView>().GetCastedWidget<ProgressWidget>().AutoAnimate = (bool)newValue;
+
+        /// <summary>
+        /// Todo: Fillout Comment
+        /// </summary>
+        /// <param name="bindable"></param>
+        /// <param name="oldValue"></param>
+        /// <param name="newValue"></param>
+        private static void OnTextSizePercentageChanged(BindableObject bindable, object oldValue, object newValue)
+            => bindable.GetCastedWidgetView<ProgressWidgetView>().GetCastedWidget<ProgressWidget>().TextSizePercentage = (float)newValue;
     }
 }            

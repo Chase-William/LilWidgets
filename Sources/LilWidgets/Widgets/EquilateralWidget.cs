@@ -29,7 +29,7 @@ namespace LilWidgets.Widgets
         /// <summary>
         /// Equilateral Rectangle to be used for drawing.
         /// </summary>
-        protected SKRectI EquilateralRect { get; private set; }
+        protected SKRect EquilateralRect { get; private set; }        
 
         protected override void OnCanvasRectChanged(in SKRectI rect)
         {

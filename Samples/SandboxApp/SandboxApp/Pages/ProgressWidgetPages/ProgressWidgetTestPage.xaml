@@ -4,7 +4,8 @@
              xmlns:lw="clr-namespace:LilWidgets.Forms.Views;assembly=LilWidgets.Forms"
              x:Class="SandboxApp.Pages.ProgressWidgetPages.ProgressWidgetTestPage"
              Style="{StaticResource DefaultPageStyle}"
-             Title="Progress Widget Testing">
+             Title="Progress Widget Testing"
+             x:DataType="lw:ProgressWidgetView">
 
     <StackLayout>
         <Grid VerticalOptions="FillAndExpand">
@@ -33,7 +34,7 @@
                    Placeholder="0.00 to 1.00"/>
             <Button Text="Apply"
                     Grid.Column="1"
-                    Clicked="Apply_BtnClicked"/>
+                    Clicked="OnApply_BtnClicked"/>
 
             <Label Text="Toggle Text"
                    Style="{StaticResource propertyLblStyle}"
@@ -42,30 +43,31 @@
                     Grid.Row="1"
                     Grid.Column="1"/>
 
-            <Label Text="Animation Duration (milli)"            
+            <Label Text="Animation Duration (Milli)"            
                    Style="{StaticResource propertyLblStyle}"
                    Grid.Row="2"/>
             <Entry Text="{Binding Duration}"
                    Grid.Row="2"
                    Grid.Column="1"/>
 
-            <Label Text="Text Margin"
+            <Label Text="Text Size Percentage"
                    Style="{StaticResource propertyLblStyle}"
                    Grid.Row="3"/>
-            <Slider x:Name="arcToTextSpacingSlider"
-                    Minimum="0"
-                    ValueChanged="arcWidthSlider_ValueChanged"
-                    Maximum="200"
+            <Slider x:Name="textWidthPercentageSlider"
+                    Minimum="0.01"
+                    ValueChanged="OnTextSizePercentage_ValueChanged"
+                    Maximum="1"
                     Grid.Row="3"
                     Grid.Column="1"/>
 
-            <Label Text="Stroke Width"
+            <Label Text="Stroke Width Percentage"
                    Style="{StaticResource propertyLblStyle}"
                    Grid.Row="4"/>
             <Slider x:Name="strokeWidthSlider"
-                    Minimum="0"
-                    ValueChanged="strokeWidthSlider_ValueChanged"
-                    Maximum="200"
+                    Minimum="0.0"
+                    Value="0.5"
+                    Maximum="0.95"
+                    ValueChanged="OnStrokeWidthSlider_ValueChanged"
                     Grid.Column="1"
                     Grid.Row="4"/>
         </Grid>
@@ -82,7 +84,7 @@
             <Label Text="Width"
                    HorizontalOptions="Center"/>
             <Slider x:Name="widthSlider"
-                    ValueChanged="widthSlider_ValueChanged"
+                    ValueChanged="OnWidthSlider_ValueChanged"
                     Minimum="0"
                     Grid.Row="1"/>
 
@@ -90,7 +92,7 @@
                    HorizontalOptions="Center"
                    Grid.Column="1"/>
             <Slider x:Name="heightSlider"
-                    ValueChanged="heightSlider_ValueChanged"
+                    ValueChanged="OnHeightSlider_ValueChanged"
                     Minimum="0"
                     Grid.Row="1"
                     Grid.Column="1"/>
