@@ -11,11 +11,13 @@
             <Label Text="Here all widgets have a preview like page and then a sandbox page where you can edit their various properties in real time."
                    FontSize="Caption"
                    Margin="0,20,0,0"/>
-            <Image Source="LilWidgetsLogo"
+            <ImageButton Source="LilWidgetsLogo"
                    VerticalOptions="CenterAndExpand"
                    HorizontalOptions="Center"
                    WidthRequest="300"
-                   HeightRequest="300"/>
+                   HeightRequest="300"
+                   BackgroundColor="Transparent"
+                   Clicked="OnOpenGithub_BtnClicked"/>
             <Button x:Name="githubBtn"
                     Text="Checkout the Github Repo!"
                     Clicked="OnOpenGithub_BtnClicked"/>

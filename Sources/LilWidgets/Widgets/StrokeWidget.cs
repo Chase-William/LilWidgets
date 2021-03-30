@@ -27,20 +27,18 @@ namespace LilWidgets.Widgets
         public static readonly SKColor defaultShadowColor = SKColors.LightGray;
         #endregion Constants
 
-        #region Properties
-        private SKColor strokeColor;
+        #region Properties With Backing Fields    
         /// <summary>
         /// Gets or sets the color of the primary arc.
         /// </summary>
         public SKColor ArcColor
         {
-            get => strokeColor;
+            get => ArcPaint.Color;
             set
             {
-                if (Set(ref strokeColor, value))
-                {
-                    ArcPaint.Color = value;
-                }
+                SKColor color = ArcPaint.Color;
+                if (Set(ref color, value))                
+                    ArcPaint.Color = value;                
             }
         }
         private SKColor shadowColor = defaultShadowColor;
@@ -61,27 +59,34 @@ namespace LilWidgets.Widgets
             get => strokeWidthPercentage;
             set
             {
-                if (Set(ref strokeWidthPercentage, value, notifyPropertyChanged: false))
-                {
-                    // Disable propChanged so we can re-calculate StrokeRatio before the next frame              
-                    NotifyPropertyChanged();
+                if (Set(ref strokeWidthPercentage, value))
+                {                                  
                     UpdateFittedRect();
                     if (!IsAnimating)
                         OnInvalidateCanvas();
                 }
             }
         }
-        #endregion
 
+        private SKRect fittedRect;
         /// <summary>
         /// Gets the rectangle for drawing that proper offsets applied for a stroke.
         /// </summary>
-        protected SKRect FittedRect { get; private set; }
-        
+        protected SKRect FittedRect
+        {
+            get => fittedRect;
+            set => Set(ref fittedRect, value);
+        }
+
+        private float offset;
         /// <summary>
         /// Gets the offset used when calculating the <see cref="FittedRect"/> from the <see cref="EquilateralWidget.EquilateralRect"/>.
         /// </summary>
-        protected float Offset { get; private set; }
+        protected float Offset
+        {
+            get => offset;
+            set => Set(ref offset, value);
+        }
 
         /// <summary>
         /// Gets or sets the <see cref="SKPaint"/> to draw the background arc.
@@ -93,6 +98,7 @@ namespace LilWidgets.Widgets
             Style = SKPaintStyle.Stroke,
             IsAntialias = true
         };
+        #endregion
 
         /// <summary>
         /// Initializes a new instance of the <see cref="StrokeWidget"/> class.
@@ -114,10 +120,7 @@ namespace LilWidgets.Widgets
         {
             float relativeStrokeWidth = LimitingDimensionLength * StrokeWidthPercentage / 2;
             // Compensate for the shadow
-            float halfShadowStrokeWidth = relativeStrokeWidth / 2 + BASE_SHADOW_SIGMA;
-
-            // Saving this offset to be used in other places like TextBounds calculation
-            Offset = halfShadowStrokeWidth;
+            float halfShadowStrokeWidth = relativeStrokeWidth / 2 + BASE_SHADOW_SIGMA;            
 
             // Determine top / bottom by finding the MidY then subtracting half the target width (get the radius of our circle) then subtract the half of stroke which acts as an offset
             if (LimitingDimension == Enumerations.LimitingDimensions.Height) // Canvas is wider than it is tall, hence compute for height
@@ -146,6 +149,9 @@ namespace LilWidgets.Widgets
                                                                   BASE_SHADOW_SIGMA,
                                                                   BASE_SHADOW_SIGMA,
                                                                   shadowColor);
+            // Saving this offset to be used in other places like TextBounds calculation
+            Offset = halfShadowStrokeWidth;
+
             // Update the paint StrokeWidth of our SKPaint
             ArcPaint.StrokeWidth = relativeStrokeWidth;
         }

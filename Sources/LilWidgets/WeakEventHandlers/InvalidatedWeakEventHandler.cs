@@ -3,9 +3,6 @@
  * Licensed under the MIT License. See project root directory for more info.
 */
 
-/// <summary>
-/// Source of this file is from https://github.com/dotnet-ad/Microcharts/blob/ceb087633a730f238794827d71281ebd8a3e2066/Sources/Microcharts/WeakEventHandlers/InvalidatedWeakEventHandler.cs
-/// </summary>
 namespace LilWidgets.WeakEventHandlers
 {
     using LilWidgets.Widgets;
