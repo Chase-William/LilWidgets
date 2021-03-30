@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:lw="clr-namespace:LilWidgets.Forms.Views;assembly=LilWidgets.Forms"
+             x:Class="SandboxApp.Pages.LoadingWidgetExamples.LoadingWidgetPage"
+             Style="{StaticResource DefaultPageStyle}"
+             Title="Loading Widget">
+    <StackLayout>
+        <lw:LoadingWidgetView x:Name="loadingWidget"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            HeightRequest="150"
+                            WidthRequest="150"
+                            ArcLength="100"
+                            Duration="1200"
+                            ArcColor="{StaticResource AccentPrimary}"/>
+        <Button Text="Goto Sandbox Page"
+                HorizontalOptions="Center"
+                Clicked="OnGotoSandboxPage_BtnClicked"/>
+    </StackLayout>
+</ContentPage>

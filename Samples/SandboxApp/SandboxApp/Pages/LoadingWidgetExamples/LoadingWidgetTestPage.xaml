@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:lw="clr-namespace:LilWidgets.Forms.Views;assembly=LilWidgets.Forms"
+             x:Class="SandboxApp.Pages.LoadingWidgetExamples.LoadingWidgetTestPage"
+             Style="{StaticResource DefaultPageStyle}"
+             Title="Loading Widget Sandbox"
+             x:DataType="lw:LoadingWidgetView">
+
+    <ScrollView>
+        <StackLayout>
+            <Grid VerticalOptions="FillAndExpand">
+                <lw:LoadingWidgetView x:Name="loadingWidget"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        ArcLength="90"   
+                        ArcColor="{StaticResource AccentPrimary}"/>
+            </Grid>
+            <Grid Style="{StaticResource controlGrid}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Text="Toggle" 
+                        Clicked="OnToggleAnimation_BtnClicked" 
+                        Grid.ColumnSpan="2"/>
+
+                <Label Text="Arc Length"
+                       Style="{StaticResource propertyLblStyle}"
+                       Grid.Row="1"/>
+                <Slider Value="{Binding ArcLength}"
+                        Minimum="0"
+                        Maximum="359"
+                        Grid.Row="1"
+                        Grid.Column="1"/>
+
+                <Label Text="Animation Duration (Milli)"            
+                       Style="{StaticResource propertyLblStyle}"
+                       Grid.Row="2"/>
+                <Entry Text="{Binding Duration}"
+                       Grid.Row="2"
+                       Grid.Column="1"/>
+
+                <Label Text="Stroke Width Percentage"
+                       Style="{StaticResource propertyLblStyle}"
+                       Grid.Row="3"/>
+                <Slider x:Name="strokeWidthSlider"
+                        Minimum="0.0"
+                        Value="0.5"
+                        Maximum="0.95"
+                        ValueChanged="OnStrokeWidthSlider_ValueChanged"
+                        Grid.Column="1"
+                        Grid.Row="3"/>
+
+                <Grid Style="{StaticResource controlGrid}" Grid.Row="4" Grid.ColumnSpan="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Width"
+                           HorizontalOptions="Center"/>
+                    <Slider x:Name="widthSlider"
+                            ValueChanged="OnWidthSlider_ValueChanged"
+                            Minimum="0"
+                            Grid.Row="1"/>
+
+                    <Label Text="Height"
+                           HorizontalOptions="Center"
+                           Grid.Column="1"/>
+                    <Slider x:Name="heightSlider"
+                            ValueChanged="OnHeightSlider_ValueChanged"
+                            Minimum="0"
+                            Grid.Row="1"
+                            Grid.Column="1"/>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
