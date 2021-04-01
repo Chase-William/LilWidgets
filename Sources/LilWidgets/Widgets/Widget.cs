@@ -1,6 +1,6 @@
 ﻿/*
  * Copyright (c) Chase Roth <cxr6988@rit.edu>
- * Licensed under the MIT License. See project root directory for more info.
+ * Licensed under the MIT License. See repository root directory for more info.
 */
 
 using System;
@@ -105,9 +105,9 @@ namespace LilWidgets.Widgets
         /// <summary>
         /// Draws content to canvas.
         /// </summary>
-        /// <param name="canvas">The canvas provided by the platform specific project.</param>
+        /// <param name="canvas">The canvas provided by the platform specific repository.</param>
         /// <param name="width">Width of the canvas.</param>
-        /// <param name="height">Height of the canvas.</param
+        /// <param name="height">Height of the canvas.</param>
         public void Draw(SKCanvas canvas, in SKRectI rect)
         {           
             canvas.Clear(SKColors.Transparent);

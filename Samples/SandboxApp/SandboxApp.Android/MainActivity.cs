@@ -10,7 +10,7 @@ using Android.OS;
 namespace SandboxApp.Droid
 {
     [Activity(Label = "SandboxApp", 
-        Icon = "@mipmap/icon", 
+        Icon = "@drawable/LilWidgetsLogo", 
         Theme = "@style/MainTheme", 
         MainLauncher = true, 
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize,
