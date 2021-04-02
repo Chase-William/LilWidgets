@@ -65,7 +65,7 @@ namespace LilWidgets.Widgets
             var backgroundPath = new SKPath();
             backgroundPath.AddArc(FittedRect, BaseSweepAngle, ArcLength);
 #if DEBUG
-            System.Console.WriteLine($"BaseSweepAngle: {BaseSweepAngle}");
+            //System.Console.WriteLine($"BaseSweepAngle: {BaseSweepAngle}");
 #endif
             
             // Draw Calls

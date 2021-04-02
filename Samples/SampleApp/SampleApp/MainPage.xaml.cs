@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace SampleApp
 {
@@ -13,6 +15,8 @@ namespace SampleApp
         public MainPage()
         {
             InitializeComponent();
+
+            On<iOS>().SetUseSafeArea(true);
         }
     }
 }

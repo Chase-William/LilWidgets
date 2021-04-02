@@ -7,7 +7,7 @@ using SkiaSharp.Views.Android;
 using LilWidgets.Widgets;
 using LilWidgets.WeakEventHandlers;
 
-namespace LilWidgets.Android
+namespace LilWidgets.Android.Views
 {
     public class WidgetView : SKCanvasView
     {

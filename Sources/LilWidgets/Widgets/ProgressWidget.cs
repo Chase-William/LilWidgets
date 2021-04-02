@@ -153,14 +153,7 @@ namespace LilWidgets.Widgets
 #if DEBUG
             System.Console.WriteLine("CurrentProgressPercentage: " + CurrentProgressPercentage);
 #endif
-
-
-            //var backgroundPath = new SKPath();
-            //backgroundPath.AddArc(arcRect, SWEEP_START, 360f);
-            // Applying path widths aka strike widths
-            //backgroundPaint.StrokeWidth = relativeStrokeWidth;
             // Draw Calls
-            //canvas.DrawPath(backgroundPath, backgroundPaint); // Background Arc
             canvas.DrawPath(progressPath, ArcPaint); // Progress Arc
 
             if (IsTextVisible) // Draw text only if enabled

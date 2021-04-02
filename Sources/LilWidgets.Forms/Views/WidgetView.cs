@@ -84,7 +84,7 @@ namespace LilWidgets.Forms.Views
         /// <summary>
         /// Stops the <see cref="Animator"/>.
         /// </summary>
-        protected abstract void StopInternal();      
+        protected abstract void StopInternal();
 
         /// <summary>
         /// Triggers the underlying libraries draw methods.
@@ -143,6 +143,6 @@ namespace LilWidgets.Forms.Views
                             v.StartInternal();
                     });
             }                
-        }
+        }        
     }
 }
