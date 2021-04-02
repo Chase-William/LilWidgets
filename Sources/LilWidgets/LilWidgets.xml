@@ -1,0 +1,431 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LilWidgets</name>
+    </assembly>
+    <members>
+        <member name="T:LilWidgets.Enumerations.LimitingDimensions">
+            <summary>
+            Limiting dimension of a rectangle.
+            </summary>
+        </member>
+        <member name="F:LilWidgets.Enumerations.LimitingDimensions.Equal">
+            <summary>
+            Dimensions are equal.
+            </summary>
+        </member>
+        <member name="F:LilWidgets.Enumerations.LimitingDimensions.Width">
+            <summary>
+            Smaller than <see cref="F:LilWidgets.Enumerations.LimitingDimensions.Height"/>.
+            </summary>
+        </member>
+        <member name="F:LilWidgets.Enumerations.LimitingDimensions.Height">
+            <summary>
+            Smaller than <see cref="F:LilWidgets.Enumerations.LimitingDimensions.Width"/>.
+            </summary>
+        </member>
+        <member name="T:LilWidgets.Enumerations.RangeType">
+            <summary>
+            Describes whether a range's absolute max or min is inclusive or exclusive.
+            </summary>
+        </member>
+        <member name="F:LilWidgets.Enumerations.RangeType.Inclusive">
+            <summary>
+            Mathematically expressed in interval notation with parenthesis.
+            </summary>
+        </member>
+        <member name="F:LilWidgets.Enumerations.RangeType.Exclusive">
+            <summary>
+            Mathematically expressed in interval notation with brackets.
+            </summary>
+        </member>
+        <member name="T:LilWidgets.Exceptions.PropertyValueOutOfRangeException">
+            <summary>
+            A <see cref="T:LilWidgets.Exceptions.PropertyValueOutOfRangeException"/> class replaces <see cref="T:System.ArgumentOutOfRangeException"/> but for properties exclusively.
+            Yes, property setters and getters boil down to methods under the hood, but I want to as clear and concise as possible.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Exceptions.PropertyValueOutOfRangeException.Value">
+            <summary>
+            Invalid value that caused the exception.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Exceptions.PropertyValueOutOfRangeException.MinValue">
+            <summary>
+            Minimum valid value for <see cref="P:LilWidgets.Exceptions.PropertyValueOutOfRangeException.Value"/>.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Exceptions.PropertyValueOutOfRangeException.MaxValue">
+            <summary>
+            Maximum valid value for <see cref="P:LilWidgets.Exceptions.PropertyValueOutOfRangeException.Value"/>.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Exceptions.PropertyValueOutOfRangeException.MinRangeType">
+            <summary>
+            Describes <see cref="P:LilWidgets.Exceptions.PropertyValueOutOfRangeException.MinValue"/> as <see cref="F:LilWidgets.Enumerations.RangeType.Inclusive"/> or <see cref="F:LilWidgets.Enumerations.RangeType.Exclusive"/>.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Exceptions.PropertyValueOutOfRangeException.MaxRangeType">
+            <summary>
+            Describes <see cref="P:LilWidgets.Exceptions.PropertyValueOutOfRangeException.MaxValue"/> as <see cref="F:LilWidgets.Enumerations.RangeType.Inclusive"/> or <see cref="F:LilWidgets.Enumerations.RangeType.Exclusive"/>.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Exceptions.PropertyValueOutOfRangeException.SenderName">
+            <summary>
+            Sender and who is responsible for the exception.
+            </summary>
+        </member>
+        <member name="M:LilWidgets.Exceptions.PropertyValueOutOfRangeException.#ctor(System.Object,System.Object,System.Object,LilWidgets.Enumerations.RangeType,LilWidgets.Enumerations.RangeType,System.String)">
+            <summary>
+            Initializes a new <see cref="T:LilWidgets.Exceptions.PropertyValueOutOfRangeException"/> instance.
+            </summary>
+            <param name="value">Invalid value that caused the exception.</param>
+            <param name="minValue">Minimum valid value for <paramref name="value"/>.</param>
+            <param name="maxValue">Maximum valid value for <paramref name="value"/>.</param>
+            <param name="minRangeType"><paramref name="minValue"/> is <see cref="F:LilWidgets.Enumerations.RangeType.Inclusive"/> or <see cref="F:LilWidgets.Enumerations.RangeType.Exclusive"/>. Default <see cref="F:LilWidgets.Enumerations.RangeType.Inclusive"/>.</param>
+            <param name="maxRangeType"><paramref name="maxValue"/> is <see cref="F:LilWidgets.Enumerations.RangeType.Inclusive"/> or <see cref="F:LilWidgets.Enumerations.RangeType.Exclusive"/>. Default <see cref="F:LilWidgets.Enumerations.RangeType.Inclusive"/>.</param>
+            <param name="senderName">Sender and who is responsible for the exception.</param>
+        </member>
+        <member name="P:LilWidgets.Exceptions.PropertyValueOutOfRangeException.Message">
+            <summary>
+            Get a human readable message describing why this <see cref="T:LilWidgets.Exceptions.PropertyValueOutOfRangeException"/> was thrown.
+            </summary>
+        </member>
+        <member name="M:LilWidgets.WeakEventHandlers.AnimatingWeakEventHandler`1.#ctor(LilWidgets.Widgets.Widget,`0,System.Action{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:LilWidgets.WeakEventHandlers.InvalidatedWeakEventHandler`1"/> class.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="target">The target.</param>
+            <param name="targetMethod">The target method.</param>
+        </member>
+        <member name="M:LilWidgets.WeakEventHandlers.AnimatingWeakEventHandler`1.Subscribe">
+            <summary>
+            Subscribe this handler to the source.
+            </summary>
+        </member>
+        <member name="M:LilWidgets.WeakEventHandlers.AnimatingWeakEventHandler`1.Unsubscribe">
+            <summary>
+            Unsubscribe this handler from the source.
+            </summary>
+        </member>
+        <member name="T:LilWidgets.WeakEventHandlers.InvalidatedWeakEventHandler`1">
+            <summary>
+            A lightweight proxy instance that will subscribe to a given event with a weak reference to the subscribed target.
+            If the subscriber is garbage collected, then only this WeakEventHandler will remain subscribed and keeped
+            in memory instead of the actual subscriber.
+            This could be considered as an acceptable solution in most cases.
+            </summary>
+        </member>
+        <member name="M:LilWidgets.WeakEventHandlers.InvalidatedWeakEventHandler`1.#ctor(LilWidgets.Widgets.Widget,`0,System.Action{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:LilWidgets.WeakEventHandlers.InvalidatedWeakEventHandler`1"/> class.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="target">The target.</param>
+            <param name="targetMethod">The target method.</param>
+        </member>
+        <member name="M:LilWidgets.WeakEventHandlers.InvalidatedWeakEventHandler`1.Subscribe">
+            <summary>
+            Subscribe this handler to the source.
+            </summary>
+        </member>
+        <member name="M:LilWidgets.WeakEventHandlers.InvalidatedWeakEventHandler`1.Unsubscribe">
+            <summary>
+            Unsubscribe this handler from the source.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.WeakEventHandlers.WeakEventHandler`1.IsAlive">
+            <summary>
+            Gets a value indicating whether this <see cref="T:LilWidgets.WeakEventHandlers.WeakEventHandler`1"/> is alive.
+            </summary>
+            <value><c>true</c> if is alive; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:LilWidgets.WeakEventHandlers.WeakEventHandler`1.#ctor(LilWidgets.Widgets.Widget,`0,System.Action{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:LilWidgets.WeakEventHandlers.WeakEventHandler`1"/> class.
+            </summary>
+            <param name="_source">The source.</param>
+            <param name="_target">The target.</param>
+            <param name="_targetMethod">The target method.</param>
+        </member>
+        <member name="M:LilWidgets.WeakEventHandlers.WeakEventHandler`1.Unsubscribe">
+            <summary>
+            Unsubscribe this handler from the source.
+            </summary>
+        </member>
+        <member name="M:LilWidgets.WeakEventHandlers.WeakEventHandler`1.Subscribe">
+            <summary>
+            Subscribe this handler to the source.
+            </summary>
+        </member>
+        <member name="M:LilWidgets.WeakEventHandlers.WeakEventHandler`1.Dispose">
+            <summary>
+            Releases all resource used by the <see cref="T:LilWidgets.InvalidatedWeakEventHandler`1"/> object.
+            </summary>
+            <remarks>Call <see cref="M:LilWidgets.WeakEventHandlers.WeakEventHandler`1.Dispose"/> when you are finished using the
+            <see cref="T:Microcharts.InvalidatedWeakEventHandler`1"/>. The <see cref="M:LilWidgets.WeakEventHandlers.WeakEventHandler`1.Dispose"/> method leaves the
+            <see cref="T:Microcharts.InvalidatedWeakEventHandler`1"/> in an unusable state. After calling
+            <see cref="M:LilWidgets.WeakEventHandlers.WeakEventHandler`1.Dispose"/>, you must release all references to the
+            <see cref="T:Microcharts.InvalidatedWeakEventHandler`1"/> so the garbage collector can reclaim the memory
+            that the <see cref="T:Microcharts.InvalidatedWeakEventHandler`1"/> was occupying.</remarks>
+        </member>
+        <member name="T:LilWidgets.Widgets.EquilateralWidget">
+            <summary>
+            A <see cref="T:LilWidgets.Widgets.EquilateralWidget"/> is a supporting class for a widget that needs a square rectangle for its content to be drawn in.
+            This rectangle will be centered inside the parent rectangle automatically.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.EquilateralWidget.LimitingDimension">
+            <summary>
+            Indicates whether the width and height are equal in length or which is the smaller of the two.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.EquilateralWidget.LimitingDimensionLength">
+            <summary>
+            Length of the limiting span given in the <see cref="!:Update(float, float)"/> method parameters.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.EquilateralWidget.EquilateralRect">
+            <summary>
+            Equilateral Rectangle to be used for drawing.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.LoadingWidget.ArcLength">
+            <summary>
+            Gets or sets the length of the Arc in degrees. 
+            The max value is denoted by <see cref="F:LilWidgets.Widgets.LoadingWidget.MAX_ARC_LENGTH"/> and likewise the min value is denoted by <see cref="F:LilWidgets.Widgets.LoadingWidget.MIN_ACC_LENGTH"/>.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.LoadingWidget.BaseSweepAngle">
+            <summary>
+            Gets or sets the starting position of the arc in degrees.
+            </summary>
+        </member>
+        <member name="M:LilWidgets.Widgets.LoadingWidget.#ctor">
+            <summary>
+            Initializes a new <see cref="T:LilWidgets.Widgets.LoadingWidget"/> instance.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.ProgressWidget.ProgressPercentage">
+            <summary>
+            Gets or sets the target percentage to be displayed by the <see cref="T:LilWidgets.Widgets.ProgressWidget"/>.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.ProgressWidget.CurrentProgressPercentage">
+            <summary>
+            Gets the current percentage the <see cref="T:LilWidgets.Widgets.ProgressWidget"/> is displaying.
+            This value will be updating constantly while the animation is running.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.ProgressWidget.IsTextVisible">
+            <summary>
+            Gets or sets whether the percentage text should be visible.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.ProgressWidget.TextSizePercentage">
+            <summary>
+            Gets or sets the size of the text within the <see cref="P:LilWidgets.Widgets.StrokeWidget.FittedRect"/>.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.ProgressWidget.AutoAnimate">
+            <summary>
+            Gets or sets whether assigning a new value to the <see cref="P:LilWidgets.Widgets.ProgressWidget.ProgressPercentage"/> automatically starts the animation.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.ProgressWidget.TextPaint">
+            <summary>
+            Gets or sets the <see cref="T:SkiaSharp.SKPaint"/> being used for drawing the text displaying the <see cref="P:LilWidgets.Widgets.ProgressWidget.CurrentProgressPercentage"/> property.
+            </summary>
+        </member>
+        <member name="F:LilWidgets.Widgets.ProgressWidget.maxWidthInsideFittedRect">
+            <summary>
+            Max width available inside the offsets of <see cref="P:LilWidgets.Widgets.StrokeWidget.FittedRect"/>.
+            This is used when embedding for say text inside a rectangle.
+            </summary>
+        </member>
+        <member name="M:LilWidgets.Widgets.ProgressWidget.#ctor">
+            <summary>
+            Initializes a new <see cref="T:LilWidgets.Widgets.ProgressWidget"/> instance.
+            </summary>
+        </member>
+        <member name="M:LilWidgets.Widgets.ProgressWidget.GetRelativeDuration">
+            <summary>
+            Gets the relative duration remaining to finish this animation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:LilWidgets.Widgets.StrokeWidget">
+            <summary>
+            A <see cref="T:LilWidgets.Widgets.StrokeWidget"/> is a supporting class for widgets that equal height and width with a stroke around the perimeter.
+            </summary>
+        </member>
+        <member name="F:LilWidgets.Widgets.StrokeWidget.BASE_SHADOW_SIGMA">
+            <summary>
+            The base sigma for the drop shadow used with the backing arc.
+            </summary>
+        </member>
+        <member name="F:LilWidgets.Widgets.StrokeWidget.DEFAULT_STROKE_WIDTH_PERCENTAGE">
+            <summary>
+            Default stroke width used for the arcs.
+            </summary>
+        </member>
+        <member name="F:LilWidgets.Widgets.StrokeWidget.defaultShadowColor">
+            <summary>
+            Default shadow color used with the arcs.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.StrokeWidget.ArcColor">
+            <summary>
+            Gets or sets the color of the primary arc.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.StrokeWidget.ShadowColor">
+            <summary>
+            Gets or sets the color of the primary arc's shadow.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.StrokeWidget.StrokeWidthPercentage">
+            <summary>
+            Gets or sets the width of the primary arc.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.StrokeWidget.FittedRect">
+            <summary>
+            Gets the rectangle for drawing that proper offsets applied for a stroke.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.StrokeWidget.Offset">
+            <summary>
+            Gets the offset used when calculating the <see cref="P:LilWidgets.Widgets.StrokeWidget.FittedRect"/> from the <see cref="P:LilWidgets.Widgets.EquilateralWidget.EquilateralRect"/>.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.StrokeWidget.ArcPaint">
+            <summary>
+            Gets or sets the <see cref="T:SkiaSharp.SKPaint"/> to draw the background arc.
+            </summary>
+        </member>
+        <member name="M:LilWidgets.Widgets.StrokeWidget.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:LilWidgets.Widgets.StrokeWidget"/> class.
+            </summary>
+        </member>
+        <member name="M:LilWidgets.Widgets.StrokeWidget.UpdateFittedRect">
+            <summary>
+            Updates the <see cref="P:LilWidgets.Widgets.StrokeWidget.FittedRect"/> property by calculating the correct offsets needed based off 
+            the <see cref="P:LilWidgets.Widgets.StrokeWidget.StrokeWidthPercentage"/> while using the inherited <see cref="P:LilWidgets.Widgets.EquilateralWidget.EquilateralRect"/>.
+            </summary>
+            <param name="rect"></param>
+        </member>
+        <member name="T:LilWidgets.Widgets.Widget">
+            <summary>
+            A <see cref="T:LilWidgets.Widgets.Widget"/> class that is the highest parent to all other derived widget classes.
+            </summary>
+        </member>
+        <member name="F:LilWidgets.Widgets.Widget.DEFAULT_DURATION_VALUE">
+            <summary>
+            Default duration for animations.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.Widget.IsAnimating">
+            <summary>
+            Gets or sets whether the animation is animating.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.Widget.Duration">
+            <summary>
+            Gets or sets the time in milliseconds for a one complete cycle of the animation.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.Widget.DrawingRect">
+            <summary>
+            Dimensions of the <see cref="T:SkiaSharp.SKCanvas"/> that is checked for updates each draw call.
+            </summary>
+        </member>
+        <member name="P:LilWidgets.Widgets.Widget.AnimateCallback">
+            <summary>
+            Callback to be used by the platform specific projects.
+            </summary>
+        </member>
+        <member name="E:LilWidgets.Widgets.Widget.PropertyChanged">
+            <summary>
+            Notifies subscribers that a property has changed.
+            </summary>
+        </member>
+        <member name="E:LilWidgets.Widgets.Widget.Invalidated">
+            <summary>
+            Notifies subscribers that the drawing canvas has been invalidated.
+            </summary>
+        </member>
+        <member name="E:LilWidgets.Widgets.Widget.IsAnimatingChanged">
+            <summary>
+            Notifies subscribers that the <see cref="P:LilWidgets.Widgets.Widget.IsAnimating"/> property has changed.
+            </summary>
+        </member>
+        <member name="M:LilWidgets.Widgets.Widget.RestartAnimation">
+            <summary>
+            Restarts a running animation or starts the animation.
+            </summary>
+        </member>
+        <member name="M:LilWidgets.Widgets.Widget.Draw(SkiaSharp.SKCanvas,SkiaSharp.SKRectI@)">
+            <summary>
+            Draws content to canvas.
+            </summary>
+            <param name="canvas">The canvas provided by the platform specific repository.</param>
+            <param name="width">Width of the canvas.</param>
+            <param name="height">Height of the canvas.</param>
+        </member>
+        <member name="M:LilWidgets.Widgets.Widget.DrawContent(SkiaSharp.SKCanvas,SkiaSharp.SKRectI@)">
+            <summary>
+            To be overridden by base classes to provide custom drawing implementation.
+            </summary>
+            <param name="canvas">To be drawn on.</param>
+            <param name="rect">Dimensions of the canvas.</param>
+        </member>
+        <member name="M:LilWidgets.Widgets.Widget.OnCanvasRectChanged(SkiaSharp.SKRectI@)">
+            <summary>
+            Handles the canvas changing sizes.
+            </summary>
+            <param name="rect"></param>
+        </member>
+        <member name="M:LilWidgets.Widgets.Widget.ObserveChanges``2(``1,System.Action{``1})">
+            <summary>
+            Initializes a new <see cref="T:LilWidgets.WeakEventHandlers.WeakEventHandler`1"/> instance of the specified derived type. Before returned, the <see cref="T:LilWidgets.WeakEventHandlers.WeakEventHandler`1"/> is
+            subscribed to the source to receive updates from the event the <see cref="T:LilWidgets.WeakEventHandlers.WeakEventHandler`1"/> targets.
+            </summary>
+            <typeparam name="THandler"><see cref="T:LilWidgets.WeakEventHandlers.WeakEventHandler`1"/> derived type.</typeparam>
+            <typeparam name="TTarget"><see cref="!:class"/> that is the source type.</typeparam>
+            <param name="target"><see cref="!:class"/> instance that is of the <typeparamref name="TTarget"/> type.</param>
+            <param name="onChanged"><see cref="T:System.Action`1"/> callback that will be invoked when updates occur.</param>
+            <returns>Subscribed <see cref="T:LilWidgets.WeakEventHandlers.WeakEventHandler`1"/> of derived type given.</returns>
+        </member>
+        <member name="M:LilWidgets.Widgets.Widget.OnNotifyPropertyChanged(System.String)">
+            <summary>
+            Notifies specific subscribers of a change.
+            </summary>
+            <param name="prop">Property that changed.</param>
+        </member>
+        <member name="M:LilWidgets.Widgets.Widget.OnInvalidateAnimation">
+            <summary>
+            Notifies the source that the <see cref="P:LilWidgets.Widgets.Widget.IsAnimating"/> property has been changed in the backing library by invoking <see cref="E:LilWidgets.Widgets.Widget.IsAnimatingChanged"/>.
+            </summary>
+        </member>
+        <member name="M:LilWidgets.Widgets.Widget.OnInvalidateCanvas">
+            <summary>
+            Invalidates the source's canvas by invoking the <see cref="E:LilWidgets.Widgets.Widget.Invalidated"/> event.
+            </summary>
+        </member>
+        <member name="M:LilWidgets.Widgets.Widget.Set``1(``0@,``0,System.Boolean,System.String)">
+            <summary>
+            Updates a targeted field with the given value if they are not already equal. 
+            This also applies to the calling of <see cref="M:LilWidgets.Widgets.Widget.OnNotifyPropertyChanged(System.String)"/>, meaning it won't be called if the field was not given a new value.    
+            </summary>
+            <typeparam name="T">The target type which is derived from <paramref name="field"/>.</typeparam>
+            <param name="field">Field to be targeted.</param>
+            <param name="value">Value to be assigned to <paramref name="field"/>.</param>
+            <param name="notifyPropertyChanged">Allows the prevention of <see cref="T:System.ComponentModel.INotifyPropertyChanged"/> being invoked.</param>
+            <param name="prop">Property responsible for <see cref="T:System.ComponentModel.INotifyPropertyChanged"/> being raised.</param>        
+            <returns>Indication if <paramref name="value"/> was assigned to <paramref name="field"/>.</returns>
+        </member>
+    </members>
+</doc>
