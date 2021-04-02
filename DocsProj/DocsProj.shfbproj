@@ -36,9 +36,9 @@
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\LilWidgets\LilWidgets\LilWidgets.csproj" />
-      <DocumentationSource sourceFile="..\LilWidgets\LilWidgets\bin\Debug\netstandard2.0\LilWidgets.xml" />
-      <DocumentationSource sourceFile="..\LilWidgets\LilWidgets\bin\Debug\netstandard2.0\LilWidgets.dll" />
+      <DocumentationSource sourceFile="..\Sources\LilWidgets\LilWidgets.csproj" />
+      <DocumentationSource sourceFile="..\Sources\LilWidgets\bin\Debug\netstandard2.0\LilWidgets.dll" />
+      <DocumentationSource sourceFile="..\Sources\LilWidgets\LilWidgets.xml" />
     </DocumentationSources>
     <HelpTitle>A Sandcastle Documented Class Library</HelpTitle>
     <HelpFileVersion>1.0.0.0</HelpFileVersion>

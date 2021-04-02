@@ -17,7 +17,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Sources\LilWidgets.Forms\LilWidgets.Forms.csproj" />
-    <ProjectReference Include="..\..\..\Sources\LilWidgets\LilWidgets.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -79,10 +79,6 @@
     <AndroidResource Include="Resources\values\colors.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Sources\LilWidgets\LilWidgets.csproj">
-      <Project>{c07e5f50-1edb-46a4-ad9e-6faeff2f5166}</Project>
-      <Name>LilWidgets</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SandboxApp\SandboxApp.csproj">
       <Project>{FEFC8A37-8A0D-4595-BF10-54B0D6927F68}</Project>
       <Name>SandboxApp</Name>
