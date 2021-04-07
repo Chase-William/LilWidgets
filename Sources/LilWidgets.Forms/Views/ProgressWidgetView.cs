@@ -30,7 +30,7 @@ namespace LilWidgets.Forms.Views
             get => (bool)GetValue(IsTextVisibleProperty);
             set => SetValue(IsTextVisibleProperty, value);
         }
-
+        
         public bool AutoAnimate
         {
             get => (bool)GetValue(AutoAnimateProperty);
