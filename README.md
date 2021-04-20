@@ -37,7 +37,7 @@ The *Loading Widget* is designed to show an infinite loading cycle. This can be 
 
 Loading Widget Example Page | Loading Widget Test Page
 -------------------------|-------------------------
-![Progress Widget Example Page](https://raw.githubusercontent.com/ChaseRoth/LilWidgets/main/Resources/Sceenshots/LoadingWidget/screenshot_example1.png)  |  ![Progress Widget Testing Page](https://raw.githubusercontent.com/ChaseRoth/LilWidgets/main/Resources/Sceenshots/LoadingWidget/screenshot_test1.png)
+![Progress Widget Example Page](https://raw.githubusercontent.com/ChaseRoth/LilWidgets/main/Resources/Sceenshots/LoadingWidget/screenshot_example1.jpg)  |  ![Progress Widget Testing Page](https://raw.githubusercontent.com/ChaseRoth/LilWidgets/main/Resources/Sceenshots/LoadingWidget/screenshot_test1.jpg)
 
 ## How to Implement
 
